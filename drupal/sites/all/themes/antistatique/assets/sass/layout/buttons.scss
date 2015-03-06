@@ -16,6 +16,7 @@ category: Layout - Buttons
 |----------------------------------------------------------------|----------------------------|
 | <button type="button" class="btn btn-default">Default</button> | <code>btn btn-default</code> |
 | <button type="button" class="btn btn-primary">Primary</button> | <code>btn btn-primary</code> |
+| <button type="button" class="btn btn-dark">Danger</button>     | <code>btn btn-dark</code>  |
 | <button type="button" class="btn btn-success">Success</button> | <code>btn btn-success</code> |
 | <button type="button" class="btn btn-info">Info</button>       | <code>btn btn-info</code>    |
 | <button type="button" class="btn btn-warning">Warning</button> | <code>btn btn-warning</code> |
@@ -25,6 +26,51 @@ category: Layout - Buttons
 
 .btn {
   border: 0;
+
+  .fa {
+    margin-right: 6px;
+    font-size: 1.2em;
+    margin-bottom: -2px;
+    position: relative;
+    top: 1px;
+  }
+
+  &:hover {
+    .fa.fa-twitter {color: #55acee}
+    .fa.fa-facebook {color: #3b5998}
+    .fa.fa-github {color: #333}
+    .fa.fa-linkedin {color: #0976b4}
+  }
+}
+
+.btn-default {
+  border-radius: 0;
+  background: none;
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    .fa {color: $text-color;}
+    color: $link-color;
+    background: $dust;
+  }
+
+  .bg-foggy & {
+    &:hover {
+      background: $white;
+    }
+  }
+}
+
+.btn-dark {
+  background: $midnight-blue;
+  border-radius: 0;
+  color: $white;
+  font-weight: 600;
+  &:hover {
+    color: $link-color;
+    .fa {color: $white;}
+  }
 }
 
 /*doc
@@ -57,18 +103,19 @@ category: Layout - Buttons
 
 ```html_example
 <div class="bg-foggy styleguide-padding">
-  <button type="button" class="btn btn-icon"><i class="fa fa-send"></i> alberto@antistatique.net</button>
-  <button type="button" class="btn btn-icon"><i class="fa fa-pencil"></i> His blog posts</button>
-  <button type="button" class="btn btn-icon"><i class="fa fa-facebook"></i> Facebook</button>
-  <button type="button" class="btn btn-icon"><i class="fa fa-twitter"></i> Twitter</button>
-  <button type="button" class="btn btn-icon"><i class="fa fa-linkedin"></i> Linkedin</button>
+  <button type="button" class="btn btn-default"><i class="fa fa-send"></i> alberto@antistatique.net</button>
+  <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> His blog posts</button>
+  <button type="button" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</button>
+  <button type="button" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</button>
+  <button type="button" class="btn btn-default"><i class="fa fa-linkedin"></i> Linkedin</button>
+  <button type="button" class="btn btn-dark"><i class="fa fa-apple"></i> AppStore</button>
 </div>
 <div class="styleguide-padding">
-  <button type="button" class="btn btn-icon"><i class="fa fa-send"></i> alberto@antistatique.net</button>
-  <button type="button" class="btn btn-icon"><i class="fa fa-pencil"></i> His blog posts</button>
-  <button type="button" class="btn btn-icon"><i class="fa fa-facebook"></i> Facebook</button>
-  <button type="button" class="btn btn-icon"><i class="fa fa-twitter"></i> Twitter</button>
-  <button type="button" class="btn btn-icon"><i class="fa fa-linkedin"></i> Linkedin</button>
+  <button type="button" class="btn btn-default"><i class="fa fa-send"></i> alberto@antistatique.net</button>
+  <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> His blog posts</button>
+  <button type="button" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</button>
+  <button type="button" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</button>
+  <button type="button" class="btn btn-dark"><i class="fa fa-apple"></i> AppStore</button>
 </div>
 ```
 
@@ -81,38 +128,6 @@ category: Layout - Buttons
 </p>
 ```
 */
-
-.btn-icon {
-  border-radius: 0;
-  background: none;
-  color: $text-color;
-  text-decoration: none;
-
-  .fa {
-    margin-right: 6px;
-    font-size: 1.2em;
-    margin-bottom: -2px;
-    position: relative;
-    top: 1px;
-  }
-
-  &:hover {
-    color: $link-color;
-    background: $dust;
-
-    .fa {color: $text-color;}
-    .fa.fa-twitter {color: #55acee}
-    .fa.fa-facebook {color: #3b5998}
-    .fa.fa-github {color: #333}
-    .fa.fa-linkedin {color: #0976b4}
-  }
-
-  .bg-foggy & {
-    &:hover {
-      background: $white;
-    }
-  }
-}
 
 
 /*doc
