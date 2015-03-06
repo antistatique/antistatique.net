@@ -1,0 +1,20 @@
+/*doc
+---
+title: Insert
+name: a-insert
+category: Components - Text Layouts
+---
+
+```html_example
+<div class="insert">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel tempore voluptate, voluptatibus corporis quo, repudiandae suscipit blanditiis tenetur magnam? Aperiam quam rem similique debitis saepe reiciendis totam ut voluptatum optio.</p>
+</div>
+```
+
+*/
+
+.insert {
+  padding: 40px 0 25px 0;
+  border-top: 1px solid $hr-border;
+  border-bottom: 1px solid $hr-border;
+}

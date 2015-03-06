@@ -237,30 +237,3 @@ category: Antistatique - Team
 
 */
 
-.team-full {
-  @media only screen and (min-width: $screen-sm-min) {
-    position: relative;
-    width: 100%;
-
-    h1 {
-      margin-bottom: $font-size-base * 2;
-    }
-    h2 {
-      padding-bottom: 53px;
-      border-bottom: 1px solid $midnight-blue-light;
-    }
-
-    .header {
-      position: absolute;
-      width: 100%;
-      top: -175px;
-      img {
-        max-width: 100px;
-      }
-    }
-
-    .content {
-      padding: 188px 0 50px 0;
-    }
-  }
-}
