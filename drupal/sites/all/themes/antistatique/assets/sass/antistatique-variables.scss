@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/**
+ * Custom variables
+ */
+
+$screen-xl-min: 1800px !default;
+$screen-lg-max: $screen-xl-min - 1;
+$transition-duration: 300ms;
+
+@keyframes hover-effect {
+  25% {
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+  }
+  75% {
+    left: 1%;
+    top: 1%;
+    width: 98%;
+    height: 98%;
+  }
+  100% {
+    left: -2%;
+    top: -2%;
+    width: 104%;
+    height: 104%;
+  }
+}
+
+/*doc
+---
+title: Colors
+name: a-colors
+category: Layout - Colors
+---
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#222;"><br><br><br><br><br></div>
+      <pre class="text-center">$gray-darker</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#333;"><br><br><br><br><br></div>
+      <pre class="text-center">$gray-dark</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#555;"><br><br><br><br><br></div>
+      <pre class="text-center">$gray</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#999;"><br><br><br><br><br></div>
+      <pre class="text-center">$gray-light</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#eee;"><br><br><br><br><br></div>
+      <pre class="text-center">$gray-lighter</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#ee2577;"><br><br><br><br><br></div>
+      <pre class="text-center">$brand-primary</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#5cb85c;"><br><br><br><br><br></div>
+      <pre class="text-center">$brand-success</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#7f7f98;"><br><br><br><br><br></div>
+      <pre class="text-center">$brand-info</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#f0ad4e;"><br><br><br><br><br></div>
+      <pre class="text-center">$brand-warning</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#d9534f;"><br><br><br><br><br></div>
+      <pre class="text-center">$brand-danger</pre>
+    </div>
+
+
+  </div>
+</div>
+
+<h1>Antistatique Colors</h1>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#ee2577;width:50%;float:left; style="margin-bottom: 15px;""><br><br><br><br><br></div>
+      <div style="background:#bd226d;width:50%;float:left;"><br><br><br><br><br></div>
+      <pre class="text-center">$pinkstatik[-dark]</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#000031;width:50%;float:left; style="margin-bottom: 15px;""><br><br><br><br><br></div>
+      <div style="background:#7f7f98;width:50%;float:left;"><br><br><br><br><br></div>
+      <pre class="text-center">$midnight-blue[-light]</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#e9efef;"><br><br><br><br><br></div>
+      <pre class="text-center">$dust</pre>
+    </div>
+
+    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div style="background:#fff;"><br><br><br><br><br></div>
+      <pre class="text-center">$white</pre>
+    </div>
+
+  </div>
+</div>
+*/
+
+$pinkstatik: #ee2577; // our branded pink
+$pinkstatik-dark: #bd226d;
+$midnight-blue: #000031;
+$midnight-blue-light: #7f7f98;
+$dust: #e9efef;
+$white: #fff;
+
+$brand-primary-dark: $pinkstatik-dark;

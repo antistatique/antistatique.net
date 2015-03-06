@@ -1,0 +1,29 @@
+// Specific styles for the styleguide only!
+// Will be built into the build/styleguide.css file.
+
+.nav.nav-pills > li > a {
+  padding: 3px 5px;
+}
+
+.exampleOutput {
+  position: relative;
+  padding: 50px 0;
+}
+
+.show-code {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.cortana-footer {
+  margin-top: 80px;
+}
+
+.cortana-content:not(:first-of-type) {
+  h1 {
+    border-top: 1px solid #999;
+    padding-top: 90px;
+    margin-top: 40px;
+  }
+}

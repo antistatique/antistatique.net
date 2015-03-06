@@ -1,0 +1,54 @@
+/**
+ * Background and block styles
+ */
+
+.bg {
+  &-foggy {
+    background: $dust;
+  }
+}
+
+.inverse {
+  background: $text-color;
+  color: $body-bg;
+}
+
+.spacer {
+  height: 65px;
+  &.spacer-xl {height: 120px;}
+  &.spacer-lg {height: 90px;}
+  &.spacer-sm {height: 30px;}
+  &.spacer-xs {height: 15px;}
+  @media only screen and (max-width: $screen-sm-max) {
+    height: 30px;
+    &.spacer-xl {height: 50px;}
+    &.spacer-lg {height: 50px;}
+    &.spacer-sm {height: 20px;}
+    &.spacer-xs {height: 10px;}
+  }
+}
+
+/**
+ * Text helpers
+ */
+
+.text {
+  &-thin {
+    font-weight: 100; // to apply only on big text (due to font-smoothing)
+  }
+  &-md {
+    font-size: $font-size-base;
+    margin-bottom: ceil(($font-size-base / 3));
+  }
+  &-sm {
+    @extend small;
+  }
+  &-xs {
+    font-size: ceil(($font-size-base * 0.7));
+    margin-bottom: ceil(($font-size-base * 0.6));
+  }
+
+  &-dark {
+    color: $text-color;
+  }
+}

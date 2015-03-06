@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/**
+ * Large styling
+ * =============
+ *
+ * We added this to Bootstrap. Mainly for the Teammate single page.
+ *
+ * NOTE:
+ * An element that is visible in screen-lg will also be visible in screen-xl.
+ *
+ *
+ */
+
+@include responsive-invisibility('.visible-xl');
+
+.visible-xl-block,
+.visible-xl-inline,
+.visible-xl-inline-block {
+  display: none !important;
+}
+
+@media (min-width: $screen-xl-min) {
+  @include responsive-visibility('.visible-xl');
+}
+.visible-xl-block {
+  @media (min-width: $screen-xl-min) {
+    display: block !important;
+  }
+}
+.visible-xl-inline {
+  @media (min-width: $screen-xl-min) {
+    display: inline !important;
+  }
+}
+.visible-xl-inline-block {
+  @media (min-width: $screen-xl-min) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $screen-xl-min) {
+  @include responsive-invisibility('.hidden-xl');
+}
