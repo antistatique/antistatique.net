@@ -85,6 +85,8 @@ category: Layout - Buttons
 .btn-icon {
   border-radius: 0;
   background: none;
+  color: $text-color;
+  text-decoration: none;
 
   .fa {
     margin-right: 6px;
