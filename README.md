@@ -24,7 +24,7 @@ $ drush fra
 
 ## Install the styleguide
 
-[View in action](http://antistatique.alwaysdata.net/styleguide)
+[View in action](http://staging.antistatique.net/styleguide)
 
 ```bash
 $ npm install
