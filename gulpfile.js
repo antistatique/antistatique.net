@@ -143,7 +143,7 @@ gulp.task('scripts', function() {
 /**
  * Build Hologram Styleguide
  */
-gulp.task('styleguide', function () {
+gulp.task('styleguide', ['twig'], function () {
   return gulp.src('hologram_config.yml')
     .pipe($.hologram());
 });
