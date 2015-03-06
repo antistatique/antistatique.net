@@ -80,6 +80,13 @@ category: Layout - Buttons
   }
 }
 
+.btn-info {
+  &:hover {
+    color: $white;
+    background: $midnight-blue-light;
+  }
+}
+
 /*doc
 ---
 title: Sizes
