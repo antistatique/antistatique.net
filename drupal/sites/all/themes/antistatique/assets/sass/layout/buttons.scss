@@ -53,6 +53,25 @@ category: Layout - Buttons
 </p>
 ```
 
+## Icon buttons
+
+```html_example
+<div class="bg-foggy styleguide-padding">
+  <button type="button" class="btn btn-icon"><i class="fa fa-send"></i> alberto@antistatique.net</button>
+  <button type="button" class="btn btn-icon"><i class="fa fa-pencil"></i> His blog posts</button>
+  <button type="button" class="btn btn-icon"><i class="fa fa-facebook"></i> Facebook</button>
+  <button type="button" class="btn btn-icon"><i class="fa fa-twitter"></i> Twitter</button>
+  <button type="button" class="btn btn-icon"><i class="fa fa-linkedin"></i> Linkedin</button>
+</div>
+<div class="styleguide-padding">
+  <button type="button" class="btn btn-icon"><i class="fa fa-send"></i> alberto@antistatique.net</button>
+  <button type="button" class="btn btn-icon"><i class="fa fa-pencil"></i> His blog posts</button>
+  <button type="button" class="btn btn-icon"><i class="fa fa-facebook"></i> Facebook</button>
+  <button type="button" class="btn btn-icon"><i class="fa fa-twitter"></i> Twitter</button>
+  <button type="button" class="btn btn-icon"><i class="fa fa-linkedin"></i> Linkedin</button>
+</div>
+```
+
 ## Block buttons
 
 ```html_example
@@ -62,6 +81,36 @@ category: Layout - Buttons
 </p>
 ```
 */
+
+.btn-icon {
+  border-radius: 0;
+  background: none;
+
+  .fa {
+    margin-right: 6px;
+    font-size: 1.2em;
+    margin-bottom: -2px;
+    position: relative;
+    top: 1px;
+  }
+
+  &:hover {
+    color: $link-color;
+    background: $dust;
+
+    .fa {color: $text-color;}
+    .fa.fa-twitter {color: #55acee}
+    .fa.fa-facebook {color: #3b5998}
+    .fa.fa-github {color: #333}
+    .fa.fa-linkedin {color: #0976b4}
+  }
+
+  .bg-foggy & {
+    &:hover {
+      background: $white;
+    }
+  }
+}
 
 
 /*doc
