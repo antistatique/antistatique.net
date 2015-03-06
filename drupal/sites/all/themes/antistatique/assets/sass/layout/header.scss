@@ -37,4 +37,17 @@ category: Layout - Cover
       max-width: 100px;
     }
   }
+  @media only screen and (max-width: $screen-xs-max) {
+    margin-top: 0;
+    h1 { margin-bottom: $font-size-base; }
+    h2 { padding-bottom: $font-size-base; }
+    header {
+      img {
+        max-width: 60px;
+        position: absolute;
+        left: 15px;
+        top: -61px;
+      }
+    }
+  }
 }
