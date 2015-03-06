@@ -1,0 +1,53 @@
+/*doc
+---
+title: Cover Overlap
+name: a-cover-overlap
+category: Layout - Cover
+---
+
+```html_example
+<img class="img-responsive" src="../img/cover_Alberto.jpg" alt="Alberto de dos">
+<div class="cover-overlap">
+  <header class="clearfix">
+    <h1>Alberto Gomez</h1>
+    <img class="img-circle img-responsive img-center" src="../img/team/Round_512_Alberto.png" alt="La bouille d'Alberto">
+    <h2 class="h6">Digital Strategist & Founder</h2>
+  </header>
+</div>
+```
+
+*/
+
+.cover-overlap {
+  margin-top: -175px;
+
+  h1 {
+    margin-bottom: $font-size-base * 2;
+  }
+  h2 {
+    padding-bottom: 38px;
+  }
+
+  header {
+    text-align: center;
+    border-bottom: 1px solid $hr-border;
+    margin-bottom: 50px;
+
+    img {
+      max-width: 100px;
+    }
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    margin-top: 0;
+    h1 { margin-bottom: $font-size-base; }
+    h2 { padding-bottom: $font-size-base; }
+    header {
+      img {
+        max-width: 60px;
+        position: absolute;
+        left: 15px;
+        top: -61px;
+      }
+    }
+  }
+}

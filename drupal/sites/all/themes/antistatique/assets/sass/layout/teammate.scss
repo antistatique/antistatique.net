@@ -215,52 +215,31 @@ category: Antistatique - Team
 ---
 
 ```html_example
-<img class="img-responsive hidden-sm hidden-xs" src="img/cover_Alberto.jpg" alt="Alberto de dos">
-<div class="container-fluid">
-  <article class="team-full">
-    <div class="row header">
-      <div class="col-sm-12 text-center">
-        <h1>Alberto Gomez</h1>
-        <div>
-          <img class="img-circle img-responsive img-center" src="img/team/Round_512_Alberto.png" alt="">
-          <h2 class="h6">Digital Strategist & Founder</h2>
+<img class="img-responsive img-center" src="img/cover_Alberto.jpg" alt="Alberto de dos">
+<div class="bg-foggy">
+  <div class="container-fluid">
+    <article class="team-full cover-overlap">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <header>
+            <h1>Alberto Gomez</h1>
+            <div>
+              <img class="img-circle img-responsive img-center" src="img/team/Round_512_Alberto.png" alt="">
+              <h2 class="h6">Digital Strategist & Founder</h2>
+            </div>
+          </header>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-2 col-sm-offset-5">
+      <div class="row content">
+        <div class="col-sm-8 col-sm-offset-2">
+          <p>Mister one-hundred-percent: 100% Swiss, 100% Colombian, 100% energy and 100% dedicated to communication strategy.<br>His professional experiences are as rich as his sneakers collection. Some are saying that his efficiency in digging music and artists give him the ability to quickly propose the right solutions for your projects... But it means you cannot leave him without an Internet connection for more than 41 minutes! Trust us... We've made some tests!</p>
+          <hr class="hr-lg">
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+  </div>
 </div>
 ```
 
 */
 
-.team-full {
-  @media only screen and (min-width: $screen-sm-min) {
-    position: relative;
-    width: 100%;
-
-    h1 {
-      margin-bottom: $font-size-base * 2;
-    }
-    h2 {
-      padding-bottom: 53px;
-      border-bottom: 1px solid $midnight-blue-light;
-    }
-
-    .header {
-      position: absolute;
-      width: 100%;
-      top: -175px;
-      img {
-        max-width: 100px;
-      }
-    }
-
-    .content {
-      padding: 188px 0 50px 0;
-    }
-  }
-}
