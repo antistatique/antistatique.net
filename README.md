@@ -24,6 +24,8 @@ $ drush fra
 
 ## Install the styleguide
 
+[View in action](http://antistatique.alwaysdata.net/styleguide)
+
 ```bash
 $ npm install
 $ bower install
