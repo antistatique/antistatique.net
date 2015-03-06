@@ -27,6 +27,15 @@ category: Layout - Buttons
 .btn {
   border: 0;
 
+  // fix font alignment to center of button
+  padding-bottom: $padding-base-vertical * (2/3);
+  &-xs {
+    padding-top: $padding-xs-vertical * (5/3);
+    padding-bottom: $padding-xs-vertical * (2/3);
+  }
+  &-sm {padding-bottom: $padding-small-vertical * (2/3);}
+  &-lg {padding-bottom: $padding-large-vertical * (2/3);}
+
   .fa {
     margin-right: 6px;
     font-size: 1.2em;
@@ -44,7 +53,6 @@ category: Layout - Buttons
 }
 
 .btn-default {
-  border-radius: 0;
   background: none;
   color: $text-color;
   text-decoration: none;
@@ -64,7 +72,6 @@ category: Layout - Buttons
 
 .btn-dark {
   background: $midnight-blue;
-  border-radius: 0;
   color: $white;
   font-weight: 600;
   &:hover {
