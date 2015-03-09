@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*doc
+---
+title: Article
+name: a-article-ct
+category: Antistatique - Content Types
+---
+
+| Field | Type | Full | Teaser | Required | Comment |
+|-------|------|:----:|:------:|:--------:|---------|
+| title | text | ✔︎ | ✔︎ | Yes | max 128 caractères |
+| hero-image | image | ✔︎ | ✔︎ | Yes | paysage - min 1500 px de large - random pattern si pas d'upload ou HEX |
+| date | date | ✔︎ | ✔︎ | Yes | auto (publication date) format 26 janvier 2015 / January, 26th 2015 ou 3 days ago pour le teaser |
+| body | body + excerpt | ✔︎ | | Yes |
+| images | image (multiple) | ✔︎ | | | —> Images to insert in body |
+| category | Term Reference (max 3) | ✔︎ | ✔︎ | Yes | basé sur la liste des catégories (read, listen, talk, socialize, etc.) |
+| author | default option | ✔︎ | ✔︎ | Yes | |
+| promoted to front page | default option | | | Yes | |
+
+### To also be displayed
+
+| Thing | Full | Teaser | Comment |
+|-------|:----:|:------:|---------|
+| Comment count | ✔︎ | ✔︎ | based on Disqus |
+| Related articles | ✔︎ | | views to display the different  |
+
+*/

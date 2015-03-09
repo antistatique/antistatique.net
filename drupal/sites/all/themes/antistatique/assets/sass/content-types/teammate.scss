@@ -1,0 +1,40 @@
+/*doc
+---
+title: Teammate
+name: b-teammate-ct
+category: Antistatique - Content Types
+---
+
+Our team is composed with teammates. Yes.
+
+### Fields
+
+| Field | Type | Full | Teaser | Tiny | Required | Comment |
+|-------|------|:----:|:------:|:----:|:--------:|---------|
+| First Name | Text | ✔ | ✔ | ✔ | Yes | |
+| Last Name | Text | ✔ | ✔ | | Yes | |
+| Job Title | Text | ✔ | ✔ | | Yes | |
+| Email | Email | ✔ | | | Yes | |
+| Hero Image | Image | ✔ | | | Yes | |
+| Avatar Image | Image | ✔ | ✔ | ✔ | Yes | |
+| Body + Excerpt | Body | ✔ | | | Yes | Biography (short) |
+| Images | Image (4) | ✔ | | | Yes | see comment #1 below |
+| Links | List text (unlimited) | ✔ | | | | List with service links (Twitter, Github...)|
+| Ping Pong Ranking | Integer | ✔ | | | | |
+| Currently Working | boolean | | | | | If not, will not be displayed, but will stay as article author |
+| Stick at the top | default option | | | | | Alberto + Marc + Gilles at the top! (cf comment #2 below) |
+
+### Comments
+
+- **#1** – First image will be formatted as a big one, two next small Instagram-style, and the fourth is again bigger. [see example](https://projects.invisionapp.com/d/main#/console/1442313/54654724/preview)
+- **#2** – We could create a custom ordering view (cf AISTS) to set the order and have more control over this (Juniors at the end, same jobs together)
+
+### To also be displayed
+
+| Thing | Full | Teaser | Comment |
+|-------|:----:|:------:|---------|
+| Related Projects | ✔︎ | | Based on Main Job |
+| All the teammates | ✔ | | Except current |
+
+
+*/
