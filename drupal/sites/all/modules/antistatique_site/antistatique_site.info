@@ -23,6 +23,7 @@ dependencies[] = custom_breadcrumbs_taxonomy
 dependencies[] = custom_breadcrumbs_views
 dependencies[] = dashboard
 dependencies[] = dblog
+dependencies[] = diff
 dependencies[] = entity
 dependencies[] = entity_translation
 dependencies[] = features
