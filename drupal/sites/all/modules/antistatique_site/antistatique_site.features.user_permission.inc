@@ -661,15 +661,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'translate content'.
-  $permissions['translate content'] = array(
-    'name' => 'translate content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'translation',
-  );
-
   // Exported permission: 'translate interface'.
   $permissions['translate interface'] = array(
     'name' => 'translate interface',
