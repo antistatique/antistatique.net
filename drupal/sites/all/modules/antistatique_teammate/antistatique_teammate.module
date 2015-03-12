@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the antistatique Teammate feature.
+ */
+
+include_once 'antistatique_teammate.features.inc';
