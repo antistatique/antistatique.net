@@ -14,6 +14,7 @@ custom_markdown: bower_components/cortana-two/CustomMarkdownRenderer.rb
 index: README
 
 dependencies:
+  - bower_components/jquery/dist/
   - drupal/sites/all/themes/antistatique/build/js
   - drupal/sites/all/themes/antistatique/build/css
   - drupal/sites/all/themes/antistatique/build/img
@@ -31,6 +32,7 @@ head_tags:
 
 # List all js to include for the styleguide render examples (path from styleguide directory)
 js_include:
+  - 'dist/jquery.min.js'
   - 'js/vendors.min.js'
   - 'js/main.js'
 
