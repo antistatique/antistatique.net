@@ -1,5 +1,8 @@
 Antistatique.net 2015
 =====================
+
+[![Stories in Ready](https://badge.waffle.io/antistatique/antistatique.net.png?label=ready&title=Ready)](http://waffle.io/antistatique/antistatique.net)
+
 Drupal 7 (yes, we tried with D8...)
 
 ## Install Drupal
