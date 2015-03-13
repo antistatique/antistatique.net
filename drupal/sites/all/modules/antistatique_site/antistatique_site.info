@@ -57,7 +57,6 @@ dependencies[] = system
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = title
-dependencies[] = translation
 dependencies[] = update
 dependencies[] = user
 dependencies[] = user_settings_access
