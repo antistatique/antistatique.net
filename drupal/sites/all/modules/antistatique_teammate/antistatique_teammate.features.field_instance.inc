@@ -114,6 +114,85 @@ function antistatique_teammate_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_pingpong_ranking'
+  $field_instances['user-user-field_pingpong_ranking'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 9,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_pingpong_ranking',
+    'label' => 'Pingpong Ranking',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_related_project'
+  $field_instances['user-user-field_related_project'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 8,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_related_project',
+    'label' => 'Related project',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_teammate_body'
   $field_instances['user-user-field_teammate_body'] = array(
     'bundle' => 'user',
@@ -335,6 +414,8 @@ function antistatique_teammate_field_default_field_instances() {
   t('Email');
   t('Firstname');
   t('Lastname');
+  t('Pingpong Ranking');
+  t('Related project');
   t('body');
   t('hero-image');
   t('job_title');

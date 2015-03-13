@@ -59,6 +59,7 @@ function antistatique_teammate_field_group_info() {
       4 => 'field_email',
       5 => 'field_teammate_links',
       6 => 'field_teammate_body',
+      7 => 'field_pingpong_ranking',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -99,6 +100,33 @@ function antistatique_teammate_field_group_info() {
     ),
   );
   $export['group_image|user|user|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_project|user|user|form';
+  $field_group->group_name = 'group_project';
+  $field_group->entity_type = 'user';
+  $field_group->bundle = 'user';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Project',
+    'weight' => '14',
+    'children' => array(
+      0 => 'field_related_project',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-project field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_project|user|user|form'] = $field_group;
 
   return $export;
 }
