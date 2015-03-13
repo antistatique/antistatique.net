@@ -12,6 +12,7 @@ dependencies[] = antistatique_basic_page
 dependencies[] = antistatique_project
 dependencies[] = antistatique_teammate
 dependencies[] = backup_migrate
+dependencies[] = betterlogin
 dependencies[] = block
 dependencies[] = chosen
 dependencies[] = color

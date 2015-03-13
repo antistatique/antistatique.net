@@ -15,7 +15,7 @@ function antistatique_teammate_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Has to be @antistatique.net',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -27,7 +27,7 @@ function antistatique_teammate_field_default_field_instances() {
     ),
     'entity_type' => 'user',
     'field_name' => 'field_email',
-    'label' => 'Email',
+    'label' => 'Displayed Email',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -144,7 +144,7 @@ function antistatique_teammate_field_default_field_instances() {
       'min' => '',
       'prefix' => '',
       'suffix' => '',
-      'user_register_form' => 1,
+      'user_register_form' => 0,
     ),
     'widget' => array(
       'active' => 0,
@@ -178,7 +178,7 @@ function antistatique_teammate_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'user_register_form' => 1,
+      'user_register_form' => 0,
     ),
     'widget' => array(
       'active' => 1,
@@ -214,7 +214,7 @@ function antistatique_teammate_field_default_field_instances() {
       'display_summary' => 1,
       'entity_translation_sync' => FALSE,
       'text_processing' => 1,
-      'user_register_form' => 1,
+      'user_register_form' => 0,
     ),
     'widget' => array(
       'active' => 1,
@@ -295,20 +295,25 @@ function antistatique_teammate_field_default_field_instances() {
       'max_resolution' => '',
       'min_resolution' => '1500x600',
       'title_field' => 0,
-      'user_register_form' => 1,
+      'user_register_form' => 0,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'image',
       'settings' => array(
         'insert' => 0,
-        'insert_absolute' => FALSE,
+        'insert_absolute' => 0,
         'insert_class' => '',
-        'insert_default' => array(
-          0 => 'auto',
-        ),
+        'insert_default' => 'auto',
         'insert_styles' => array(
-          0 => 'auto',
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_large' => 0,
+          'image_medium' => 0,
+          'image_square_thumbnail' => 0,
+          'image_thumbnail' => 0,
+          'link' => 0,
         ),
         'insert_width' => '',
         'preview_image_style' => 'thumbnail',
@@ -394,7 +399,7 @@ function antistatique_teammate_field_default_field_instances() {
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
-      'user_register_form' => 1,
+      'user_register_form' => 0,
       'validate_url' => 1,
     ),
     'widget' => array(
@@ -409,8 +414,9 @@ function antistatique_teammate_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Currently working');
-  t('Email');
+  t('Displayed Email');
   t('Firstname');
+  t('Has to be @antistatique.net');
   t('Job title');
   t('Lastname');
   t('Pingpong Ranking');
