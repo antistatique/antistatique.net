@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Antistatique Banner feature.
- */
-
-include_once 'antistatique_banner.features.inc';
