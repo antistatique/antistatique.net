@@ -21,7 +21,7 @@ function antistatique_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Client',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_year',
       1 => 'field_client',
@@ -54,9 +54,8 @@ function antistatique_project_field_group_info() {
       0 => 'body',
       1 => 'field_images',
       2 => 'field_links',
-      3 => 'field_teammate_hero_image',
-      4 => 'title_field',
-      5 => 'field_paragraphs',
+      3 => 'title_field',
+      4 => 'field_paragraphs',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -73,6 +72,35 @@ function antistatique_project_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_image|node|project|form';
+  $field_group->group_name = 'group_image';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'project';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Images',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_teammate_hero_image',
+      1 => 'field_svg_title',
+      2 => 'field_hero_image_is_dark',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-image field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_image|node|project|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_others|node|project|form';
   $field_group->group_name = 'group_others';
   $field_group->entity_type = 'node';
@@ -81,10 +109,11 @@ function antistatique_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Others',
-    'weight' => '10',
+    'weight' => '5',
     'children' => array(
       0 => 'field_credits',
       1 => 'field_skills',
+      2 => 'path',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -109,7 +138,7 @@ function antistatique_project_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Testimonial',
-    'weight' => '8',
+    'weight' => '4',
     'children' => array(
       0 => 'field_testimonial_avatar',
       1 => 'field_testimonial_name',

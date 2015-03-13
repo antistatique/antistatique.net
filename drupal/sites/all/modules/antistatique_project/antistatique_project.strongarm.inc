@@ -24,6 +24,9 @@ function antistatique_project_strongarm() {
         'language' => array(
           'weight' => '0',
         ),
+        'path' => array(
+          'weight' => '11',
+        ),
       ),
       'display' => array(),
     ),
