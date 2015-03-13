@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Antistatique Articles feature.
- */
-
-include_once 'antistatique_articles.features.inc';

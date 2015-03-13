@@ -25,8 +25,7 @@ function antistatique_site_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_category',
-      2 => 'field_co_author',
-      3 => 'title',
+      2 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

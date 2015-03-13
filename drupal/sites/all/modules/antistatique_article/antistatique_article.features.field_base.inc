@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * antistatique_articles.features.field_base.inc
+ * antistatique_article.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function antistatique_articles_field_default_field_bases() {
+function antistatique_article_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_co_author'
