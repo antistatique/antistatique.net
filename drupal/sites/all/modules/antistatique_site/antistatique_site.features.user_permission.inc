@@ -507,16 +507,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'context_ui',
   );
 
-  // Exported permission: 'create banner content'.
-  $permissions['create banner content'] = array(
-    'name' => 'create banner content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'create blog content'.
   $permissions['create blog content'] = array(
     'name' => 'create blog content',
@@ -555,16 +545,6 @@ function antistatique_site_user_default_permissions() {
       'collaborator' => 'collaborator',
     ),
     'module' => 'path',
-  );
-
-  // Exported permission: 'delete any banner content'.
-  $permissions['delete any banner content'] = array(
-    'name' => 'delete any banner content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'delete any blog content'.
@@ -606,15 +586,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
-  // Exported permission: 'delete own banner content'.
-  $permissions['delete own banner content'] = array(
-    'name' => 'delete own banner content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'node',
-  );
 
   // Exported permission: 'delete own blog content'.
   $permissions['delete own blog content'] = array(
@@ -683,16 +654,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
-  // Exported permission: 'edit any banner content'.
-  $permissions['edit any banner content'] = array(
-    'name' => 'edit any banner content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit any blog content'.
   $permissions['edit any blog content'] = array(
     'name' => 'edit any blog content',
@@ -731,16 +692,6 @@ function antistatique_site_user_default_permissions() {
       'collaborator' => 'collaborator',
     ),
     'module' => 'media',
-  );
-
-  // Exported permission: 'edit own banner content'.
-  $permissions['edit own banner content'] = array(
-    'name' => 'edit own banner content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'edit own blog content'.
@@ -789,15 +740,6 @@ function antistatique_site_user_default_permissions() {
       'collaborator' => 'collaborator',
     ),
     'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'enter banner revision log entry'.
-  $permissions['enter banner revision log entry'] = array(
-    'name' => 'enter banner revision log entry',
-    'roles' => array(
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'override_node_options',
   );
 
   // Exported permission: 'enter blog revision log entry'.
@@ -863,62 +805,6 @@ function antistatique_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'features',
-  );
-
-  // Exported permission: 'override banner authored by option'.
-  $permissions['override banner authored by option'] = array(
-    'name' => 'override banner authored by option',
-    'roles' => array(
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override banner authored on option'.
-  $permissions['override banner authored on option'] = array(
-    'name' => 'override banner authored on option',
-    'roles' => array(
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override banner promote to front page option'.
-  $permissions['override banner promote to front page option'] = array(
-    'name' => 'override banner promote to front page option',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override banner published option'.
-  $permissions['override banner published option'] = array(
-    'name' => 'override banner published option',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override banner revision option'.
-  $permissions['override banner revision option'] = array(
-    'name' => 'override banner revision option',
-    'roles' => array(
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override banner sticky option'.
-  $permissions['override banner sticky option'] = array(
-    'name' => 'override banner sticky option',
-    'roles' => array(
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'override_node_options',
   );
 
   // Exported permission: 'override blog authored by option'.
@@ -1268,12 +1154,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: 'view any unpublished banner content'.
-  $permissions['view any unpublished banner content'] = array(
-    'name' => 'view any unpublished banner content',
-    'roles' => array(),
-    'module' => 'view_unpublished',
-  );
 
   // Exported permission: 'view any unpublished blog content'.
   $permissions['view any unpublished blog content'] = array(
