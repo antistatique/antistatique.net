@@ -28,10 +28,10 @@ function antistatique_teammate_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_email',
     'label' => 'Email',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -62,11 +62,11 @@ function antistatique_teammate_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_firstname',
     'label' => 'Firstname',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -97,11 +97,11 @@ function antistatique_teammate_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_lastname',
     'label' => 'Lastname',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -144,7 +144,7 @@ function antistatique_teammate_field_default_field_instances() {
       'min' => '',
       'prefix' => '',
       'suffix' => '',
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 0,
@@ -216,7 +216,7 @@ function antistatique_teammate_field_default_field_instances() {
       'display_summary' => 1,
       'entity_translation_sync' => FALSE,
       'text_processing' => 1,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -239,7 +239,7 @@ function antistatique_teammate_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'To know if you\'re part of the team',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -297,22 +297,12 @@ function antistatique_teammate_field_default_field_instances() {
       'max_resolution' => '',
       'min_resolution' => '1500x600',
       'title_field' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'insert' => 0,
-        'insert_absolute' => FALSE,
-        'insert_class' => '',
-        'insert_default' => array(
-          0 => 'auto',
-        ),
-        'insert_styles' => array(
-          0 => 'auto',
-        ),
-        'insert_width' => '',
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -326,7 +316,7 @@ function antistatique_teammate_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'What\'s on your business card ?',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -338,12 +328,12 @@ function antistatique_teammate_field_default_field_instances() {
     ),
     'entity_type' => 'user',
     'field_name' => 'field_teammate_job_title',
-    'label' => 'job_title',
-    'required' => 0,
+    'label' => 'Job title',
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -361,7 +351,7 @@ function antistatique_teammate_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'User font awesome syntax for class',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -379,7 +369,7 @@ function antistatique_teammate_field_default_field_instances() {
       'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
-        'configurable_class' => 0,
+        'configurable_class' => 1,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
@@ -396,7 +386,7 @@ function antistatique_teammate_field_default_field_instances() {
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
       'validate_url' => 1,
     ),
     'widget' => array(
@@ -413,12 +403,15 @@ function antistatique_teammate_field_default_field_instances() {
   t('Currently working');
   t('Email');
   t('Firstname');
+  t('Job title');
   t('Lastname');
   t('Pingpong Ranking');
   t('Related project');
+  t('To know if you\'re part of the team');
+  t('User font awesome syntax for class');
+  t('What\'s on your business card ?');
   t('body');
   t('hero-image');
-  t('job_title');
   t('links');
 
   return $field_instances;
