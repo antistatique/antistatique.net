@@ -16,5 +16,11 @@ function antistatique_site_user_default_roles() {
     'weight' => 2,
   );
 
+  // Exported role: collaborator.
+  $roles['collaborator'] = array(
+    'name' => 'collaborator',
+    'weight' => 3,
+  );
+
   return $roles;
 }

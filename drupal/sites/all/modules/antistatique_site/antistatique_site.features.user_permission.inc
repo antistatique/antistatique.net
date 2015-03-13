@@ -15,6 +15,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'admin_menu',
   );
@@ -24,6 +25,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'system',
   );
@@ -62,6 +64,7 @@ function antistatique_site_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'node',
   );
@@ -71,6 +74,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'node',
   );
@@ -116,6 +120,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'user',
   );
@@ -192,6 +197,15 @@ function antistatique_site_user_default_permissions() {
     'module' => 'custom_breadcrumbs',
   );
 
+  // Exported permission: 'administer entity translation'.
+  $permissions['administer entity translation'] = array(
+    'name' => 'administer entity translation',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'entity_translation',
+  );
+
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -249,6 +263,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'administer main-menu menu items',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'menu_admin_per_menu',
   );
@@ -262,11 +277,21 @@ function antistatique_site_user_default_permissions() {
     'module' => 'menu_admin_per_menu',
   );
 
+  // Exported permission: 'administer media'.
+  $permissions['administer media'] = array(
+    'name' => 'administer media',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'media',
+  );
+
   // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'menu',
   );
@@ -314,6 +339,15 @@ function antistatique_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'page_manager',
+  );
+
+  // Exported permission: 'administer paragraphs bundles'.
+  $permissions['administer paragraphs bundles'] = array(
+    'name' => 'administer paragraphs bundles',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'paragraphs',
   );
 
   // Exported permission: 'administer permissions'.
@@ -415,6 +449,15 @@ function antistatique_site_user_default_permissions() {
     'module' => 'role_delegation',
   );
 
+  // Exported permission: 'assign collaborator role'.
+  $permissions['assign collaborator role'] = array(
+    'name' => 'assign collaborator role',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'role_delegation',
+  );
+
   // Exported permission: 'block IP addresses'.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
@@ -447,6 +490,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'user',
   );
@@ -463,7 +507,27 @@ function antistatique_site_user_default_permissions() {
   // Exported permission: 'create blog content'.
   $permissions['create blog content'] = array(
     'name' => 'create blog content',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create page content'.
+  $permissions['create page content'] = array(
+    'name' => 'create page content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create project content'.
+  $permissions['create project content'] = array(
+    'name' => 'create project content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'node',
   );
 
@@ -472,6 +536,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'path',
   );
@@ -479,7 +544,27 @@ function antistatique_site_user_default_permissions() {
   // Exported permission: 'delete any blog content'.
   $permissions['delete any blog content'] = array(
     'name' => 'delete any blog content',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any page content'.
+  $permissions['delete any page content'] = array(
+    'name' => 'delete any page content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any project content'.
+  $permissions['delete any project content'] = array(
+    'name' => 'delete any project content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'node',
   );
 
@@ -495,7 +580,27 @@ function antistatique_site_user_default_permissions() {
   // Exported permission: 'delete own blog content'.
   $permissions['delete own blog content'] = array(
     'name' => 'delete own blog content',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own page content'.
+  $permissions['delete own page content'] = array(
+    'name' => 'delete own page content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own project content'.
+  $permissions['delete own project content'] = array(
+    'name' => 'delete own project content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'node',
   );
 
@@ -504,8 +609,27 @@ function antistatique_site_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'delete terms in category'.
+  $permissions['delete terms in category'] = array(
+    'name' => 'delete terms in category',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in skills'.
+  $permissions['delete terms in skills'] = array(
+    'name' => 'delete terms in skills',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'display drupal links'.
@@ -520,21 +644,109 @@ function antistatique_site_user_default_permissions() {
   // Exported permission: 'edit any blog content'.
   $permissions['edit any blog content'] = array(
     'name' => 'edit any blog content',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit any page content'.
+  $permissions['edit any page content'] = array(
+    'name' => 'edit any page content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any project content'.
+  $permissions['edit any project content'] = array(
+    'name' => 'edit any project content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit media'.
+  $permissions['edit media'] = array(
+    'name' => 'edit media',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'media',
   );
 
   // Exported permission: 'edit own blog content'.
   $permissions['edit own blog content'] = array(
     'name' => 'edit own blog content',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit own page content'.
+  $permissions['edit own page content'] = array(
+    'name' => 'edit own page content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own project content'.
+  $permissions['edit own project content'] = array(
+    'name' => 'edit own project content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit terms in category'.
+  $permissions['edit terms in category'] = array(
+    'name' => 'edit terms in category',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in skills'.
+  $permissions['edit terms in skills'] = array(
+    'name' => 'edit terms in skills',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'enter blog revision log entry'.
   $permissions['enter blog revision log entry'] = array(
     'name' => 'enter blog revision log entry',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter page revision log entry'.
+  $permissions['enter page revision log entry'] = array(
+    'name' => 'enter page revision log entry',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter project revision log entry'.
+  $permissions['enter project revision log entry'] = array(
+    'name' => 'enter project revision log entry',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'override_node_options',
   );
 
@@ -543,6 +755,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'flush caches',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'admin_menu',
   );
@@ -554,6 +767,16 @@ function antistatique_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'import media'.
+  $permissions['import media'] = array(
+    'name' => 'import media',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'media',
   );
 
   // Exported permission: 'manage features'.
@@ -568,42 +791,162 @@ function antistatique_site_user_default_permissions() {
   // Exported permission: 'override blog authored by option'.
   $permissions['override blog authored by option'] = array(
     'name' => 'override blog authored by option',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'override_node_options',
   );
 
   // Exported permission: 'override blog authored on option'.
   $permissions['override blog authored on option'] = array(
     'name' => 'override blog authored on option',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'override_node_options',
   );
 
   // Exported permission: 'override blog promote to front page option'.
   $permissions['override blog promote to front page option'] = array(
     'name' => 'override blog promote to front page option',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'override_node_options',
   );
 
   // Exported permission: 'override blog published option'.
   $permissions['override blog published option'] = array(
     'name' => 'override blog published option',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'override_node_options',
   );
 
   // Exported permission: 'override blog revision option'.
   $permissions['override blog revision option'] = array(
     'name' => 'override blog revision option',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'override_node_options',
   );
 
   // Exported permission: 'override blog sticky option'.
   $permissions['override blog sticky option'] = array(
     'name' => 'override blog sticky option',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page authored by option'.
+  $permissions['override page authored by option'] = array(
+    'name' => 'override page authored by option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page authored on option'.
+  $permissions['override page authored on option'] = array(
+    'name' => 'override page authored on option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page promote to front page option'.
+  $permissions['override page promote to front page option'] = array(
+    'name' => 'override page promote to front page option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page published option'.
+  $permissions['override page published option'] = array(
+    'name' => 'override page published option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page revision option'.
+  $permissions['override page revision option'] = array(
+    'name' => 'override page revision option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page sticky option'.
+  $permissions['override page sticky option'] = array(
+    'name' => 'override page sticky option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override project authored by option'.
+  $permissions['override project authored by option'] = array(
+    'name' => 'override project authored by option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override project authored on option'.
+  $permissions['override project authored on option'] = array(
+    'name' => 'override project authored on option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override project promote to front page option'.
+  $permissions['override project promote to front page option'] = array(
+    'name' => 'override project promote to front page option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override project published option'.
+  $permissions['override project published option'] = array(
+    'name' => 'override project published option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override project revision option'.
+  $permissions['override project revision option'] = array(
+    'name' => 'override project revision option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override project sticky option'.
+  $permissions['override project sticky option'] = array(
+    'name' => 'override project sticky option',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'override_node_options',
   );
 
@@ -639,6 +982,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'node',
   );
@@ -648,6 +992,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'search content',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'search',
   );
@@ -661,13 +1006,54 @@ function antistatique_site_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'toggle field translatability'.
+  $permissions['toggle field translatability'] = array(
+    'name' => 'toggle field translatability',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'entity_translation',
+  );
+
+  // Exported permission: 'translate any entity'.
+  $permissions['translate any entity'] = array(
+    'name' => 'translate any entity',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'entity_translation',
+  );
+
+  // Exported permission: 'translate content'.
+  $permissions['translate content'] = array(
+    'name' => 'translate content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'translation',
+  );
+
   // Exported permission: 'translate interface'.
   $permissions['translate interface'] = array(
     'name' => 'translate interface',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'locale',
+  );
+
+  // Exported permission: 'translate node entities'.
+  $permissions['translate node entities'] = array(
+    'name' => 'translate node entities',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'entity_translation',
   );
 
   // Exported permission: 'use advanced search'.
@@ -675,6 +1061,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'use advanced search',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'search',
   );
@@ -713,6 +1100,7 @@ function antistatique_site_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'filter',
   );
@@ -722,6 +1110,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'use text format full_html',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'filter',
   );
@@ -729,7 +1118,9 @@ function antistatique_site_user_default_permissions() {
   // Exported permission: 'view any unpublished blog content'.
   $permissions['view any unpublished blog content'] = array(
     'name' => 'view any unpublished blog content',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'view_unpublished',
   );
 
@@ -738,8 +1129,39 @@ function antistatique_site_user_default_permissions() {
     'name' => 'view any unpublished content',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished page content'.
+  $permissions['view any unpublished page content'] = array(
+    'name' => 'view any unpublished page content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view any unpublished project content'.
+  $permissions['view any unpublished project content'] = array(
+    'name' => 'view any unpublished project content',
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'view_unpublished',
+  );
+
+  // Exported permission: 'view media'.
+  $permissions['view media'] = array(
+    'name' => 'view media',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'media',
   );
 
   // Exported permission: 'view own unpublished content'.
@@ -747,6 +1169,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'node',
   );
@@ -756,6 +1179,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'node',
   );
@@ -765,6 +1189,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'view the administration theme',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'system',
   );
