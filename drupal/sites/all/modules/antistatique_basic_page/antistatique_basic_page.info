@@ -10,6 +10,7 @@ dependencies[] = field_group
 dependencies[] = image
 dependencies[] = list
 dependencies[] = media
+dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text

@@ -141,7 +141,11 @@ function antistatique_project_field_default_field_instances() {
   // Exported field_instance: 'node-project-field_hero_image_is_dark'
   $field_instances['node-project-field_hero_image_is_dark'] = array(
     'bundle' => 'project',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -162,7 +166,7 @@ function antistatique_project_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_hero_image_is_dark',
     'label' => 'Hero image is dark',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -487,8 +491,15 @@ function antistatique_project_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'media',
       'settings' => array(
+        'allowed_schemes' => array(
+          0 => 'public',
+          1 => 'private',
+        ),
+        'allowed_types' => array(
+          0 => 'image',
+        ),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -507,7 +518,7 @@ function antistatique_project_field_default_field_instances() {
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'media_generic',
       'weight' => -4,
     ),
   );
