@@ -24,8 +24,8 @@ function antistatique_article_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'body',
-      1 => 'field_teammate_hero_image',
-      2 => 'field_images',
+      1 => 'field_images',
+      2 => 'field_teammate_hero_image',
       3 => 'title_field',
     ),
     'format_type' => 'tab',

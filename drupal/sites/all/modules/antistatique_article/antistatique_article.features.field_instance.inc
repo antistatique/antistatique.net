@@ -79,15 +79,16 @@ function antistatique_article_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_category',
     'label' => 'Category',
-    'required' => FALSE,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => '',
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
       'weight' => 3,
@@ -221,8 +222,8 @@ function antistatique_article_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_teammate_hero_image',
-    'label' => 'hero-image',
-    'required' => 0,
+    'label' => 'Hero-image',
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -243,6 +244,7 @@ function antistatique_article_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'audio' => 0,
           'default' => 0,
           'image' => 'image',
@@ -303,9 +305,9 @@ function antistatique_article_field_default_field_instances() {
   t('Body');
   t('Category');
   t('Co-Author');
+  t('Hero-image');
   t('Images');
   t('Title');
-  t('hero-image');
 
   return $field_instances;
 }
