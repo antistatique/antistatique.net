@@ -160,7 +160,7 @@ function antistatique_teammate_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Your prefered project you worked on',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -178,17 +178,15 @@ function antistatique_teammate_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'options',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'entityreference_autocomplete_tags',
+      'type' => 'options_select',
       'weight' => 11,
     ),
   );
@@ -410,6 +408,7 @@ function antistatique_teammate_field_default_field_instances() {
   t('To know if you\'re part of the team');
   t('User font awesome syntax for class');
   t('What\'s on your business card ?');
+  t('Your prefered project you worked on');
   t('body');
   t('hero-image');
   t('links');
