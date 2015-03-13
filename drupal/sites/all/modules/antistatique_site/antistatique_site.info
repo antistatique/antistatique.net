@@ -9,6 +9,7 @@ dependencies[] = admin_menu_source
 dependencies[] = adminimal_admin_menu
 dependencies[] = antistatique_articles
 dependencies[] = antistatique_basic_page
+dependencies[] = antistatique_project
 dependencies[] = antistatique_teammate
 dependencies[] = backup_migrate
 dependencies[] = block
