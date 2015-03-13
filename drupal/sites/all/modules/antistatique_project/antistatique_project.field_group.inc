@@ -84,6 +84,7 @@ function antistatique_project_field_group_info() {
     'weight' => '10',
     'children' => array(
       0 => 'field_credits',
+      1 => 'field_skills',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
