@@ -20,7 +20,7 @@ function antistatique_site_locale_default_languages() {
     'plurals' => 0,
     'formula' => '',
     'domain' => '',
-    'prefix' => '',
+    'prefix' => 'en',
     'weight' => 0,
   );
   // Exported language: fr.

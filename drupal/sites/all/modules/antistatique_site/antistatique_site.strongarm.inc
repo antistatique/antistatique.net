@@ -61,15 +61,15 @@ function antistatique_site_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'language_default';
   $strongarm->value = (object) array(
-    'language' => 'en',
-    'name' => 'English',
-    'native' => 'English',
+    'language' => 'fr',
+    'name' => 'French',
+    'native' => 'Français',
     'direction' => '0',
     'enabled' => 1,
     'plurals' => '0',
     'formula' => '',
     'domain' => '',
-    'prefix' => '',
+    'prefix' => 'fr',
     'weight' => '0',
     'javascript' => '',
   );
