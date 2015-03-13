@@ -1,4 +1,4 @@
-name = antistatique_site
+name = Antistatique Site
 description = Main feature module
 core = 7.x
 package = Features
@@ -7,7 +7,9 @@ project = antistatique_site
 dependencies[] = admin_menu
 dependencies[] = admin_menu_source
 dependencies[] = adminimal_admin_menu
+dependencies[] = antistatique_articles
 dependencies[] = antistatique_basic_page
+dependencies[] = antistatique_teammate
 dependencies[] = backup_migrate
 dependencies[] = block
 dependencies[] = blog
