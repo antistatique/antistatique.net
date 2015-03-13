@@ -45,6 +45,7 @@ dependencies[] = filter
 dependencies[] = help
 dependencies[] = image
 dependencies[] = insert
+dependencies[] = jquery_update
 dependencies[] = link
 dependencies[] = list
 dependencies[] = locale
