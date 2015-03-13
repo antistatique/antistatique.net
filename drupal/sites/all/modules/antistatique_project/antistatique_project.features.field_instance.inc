@@ -56,6 +56,47 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-project-field_client'
+  $field_instances['node-project-field_client'] = array(
+    'bundle' => 'project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_client',
+    'label' => 'Client',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-project-field_company_logo'
   $field_instances['node-project-field_company_logo'] = array(
     'bundle' => 'project',
@@ -111,7 +152,7 @@ function antistatique_project_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -152,7 +193,7 @@ function antistatique_project_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -321,6 +362,52 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-project-field_paragraphs'
+  $field_instances['node-project-field_paragraphs'] = array(
+    'bundle' => 'project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_paragraphs',
+    'label' => 'Paragraphs',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(),
+      'bundle_weights' => array(),
+      'default_edit_mode' => 'open',
+      'entity_translation_sync' => FALSE,
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-project-field_skills'
   $field_instances['node-project-field_skills'] = array(
     'bundle' => 'project',
@@ -351,13 +438,12 @@ function antistatique_project_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'options_select',
       'weight' => 9,
     ),
   );
@@ -388,7 +474,7 @@ function antistatique_project_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_teammate_hero_image',
     'label' => 'Hero Image',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
@@ -598,7 +684,7 @@ function antistatique_project_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_year',
     'label' => 'Year',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
@@ -669,6 +755,7 @@ function antistatique_project_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Client');
   t('Company Logo');
   t('Company Name');
   t('Credits');
@@ -676,6 +763,7 @@ function antistatique_project_field_default_field_instances() {
   t('Images');
   t('Link(s)');
   t('Link(s) where this project can be viewed.');
+  t('Paragraphs');
   t('Skills');
   t('Testimonial Avatar');
   t('Testimonial Name');

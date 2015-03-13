@@ -4,7 +4,6 @@ package = Features
 version = 7.x-1.0
 project = antistatique_basic_page
 dependencies[] = antistatique_site
-dependencies[] = ctools
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = image

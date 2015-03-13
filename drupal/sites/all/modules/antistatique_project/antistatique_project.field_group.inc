@@ -26,6 +26,7 @@ function antistatique_project_field_group_info() {
       0 => 'field_company_name',
       1 => 'field_company_logo',
       2 => 'field_year',
+      3 => 'field_client',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -57,6 +58,7 @@ function antistatique_project_field_group_info() {
       2 => 'field_teammate_hero_image',
       3 => 'field_links',
       4 => 'field_images',
+      5 => 'field_paragraphs',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

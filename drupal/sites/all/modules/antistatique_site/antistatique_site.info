@@ -55,6 +55,7 @@ dependencies[] = number
 dependencies[] = options
 dependencies[] = override_node_options
 dependencies[] = page_manager
+dependencies[] = paragraphs
 dependencies[] = path
 dependencies[] = rdf
 dependencies[] = role_delegation
