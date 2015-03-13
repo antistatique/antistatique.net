@@ -14,6 +14,7 @@ dependencies[] = antistatique_teammate
 dependencies[] = backup_migrate
 dependencies[] = block
 dependencies[] = blog
+dependencies[] = chosen
 dependencies[] = color
 dependencies[] = context
 dependencies[] = context_admin
