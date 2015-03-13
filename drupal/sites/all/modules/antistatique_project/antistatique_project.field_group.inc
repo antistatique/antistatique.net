@@ -23,10 +23,8 @@ function antistatique_project_field_group_info() {
     'label' => 'Client',
     'weight' => '2',
     'children' => array(
-      0 => 'field_company_name',
-      1 => 'field_company_logo',
-      2 => 'field_year',
-      3 => 'field_client',
+      0 => 'field_year',
+      1 => 'field_client',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -54,10 +52,10 @@ function antistatique_project_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'body',
-      1 => 'title_field',
-      2 => 'field_teammate_hero_image',
-      3 => 'field_links',
-      4 => 'field_images',
+      1 => 'field_images',
+      2 => 'field_links',
+      3 => 'field_teammate_hero_image',
+      4 => 'title_field',
       5 => 'field_paragraphs',
     ),
     'format_type' => 'tab',
@@ -113,9 +111,10 @@ function antistatique_project_field_group_info() {
     'label' => 'Testimonial',
     'weight' => '8',
     'children' => array(
-      0 => 'field_testimonial_name',
-      1 => 'field_testimonial_quote',
-      2 => 'field_testimonial_avatar',
+      0 => 'field_testimonial_avatar',
+      1 => 'field_testimonial_name',
+      2 => 'field_testimonial_quote',
+      3 => 'field_testimonial_position',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
