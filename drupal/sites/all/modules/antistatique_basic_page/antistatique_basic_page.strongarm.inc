@@ -35,7 +35,10 @@ function antistatique_basic_page_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'language' => array(
-          'weight' => '2',
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '4',
         ),
       ),
       'display' => array(),
