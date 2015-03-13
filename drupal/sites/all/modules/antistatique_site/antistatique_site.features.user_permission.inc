@@ -97,6 +97,66 @@ function antistatique_site_user_default_permissions() {
     'module' => 'dashboard',
   );
 
+  // Exported permission: 'access environment indicator'.
+  $permissions['access environment indicator'] = array(
+    'name' => 'access environment indicator',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator default_environment'.
+  $permissions['access environment indicator default_environment'] = array(
+    'name' => 'access environment indicator default_environment',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator dev_environment'.
+  $permissions['access environment indicator dev_environment'] = array(
+    'name' => 'access environment indicator dev_environment',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator overwritten_environment'.
+  $permissions['access environment indicator overwritten_environment'] = array(
+    'name' => 'access environment indicator overwritten_environment',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator prod'.
+  $permissions['access environment indicator prod'] = array(
+    'name' => 'access environment indicator prod',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access environment indicator staging_environment'.
+  $permissions['access environment indicator staging_environment'] = array(
+    'name' => 'access environment indicator staging_environment',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'environment_indicator',
+  );
+
   // Exported permission: 'access site in maintenance mode'.
   $permissions['access site in maintenance mode'] = array(
     'name' => 'access site in maintenance mode',
@@ -205,6 +265,15 @@ function antistatique_site_user_default_permissions() {
       'collaborator' => 'collaborator',
     ),
     'module' => 'entity_translation',
+  );
+
+  // Exported permission: 'administer environment indicator settings'.
+  $permissions['administer environment indicator settings'] = array(
+    'name' => 'administer environment indicator settings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'environment_indicator',
   );
 
   // Exported permission: 'administer features'.

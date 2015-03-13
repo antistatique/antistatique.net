@@ -17,7 +17,7 @@ function antistatique_site_default_environment_indicator_environment() {
   $environment->name = 'Development';
   $environment->regexurl = '.*\\.dev';
   $environment->settings = array(
-    'color' => '#aa3333',
+    'color' => '#202020',
     'text_color' => '#ffffff',
     'weight' => '1',
     'position' => 'top',
@@ -34,7 +34,7 @@ function antistatique_site_default_environment_indicator_environment() {
   $environment->settings = array(
     'color' => '#d40b6b',
     'text_color' => '#ffffff',
-    'weight' => '2',
+    'weight' => '3',
     'position' => 'top',
     'fixed' => 0,
   );
@@ -45,11 +45,11 @@ function antistatique_site_default_environment_indicator_environment() {
   $environment->api_version = 1;
   $environment->machine = 'staging_environment';
   $environment->name = 'Staging';
-  $environment->regexurl = 'staging\\..*$';
+  $environment->regexurl = 'staging\\.antistatique\\.net';
   $environment->settings = array(
-    'color' => '#0ba1d4',
+    'color' => '#298DEF',
     'text_color' => '#ffffff',
-    'weight' => '3',
+    'weight' => '2',
     'position' => 'top',
     'fixed' => 0,
   );
