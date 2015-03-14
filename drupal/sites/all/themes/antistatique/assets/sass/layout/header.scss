@@ -6,7 +6,9 @@ category: Layout - Cover
 ---
 
 ```html_example
-<img class="img-responsive" src="../img/cover_Alberto.jpg" alt="Alberto de dos">
+<div class="img-hero" style="background-image:url('img/cover_Alberto.jpg')">
+
+</div>
 <div class="cover-overlap">
   <header class="clearfix">
     <h1>Alberto Gomez</h1>
@@ -49,5 +51,38 @@ category: Layout - Cover
         top: -61px;
       }
     }
+  }
+}
+
+
+
+.img-hero{
+  min-height: 600px;
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: min-height ease-in-out 0.3s;
+  @media only screen and (min-width: $screen-xl-min) {
+    min-height: 1000px;
+  }
+  @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+    min-height: 800px;
+  }
+  @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    min-height: 600px;
+  }
+  @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    min-height: 400px;
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    min-height: 200px;
+  }
+  @media only screen and (max-height: 400px) {
+    min-height: 200px;
+  }
+  @media only screen and (max-height: 800px) and (min-height: 401px) {
+    min-height: 400px;
+  }
+  @media only screen and (max-height: 1000px) and (min-height: 801px) {
+    min-height: 600px;
   }
 }

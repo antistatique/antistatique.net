@@ -93,7 +93,7 @@ category: Antistatique - Team
 
   .team-avatar {
     position: relative;
-    display: inline-block;
+    display: block;
     &:before {
       content: '';
       width: 100%;
@@ -215,7 +215,9 @@ category: Antistatique - Team
 ---
 
 ```html_example
-<img class="img-responsive img-center" src="img/cover_Alberto.jpg" alt="Alberto de dos">
+<div class="img-hero" style="background-image:url('img/cover_Alberto.jpg')">
+
+</div>
 <div class="bg-foggy">
   <div class="container-fluid">
     <article class="team-full cover-overlap">
