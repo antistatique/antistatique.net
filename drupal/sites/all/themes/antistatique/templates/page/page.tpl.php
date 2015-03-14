@@ -154,7 +154,6 @@
 
   <?php if (!empty($page['page_bottom'])): ?>
     <div class="page-bottom">
-      <?php print $messages; ?>
       <?php print render($page['page_bottom']); ?>
     </div>
   <?php endif; ?>
