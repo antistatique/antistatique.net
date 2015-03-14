@@ -430,6 +430,15 @@ function antistatique_site_user_default_permissions() {
     'module' => 'paragraphs',
   );
 
+  // Exported permission: 'administer pathauto'.
+  $permissions['administer pathauto'] = array(
+    'name' => 'administer pathauto',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'pathauto',
+  );
+
   // Exported permission: 'administer permissions'.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
@@ -824,6 +833,15 @@ function antistatique_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'notify of path changes'.
+  $permissions['notify of path changes'] = array(
+    'name' => 'notify of path changes',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'pathauto',
   );
 
   // Exported permission: 'override page authored by option'.
