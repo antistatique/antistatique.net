@@ -93,6 +93,7 @@ features[filter][] = filtered_html
 features[filter][] = full_html
 features[filter][] = markdown
 features[filter][] = plain_text
+features[image][] = hero-image
 features[language][] = en
 features[language][] = fr
 features[menu_custom][] = features
