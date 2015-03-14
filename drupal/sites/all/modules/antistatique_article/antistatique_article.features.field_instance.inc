@@ -63,7 +63,7 @@ function antistatique_article_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -103,7 +103,7 @@ function antistatique_article_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
@@ -149,7 +149,7 @@ function antistatique_article_field_default_field_instances() {
     'description' => 'Tick if your hero image is dark (we\'ll set white text for the header)',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -186,7 +186,7 @@ function antistatique_article_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
@@ -330,7 +330,7 @@ function antistatique_article_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
