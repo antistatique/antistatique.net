@@ -1,6 +1,22 @@
 // Specific styles for the styleguide only!
 // Will be built into the build/styleguide.css file.
 
+.header {
+  .navbar-fixed-top {
+    background: white;
+  }
+  .navbar-nav>li>a {
+    padding: 10px;
+  }
+  .navbar-brand {
+    padding: 11px 15px 11px 0;
+  }
+}
+
+.navbar>.container .navbar-brand {
+  margin-left: 0;
+}
+
 .nav.nav-pills > li > a {
   padding: 3px 5px;
 }
@@ -23,7 +39,7 @@
 h1.styleguide {
   border-top: 1px solid #999;
   padding-top: 90px;
-  margin-top: 40px;
+  margin-top: 0;
 }
 
 table.styleguide {
