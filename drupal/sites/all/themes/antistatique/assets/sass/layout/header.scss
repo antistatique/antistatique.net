@@ -83,11 +83,34 @@ category: Layout - Cover
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(to bottom, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
     color: $white;
     padding-top: 2em;
     padding-bottom: 0.4em;
     margin-bottom: 0;
+    z-index: 999;
+    @media only screen and (min-width: $screen-sm-min) {
+      background: linear-gradient(to bottom, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
+    }
+  }
+  &:before {
+    content: '';
+    background: linear-gradient(to top, transparentize($white, 1) 0%, transparentize($white, 0.2) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25%;
+    width: 100%;
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    &:after {
+      content: '';
+      background: linear-gradient(to bottom, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 25%;
+      width: 100%;
+    }
   }
   .img-svg-title{
     position: absolute;

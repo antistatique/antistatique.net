@@ -36,6 +36,12 @@ category: Components - Navbar
 ```
 */
 
+.header {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+}
+
 .navbar-brand {
   padding: 15px 0;
   @media only screen and (min-width: $screen-sm-min) {

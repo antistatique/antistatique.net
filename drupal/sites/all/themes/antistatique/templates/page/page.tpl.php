@@ -81,7 +81,7 @@
   </div>
 <?php endif; ?>
 
-<header id="navbar" role="banner">
+<header id="navbar" role="banner" class="header">
   <div class="container">
     <div class="navbar navbar-default">
       <div class="navbar-header">
@@ -126,11 +126,11 @@
       <?php endif; ?>
 
     </div>
+    <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
   </div>
 </header>
 
 <header role="banner" id="page-header">
-  <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
   <?php print render($page['header']); ?>
 </header> <!-- /#page-header -->
 
