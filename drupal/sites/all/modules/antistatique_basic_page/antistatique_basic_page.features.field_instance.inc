@@ -172,6 +172,56 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_paragraphs'
+  $field_instances['node-page-field_paragraphs'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_paragraphs',
+    'label' => 'Paragraphs',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'image_aside' => -1,
+      ),
+      'bundle_weights' => array(
+        'image_aside' => 2,
+      ),
+      'default_edit_mode' => 'open',
+      'entity_translation_sync' => FALSE,
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-page-field_svg_title'
   $field_instances['node-page-field_svg_title'] = array(
     'bundle' => 'page',
@@ -446,6 +496,7 @@ function antistatique_basic_page_field_default_field_instances() {
   t('Description');
   t('Hero image is dark');
   t('Name');
+  t('Paragraphs');
   t('SVG title');
   t('Title');
   t('hero-image');

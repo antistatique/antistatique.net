@@ -55,7 +55,8 @@ function antistatique_basic_page_field_group_info() {
       0 => 'body',
       1 => 'field_images',
       2 => 'title_field',
-      3 => 'path',
+      3 => 'field_paragraphs',
+      4 => 'path',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
