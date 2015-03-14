@@ -1,0 +1,12 @@
+name = "Migrate from Antistatique Drupal8 "
+description = "Module to migrate our old articles inserted in D8 to Drupal 7"
+package = "Migration"
+core = 7.x
+dependencies[] = migrate
+
+
+#  include the files that contain your Migrate classes
+files[] = antistatique_migrate.migrate.inc
+files[] = user.inc
+files[] = gallery.inc
+files[] = roles.inc
