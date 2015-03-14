@@ -36,7 +36,46 @@ category: Components - Navbar
 ```
 */
 
+.navbar-brand {
+  padding: 15px 0;
+  @media only screen and (min-width: $screen-sm-min) {
+    padding: 44px 10px 0 0;
+  }
+  @media only screen and (min-width: $screen-md-min) {
+    margin-right: 20px;
+    padding: 44px 15px 44px 0;
+  }
+  img {
+    width: 40px;
+    @media only screen and (min-width: $screen-md-min) {
+      width: 165px;
+    }
+    max-height: 31px;
+  }
+}
 
+.navbar {
+  font-weight: 700;
+  @media only screen and (max-width: $screen-xs-max) {
+    margin: 20px 0 20px 20px;
+  }
+  @media only screen and (min-width: $screen-sm-min) {
+    border-bottom: 1px solid $midnight-blue-light;
+  }
+}
+.navbar-default .navbar-nav {
+  > li {
+    > a {
+      padding-bottom: 35px;
+    }
+  }
+}
+
+.nav {
+  > .btn {
+    margin-top: 44px;
+  }
+}
 
 /*doc
 ---

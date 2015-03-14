@@ -13,6 +13,10 @@
   color: $body-bg;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .spacer {
   height: 65px;
   &.spacer-xl {height: 120px;}

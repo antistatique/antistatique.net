@@ -73,25 +73,27 @@
  * @ingroup themeable
  */
 ?>
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="<?php print $container_class; ?>">
+<header id="navbar" role="banner" class="container">
+  <div class="navbar navbar-default">
     <div class="navbar-header">
       <?php if ($logo): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        <a class="logo navbar-btn navbar-brand pull-left hidden-xs hidden-sm" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+          <img src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/img/logo.svg" onerror="this.onerror=null; this.src='<?php print $logo; ?>'" alt="<?php if (!empty($site_name)): print $site_name; endif; ?>" />
         </a>
-      <?php endif; ?>
-
-      <?php if (!empty($site_name)): ?>
-        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+        <a class="logo navbar-btn navbar-brand pull-left visible-xs visible-sm" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+          <img src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/img/A-logo.svg" onerror="this.onerror=null; this.src='/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/img/A-logo.png'" alt="<?php if (!empty($site_name)): print $site_name; endif; ?>" />
+        </a>
       <?php endif; ?>
 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <div class="inline-block">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </div>
+        <?php print t('Menu'); ?>
       </button>
     </div>
 
@@ -108,8 +110,12 @@
             <?php print render($page['navigation']); ?>
           <?php endif; ?>
         </nav>
+        <div class="nav navbar-right">
+          <a href="/contact" class="btn btn-primary"><?php print t('Contact Us'); ?></a>
+        </div>
       </div>
     <?php endif; ?>
+
   </div>
 </header>
 

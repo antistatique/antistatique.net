@@ -26,6 +26,7 @@ category: Layout - Buttons
 
 .btn {
   border: 0;
+  text-decoration: none;
 
   // fix font alignment to center of button
   padding-bottom: $padding-base-vertical * (2/3);
@@ -55,7 +56,6 @@ category: Layout - Buttons
 .btn-default {
   background: none;
   color: $text-color;
-  text-decoration: none;
 
   &:hover {
     .fa {color: $text-color;}
