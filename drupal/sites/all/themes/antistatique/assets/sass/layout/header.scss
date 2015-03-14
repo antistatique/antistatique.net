@@ -6,12 +6,12 @@ category: Layout - Cover
 ---
 
 ```html_example
-<div class="img-hero" style="background-image:url('img/cover_Alberto.jpg')">
-
+<div class="img-hero teammate-hero" style="background-image:url('img/cover_Alberto.jpg')">
+  <img src="../img/meet_the_team.svg" alt="" class="img-svg-title">
+  <h1>Alberto Gomez</h1>
 </div>
 <div class="cover-overlap">
   <header class="clearfix">
-    <h1>Alberto Gomez</h1>
     <img class="img-circle img-responsive img-center" src="../img/team/Round_512_Alberto.png" alt="La bouille d'Alberto">
     <h2 class="h6">Digital Strategist & Founder</h2>
   </header>
@@ -21,7 +21,7 @@ category: Layout - Cover
 */
 
 .cover-overlap {
-  margin-top: -175px;
+  margin-top: -50px;
 
   h1 {
     margin-bottom: $font-size-base * 2;
@@ -61,6 +61,22 @@ category: Layout - Cover
   background-size: cover;
   background-position: 50% 50%;
   transition: min-height ease-in-out 0.3s;
+  position: relative;
+  h1{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.3) 100%);
+    color: $white;
+    padding-top: 1em;
+    padding-bottom: 0.4em;
+    margin-bottom: 0;
+  }
+  .img-svg-title{
+    position: absolute;
+    bottom: 30%;
+  }
   @media only screen and (min-width: $screen-xl-min) {
     min-height: 1000px;
   }
@@ -84,5 +100,10 @@ category: Layout - Cover
   }
   @media only screen and (max-height: 1000px) and (min-height: 801px) {
     min-height: 600px;
+  }
+}
+.teammate-hero{
+  h1{
+    padding-bottom: 80px;
   }
 }

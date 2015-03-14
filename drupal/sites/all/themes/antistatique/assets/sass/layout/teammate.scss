@@ -215,8 +215,8 @@ category: Antistatique - Team
 ---
 
 ```html_example
-<div class="img-hero" style="background-image:url('img/cover_Alberto.jpg')">
-
+<div class="img-hero teammate-hero" style="background-image:url('img/cover_Alberto.jpg')">
+  <h1>Alberto Gomez</h1>
 </div>
 <div class="bg-foggy">
   <div class="container-fluid">
@@ -224,7 +224,7 @@ category: Antistatique - Team
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <header>
-            <h1>Alberto Gomez</h1>
+
             <div>
               <img class="img-circle img-responsive img-center" src="img/team/Round_512_Alberto.png" alt="">
               <h2 class="h6">Digital Strategist & Founder</h2>
