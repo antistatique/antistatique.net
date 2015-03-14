@@ -82,11 +82,11 @@
 hide($content['comments']);
 hide($content['links']);
 hide($content['field_svg_title']);
-hide($content['field_hero_image']);
+hide($content['field_teammate_hero_image']);
 if (!empty($content['field_hero_image_is_dark'])) {
   hide($content['field_hero_image_is_dark']);
 }
-$file_hero_image = file_load($node->field_hero_image['und'][0]['fid']);
+$file_hero_image = file_load($node->field_teammate_hero_image['und'][0]['fid']);
 ?>
 
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix "<?php print $attributes; ?>>
