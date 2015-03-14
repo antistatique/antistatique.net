@@ -74,10 +74,15 @@
  */
 ?>
 
-<?php if (!empty($page['page_top']) || !empty($messages)): ?>
+<?php if (!empty($page['page_top']) || !empty($messages || true)): ?>
   <div class="page-top">
     <?php print $messages; ?>
     <?php print render($page['page_top']); ?>
+    <div class="alert alert-info alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h6><a href="#">Well done!</a></h6>
+      You successfully read this important alert message.
+    </div>
   </div>
 <?php endif; ?>
 
