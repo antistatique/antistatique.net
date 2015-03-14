@@ -127,7 +127,7 @@ function antistatique_site_strongarm() {
     'hide_language_selector' => 0,
     'exclude_language_none' => 0,
     'lock_language' => 0,
-    'shared_fields_original_only' => 0,
+    'shared_fields_original_only' => 1,
   );
   $export['entity_translation_settings_node__page'] = $strongarm;
 
@@ -140,7 +140,7 @@ function antistatique_site_strongarm() {
     'hide_language_selector' => 0,
     'exclude_language_none' => 0,
     'lock_language' => 0,
-    'shared_fields_original_only' => 0,
+    'shared_fields_original_only' => 1,
   );
   $export['entity_translation_settings_node__project'] = $strongarm;
 
@@ -153,7 +153,7 @@ function antistatique_site_strongarm() {
     'hide_language_selector' => 0,
     'exclude_language_none' => 0,
     'lock_language' => 0,
-    'shared_fields_original_only' => 0,
+    'shared_fields_original_only' => 1,
   );
   $export['entity_translation_settings_taxonomy_term__category'] = $strongarm;
 
@@ -166,7 +166,7 @@ function antistatique_site_strongarm() {
     'hide_language_selector' => 0,
     'exclude_language_none' => 0,
     'lock_language' => 0,
-    'shared_fields_original_only' => 0,
+    'shared_fields_original_only' => 1,
   );
   $export['entity_translation_settings_taxonomy_term__skills'] = $strongarm;
 
@@ -179,7 +179,7 @@ function antistatique_site_strongarm() {
     'hide_language_selector' => 0,
     'exclude_language_none' => 0,
     'lock_language' => 0,
-    'shared_fields_original_only' => 0,
+    'shared_fields_original_only' => 1,
   );
   $export['entity_translation_settings_user__user'] = $strongarm;
 
