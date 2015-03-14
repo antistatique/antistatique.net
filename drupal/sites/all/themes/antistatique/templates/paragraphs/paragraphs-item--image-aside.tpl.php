@@ -41,6 +41,7 @@ hide($content['field_alignment']);
 hide($content['field_image_width']);
 ?>
 <div class="<?php print $classes; ?> container"<?php print $attributes; ?>>
+  <div class="spacer"></div>
   <div class="row content"<?php print $content_attributes; ?>>
     <div class="<?php print $alignment_image; ?>">
       <?php print render($content['field_image']); ?>

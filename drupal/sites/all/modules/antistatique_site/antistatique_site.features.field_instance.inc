@@ -212,12 +212,90 @@ function antistatique_site_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-image_wide-field_wide_images'
+  $field_instances['paragraphs_item-image_wide-field_wide_images'] = array(
+    'bundle' => 'image_wide',
+    'deleted' => 0,
+    'description' => 'The image will be set at width=100%. If you upload 2 images, both will be at 50%.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_wide_images',
+    'label' => 'Wide Image(s)',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'paragraph-image-wide',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 'private',
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_hero-image' => 0,
+          'image_large' => 0,
+          'image_medium' => 0,
+          'image_square_thumbnail' => 0,
+          'image_thumbnail' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 1,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Alignment');
   t('Aside');
   t('Image');
   t('Image Width');
+  t('The image will be set at width=100%. If you upload 2 images, both will be at 50%.');
+  t('Wide Image(s)');
 
   return $field_instances;
 }
