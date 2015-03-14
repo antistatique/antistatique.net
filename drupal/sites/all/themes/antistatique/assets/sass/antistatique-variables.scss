@@ -33,54 +33,54 @@ category: Layout - Colors
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#222;"><br><br><br><br><br></div>
-      <pre class="text-center">$gray-darker</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase text-white" style="background:#222;"><br><br>#222<br><br><br></div>
+      <pre>$gray-darker</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#333;"><br><br><br><br><br></div>
-      <pre class="text-center">$gray-dark</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase text-white" style="background:#333;"><br><br>#333<br><br><br></div>
+      <pre>$gray-dark</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#555;"><br><br><br><br><br></div>
-      <pre class="text-center">$gray</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase text-white" style="background:#555;"><br><br>#555<br><br><br></div>
+      <pre>$gray</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#999;"><br><br><br><br><br></div>
-      <pre class="text-center">$gray-light</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase" style="background:#999;"><br><br>#999<br><br><br></div>
+      <pre>$gray-light</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#eee;"><br><br><br><br><br></div>
-      <pre class="text-center">$gray-lighter</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase" style="background:#eee;"><br><br>#eee<br><br><br></div>
+      <pre>$gray-lighter</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#ee2577;"><br><br><br><br><br></div>
-      <pre class="text-center">$brand-primary</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase" style="background:#ee2577;"><br><br>#ee2577<br><br><br></div>
+      <pre>$brand-primary</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#5cb85c;"><br><br><br><br><br></div>
-      <pre class="text-center">$brand-success</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase" style="background:#40b3ff;"><br><br>#40b3ff<br><br><br></div>
+      <pre>$brand-success</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#7f7f98;"><br><br><br><br><br></div>
-      <pre class="text-center">$brand-info</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase" style="background:#7f7f98;"><br><br>#7f7f98<br><br><br></div>
+      <pre>$brand-info</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#f0ad4e;"><br><br><br><br><br></div>
-      <pre class="text-center">$brand-warning</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase" style="background:#f0ad4e;"><br><br>#f0ad4e<br><br><br></div>
+      <pre>$brand-warning</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#d9534f;"><br><br><br><br><br></div>
-      <pre class="text-center">$brand-danger</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase" style="background:#d9534f;"><br><br>#d9534f<br><br><br></div>
+      <pre>$brand-danger</pre>
     </div>
 
 
@@ -92,26 +92,27 @@ category: Layout - Colors
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#ee2577;width:50%;float:left; style="margin-bottom: 15px;""><br><br><br><br><br></div>
-      <div style="background:#bd226d;width:50%;float:left;"><br><br><br><br><br></div>
-      <pre class="text-center">$pinkstatik[-dark]</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase" style="background:#ee2577;width:50%;float:left;"><br><br>#ee2577<br><br><br></div>
+      <div class="text-uppercase" style="background:#bd226d;width:50%;float:left;"><br><br>#bd226d<br><br><br></div>
+      <pre>$pinkstatik[-dark]<br>-> $brand-primary</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#000031;width:50%;float:left; style="margin-bottom: 15px;""><br><br><br><br><br></div>
-      <div style="background:#7f7f98;width:50%;float:left;"><br><br><br><br><br></div>
-      <pre class="text-center">$midnight-blue[-light]</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase text-white" style="background:#000031;width:50%;float:left;"><br><br>#000031<br><br><br></div>
+      <div class="text-uppercase" style="background:#7f7f98;width: 50%;float:left;"><br>#7f7f98<br><br></div>
+      <div class="text-uppercase" style="background:#bfbfcb;width: 50%;float:left;">#bfbfcb<br><br></div>
+      <pre>$midnight-blue<br>[-light][-lighter]</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#e9efef;"><br><br><br><br><br></div>
-      <pre class="text-center">$dust</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase" style="background:#e9efef;"><br><br>#e9efef<br><br><br></div>
+      <pre>$dust</pre>
     </div>
 
-    <div class="col-sm-3 col-xs-6" style="margin-bottom: 15px;">
-      <div style="background:#fff;"><br><br><br><br><br></div>
-      <pre class="text-center">$white</pre>
+    <div class="text-center col-sm-3 col-xs-6" style="margin-bottom: 15px;">
+      <div class="text-uppercase" style="background:#fff;"><br><br>#fff<br><br><br></div>
+      <pre>$white</pre>
     </div>
 
   </div>
