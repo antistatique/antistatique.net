@@ -10,8 +10,8 @@ end
 namespace :assets do
   desc "Build assets on the server"
   task :build do
-    run "cd #{current_release} && npm config set spin=false && npm install --silent"
-    run "cd #{current_release} && ./node_modules/.bin/bower install --config.interactive=false"
+    run "cd #{current_release} && npm config set spin=false && npm install --production --silent"
+    run "cd #{current_release} && ./node_modules/.bin/bower install --production --config.interactive=false"
     run "cd #{current_release} && ./node_modules/.bin/gulp build"
   end
 end
