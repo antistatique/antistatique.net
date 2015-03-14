@@ -42,3 +42,17 @@ function antistatique_site_image_default_styles() {
 
   return $styles;
 }
+
+/**
+ * Implements hook_paragraphs_info().
+ */
+function antistatique_site_paragraphs_info() {
+  $items = array(
+    'image_aside' => array(
+      'name' => 'Image & Aside',
+      'bundle' => 'image_aside',
+      'locked' => '1',
+    ),
+  );
+  return $items;
+}
