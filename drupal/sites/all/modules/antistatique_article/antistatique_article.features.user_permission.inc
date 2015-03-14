@@ -52,9 +52,7 @@ function antistatique_article_user_default_permissions() {
   // Exported permission: 'display disqus comments on profile'.
   $permissions['display disqus comments on profile'] = array(
     'name' => 'display disqus comments on profile',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'disqus',
   );
 
