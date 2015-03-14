@@ -38,6 +38,7 @@ category: Layout - Footer
   background-size: 400px;
   background-position: -150px 50%;
   position: relative;
+  overflow: hidden;
   @media only screen and (max-width: $screen-sm-max) {
     padding-top: 80px;
     background-position: -120px 20px;
