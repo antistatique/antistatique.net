@@ -471,6 +471,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'taxonomy',
   );
