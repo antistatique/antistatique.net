@@ -18,6 +18,7 @@ dependencies:
   - drupal/sites/all/themes/antistatique/build/js
   - drupal/sites/all/themes/antistatique/build/css
   - drupal/sites/all/themes/antistatique/build/img
+  - drupal/sites/all/themes/antistatique/build/svg
   - drupal/sites/all/themes/antistatique/build/fonts
 
 # List all css to include for the styleguide render examples (path from styleguide directory)

@@ -87,7 +87,7 @@ gulp.task('img', function() {
       'drupal/sites/all/themes/antistatique/assets/svg/**/*'
     ])
     .pipe($.svgmin())
-    .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/img'));
+    .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/svg'));
 });
 
 /**
