@@ -162,7 +162,25 @@
 
 
 <?php if (!empty($page['footer'])): ?>
-  <footer class="footer <?php print $container_class; ?>">
-    <?php print render($page['footer']); ?>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <div class="spacer spacer-md"></div>
+
+          &nbsp;  <strong><a href="#">Lausanne</a></strong> & <strong><a href="#">Geneva</a></strong>&nbsp;
+          <div class="visible-xs spacer spacer-xs"></div>
+          <span class="visible-xs">
+            <a href="tel:0041216236303" class="btn btn-primary">+41 21 623 63 03</a>
+          </span>
+          <span class="hidden-xs"> &nbsp;  +41 21 623 63 03 &nbsp;  </span>
+          <div class="visible-xs spacer spacer-xs"></div>
+          <strong>&nbsp;<a href="mailto:hello@antistatique.net">hello@antistatique.net</a>&nbsp;</strong>
+          <div class="spacer spacer-md"></div>
+          <?php print render($page['footer']); ?>
+          <div class="spacer spacer-sm"></div>
+        </div>
+      </div>
+      </div>
   </footer>
 <?php endif; ?>
