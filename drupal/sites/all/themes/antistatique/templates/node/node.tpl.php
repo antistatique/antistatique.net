@@ -81,33 +81,31 @@
 
 hide($content['comments']);
 hide($content['links']);
+hide($content['field_hero_image']);
 if (!empty($content['field_hero_image_is_dark'])) {
   hide($content['field_hero_image_is_dark']);
 }
+$file_hero_image = file_load($node->field_hero_image['und'][0]['fid']);
 ?>
 
-<?php print render($content['field_hero_image']); ?>
-
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix cover-overlap"<?php print $attributes; ?>>
-
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix "<?php print $attributes; ?>>
+  <div class="img-hero" style="background-image:url('<?php print file_create_url($file_hero_image->uri); ?>')">
+    <?php print render($title_prefix); ?>
+    <?php if (!empty($title)): ?>
+      <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
+  </div>
   <div class="container">
     <?php if ((!empty($title)) || !empty($title_prefix) || !empty($title_suffix) || !$page && $display_submitted): ?>
 
       <header>
-
-        <?php print render($title_prefix); ?>
-          <?php if (!empty($title)): ?>
-            <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
-          <?php endif; ?>
-        <?php print render($title_suffix); ?>
-
         <?php if ($display_submitted): ?>
         <span class="submitted">
           <?php print $user_picture; ?>
           <?php print $submitted; ?>
         </span>
         <?php endif; ?>
-
       </header>
 
     <?php endif; ?>
