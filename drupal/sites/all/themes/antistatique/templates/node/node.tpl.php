@@ -111,8 +111,12 @@ $file_hero_image = file_load($node->field_teammate_hero_image['und'][0]['fid']);
       </header>
 
     <?php endif; ?>
-
-    <?php print render($content['body']); ?>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="spacer"></div>
+        <?php print render($content['body']); ?>
+      </div>
+    </div>
   </div>
 
   <?php print render($content); ?>
