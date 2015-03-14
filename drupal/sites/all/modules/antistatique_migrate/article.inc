@@ -54,10 +54,16 @@ class ArticleNodeMigration extends AbstractAntistatiqueMigration
     $query = $this->getConnection()
       ->select('node_field_data', 'n')
       ->fields('n', array('nid', 'type', 'status', 'title', 'uid', 'created'))
-      ->fields('body', array('field_article_body_value', 'field_article_body_summary'));
+      ->fields('body', array('field_article_body_value', 'field_article_body_summary'))
+      ->fields('date', array('field_article_date_value'))
+    ;
 
     $query
       ->leftJoin('node__field_article_body', 'body', 'body.entity_id = n.nid')
+    ;
+
+    $query
+      ->leftJoin('node__field_article_date', 'date', 'date.entity_id = n.nid')
     ;
 
     $query
@@ -111,8 +117,25 @@ class ArticleNodeMigration extends AbstractAntistatiqueMigration
 
     $this->addFieldMapping('body:summary', 'field_article_body_summary')
       ->description(t('Mapping Article summary in source to node summary'));
+    $this->addFieldMapping('body:format')
+      ->defaultValue('full_html');
+
     $this->addFieldMapping('uid')
       ->defaultValue(1);
-    $this->addFieldMapping('created', 'created');
+    $this->addFieldMapping('created', 'field_article_date_value');
+
+
+    $this->addUnmigratedDestinations(array(
+      'body:language',
+      'changed',
+      'comment',
+      'is_new',
+      'language',
+      'log',
+      'promote',
+      'revision',
+      'revision_uid',
+      'status',
+    ));
   }
 }
