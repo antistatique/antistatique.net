@@ -53,9 +53,10 @@ class ArticleNodeMigration extends AbstractAntistatiqueMigration
 
     $query = $this->getConnection()
       ->select('node_field_data', 'n')
-      ->fields('n', array('nid', 'type', 'status', 'title', 'uid', 'created'))
+      ->fields('n', array('nid', 'type', 'status', 'title', 'created'))
       ->fields('body', array('field_article_body_value', 'field_article_body_summary'))
       ->fields('date', array('field_article_date_value'))
+      ->fields('u', array('uid', 'mail'))
     ;
 
     $query
@@ -65,6 +66,15 @@ class ArticleNodeMigration extends AbstractAntistatiqueMigration
     $query
       ->leftJoin('node__field_article_date', 'date', 'date.entity_id = n.nid')
     ;
+
+    $query
+      ->leftJoin('node__field_article_author', 'au', 'au.entity_id = n.nid')
+    ;
+
+    $query
+      ->leftJoin('users', 'u', 'u.uid = au.field_article_author_target_id')
+    ;
+
 
     $query
       ->where("n.type = :type AND n.status = :status", array(
@@ -120,8 +130,9 @@ class ArticleNodeMigration extends AbstractAntistatiqueMigration
     $this->addFieldMapping('body:format')
       ->defaultValue('full_html');
 
-    $this->addFieldMapping('uid')
+    $this->addFieldMapping('uid', 'destination_uid')
       ->defaultValue(1);
+
     $this->addFieldMapping('created', 'field_article_date_value');
 
 
@@ -137,5 +148,28 @@ class ArticleNodeMigration extends AbstractAntistatiqueMigration
       'revision_uid',
       'status',
     ));
+  }
+
+  public function prepareRow($current_row)
+  {
+    if (parent::prepareRow($current_row) === FALSE) {
+      return FALSE;
+    }
+
+    $mail = $current_row->mail;
+    $uid = db_select('users', 'u')
+      ->fields('u', array('uid', 'mail'))
+      ->condition('mail', $mail)
+      ->execute()
+      ->fetchField(0)
+    ;
+
+    if (!$uid) {
+      $uid = 1; // default: admin
+    }
+
+    $current_row->destination_uid = $uid;
+
+    return TRUE;
   }
 }
