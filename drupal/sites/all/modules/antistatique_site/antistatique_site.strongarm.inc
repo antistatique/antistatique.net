@@ -681,15 +681,29 @@ function antistatique_site_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_article_en_pattern';
-  $strongarm->value = 'we/blog/[current-date:custom:Y]/[current-date:custom:m]/[current-date:custom:d]/[node:title]';
+  $strongarm->value = 'we/blog/[node:created:custom:Y]/[node:created:custom:m]/[node:created:custom:d]/[node:title]';
   $export['pathauto_node_article_en_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_article_fr_pattern';
-  $strongarm->value = 'nous/bloggons/[current-date:custom:Y]/[current-date:custom:m]/[current-date:custom:d]/[node:title]';
+  $strongarm->value = 'nous/bloggons/[node:created:custom:Y]/[node:created:custom:m]/[node:created:custom:d]/[node:title]';
   $export['pathauto_node_article_fr_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_article_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_article_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_article_und_pattern';
+  $strongarm->value = 'nous/bloggons/[node:created:custom:Y]/[node:created:custom:m]/[node:created:custom:d]/[node:title]';
+  $export['pathauto_node_article_und_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
