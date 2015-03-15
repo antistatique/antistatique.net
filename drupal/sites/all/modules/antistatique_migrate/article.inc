@@ -4,7 +4,7 @@ abstract class AbstractAntistatiqueMigration extends Migration {
   public function __construct($arguments) {
     parent::__construct($arguments);
 
-    // @TODO: I don't what is this !
+    // @TODO: I don't know what is this !
     // With migrate_ui enabled, migration pages will indicate people involved in
     // the particular migration, with their role and contact info. We default the
     // list in the shared class; it can be overridden for specific migrations.
@@ -135,18 +135,21 @@ class ArticleNodeMigration extends AbstractAntistatiqueMigration
 
     $this->addFieldMapping('created', 'field_article_date_value');
 
+    $this->addFieldMapping('language')
+      ->defaultValue('fr');
+    $this->addFieldMapping('body:language')
+      ->defaultValue('fr');
 
     $this->addUnmigratedDestinations(array(
-      'body:language',
       'changed',
       'comment',
       'is_new',
-      'language',
       'log',
       'promote',
       'revision',
       'revision_uid',
       'status',
+      'path',
     ));
   }
 
