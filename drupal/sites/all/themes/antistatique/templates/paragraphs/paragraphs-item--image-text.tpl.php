@@ -27,25 +27,23 @@
  */
 hide($content['field_alignment']);
 ?>
-<div class="bg-foggy">
-  <div class="<?php print $classes; ?> container"<?php print $attributes; ?>>
-    <div class="spacer spacer-md"></div>
-    <div class="row content"<?php print $content_attributes; ?>>
-      <div class="col-md-offset-2 col-md-4">
-        <?php if ($content['field_alignment'][0]['#markup'] == 'left'): ?>
-          <?php print render($content['field_image']); ?>
-        <?php else: ?>
-          <?php print render($content['field_body']); ?>
-        <?php endif ?>
-      </div>
-      <div class="col-md-offset-2 col-md-4">
-        <?php if ($content['field_alignment'][0]['#markup'] == 'left'): ?>
-          <?php print render($content['field_body']); ?>
-        <?php else: ?>
-          <?php print render($content['field_image']); ?>
-        <?php endif ?>
-      </div>
+<div class="<?php print $classes; ?> container"<?php print $attributes; ?>>
+  <div class="spacer spacer-md"></div>
+  <div class="row content"<?php print $content_attributes; ?>>
+    <div class="col-md-offset-2 col-md-4">
+      <?php if ($content['field_alignment'][0]['#markup'] == 'left'): ?>
+        <?php print render($content['field_image']); ?>
+      <?php else: ?>
+        <?php print render($content['field_body']); ?>
+      <?php endif ?>
     </div>
-    <div class="spacer spacer-md"></div>
+    <div class="col-md-offset-2 col-md-4">
+      <?php if ($content['field_alignment'][0]['#markup'] == 'left'): ?>
+        <?php print render($content['field_body']); ?>
+      <?php else: ?>
+        <?php print render($content['field_image']); ?>
+      <?php endif ?>
+    </div>
   </div>
+  <div class="spacer spacer-md"></div>
 </div>
