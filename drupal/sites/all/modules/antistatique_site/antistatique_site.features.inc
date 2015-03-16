@@ -58,6 +58,11 @@ function antistatique_site_paragraphs_info() {
       'bundle' => 'image_foggy',
       'locked' => '1',
     ),
+    'image_text' => array(
+      'name' => 'Image with text',
+      'bundle' => 'image_text',
+      'locked' => '1',
+    ),
     'image_wide' => array(
       'name' => 'Image Wide',
       'bundle' => 'image_wide',
