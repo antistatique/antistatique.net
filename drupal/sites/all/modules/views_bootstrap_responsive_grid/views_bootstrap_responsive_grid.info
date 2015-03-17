@@ -1,0 +1,10 @@
+name = Views Bootstrap Responsive Grid
+package = Views
+description = Bootstrap Responsive Grid
+core = 7.x
+version = 7.x-1.0
+project = views_bootstrap_responsive_grid
+
+dependencies[] = views
+
+files[] = plugins/grid/views_bootstrap_responsive_grid_plugin_style.inc
