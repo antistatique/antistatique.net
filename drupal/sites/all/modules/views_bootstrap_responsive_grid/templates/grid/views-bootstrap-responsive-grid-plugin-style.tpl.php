@@ -1,13 +1,12 @@
 <?php
 /**
- * @file views-bootstrap-grid-plugin-style.tpl.php
- * Default simple view template to display Bootstrap Grids.
+ * @file views-bootstrap-grid-responsive-plugin-style.tpl.php
+ * Boostrap3 Responsive Grid view with configurable breakpoints
  *
  *
- * - $columns contains rows grouped by columns.
- * - $rows contains a nested array of rows. Each row contains an array of
- *   columns.
- * - $column_type contains a number (default Bootstrap grid system column type).
+ * - $rows contains the list of item to display
+ * - $column_classes contains a string of the bootstrap columns classes for each items, 'col-md-* col-sm-* ...' like
+ * - $column_breakpoints contains an array of number of items per row per breakpoints.
  *
  * @ingroup views_templates
  */
@@ -16,12 +15,18 @@
 
     <?php if (!empty($rows)): ?>
       <div class="row">
-        <?php foreach ($rows as $item): ?>
-          <div class="col col-lg-<?php print $column_type ?>">
+        <?php foreach ($rows as $i => $item): ?>
+          <div class="<?php print $column_classes ?>">
             <?php print $item ?>
           </div>
+          <?php foreach($column_breakpoints as $breakpoint => $numberOfItem): ?>
+            <?php if ((0 != $i && 1 != $numberOfItem) && (($i+1) % (int)$numberOfItem == 0)): ?>
+              <div class="clearfix visible-'<?php print $breakpoint ?>"></div>
+            <?php endif ?>
+          <?php endforeach ?>
         <?php endforeach ?>
       </div>
+
     <?php endif ?>
 
 </div>
