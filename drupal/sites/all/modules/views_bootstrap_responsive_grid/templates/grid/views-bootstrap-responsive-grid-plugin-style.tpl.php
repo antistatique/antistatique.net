@@ -21,7 +21,7 @@
           </div>
           <?php foreach($column_breakpoints as $breakpoint => $numberOfItem): ?>
             <?php if ((0 != $i && 1 != $numberOfItem) && (($i+1) % (int)$numberOfItem == 0)): ?>
-              <div class="clearfix visible-'<?php print $breakpoint ?>"></div>
+              <div class="clearfix visible-<?php print $breakpoint ?>"></div>
             <?php endif ?>
           <?php endforeach ?>
         <?php endforeach ?>
