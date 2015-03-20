@@ -26,20 +26,6 @@ category: Components - Nav
 ```
 */
 
-.nav {
-  > li {
-    > a {
-      &:hover {
-        text-decoration: underline;
-      }
-      &.active,
-      &.active:hover {
-        text-decoration: none;
-      }
-    }
-  }
-}
-
 /*doc
 ---
 title: Pills

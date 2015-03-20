@@ -1,0 +1,45 @@
+/*doc
+---
+title: Link
+name: i-linkunderlinetest
+category: Layout - Typography
+---
+
+Test based on Medium way of doing things! @Guillaume ;)
+
+```html_example
+<div class="content">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati eaque possimus, eligendi. Veniam eaque assumenda nulla error, cupiditate quod veritatis omnis, numquam, ducimus, suscipit consequuntur accusamus aliquam <a href="#">Link with an underline that is wraping on the next line</a>  cumque itaque recusandae?
+  </p>
+</div>
+```
+
+*/
+
+.content a {
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, rgba($link-color,0) 50%, rgba($link-color,0.6) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 0.9em;
+  &:hover {
+    background-image: linear-gradient(to bottom, rgba($link-hover-color,0) 50%, rgba($link-hover-color,0.6) 50%);
+  }
+}
+
+.navbar {
+  li > a {
+    padding: 0 !important; // naaaaaah remove that ASAP (it's just for testing)
+  }
+  li:not(.active) > a {
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, rgba($text-color,0) 50%, rgba($text-color,0.6) 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 1.35em;
+    &:hover {
+      background-image: linear-gradient(to bottom, rgba($link-color,0) 50%, rgba($link-color,0.6) 50%);
+    }
+  }
+}

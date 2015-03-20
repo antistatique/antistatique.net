@@ -99,8 +99,8 @@ gulp.task('styles', function() {
   else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
 
   return gulp.src('drupal/sites/all/themes/antistatique/assets/sass/main.scss')
-    .pipe($.sass({errLogToConsole: true}))
     .pipe($.if(argv.dev, $.sourcemaps.init()))
+    .pipe($.sass())
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
     }))
