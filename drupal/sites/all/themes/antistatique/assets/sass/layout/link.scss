@@ -28,16 +28,13 @@ Test based on Medium way of doing things! @Guillaume ;)
   }
 }
 
-.navbar {
-  li > a {
-    padding: 0 !important; // naaaaaah remove that ASAP (it's just for testing)
-  }
-  li:not(.active) > a {
+header.header {
+  .navbar-nav > li:not(.active) > a {
     text-decoration: none;
     background-image: linear-gradient(to bottom, rgba($text-color,0) 50%, rgba($text-color,0.6) 50%);
     background-repeat: repeat-x;
     background-size: 2px 2px;
-    background-position: 0 1.35em;
+    background-position: 0 34px;
     &:hover {
       background-image: linear-gradient(to bottom, rgba($link-color,0) 50%, rgba($link-color,0.6) 50%);
     }

@@ -42,11 +42,8 @@ category: Components - Navbar
   width: 100%;
 }
 
-.navbar-header {
-
-}
-
 .navbar-brand {
+  padding-left: 0;
   img {
     width: 40px;
     @media only screen and (min-width: $screen-md-min) {
@@ -65,19 +62,20 @@ category: Components - Navbar
     border-bottom: 1px solid $midnight-blue-light;
   }
 }
+
+.navbar-nav > li > a {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .navbar-default .navbar-nav {
   > li {
-    padding: 55px 15px;
-    > a {
-      // padding-bottom: 35px;
-    }
+    padding: 45px 15px 29px 15px;
   }
 }
 
-.nav {
-  > .btn {
-    margin-top: 44px;
-  }
+.navbar-btn {
+  margin-top: 43px;
 }
 
 /*doc
