@@ -105,14 +105,14 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
   <div class="container">
     <?php if ((!empty($title)) || !empty($title_prefix) || !empty($title_suffix) || !$page && $display_submitted): ?>
 
-      <header>
-        <?php if ($display_submitted): ?>
-        <span class="submitted">
-          <?php print $user_picture; ?>
-          <?php print $submitted; ?>
-        </span>
-        <?php endif; ?>
-      </header>
+      <?php if ($display_submitted): ?>
+        <header>
+          <span class="submitted">
+            <?php print $user_picture; ?>
+            <?php print $submitted; ?>
+          </span>
+        </header>
+      <?php endif; ?>
 
     <?php endif; ?>
     <div class="row">

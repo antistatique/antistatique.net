@@ -145,6 +145,7 @@
   <?php endif; ?>
 
   <?php print render($page['content']); ?>
+  <?php print render($page['content_bottom']); ?>
 
   <?php if (!empty($page['page_bottom'])): ?>
     <div class="page-bottom">
