@@ -1,0 +1,69 @@
+/*doc
+---
+title: Card
+name: a-card
+category: Components - Card
+---
+
+```html_example
+<div class="clearfix card">
+  <img src="img/boulot_devs_yann_gilles.jpg" alt="image">
+  <div class="card-content">
+    <p><small>Branding • Symfony • Responsive</small></p>
+    <h4>Title of the project</h4>
+  </div>
+</div>
+```
+
+*/
+
+.card {
+  position: relative;
+  color: $white;
+
+  img {
+    max-width: 100%;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba($midnight-blue, 0.7), rgba($midnight-blue, 0));
+    display: block;
+    transition: all 200ms;
+  }
+}
+
+a {
+  .card {
+    &:hover {
+      &:before {
+        height: 50%;
+      }
+      .card-content {
+        border-width: 5px;
+      }
+    }
+  }
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 15px;
+  width: 100%;
+  border-bottom: 0 solid $brand-primary;
+  transition: all 200ms;
+
+  h4 {
+    margin-top: 5px;
+    margin-bottom: 8px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
