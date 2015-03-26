@@ -4,3 +4,10 @@
     width: 50%;
   }
 }
+
+.readmore {
+  a:before {
+    content: '›';
+    margin: 0 4px;
+  }
+}

@@ -189,6 +189,9 @@ category: Layout - Typography
 ```
 */
 
+p.small {
+  margin-bottom: ($line-height-computed / 3);
+}
 
 /*doc
 ---

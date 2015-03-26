@@ -40,3 +40,38 @@ header.header {
     }
   }
 }
+
+/*doc
+---
+title: Image in link
+name: i-linkimage
+category: Layout - Images
+---
+
+```html_example
+<div class="link-image">
+  <a href="#"><img src="img/article-teaser.png" alt="image"></a>
+</div>
+```
+
+*/
+
+.link-image {
+  position: relative;
+  display: block;
+  &:after {
+    content: '';
+    background: $link-color;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .2s ease-in;
+  }
+  &:hover {
+    &:after {
+     height: 4px;
+    }
+  }
+}
