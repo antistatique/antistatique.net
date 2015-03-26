@@ -74,6 +74,7 @@ gulp.task('js-vendors', function() {
  */
 gulp.task('fonts', function() {
   return gulp.src([
+      'bower_components/font-awesome/fonts/*',
       'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',
       'drupal/sites/all/themes/antistatique/assets/fonts/*'
     ])
@@ -99,12 +100,22 @@ gulp.task('polyfills', function() {
 /**
  * Copy images
  */
-gulp.task('img', function() {
+gulp.task('img', ['svg'], function() {
   return gulp.src([
       'drupal/sites/all/themes/antistatique/assets/img/**/*'
     ])
     .pipe($.size({title: "IMAGES"}))
     .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/img'));
+
+});
+
+gulp.task('svg', function(){
+  gulp.src([
+      'drupal/sites/all/themes/antistatique/assets/svg/**/*'
+    ])
+    .pipe($.svgmin())
+    .pipe($.size({title: "SVG"}))
+    .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/svg'));
 });
 
 /**
