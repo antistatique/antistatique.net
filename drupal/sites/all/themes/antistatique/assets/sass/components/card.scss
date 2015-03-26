@@ -5,14 +5,18 @@ name: a-card
 category: Components - Card
 ---
 
+#### Card as a link:
+
 ```html_example
-<div class="clearfix card">
-  <img src="img/boulot_devs_yann_gilles.jpg" alt="image">
-  <div class="card-content">
-    <p><small>Branding • Symfony • Responsive</small></p>
-    <h4>Title of the project</h4>
+<a href="#">
+  <div class="clearfix card">
+    <img src="img/boulot_devs_yann_gilles.jpg" alt="image">
+    <div class="card-content">
+      <p><small>Branding • Symfony • Responsive</small></p>
+      <h4>Title of the project</h4>
+    </div>
   </div>
-</div>
+</a>
 ```
 
 */
@@ -20,6 +24,7 @@ category: Components - Card
 .card {
   position: relative;
   color: $white;
+  margin-bottom: 30px;
 
   img {
     max-width: 100%;
@@ -33,7 +38,7 @@ category: Components - Card
     width: 100%;
     background-image: linear-gradient(to top, rgba($midnight-blue, 0.7), rgba($midnight-blue, 0));
     display: block;
-    transition: all 200ms;
+    transition: all .2s ease-in;
   }
 }
 
@@ -41,7 +46,7 @@ a {
   .card {
     &:hover {
       &:before {
-        height: 50%;
+        opacity: .9;
       }
       .card-content {
         border-width: 5px;
@@ -57,7 +62,7 @@ a {
   padding: 0 15px;
   width: 100%;
   border-bottom: 0 solid $brand-primary;
-  transition: all 200ms;
+  transition: all .2s ease-in;
 
   h4 {
     margin-top: 5px;

@@ -1,4 +1,4 @@
-# Antistatique
+<h1 class="styleguide">Antistatique</h1>
 
 ```none_example
 
