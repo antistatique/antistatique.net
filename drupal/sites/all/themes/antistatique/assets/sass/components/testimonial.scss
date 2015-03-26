@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/*doc
+---
+title: Testimonial
+name: a-testimonial
+category: Components - Testimonial
+---
+
+```html_example
+<div class="media media-testimonial">
+  <a class="pull-left" href="#">
+    <img class="media-object img-rounded" data-src="holder.js/64x64" alt="64x64" src="img/team/Round_512_Saniha.png" style="width: 96px; height: 96px;">
+  </a>
+  <div class="media-body">
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <small class="text-muted">Saniha • experte ès langues mortes</small>
+  </div>
+</div>
+```
+
+*/
+
+.media-testimonial {
+  border-top: 1px solid $midnight-blue-lighter;
+  border-bottom: 1px solid $midnight-blue-lighter;
+  padding: 35px 0;
+
+  .media-object {
+    @media only screen and (min-width: $screen-sm-min) {
+      margin-right: 35px;
+    }
+  }
+  .media-body {
+    p {
+      margin-bottom: 0;
+      &:before {
+        content: '“';
+      }
+      &:after {
+        content: '”';
+      }
+    }
+  }
+}
