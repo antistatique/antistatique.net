@@ -87,7 +87,7 @@ category: Layout - Cover
     padding-top: 2em;
     padding-bottom: 1em;
     margin-bottom: 0;
-    z-index: 1;
+    z-index: 0;
     @media only screen and (min-width: $screen-sm-min) {
       background: linear-gradient(to bottom, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
     }
