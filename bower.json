@@ -1,13 +1,10 @@
 {
   "name": "antistatique",
-  "dependencies": {
+  "devDependencies": {
     "html5shiv": "3.7.2",
     "respond": "1.4.2",
+    "cortana-two": "~2.1.2",
     "bootstrap-sass": "~3.3.4",
-    "jquery": "~2.1.1",
-    "font-awesome": "~4.3.0"
-  },
-  "devDependencies": {
-    "cortana-two": "~2.1.1"
+    "jquery": "~2.1.1"
   }
 }

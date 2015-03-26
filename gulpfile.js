@@ -12,26 +12,42 @@ var gulp = require('gulp'),
     del = require('del');
 
 /**
+ * Init project
+ */
+gulp.task('init', function() {
+  return gulp.src('bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss')
+    .pipe($.rename('bootstrap-variables.scss'))
+    .pipe(gulp.dest('drupal/sites/all/themes/antistatique/assets/sass'))
+});
+
+
+/**
  * Build vendors dependencies
  */
 gulp.task('vendors', function() {
+  return gulp.start('css-vendors', 'js-vendors', 'fonts', 'polyfills');
+});
 
-  /**
-   * CSS VENDORS
-   */
-  gulp.src([
-        ''
-      ])
-      .pipe($.concat('vendors.css'))
-      .pipe($.minifyCss())
-      .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/css'));
+/**
+ * CSS VENDORS
+ */
+gulp.task('css-vendors', function() {
+  return gulp.src([
+      ''
+    ])
+    .pipe($.concat('vendors.css'))
+    .pipe($.minifyCss())
+    .pipe($.size({title: "CSS VENDORS", showFiles: true}))
+    .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/css'));
+});
 
-  /**
-   * JS VENDORS
-   * (with jQuery and Bootstrap dependencies first)
-   */
+/**
+ * JS VENDORS
+ * (with jQuery and Bootstrap dependencies first)
+ */
 
-  gulp.src([
+gulp.task('js-vendors', function() {
+  return gulp.src([
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js',
@@ -47,30 +63,36 @@ gulp.task('vendors', function() {
     ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())
+    .pipe($.size({title: "JS VENDORS", showFiles: true}))
     .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/js'));
+});
 
 
-  /**
-   * FONTS SOURCES
-   * Important to add the bootstrap fonts to avoid issues with the fonts include path
-   */
-  gulp.src([
-      'bower_components/font-awesome/fonts/*',
+/**
+ * FONTS SOURCES
+ * Important to add the bootstrap fonts to avoid issues with the fonts include path
+ */
+gulp.task('fonts', function() {
+  return gulp.src([
       'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',
       'drupal/sites/all/themes/antistatique/assets/fonts/*'
     ])
+    .pipe($.size({title: "FONTS"}))
     .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/fonts'));
+});
 
-  /**
-   * POLYFILLS SOURCES
-   * Various polyfills required for old IE
-   */
-  gulp.src([
+/**
+ * POLYFILLS SOURCES
+ * Various polyfills required for old IE
+ */
+gulp.task('polyfills', function() {
+  return gulp.src([
       'bower_components/html5shiv/dist/html5shiv.js',
       'bower_components/respond/dest/respond.src.js'
     ])
     .pipe($.concat('polyfills.min.js'))
     .pipe($.uglify())
+    .pipe($.size({title: "POLYFILLS", showFiles: true}))
     .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/js'));
 });
 
@@ -78,16 +100,11 @@ gulp.task('vendors', function() {
  * Copy images
  */
 gulp.task('img', function() {
-  gulp.src([
+  return gulp.src([
       'drupal/sites/all/themes/antistatique/assets/img/**/*'
     ])
+    .pipe($.size({title: "IMAGES"}))
     .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/img'));
-
-  gulp.src([
-      'drupal/sites/all/themes/antistatique/assets/svg/**/*'
-    ])
-    .pipe($.svgmin())
-    .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/svg'));
 });
 
 /**
@@ -95,17 +112,35 @@ gulp.task('img', function() {
  * With error reporting on compiling (so that there's no crash)
  */
 gulp.task('styles', function() {
-  if (!argv.dev) { console.log('[styles] Processing minified styles.' ); }
-  else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
+  if (argv.production) { console.log('[styles] Production mode' ); }
+  else { console.log('[styles] Dev mode') }
 
   return gulp.src('drupal/sites/all/themes/antistatique/assets/sass/main.scss')
-    .pipe($.if(argv.dev, $.sourcemaps.init()))
-    .pipe($.sass())
-    .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
+    .pipe($.if(!argv.production, $.sourcemaps.init()))
+    .pipe($.sass({
+      outputStyle: 'nested', // libsass doesn't support expanded yet
+      precision: 10,
+      includePaths: ['.']
     }))
-    .pipe($.if(argv.dev, $.sourcemaps.write()))
-    .pipe($.if(!argv.dev, $.minifyCss()))
+    .on('error', $.notify.onError({
+      title: function(error) {
+        return error.message
+      },
+      message: function(error) {
+        return error.fileName + ':' + error.lineNumber
+      }
+    }))
+    .pipe($.postcss([
+      require('autoprefixer-core')({
+        browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1'],
+        options: {
+          map: true
+        }
+      })
+    ]))
+    .pipe($.if(!argv.production, $.sourcemaps.write()))
+    .pipe($.if(argv.production, $.minifyCss()))
+    .pipe($.size({title: "STYLES", showFiles: true}))
     .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/css'));
 });
 
@@ -115,12 +150,30 @@ gulp.task('styles', function() {
  */
 gulp.task('styleguide-styles', function() {
   return gulp.src('drupal/sites/all/themes/antistatique/assets/sass/styleguide.scss')
-    .pipe($.sass({errLogToConsole: true}))
-    .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
+    .pipe($.sass({
+      outputStyle: 'nested', // libsass doesn't support expanded yet
+      precision: 10,
+      includePaths: ['.']
     }))
+    .on('error', $.notify.onError({
+      title: function(error) {
+        return error.message
+      },
+      message: function(error) {
+        return error.fileName + ':' + error.lineNumber
+      }
+    }))
+    .pipe($.postcss([
+      require('autoprefixer-core')({
+        browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1'],
+        options: {
+          map: true
+        }
+      })
+    ]))
     .pipe($.minifyCss())
-    .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/css'));
+    .pipe($.size({title: "STYLEGUIDE STYLES", showFiles: true}))
+    .pipe(gulp.dest('styleguide/css'));
 });
 
 /**
@@ -136,17 +189,17 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/js'))
     .pipe($.rename({ suffix: '.min' }))
     .pipe($.uglify())
+    .pipe($.size({title: "JS SCRIPTS", showFiles: true}))
     .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/js'));
 });
 
 /**
  * Build Hologram Styleguide
  */
-gulp.task('styleguide', ['twig'], function () {
+gulp.task('styleguide', function () {
   return gulp.src('hologram_config.yml')
     .pipe($.hologram());
 });
-
 
 /**
  * Compile TWIG example pages
@@ -158,16 +211,15 @@ gulp.task('twig', function () {
         .pipe(gulp.dest('styleguide/pages'));
 });
 
-
 /**
  * Clean output directories
  */
-gulp.task('clean', del.bind(null, ['build', 'styleguide']));
+ gulp.task('clean', del.bind(null, ['drupal/sites/all/themes/antistatique/build', 'styleguide']));
 
-/**
- * Serve
- */
-gulp.task('serve', ['styles', 'scripts', 'twig'], function () {
+ /**
+  * Serve
+  */
+gulp.task('serve', ['default'], function () {
   browserSync({
     server: {
       baseDir: ['styleguide'],
@@ -175,10 +227,7 @@ gulp.task('serve', ['styles', 'scripts', 'twig'], function () {
     open: false
   });
   gulp.watch(['drupal/sites/all/themes/antistatique/assets/sass/**/*.scss'], function() {
-    runSequence('styles', 'styleguide', reload);
-  });
-  gulp.watch(['drupal/sites/all/themes/antistatique/assets/sass/styleguide.scss'], function() {
-    runSequence('styleguide-styles', 'styleguide', reload);
+    runSequence('styles', 'styleguide', 'styleguide-styles', reload);
   });
   gulp.watch(['drupal/sites/all/themes/antistatique/assets/img/**/*'], function() {
     runSequence('img', 'styleguide', reload);
@@ -186,26 +235,35 @@ gulp.task('serve', ['styles', 'scripts', 'twig'], function () {
   gulp.watch(['drupal/sites/all/themes/antistatique/assets/js/**/*.js'], function() {
     runSequence('scripts', reload);
   });
-
   gulp.watch(['drupal/sites/all/themes/antistatique/assets/pages/**/*'], function() {
     // clean folder before compiling
     del.bind(null, ['styleguide/pages'])
     runSequence('twig', reload);
   });
+});
 
+/**
+ * Deploy to GH pages
+ */
+
+gulp.task('deploy', function () {
+  return gulp.src("styleguide/**/*")
+    .pipe($.ghPages());
 });
 
 /**
  * Task to build assets on production server
  */
 gulp.task('build',['clean'], function() {
-    runSequence('vendors', 'styles', 'img', 'scripts');
+  argv.production = true;
+  return gulp.start('vendors', 'styles', 'img', 'scripts');
 });
 
 /**
  * Default task
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'styles', 'img', 'scripts','twig', 'styleguide-styles', 'styleguide', cb);
+  var styleguide_styles = argv.production ? '' : 'styleguide-styles';
+  runSequence(['js-vendors', 'css-vendors', 'polyfills', 'fonts', 'styles', 'img', 'scripts', 'twig'], 'styleguide', styleguide_styles, cb);
 });
 
