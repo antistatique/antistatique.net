@@ -209,7 +209,7 @@ gulp.task('scripts', function() {
  */
 gulp.task('styleguide', function () {
   return gulp.src('hologram_config.yml')
-    .pipe($.hologram());
+    .pipe($.hologram({bundler:true}));
 });
 
 /**
