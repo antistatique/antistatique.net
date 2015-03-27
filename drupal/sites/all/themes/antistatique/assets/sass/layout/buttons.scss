@@ -15,7 +15,9 @@ category: Layout - Buttons
 | Preview                                                        | Class                      |
 |----------------------------------------------------------------|----------------------------|
 | <button type="button" class="btn btn-default">Default</button> | <code>btn btn-default</code> |
+| <button type="button" class="btn btn-wire">Wire</button> | <code>btn btn-wire</code> |
 | <button type="button" class="btn btn-primary">Primary</button> | <code>btn btn-primary</code> |
+| <button type="button" class="btn btn-primary btn-wire">Primary</button> | <code>btn btn-primary btn-wire</code> |
 | <button type="button" class="btn btn-dark">Dark</button>     | <code>btn btn-dark</code>  |
 | <button type="button" class="btn btn-success">Success</button> | <code>btn btn-success</code> |
 | <button type="button" class="btn btn-info">Info</button>       | <code>btn btn-info</code>    |
@@ -76,6 +78,31 @@ category: Layout - Buttons
   font-weight: 600;
   &:hover {
     color: $link-color;
+    .fa {color: $white;}
+  }
+}
+
+.btn-wire {
+  background: transparent;
+  color: $text-color;
+  font-weight: 600;
+  border: 1px solid $text-color;
+  &:hover {
+    color: $white;
+    background: $text-color;
+    .fa {color: $white;}
+  }
+}
+
+.btn-primary.btn-wire {
+  background: white;
+  color: $link-color;
+  font-weight: 600;
+  border: 1px solid $link-color;
+  &:hover {
+    color: $white;
+    background: $brand-primary-dark;
+    border-color: $brand-primary-dark;
     .fa {color: $white;}
   }
 }
