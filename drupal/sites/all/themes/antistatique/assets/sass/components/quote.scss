@@ -19,36 +19,21 @@ blockquote {
   border-left: none;
   border-top: 1px solid $midnight-blue-lighter;
   border-bottom: 1px solid $midnight-blue-lighter;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px 0;
   @media only screen and (min-width: $screen-sm-min) {
-    padding-left: 10%;
-    padding-right: 10%;
+    font-weight: 100;
   }
 
-  &:before,
-  &:after {
-    font-size: 70px;
-    position: absolute;
-    color: $dust;
-    @media only screen and (min-width: $screen-sm-min) {
-      font-size: 100px;
+  p {
+    &:first-of-type:before {
+      content: '“';
+    }
+    &:last-of-type:after {
+      content: '”';
     }
   }
-  &:before {
-    content: '“';
-    left: 0;
-    top: 57px;
-    @media only screen and (min-width: $screen-sm-min) {
-      top: 51px;
-    }
-  }
-  &:after {
-    content: '”';
-    right: 0;
-    bottom: 47px;
-    @media only screen and (min-width: $screen-sm-min) {
-      bottom: 14px;
-    }
+
+  footer:before {
+    content: '';
   }
 }

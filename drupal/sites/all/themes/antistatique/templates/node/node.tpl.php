@@ -116,7 +116,7 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
 
     <?php endif; ?>
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-6 col-md-offset-3 content">
         <div class="spacer"></div>
         <?php print render($content['body']); ?>
       </div>

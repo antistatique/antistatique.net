@@ -16,6 +16,13 @@ category: Layout - Images
   margin: 0 auto;
 }
 
+.content {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 
 /*doc
 ---

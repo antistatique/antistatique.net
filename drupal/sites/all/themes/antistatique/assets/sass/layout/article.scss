@@ -34,3 +34,13 @@ category: Antistatique - Blog
 ```
 
 */
+
+.node-type-article {
+  .content {
+    aside {
+      @include make-md-column(6); // will be the same size as a col-md-3 ;)
+      position: absolute;
+      left: -50%;
+    }
+  }
+}
