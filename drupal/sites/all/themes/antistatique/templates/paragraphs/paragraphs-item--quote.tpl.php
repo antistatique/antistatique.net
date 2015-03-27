@@ -26,15 +26,15 @@
  * @see template_process()
  */
 ?>
-<div class="spacer spacer-md"></div>
-<div class="bg-foggy">
-  <div class="<?php print $classes; ?> container"<?php print $attributes; ?>>
-    <div class="spacer spacer-md"></div>
-    <div class="row content"<?php print $content_attributes; ?>>
-      <div class="col-md-offset-3 col-md-6">
-        <?php print render($content['field_image']); ?>
-      </div>
+<div class="<?php print $classes; ?> container"<?php print $attributes; ?>>
+  <div class="row content"<?php print $content_attributes; ?>>
+    <div class="spacer spacer-sm"></div>
+    <div class="col-md-offset-2 col-md-8">
+      <blockquote class="quote">
+        <?php print render($content['field_body']); ?>
+        <footer><?php print render($content['field_quote_author']); ?></footer>
+      </blockquote>
     </div>
-    <div class="spacer spacer-md"></div>
+    <div class="spacer spacer-sm"></div>
   </div>
 </div>

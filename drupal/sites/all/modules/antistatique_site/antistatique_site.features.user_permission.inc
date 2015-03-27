@@ -266,6 +266,13 @@ function antistatique_site_user_default_permissions() {
     'module' => 'custom_breadcrumbs',
   );
 
+  // Exported permission: 'administer devel menu items'.
+  $permissions['administer devel menu items'] = array(
+    'name' => 'administer devel menu items',
+    'roles' => array(),
+    'module' => 'menu_admin_per_menu',
+  );
+
   // Exported permission: 'administer entity translation'.
   $permissions['administer entity translation'] = array(
     'name' => 'administer entity translation',
@@ -274,6 +281,15 @@ function antistatique_site_user_default_permissions() {
       'collaborator' => 'collaborator',
     ),
     'module' => 'entity_translation',
+  );
+
+  // Exported permission: 'administer entity view modes'.
+  $permissions['administer entity view modes'] = array(
+    'name' => 'administer entity view modes',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'entity_view_mode',
   );
 
   // Exported permission: 'administer environment indicator settings'.

@@ -48,6 +48,11 @@ function antistatique_site_image_default_styles() {
  */
 function antistatique_site_paragraphs_info() {
   $items = array(
+    'body' => array(
+      'name' => 'Simple Body',
+      'bundle' => 'body',
+      'locked' => '1',
+    ),
     'image_aside' => array(
       'name' => 'Image & Aside',
       'bundle' => 'image_aside',
@@ -66,6 +71,11 @@ function antistatique_site_paragraphs_info() {
     'image_wide' => array(
       'name' => 'Image Wide',
       'bundle' => 'image_wide',
+      'locked' => '1',
+    ),
+    'quote' => array(
+      'name' => 'Quote',
+      'bundle' => 'quote',
       'locked' => '1',
     ),
   );
