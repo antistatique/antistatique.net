@@ -78,68 +78,16 @@
  *
  * @ingroup themeable
  */
-
-hide($content['comments']);
-hide($content['links']);
-hide($content['field_svg_title']);
-hide($content['field_teammate_hero_image']);
-if (!empty($content['field_hero_image_is_dark'])) {
-  hide($content['field_hero_image_is_dark']);
-}
-$file_hero_image = null;
-if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
-  $file_hero_image = file_load($node->field_teammate_hero_image['und'][0]['fid']);
-}
-
 ?>
 
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix "<?php print $attributes; ?>>
-  <div class="img-hero teammate-hero" <?php if($file_hero_image): ?>style="background-image:url('<?php print file_create_url($file_hero_image->uri); ?>')"<?php endif ;?>>
-    <?php print render($content['field_svg_title']); ?>
-    <?php print render($title_prefix); ?>
-    <?php if (!empty($title)): ?>
-      <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-  </div>
-  <div class="container <?php if ($display_submitted) : ?>cover-overlap<?php endif; ?>">
-    <?php if ((!empty($title)) || !empty($title_prefix) || !empty($title_suffix) || !$page && $display_submitted): ?>
-
-      <?php if ($display_submitted): ?>
-        <div class="row">
-          <div class="col-md-offset-3 col-md-6">
-            <header>
-              <?php print render($content['field_co_author']); ?>
-              <div class="spacer spacer-sm"></div>
-              <hr>
-              <p class="meta"><?php print format_date($created, 'custom', 'M jS Y'); ?> <?php print t('in'); ?> <?php print render($content['field_category']); ?></p>
-            </header>
-          </div>
-        </div>
-      <?php endif; ?>
-
-    <?php endif; ?>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 content">
-        <?php print render($content['body']); ?>
-      </div>
+<a href="<?php print $node_url; ?>">
+  <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix card"<?php print $attributes; ?>>
+    <?php print render($content['field_hero_image']); ?>
+    <?php print render($content['field_client']); ?>
+    <img src="img/boulot_devs_yann_gilles.jpg" alt="image">
+    <div class="card-content">
+      <p><small>Branding • Symfony • Responsive</small></p>
+      <h4>Title of the project</h4>
     </div>
   </div>
-
-  <?php print render($content); ?>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-      </div>
-    </div>
-  </div>
-
-
-  <?php if (!empty($content['links'])): ?>
-    <footer>
-      <?php print render($content['links']); ?>
-    </footer>
-  <?php endif; ?>
-
-
-</article>
+</a>

@@ -24,7 +24,7 @@ category: Antistatique - Team
           <div class="team-avatar">
             <img src="img/team/Round_512_Philippe.png" alt="" class="img-circle img-responsive">
           </div>
-          <h6 class="text-md text-dark hidden-xs">
+          <h6 class="h6 text-md text-dark hidden-xs">
             Philippe
           </h6>
         </a>
@@ -34,7 +34,7 @@ category: Antistatique - Team
           <div class="team-avatar">
             <img src="img/team/Round_512_Saniha.png" alt="" class="img-circle img-responsive">
           </div>
-          <h6 class="text-md text-dark hidden-xs">
+          <h6 class="h6 text-md text-dark hidden-xs">
             Saniha
           </h6>
         </a>
@@ -44,7 +44,7 @@ category: Antistatique - Team
           <div class="team-avatar">
             <img src="img/team/Round_512_Guillaume.png" alt="" class="img-circle img-responsive">
           </div>
-          <h6 class="text-md text-dark hidden-xs">
+          <h6 class="h6 text-md text-dark hidden-xs">
             Guillaume
           </h6>
         </a>
@@ -54,7 +54,7 @@ category: Antistatique - Team
           <div class="team-avatar">
             <img src="img/team/Round_512_Marc.png" alt="" class="img-circle img-responsive">
           </div>
-          <h6 class="text-md text-dark hidden-xs">
+          <h6 class="h6 text-md text-dark hidden-xs">
             Marc
           </h6>
         </a>
@@ -64,7 +64,7 @@ category: Antistatique - Team
           <div class="team-avatar">
             <img src="img/team/Round_512_Gilles.png" alt="" class="img-circle img-responsive">
           </div>
-          <h6 class="text-md text-dark hidden-xs">
+          <h6 class="h6 text-md text-dark hidden-xs">
             Gilles
           </h6>
         </a>
@@ -74,7 +74,7 @@ category: Antistatique - Team
           <div class="team-avatar">
             <img src="img/team/Round_512_Yann.png" alt="" class="img-circle img-responsive">
           </div>
-          <h6 class="text-md text-dark hidden-xs">
+          <h6 class="h6 text-md text-dark hidden-xs">
             Yann
           </h6>
         </a>
@@ -90,10 +90,12 @@ category: Antistatique - Team
   text-align: center;
   color: inherit;
   text-decoration: none;
+  display: block;
 
   .team-avatar {
+    text-align: center;
     position: relative;
-    display: block;
+    display: inline-block;
     &:before {
       content: '';
       width: 100%;
@@ -108,10 +110,11 @@ category: Antistatique - Team
     img {
       padding: 3px;
       position: relative;
+      display: inline;
     }
   }
 
-  h6 {
+  .h6 {
     text-decoration: underline;
   }
 
@@ -132,7 +135,7 @@ category: Antistatique - Team
         background: $link-color;
       }
     }
-    h6 {
+    .h6 {
       color: $link-color;
     }
   }
@@ -153,7 +156,7 @@ category: Antistatique - Team
             <img src="img/team/Round_512_Sepehr.png" alt="" class="img-circle img-responsive">
           </div>
           <div>
-            <h6 class="text-md text-dark">
+            <h6 class="h6 text-md text-dark">
               Sepehr
             </h6>
           </div>
@@ -168,7 +171,7 @@ category: Antistatique - Team
             <img src="img/team/Round_512_Toni.png" alt="" class="img-circle img-responsive">
           </div>
           <div>
-            <h6 class="text-md text-dark">
+            <h6 class="h6 text-md text-dark">
               Toni
             </h6>
           </div>
@@ -183,7 +186,7 @@ category: Antistatique - Team
             <img src="img/team/Round_512_Charlotte.png" alt="" class="img-circle img-responsive">
           </div>
           <div>
-            <h6 class="text-md text-dark">
+            <h6 class="h6 text-md text-dark">
               Charlotte
             </h6>
           </div>

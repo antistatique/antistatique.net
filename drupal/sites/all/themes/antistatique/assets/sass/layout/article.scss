@@ -44,3 +44,19 @@ category: Antistatique - Blog
     }
   }
 }
+
+.field-name-field-co-author {
+  .field-item {
+    display: inline-block;
+  }
+  .user-picture img{
+    display: inline-block;
+  }
+}
+
+header {
+  .meta {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+}
