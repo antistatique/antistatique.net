@@ -14,11 +14,10 @@ abstract class AbstractAntistatiqueMigration extends Migration {
     );
 
     // @TODO: Do I need this ?
-    // Individual mappings in a migration can be linked to a ticket or issue
-    // in an external tracking system. Define the URL pattern here in the shared
-    // class with ':id:' representing the position of the issue number, then add
-    // ->issueNumber(1234) to a mapping.
     $this->issuePattern = 'http://github.com/antistatique/antistatique.net/issues/:id:';
+
+    // @TODO: Change this with real image path
+    $this->imageSourceDir = __DIR__ . '/../../../../drupal8-uploads';
   }
 
   /**
@@ -57,6 +56,7 @@ class ArticleNodeMigration extends AbstractAntistatiqueMigration
       ->fields('body', array('field_article_body_value', 'field_article_body_summary'))
       ->fields('date', array('field_article_date_value'))
       ->fields('u', array('uid', 'mail'))
+      ->fields('file', array('filename'))
     ;
 
     $query
@@ -69,6 +69,14 @@ class ArticleNodeMigration extends AbstractAntistatiqueMigration
 
     $query
       ->leftJoin('node__field_article_author', 'au', 'au.entity_id = n.nid')
+    ;
+
+    $query
+      ->leftJoin('node__field_article_image', 'im', 'im.entity_id = n.nid')
+    ;
+
+    $query
+      ->leftJoin('file_managed', 'file', 'file.fid = im.field_article_image_target_id')
     ;
 
     $query
@@ -139,6 +147,18 @@ class ArticleNodeMigration extends AbstractAntistatiqueMigration
       ->defaultValue('fr');
     $this->addFieldMapping('body:language')
       ->defaultValue('fr');
+
+    // images
+    $this->addFieldMapping('field_teammate_hero_image', 'filename');
+    // The file_class determines how the 'image' value is interpreted, and what
+    // other options are available. In this case, MigrateFileUri indicates that
+    // the 'image' value is a URI.
+    $this->addFieldMapping('field_teammate_hero_image:file_class')
+      ->defaultValue('MigrateFileUri');
+    $this->addFieldMapping('field_teammate_hero_image:source_dir')
+      ->defaultValue($this->imageSourceDir);
+    $this->addFieldMapping('field_teammate_hero_image:destination_dir')
+      ->defaultValue(variable_get('file_default_scheme', 'public') . '://');
 
     $this->addUnmigratedDestinations(array(
       'changed',
