@@ -78,6 +78,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = title
 dependencies[] = token
+dependencies[] = transliteration
 dependencies[] = update
 dependencies[] = user
 dependencies[] = user_settings_access
