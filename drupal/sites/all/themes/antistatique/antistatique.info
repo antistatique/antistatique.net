@@ -15,7 +15,7 @@ regions[help]           = 'Help'
 regions[content]        = 'Content'
 regions[content_below]  = 'Below Content'
 regions[footer]         = 'Footer'
-regions[page_bottom]    = 'Page bottom'
+regions[above_footer]    = 'Above Footer'
 
 
 ;;;;;;;;;;;;;;;;;;;;;
