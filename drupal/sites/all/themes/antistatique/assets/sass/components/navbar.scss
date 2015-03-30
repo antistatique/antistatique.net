@@ -8,31 +8,57 @@ category: Components - Navbar
 ---
 
 ```html_example
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+<div class="navbar navbar-default">
+  <div class="navbar-header">
+    <a class="logo navbar-btn navbar-brand pull-left hidden-xs hidden-sm" href="#" title="Home">
+      <img src="svg/logo.svg" onerror="this.onerror=null; this.src='img/logo.png'" alt="Antistatique" />
+    </a>
+    <a class="logo navbar-btn navbar-brand pull-left visible-xs-inline-block visible-sm-inline-block" href="#" title="Home">
+      <img src="svg/A-logo.svg" onerror="this.onerror=null; this.src='img/A-logo.png'" alt="Antistatique" />
+    </a>
 
-    <!-- Collect the nav links -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+    <a href="/contact" type="button" class="pull-right btn btn-primary navbar-btn visible-xs">
+      <i class="fa fa-paper-plane"></i>
+      <span class="sr-only">Contact</span>
+    </a>
+
+    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+      <span class="sr-only">Toggle navigation</span>
+      <div class="inline-block">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      Menu
+    </button>
+  </div>
+
+  <div class="navbar-collapse navbar-collapse-example navbar-mobile collapse">
+    <nav role="navigation" class="inverse">
+      <ul class="menu nav navbar-nav">
+        <li class="first collapsed"><a href="/fr/nous" title="">Nous</a></li>
+        <li class="expanded active-trail dropdown active">
+          <a href="/fr/travaillons" title="" class="active-trail dropdown-toggle active" data-target="#" data-toggle="dropdown" aria-expanded="false">Travaillons <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="first leaf"><a href="/fr/nous/travaillons/avec">Avec</a></li>
+            <li class="last leaf"><a href="/fr/nous/travaillons/les-technologies">Les technologies</a></li>
+          </ul>
+        </li>
+        <li class="last leaf"><a href="/fr/avec-vous">Avec vous</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    </nav>
+    <div class="nav navbar-right navbar-btn">
+      <a href="/contact" class="btn btn-primary">Contact Us</a>
+    </div>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+      <span class="sr-only">Close navigation</span>
+      <span class="h5">&times;</span>
+      Close
+    </button>
+  </div>
+
+</div>
 ```
 */
 
