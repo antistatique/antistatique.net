@@ -94,7 +94,7 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
 ?>
 
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> main-content clearfix "<?php print $attributes; ?>>
-  <div class="img-hero teammate-hero" <?php if($file_hero_image): ?>style="background-image:url('<?php print file_create_url($file_hero_image->uri); ?>')"<?php endif ;?>>
+  <div class="img-hero<?php if ($display_submitted): ?> teammate-hero<?php endif; ?>" <?php if($file_hero_image): ?>style="background-image:url('<?php print file_create_url($file_hero_image->uri); ?>')"<?php endif ;?>>
     <?php print render($content['field_svg_title']); ?>
     <?php print render($title_prefix); ?>
     <?php if (!empty($title)): ?>

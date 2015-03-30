@@ -22,7 +22,7 @@ category: Layout - Cover
 */
 
 .cover-overlap {
-  margin-top: -50px;
+  margin-top: -80px;
   position: relative;
 
   h1 {
@@ -154,6 +154,10 @@ category: Layout - Cover
   }
   @media only screen and (max-height: 1000px) and (min-height: 801px) {
     min-height: 600px;
+  }
+
+  + .container {
+    padding-top: 30px;
   }
 }
 .teammate-hero{
