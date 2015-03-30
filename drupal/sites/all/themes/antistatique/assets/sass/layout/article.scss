@@ -38,9 +38,16 @@ category: Antistatique - Blog
 .node-type-article {
   .content {
     aside {
-      @include make-md-column(6); // will be the same size as a col-md-3 ;)
-      position: absolute;
-      left: -50%;
+      @media only screen and (min-width: $screen-md-min) {
+        @include make-md-column(3); // will be the same size as a col-md-3 ;)
+        left: -25%;
+        position: absolute;
+      }
+      @media only screen and (min-width: $screen-lg-min) {
+        @include make-lg-column(6); // will be the same size as a col-md-3 ;)
+        left: -50%;
+        position: absolute;
+      }
     }
   }
 }

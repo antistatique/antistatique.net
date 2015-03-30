@@ -107,7 +107,7 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
 
       <?php if ($display_submitted): ?>
         <div class="row">
-          <div class="col-md-offset-3 col-md-6">
+          <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
             <header>
               <?php print render($content['field_co_author']); ?>
               <div class="spacer spacer-sm"></div>
@@ -120,7 +120,7 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
 
     <?php endif; ?>
     <div class="row">
-      <div class="col-md-6 col-md-offset-3 content">
+      <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 content">
         <?php print render($content['body']); ?>
       </div>
     </div>
@@ -128,7 +128,7 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
 
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 ">
         <?php print render($content); ?>
         <?php if (isset($region['content_below'])): ?>
           <?php print render($region['content_below']); ?>
