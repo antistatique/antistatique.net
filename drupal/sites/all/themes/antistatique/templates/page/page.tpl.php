@@ -89,10 +89,15 @@
           <a class="logo navbar-btn navbar-brand pull-left hidden-xs hidden-sm" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
             <img src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/svg/logo.svg" onerror="this.onerror=null; this.src='<?php print $logo; ?>'" alt="<?php if (!empty($site_name)): print $site_name; endif; ?>" />
           </a>
-          <a class="logo navbar-btn navbar-brand pull-left visible-xs visible-sm" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+          <a class="logo navbar-btn navbar-brand pull-left visible-xs-inline-block visible-sm-inline-block" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
             <img src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/svg/A-logo.svg" onerror="this.onerror=null; this.src='/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/img/A-logo.png'" alt="<?php if (!empty($site_name)): print $site_name; endif; ?>" />
           </a>
         <?php endif; ?>
+
+        <a href="/contact" type="button" class="pull-right btn btn-primary navbar-btn visible-xs">
+          <i class="fa fa-paper-plane"></i>
+          <span class="sr-only"><?php print t('Contact'); ?></span>
+        </a>
 
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -107,8 +112,8 @@
       </div>
 
       <?php if (!empty($primary_nav)): ?>
-        <div class="navbar-collapse collapse">
-          <nav role="navigation">
+        <div class="navbar-collapse navbar-mobile collapse">
+          <nav role="navigation" class="inverse">
             <?php if (!empty($primary_nav)): ?>
               <?php print render($primary_nav); ?>
             <?php endif; ?>
@@ -116,6 +121,11 @@
           <div class="nav navbar-right navbar-btn">
             <a href="/contact" class="btn btn-primary"><?php print t('Contact Us'); ?></a>
           </div>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Close navigation</span>
+            <span class="h5">&times;</span>
+            <?php print t('Close'); ?>
+          </button>
         </div>
       <?php endif; ?>
 
