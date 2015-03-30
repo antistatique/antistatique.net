@@ -79,16 +79,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'access contextual links'.
-  $permissions['access contextual links'] = array(
-    'name' => 'access contextual links',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'contextual',
-  );
-
   // Exported permission: 'access dashboard'.
   $permissions['access dashboard'] = array(
     'name' => 'access dashboard',
