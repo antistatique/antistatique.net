@@ -87,10 +87,10 @@
       <div class="navbar-header">
         <?php if ($logo): ?>
           <a class="logo navbar-btn navbar-brand pull-left hidden-xs hidden-sm" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-            <img src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/img/logo.svg" onerror="this.onerror=null; this.src='<?php print $logo; ?>'" alt="<?php if (!empty($site_name)): print $site_name; endif; ?>" />
+            <img src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/svg/logo.svg" onerror="this.onerror=null; this.src='<?php print $logo; ?>'" alt="<?php if (!empty($site_name)): print $site_name; endif; ?>" />
           </a>
           <a class="logo navbar-btn navbar-brand pull-left visible-xs visible-sm" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-            <img src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/img/A-logo.svg" onerror="this.onerror=null; this.src='/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/img/A-logo.png'" alt="<?php if (!empty($site_name)): print $site_name; endif; ?>" />
+            <img src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/svg/A-logo.svg" onerror="this.onerror=null; this.src='/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/img/A-logo.png'" alt="<?php if (!empty($site_name)): print $site_name; endif; ?>" />
           </a>
         <?php endif; ?>
 
@@ -124,9 +124,11 @@
   </div>
 </header>
 
-<header role="banner" id="page-header">
-  <?php print render($page['header']); ?>
-</header> <!-- /#page-header -->
+<?php if (!empty($page['header'])): ?>
+  <header role="banner" id="page-header">
+    <?php print render($page['header']); ?>
+  </header> <!-- /#page-header -->
+<?php endif; ?>
 
 <div class="main-container">
 

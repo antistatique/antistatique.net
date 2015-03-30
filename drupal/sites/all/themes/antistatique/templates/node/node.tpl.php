@@ -93,7 +93,7 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
 
 ?>
 
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix "<?php print $attributes; ?>>
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> main-content clearfix "<?php print $attributes; ?>>
   <div class="img-hero teammate-hero" <?php if($file_hero_image): ?>style="background-image:url('<?php print file_create_url($file_hero_image->uri); ?>')"<?php endif ;?>>
     <?php print render($content['field_svg_title']); ?>
     <?php print render($title_prefix); ?>
@@ -109,8 +109,9 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
         <div class="row">
           <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
             <header>
+              <div class="spacer spacer-sm visible-xs"></div>
               <?php print render($content['field_co_author']); ?>
-              <div class="spacer spacer-sm"></div>
+              <div class="spacer spacer-sm hidden-xs"></div>
               <hr>
               <p class="meta"><?php print format_date($created, 'custom', 'M jS Y'); ?> <?php print t('in'); ?> <?php print render($content['field_category']); ?></p>
             </header>

@@ -45,7 +45,7 @@ category: Components - Navbar
 .navbar-brand {
   padding-left: 0;
   img {
-    width: 40px;
+    min-width: 29px;
     @media only screen and (min-width: $screen-md-min) {
       width: 165px;
     }
@@ -70,12 +70,17 @@ category: Components - Navbar
 
 .navbar-default .navbar-nav {
   > li {
-    padding: 45px 15px 29px 15px;
+    @media only screen and (min-width: $screen-sm-min) {
+      padding: 45px 15px 29px 15px;
+    }
   }
 }
 
 .navbar-btn {
-  margin-top: 43px;
+  margin-top: 11px;
+  @media only screen and (min-width: $screen-sm-min) {
+    margin-top: 43px;
+  }
 }
 
 /*doc
