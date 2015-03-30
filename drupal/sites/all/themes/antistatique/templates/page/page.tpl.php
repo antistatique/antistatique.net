@@ -74,7 +74,7 @@
  */
 ?>
 
-<?php if (!empty($page['page_top']) || !empty($messages || true)): ?>
+<?php if (!empty($page['page_top']) || !empty($messages)): ?>
   <div class="page-top">
     <?php print $messages; ?>
     <?php print render($page['page_top']); ?>
@@ -146,9 +146,9 @@
 
   <?php print render($page['content']); ?>
 
-  <?php if (!empty($page['page_bottom'])): ?>
-    <div class="page-bottom">
-      <?php print render($page['page_bottom']); ?>
+  <?php if (!empty($page['above_footer'])): ?>
+    <div class="above_footer">
+      <?php print render($page['above_footer']); ?>
     </div>
   <?php endif; ?>
 

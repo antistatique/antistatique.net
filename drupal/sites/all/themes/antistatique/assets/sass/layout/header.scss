@@ -40,6 +40,10 @@ category: Layout - Cover
     img {
       max-width: 100px;
     }
+    .field-co-author {
+      display: inline-block;
+      margin: 0 15px;
+    }
   }
   @media only screen and (max-width: $screen-xs-max) {
     margin-top: 0;

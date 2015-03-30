@@ -39,9 +39,9 @@ $username = render($user_profile['field_firstname'][0]['#markup']) .' '. render(
 $userpath = '/' . $language->language . '/' . drupal_get_path_alias('user/' . $user_id);
 
 ?>
-<a href="<?php print userpath; ?>" class="profile team-tiny"<?php print $attributes; ?>>
+<a href="<?php print $userpath; ?>" class="profile team-tiny"<?php print $attributes; ?>>
   <div class="team-avatar">
-    <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print username; ?>" class="img-circle img-responsive">
+    <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print $username; ?>" class="img-circle img-responsive">
   </div>
   <p class="h6 text-md text-dark hidden-xs"><?php print $username; ?></p>
 </a>

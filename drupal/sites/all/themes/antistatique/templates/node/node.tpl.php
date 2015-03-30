@@ -132,6 +132,7 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
         <?php print render($content); ?>
         <?php if (isset($region['content_below'])): ?>
           <?php print render($region['content_below']); ?>
+          <div class="spacer spacer-sm"></div>
         <?php endif; ?>
       </div>
     </div>
