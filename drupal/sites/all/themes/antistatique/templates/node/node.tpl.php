@@ -103,7 +103,7 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
     <?php print render($title_suffix); ?>
   </div>
   <div class="container <?php if ($display_submitted) : ?>cover-overlap<?php endif; ?>">
-    <?php if ((!empty($title)) || !empty($title_prefix) || !empty($title_suffix) || !$page && $display_submitted): ?>
+    <?php if ($page && $display_submitted): ?>
 
       <?php if ($display_submitted): ?>
         <div class="row">
@@ -126,10 +126,13 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
     </div>
   </div>
 
-  <?php print render($content); ?>
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
+        <?php print render($content); ?>
+        <?php if (isset($region['content_below'])): ?>
+          <?php print render($region['content_below']); ?>
+        <?php endif; ?>
       </div>
     </div>
   </div>

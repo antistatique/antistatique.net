@@ -4,15 +4,13 @@
  * template.php
  */
 
-function antistatique_preprocess_node(&$vars) {
-  // Get a list of all the regions for this theme
-  foreach (system_region_list($GLOBALS['theme']) as $region_key => $region_name) {
-    // Get the content for each region and add it to the $region variable
-    if ($blocks = block_get_blocks_by_region($region_key)) {
-      $variables['region'][$region_key] = $blocks;
-    }
-    else {
-      $variables['region'][$region_key] = array();
+function antistatique_preprocess_node(&$vars, $hook) {
+  // load the blocks regions to enable display in node templates
+
+  if($vars['node']->type == 'article') {
+    if ($reaction = context_get_plugin('reaction', 'block')) {
+      $vars['region']['content_below'] = $reaction->block_get_blocks_by_region('content_below');
+      drupal_static_reset('context_reaction_block_list');
     }
   }
 }

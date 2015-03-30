@@ -84,6 +84,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'access contextual links',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'contextual',
   );
