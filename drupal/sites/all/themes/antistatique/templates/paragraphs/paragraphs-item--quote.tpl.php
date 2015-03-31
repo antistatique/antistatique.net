@@ -30,7 +30,7 @@
   <div class="row content"<?php print $content_attributes; ?>>
     <div class="spacer spacer-sm"></div>
     <div class="col-md-offset-2 col-md-8">
-      <blockquote class="quote">
+      <blockquote class="blockquote-paragraph">
         <?php print render($content['field_body']); ?>
         <footer><?php print render($content['field_quote_author']); ?></footer>
       </blockquote>

@@ -25,7 +25,17 @@ category: Components - Testimonial
   border-bottom: 1px solid $midnight-blue-lighter;
   padding: 35px 0;
 
-  .media-object {
+  .pull-left {
+    @media only screen and (max-width: $screen-xs-max) {
+      float: none !important; // override pull-left
+      img {
+        @include center-block;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  img {
     @media only screen and (min-width: $screen-sm-min) {
       margin-right: 35px;
     }

@@ -34,7 +34,9 @@ blockquote {
     }
   }
 
-  footer:before {
+  footer:before,
+  footer p:first-of-type:before,
+  footer p:last-of-type:after {
     content: '';
   }
 }

@@ -91,6 +91,7 @@ hide($content['field_year']);
 hide($content['field_testimonial_name']);
 hide($content['field_testimonial_quote']);
 hide($content['field_testimonial_position']);
+hide($content['field_testimonial_avatar']);
 hide($content['field_year']);
 hide($content['field_links']);
 hide($content['field_credits']);
@@ -158,8 +159,20 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
 
   <div class="container">
     <div class="row">
+      <div class="col-sm-offset-2 col-sm-8">
+        <div class="media media-testimonial">
+          <div class="pull-left img-rounded">
+            <?php print render($content['field_testimonial_avatar']); ?>
+          </div>
+          <div class="media-body">
+            <?php print render($content['field_testimonial_quote']); ?>
+            <small class="text-muted"><?php print render($content['field_testimonial_name']); ?> • <?php print render($content['field_testimonial_position']); ?></small>
+          </div>
+        </div>
+      </div>
       <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 ">
         <?php print render($content); ?>
+
         <?php if (isset($region['content_below'])): ?>
           <?php print render($region['content_below']); ?>
 

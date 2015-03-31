@@ -69,36 +69,34 @@ category: Antistatique - Paragraphs
 */
 
 blockquote.blockquote-paragraph {
-  font-size: $font-size-base;
-  font-weight: 400;
+  // font-size: $font-size-base;
+  // font-weight: 400;
   @media only screen and (min-width: $screen-sm-min) {
     padding-left: 10%;
     padding-right: 10%;
   }
 
-  &:before,
-  &:after {
-    font-size: 70px;
-    position: absolute;
-    color: $dust;
-    @media only screen and (min-width: $screen-sm-min) {
+  @media only screen and (min-width: $screen-sm-min) {
+    &:before,
+    &:after {
+      font-size: 70px;
+      position: absolute;
+      color: $dust;
       font-size: 100px;
     }
-  }
-  &:before {
-    content: '“';
-    left: 0;
-    top: 57px;
-    @media only screen and (min-width: $screen-sm-min) {
+    &:before {
+      content: '“';
+      left: 0;
+      top: 57px;
       top: 51px;
     }
-  }
-  &:after {
-    content: '”';
-    right: 0;
-    bottom: 47px;
-    @media only screen and (min-width: $screen-sm-min) {
-      bottom: 14px;
+    &:after {
+      content: '”';
+      right: 0;
+      bottom: 47px;
+      @media only screen and (min-width: $screen-sm-min) {
+        bottom: 14px;
+      }
     }
   }
 }

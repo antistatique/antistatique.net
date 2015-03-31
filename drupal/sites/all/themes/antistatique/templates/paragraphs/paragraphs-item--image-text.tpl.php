@@ -33,6 +33,7 @@ hide($content['field_alignment']);
     <div class="col-md-offset-2 col-md-4">
       <?php if ($content['field_alignment'][0]['#markup'] == 'left'): ?>
         <?php print render($content['field_image']); ?>
+        <div class="spacer spacer-sm"></div>
       <?php else: ?>
         <?php print render($content['field_body']); ?>
       <?php endif ?>
@@ -42,6 +43,7 @@ hide($content['field_alignment']);
         <?php print render($content['field_body']); ?>
       <?php else: ?>
         <?php print render($content['field_image']); ?>
+        <div class="spacer spacer-sm"></div>
       <?php endif ?>
     </div>
   </div>
