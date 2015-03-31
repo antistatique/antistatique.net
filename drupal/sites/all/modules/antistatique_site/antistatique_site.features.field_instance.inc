@@ -627,6 +627,7 @@ function antistatique_site_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
+    'fences_wrapper' => 'p',
     'field_name' => 'field_quote_author',
     'label' => 'Quote Author',
     'required' => 1,

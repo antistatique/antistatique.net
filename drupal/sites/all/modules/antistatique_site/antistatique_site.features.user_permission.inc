@@ -257,13 +257,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'custom_breadcrumbs',
   );
 
-  // Exported permission: 'administer devel menu items'.
-  $permissions['administer devel menu items'] = array(
-    'name' => 'administer devel menu items',
-    'roles' => array(),
-    'module' => 'menu_admin_per_menu',
-  );
-
   // Exported permission: 'administer entity translation'.
   $permissions['administer entity translation'] = array(
     'name' => 'administer entity translation',

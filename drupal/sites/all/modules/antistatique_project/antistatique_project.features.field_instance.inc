@@ -61,11 +61,11 @@ function antistatique_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -106,7 +106,7 @@ function antistatique_project_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -147,11 +147,11 @@ function antistatique_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 17,
+        'type' => 'list_key',
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -184,14 +184,14 @@ function antistatique_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 7,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -259,11 +259,11 @@ function antistatique_project_field_default_field_instances() {
     'description' => 'Link(s) where this project can be viewed.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 5,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -317,13 +317,13 @@ function antistatique_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'paragraphs',
         'settings' => array(
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
-        'weight' => 14,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -367,7 +367,7 @@ function antistatique_project_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 12,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -410,7 +410,7 @@ function antistatique_project_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 16,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -473,14 +473,14 @@ function antistatique_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -550,14 +550,14 @@ function antistatique_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'thumbnail',
         ),
         'type' => 'image',
-        'weight' => 10,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -567,6 +567,7 @@ function antistatique_project_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'span',
     'field_name' => 'field_testimonial_avatar',
     'label' => 'Testimonial Avatar',
     'required' => 0,
@@ -587,22 +588,30 @@ function antistatique_project_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'audio' => 0,
           'default' => 0,
           'image' => 'image',
           'video' => 0,
         ),
         'insert' => 0,
-        'insert_absolute' => FALSE,
+        'insert_absolute' => 0,
         'insert_class' => '',
-        'insert_default' => array(
-          0 => 'auto',
-        ),
+        'insert_default' => 'auto',
         'insert_styles' => array(
-          0 => 'auto',
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_hero-image' => 0,
+          'image_large' => 0,
+          'image_medium' => 0,
+          'image_square_thumbnail' => 0,
+          'image_thumbnail' => 0,
+          'link' => 0,
         ),
         'insert_width' => '',
         'progress_indicator' => 'throbber',
@@ -620,11 +629,11 @@ function antistatique_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -634,6 +643,7 @@ function antistatique_project_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'span',
     'field_name' => 'field_testimonial_name',
     'label' => 'Testimonial Author',
     'required' => 0,
@@ -661,11 +671,11 @@ function antistatique_project_field_default_field_instances() {
     'description' => 'CEO, Founder, Best client ever, a fan',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -675,6 +685,7 @@ function antistatique_project_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'span',
     'field_name' => 'field_testimonial_position',
     'label' => 'Testimonial position',
     'required' => 0,
@@ -702,11 +713,11 @@ function antistatique_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -716,6 +727,7 @@ function antistatique_project_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'p',
     'field_name' => 'field_testimonial_quote',
     'label' => 'Testimonial Quote',
     'required' => 0,
@@ -742,7 +754,7 @@ function antistatique_project_field_default_field_instances() {
     'description' => 'The year this project was delivered to the client.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -752,7 +764,7 @@ function antistatique_project_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -800,7 +812,7 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'hidden',

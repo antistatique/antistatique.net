@@ -156,7 +156,6 @@ features[user_permission][] = administer bueditor
 features[user_permission][] = administer content types
 features[user_permission][] = administer contexts
 features[user_permission][] = administer custom breadcrumbs
-features[user_permission][] = administer devel menu items
 features[user_permission][] = administer entity translation
 features[user_permission][] = administer entity view modes
 features[user_permission][] = administer environment indicator settings
