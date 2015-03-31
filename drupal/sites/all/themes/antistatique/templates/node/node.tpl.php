@@ -88,15 +88,16 @@ hide($content['field_teammate_hero_image']);
 // hide($content['field_paragraphs']);
 hide($content['field_images']);
 hide($content['field_year']);
-hide($content['field_testimonial_name']);
-hide($content['field_testimonial_quote']);
-hide($content['field_testimonial_position']);
-hide($content['field_testimonial_avatar']);
+if (!empty($content['field_testimonial_quote'])) {
+  hide($content['field_testimonial_name']);
+  hide($content['field_testimonial_quote']);
+  hide($content['field_testimonial_position']);
+  hide($content['field_testimonial_avatar']);
+}
 hide($content['field_year']);
 hide($content['field_links']);
 hide($content['field_credits']);
 hide($content['field_skills']);
-hide($content['field_client']);
 
 if (!empty($content['field_hero_image_is_dark'])) {
   hide($content['field_hero_image_is_dark']);
@@ -150,6 +151,13 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
       <?php if (!empty($content['field_links'])): ?>
         <div class="col-sm-1 col-md-2 col-lg-3">
           <?php print render($content['field_links']); ?>
+          <div class="spacer spacer-md"></div>
+          <div class="field-year">
+            <?php print render($content['field_year']); ?>
+          </div>
+          <div class="field-client">
+            <?php print render($content['field_client']); ?>
+          </div>
         </div>
       <?php endif ?>
     </div>
@@ -158,19 +166,28 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
   <?php print render($content['field_paragraphs']); ?>
 
   <div class="container">
-    <div class="row">
-      <div class="col-sm-offset-2 col-sm-8">
-        <div class="media media-testimonial">
-          <div class="pull-left img-rounded">
-            <?php print render($content['field_testimonial_avatar']); ?>
-          </div>
-          <div class="media-body">
-            <?php print render($content['field_testimonial_quote']); ?>
-            <small class="text-muted"><?php print render($content['field_testimonial_name']); ?> • <?php print render($content['field_testimonial_position']); ?></small>
+    <?php if (!empty($content['field_testimonial_quote'])): ?>
+      <div class="row">
+        <div class="col-sm-offset-2 col-sm-8">
+          <div class="media media-testimonial">
+            <div class="pull-left img-rounded">
+              <?php print render($content['field_testimonial_avatar']); ?>
+            </div>
+            <div class="media-body">
+              <?php print render($content['field_testimonial_quote']); ?>
+              <small class="text-muted"><?php print render($content['field_testimonial_name']); ?> • <?php print render($content['field_testimonial_position']); ?></small>
+            </div>
           </div>
         </div>
       </div>
+    <?php endif ?>
+    <div class="row">
       <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 ">
+
+        <?php if (!empty($content['field_credits'])): ?>
+          <?php print render($content['field_credits']); ?>
+        <?php endif ?>
+
         <?php print render($content); ?>
 
         <?php if (isset($region['content_below'])): ?>

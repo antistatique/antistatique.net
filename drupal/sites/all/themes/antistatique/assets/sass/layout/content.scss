@@ -17,6 +17,10 @@
   margin-bottom: 50px;
 }
 
+.field-label {
+  color: $text-muted;
+}
+
 // remove ungraceful margin-top from titles in content
 .main-content .field-body {
   h2:first-of-type {
