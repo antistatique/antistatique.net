@@ -93,14 +93,6 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
 
 ?>
 
-<script type="text/javascript">
-  (function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript'; s.src = '//antistatique.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-  }());
-</script>
-
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> main-content clearfix "<?php print $attributes; ?>>
   <div class="img-hero<?php if ($display_submitted): ?> teammate-hero<?php endif; ?>" <?php if($file_hero_image): ?>style="background-image:url('<?php print file_create_url($file_hero_image->uri); ?>')"<?php endif ;?>>
     <?php print render($content['field_svg_title']); ?>
@@ -114,6 +106,14 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
     <?php if ($page && $display_submitted): ?>
 
       <?php if ($display_submitted): ?>
+        <script type="text/javascript">
+          (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript'; s.src = '//antistatique.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+          }());
+        </script>
+
         <div class="row">
           <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
             <header>
