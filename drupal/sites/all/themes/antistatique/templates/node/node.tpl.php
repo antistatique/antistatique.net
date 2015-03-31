@@ -93,6 +93,14 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
 
 ?>
 
+<script type="text/javascript">
+  (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript'; s.src = '//antistatique.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+</script>
+
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> main-content clearfix "<?php print $attributes; ?>>
   <div class="img-hero<?php if ($display_submitted): ?> teammate-hero<?php endif; ?>" <?php if($file_hero_image): ?>style="background-image:url('<?php print file_create_url($file_hero_image->uri); ?>')"<?php endif ;?>>
     <?php print render($content['field_svg_title']); ?>
@@ -113,7 +121,7 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
               <?php print render($content['field_co_author']); ?>
               <div class="spacer spacer-sm hidden-xs"></div>
               <hr>
-              <p class="meta"><?php print format_date($created, 'custom', 'M jS Y'); ?> <?php print t('in'); ?> <?php print render($content['field_category']); ?></p>
+              <p class="meta"><?php print format_date($created, 'custom', 'M jS Y'); ?> <?php print t('in'); ?> <?php print render($content['field_category']); ?><span class="pull-right"><a href="#disqus_thread"></a> </span></p>
             </header>
           </div>
         </div>
@@ -133,6 +141,10 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
         <?php print render($content); ?>
         <?php if (isset($region['content_below'])): ?>
           <?php print render($region['content_below']); ?>
+
+          <?php if ($page && $display_submitted): ?>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+          <?php endif; ?>
           <div class="spacer spacer-sm"></div>
         <?php endif; ?>
       </div>
