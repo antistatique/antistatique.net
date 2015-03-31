@@ -114,6 +114,19 @@ category: Layout - Buttons
   }
 }
 
+.btn-wrap {
+  white-space: normal;
+}
+
+// Tweaks for btn with icons only
+.btn-dark {
+  padding-right: 9px;
+  .fa-external-link {
+    top: 3px;
+    margin-right: 0;
+  }
+}
+
 /*doc
 ---
 title: Sizes

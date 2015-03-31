@@ -50,4 +50,5 @@ hide($content['field_image_width']);
       <?php print render($content['field_aside']); ?>
     </aside>
   </div>
+  <div class="spacer"></div>
 </div>

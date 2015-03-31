@@ -102,3 +102,22 @@ blockquote.blockquote-paragraph {
     }
   }
 }
+
+.paragraphs-item-image-wide {
+  .centered {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .half {
+    @media only screen and (min-width: $screen-sm-min) {
+      @include clearfix;
+      .field-wide-images {
+        max-width: 50%;
+        float: left;
+      }
+    }
+  }
+}

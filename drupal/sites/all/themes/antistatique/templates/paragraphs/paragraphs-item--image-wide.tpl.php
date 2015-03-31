@@ -30,8 +30,9 @@ $count = count($content['field_wide_images']['#items']);
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
       <div class="spacer"></div>
-      <div class="<?php if ($count == 2): print 'half'; endif; ?>">
+      <div class="<?php if ($count == 2): print 'half'; else: print 'centered'; endif; ?>">
         <?php print render($content['field_wide_images']); ?>
       </div>
   </div>
 </div>
+<div class="spacer"></div>

@@ -80,9 +80,23 @@
  */
 
 hide($content['comments']);
-hide($content['links']);
+if (!empty($content['links'])) {
+  hide($content['links']);
+}
 hide($content['field_svg_title']);
 hide($content['field_teammate_hero_image']);
+// hide($content['field_paragraphs']);
+hide($content['field_images']);
+hide($content['field_year']);
+hide($content['field_testimonial_name']);
+hide($content['field_testimonial_quote']);
+hide($content['field_testimonial_position']);
+hide($content['field_year']);
+hide($content['field_links']);
+hide($content['field_credits']);
+hide($content['field_skills']);
+hide($content['field_client']);
+
 if (!empty($content['field_hero_image_is_dark'])) {
   hide($content['field_hero_image_is_dark']);
 }
@@ -132,8 +146,15 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
       <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 content">
         <?php print render($content['body']); ?>
       </div>
+      <?php if (!empty($content['field_links'])): ?>
+        <div class="col-sm-1 col-md-2 col-lg-3">
+          <?php print render($content['field_links']); ?>
+        </div>
+      <?php endif ?>
     </div>
   </div>
+
+  <?php print render($content['field_paragraphs']); ?>
 
   <div class="container">
     <div class="row">
@@ -150,6 +171,8 @@ if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
       </div>
     </div>
   </div>
+
+  <div class="spacer spacer-lg"></div>
 
 
   <?php if (!empty($content['links'])): ?>
