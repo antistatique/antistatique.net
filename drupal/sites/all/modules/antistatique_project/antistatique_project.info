@@ -21,6 +21,7 @@ dependencies[] = module_filter
 dependencies[] = options
 dependencies[] = override_node_options
 dependencies[] = paragraphs
+dependencies[] = picture
 dependencies[] = role_delegation
 dependencies[] = strongarm
 dependencies[] = taxonomy

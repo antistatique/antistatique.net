@@ -201,6 +201,7 @@ function antistatique_project_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_images',
     'label' => 'Images',
     'required' => 0,
@@ -208,11 +209,11 @@ function antistatique_project_field_default_field_instances() {
       'alt_field' => 0,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
-      'file_directory' => '',
+      'file_directory' => 'large-project',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '',
+      'min_resolution' => '600x600',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -221,9 +222,11 @@ function antistatique_project_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'private' => 0,
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'audio' => 0,
           'default' => 0,
           'image' => 'image',
@@ -237,6 +240,7 @@ function antistatique_project_field_default_field_instances() {
           'auto' => 'auto',
           'icon_link' => 0,
           'image' => 0,
+          'image_hero-image' => 0,
           'image_large' => 0,
           'image_medium' => 0,
           'image_square_thumbnail' => 0,
@@ -470,16 +474,25 @@ function antistatique_project_field_default_field_instances() {
   $field_instances['node-project-field_teammate_hero_image'] = array(
     'bundle' => 'project',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'picture',
         'settings' => array(
+          'colorbox_settings' => array(
+            'colorbox_caption' => 'auto',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_group' => '',
+            'colorbox_multivalue_index' => NULL,
+          ),
+          'fallback_image_style' => 'hero-image',
           'image_link' => '',
-          'image_style' => '',
+          'picture_mapping' => 'hero',
         ),
-        'type' => 'image',
+        'type' => 'picture',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -494,6 +507,7 @@ function antistatique_project_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_teammate_hero_image',
     'label' => 'Hero Image',
     'required' => 1,
@@ -501,11 +515,11 @@ function antistatique_project_field_default_field_instances() {
       'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
-      'file_directory' => '',
+      'file_directory' => 'hero-project',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '',
+      'min_resolution' => '1600x900',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -514,11 +528,14 @@ function antistatique_project_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          0 => 'public',
-          1 => 'private',
+          'private' => 'private',
+          'public' => 'public',
         ),
         'allowed_types' => array(
-          0 => 'image',
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
         ),
         'insert' => 0,
         'insert_absolute' => 0,
@@ -528,6 +545,7 @@ function antistatique_project_field_default_field_instances() {
           'auto' => 'auto',
           'icon_link' => 0,
           'image' => 0,
+          'image_hero-image' => 0,
           'image_large' => 0,
           'image_medium' => 0,
           'image_square_thumbnail' => 0,
@@ -535,7 +553,6 @@ function antistatique_project_field_default_field_instances() {
           'link' => 0,
         ),
         'insert_width' => '',
-        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -930,6 +947,7 @@ function antistatique_project_field_default_field_instances() {
   t('Hero Image');
   t('Hero image is dark');
   t('Images');
+  t('L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.');
   t('Link(s)');
   t('Link(s) where this project can be viewed.');
   t('Name');

@@ -221,6 +221,15 @@ function antistatique_site_user_default_permissions() {
     'module' => 'block',
   );
 
+  // Exported permission: 'administer breakpoints'.
+  $permissions['administer breakpoints'] = array(
+    'name' => 'administer breakpoints',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'breakpoints',
+  );
+
   // Exported permission: 'administer bueditor'.
   $permissions['administer bueditor'] = array(
     'name' => 'administer bueditor',
@@ -446,6 +455,15 @@ function antistatique_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'administer pictures'.
+  $permissions['administer pictures'] = array(
+    'name' => 'administer pictures',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'picture',
   );
 
   // Exported permission: 'administer search'.
@@ -1135,6 +1153,13 @@ function antistatique_site_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'view any unpublished article content'.
+  $permissions['view any unpublished article content'] = array(
+    'name' => 'view any unpublished article content',
+    'roles' => array(),
+    'module' => 'view_unpublished',
   );
 
   // Exported permission: 'view any unpublished content'.
