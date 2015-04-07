@@ -55,7 +55,6 @@
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <?php print $scripts; ?>
 
   <!-- Import fonts -->
   <script src="//use.typekit.net/lfl3jyz.js"></script>
@@ -69,5 +68,7 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+
+  <?php print $scripts; ?>
 </body>
 </html>

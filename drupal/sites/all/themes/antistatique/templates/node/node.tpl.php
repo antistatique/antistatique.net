@@ -99,19 +99,12 @@ hide($content['field_links']);
 hide($content['field_credits']);
 hide($content['field_skills']);
 
-if (!empty($content['field_hero_image_is_dark'])) {
-  hide($content['field_hero_image_is_dark']);
-}
-$file_hero_image = null;
-if(isset($node->field_teammate_hero_image['und'][0]['fid'])){
-  $file_hero_image = file_load($node->field_teammate_hero_image['und'][0]['fid']);
-}
-
+hide($content['field_hero_image_is_dark']);
 ?>
 
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> main-content clearfix "<?php print $attributes; ?>>
-  <div class="img-hero<?php if ($display_submitted): ?> teammate-hero<?php endif; ?>" <?php if($file_hero_image): ?>style="background-image:url('<?php print file_create_url($file_hero_image->uri); ?>')"<?php endif ;?>>
-    <?php print render($content['field_svg_title']); ?>
+  <div class="img-hero<?php if ($display_submitted): ?> teammate-hero<?php endif; ?>">
+    <div class="hidden-xs"><?php print render($content['field_svg_title']); ?></div>
     <?php print render($title_prefix); ?>
     <?php if (!empty($title)): ?>
       <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>

@@ -13,6 +13,67 @@ function antistatique_preprocess_node(&$vars, $hook) {
       drupal_static_reset('context_reaction_block_list');
     }
   }
+
+  /*
+    Define hero image to display on node header.
+
+    These styles must use the exact path that is defined by the breakpoint and
+    picture module.
+  */
+  $hero = field_get_items('node', $vars['node'], 'field_teammate_hero_image');
+  $vars['hero_xs'] = field_view_value('node', $vars['node'], 'field_teammate_hero_image', $hero[0], array(
+    'type' => 'image_url',
+    'settings' => array(
+      'image_style' => 'hero_breakpoints_theme_bootstrap_screen-xs-max_1x'
+    ),
+  ));
+  $vars['hero_xs2'] = field_view_value('node', $vars['node'], 'field_teammate_hero_image', $hero[0], array(
+    'type' => 'image_url',
+    'settings' => array(
+      'image_style' => 'hero_breakpoints_theme_bootstrap_screen-xs-max_2x'
+    ),
+  ));
+  $vars['hero_sm'] = field_view_value('node', $vars['node'], 'field_teammate_hero_image', $hero[0], array(
+    'type' => 'image_url',
+    'settings' => array(
+      'image_style' => 'hero_breakpoints_theme_bootstrap_screen-sm-max_1x'
+    ),
+  ));
+  $vars['hero_md'] = field_view_value('node', $vars['node'], 'field_teammate_hero_image', $hero[0], array(
+    'type' => 'image_url',
+    'settings' => array(
+      'image_style' => 'hero_breakpoints_theme_bootstrap_screen-md-max_1x'
+    ),
+  ));
+  $vars['hero_lg'] = field_view_value('node', $vars['node'], 'field_teammate_hero_image', $hero[0], array(
+    'type' => 'image_url',
+    'settings' => array(
+      'image_style' => 'hero_breakpoints_theme_bootstrap_screen-lg-min_1x'
+    ),
+  ));
+  $css = "@media only screen and (min-width: 1200px) {
+    #node-" . $vars['node']->nid . " .img-hero {
+      background-image:url('" . render($vars['hero_lg']) . "');
+    }
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #node-" . $vars['node']->nid . " .img-hero {
+      background-image:url('" . render($vars['hero_md']) . "');
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    #node-" . $vars['node']->nid . " .img-hero {
+      background-image:url('" . render($vars['hero_sm']) . "');
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    #node-" . $vars['node']->nid . " .img-hero {
+      background-image:url('" . render($vars['hero_xs']) . "');
+    }
+  }";
+
+  drupal_add_css($css, 'inline');
+
 }
 
 function antistatique_preprocess_field(&$vars) {

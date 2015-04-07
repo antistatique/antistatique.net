@@ -147,7 +147,7 @@ category: Layout - Cover
   }
   @media only screen and (max-height: 600px) {
     min-height: 200px;
-    h1 {font-size: $font-size-base;}
+    h1 {font-size: $font-size-h1 / 1.4;}
   }
   @media only screen and (max-height: 800px) and (min-height: 601px) {
     min-height: 400px;
@@ -157,7 +157,19 @@ category: Layout - Cover
   }
 
   + .container {
-    padding-top: 50px;
+    padding-top: 25px;
+    @media only screen and (min-width: $screen-sm-min) {
+      padding-top: 50px;
+    }
+  }
+
+  .field-svg-title {
+    margin-bottom: -5%;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    height: auto;
+    width: 100%;
   }
 }
 .teammate-hero{
