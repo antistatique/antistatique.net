@@ -343,6 +343,7 @@ features[variable][] = site_name
 features[variable][] = theme_default
 features[variable][] = translation_language_type
 features[wysiwyg][] = filtered_html
+features[wysiwyg][] = markdown
 features_exclude[dependencies][translation] = translation
 features_exclude[dependencies][contextual] = contextual
 features_exclude[dependencies][bueditor] = bueditor

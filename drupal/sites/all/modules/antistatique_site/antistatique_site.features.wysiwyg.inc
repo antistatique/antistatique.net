@@ -56,5 +56,23 @@ function antistatique_site_wysiwyg_default_profiles() {
     'rdf_mapping' => array(),
   );
 
+  // Exported profile: markdown
+  $profiles['markdown'] = array(
+    'format' => 'markdown',
+    'editor' => 'epiceditor',
+    'settings' => array(
+      'default' => 1,
+      'user_choose' => 0,
+      'show_toggle' => 0,
+      'add_to_summaries' => 0,
+      'theme' => '',
+      'language' => 'en',
+      'css_setting' => 'theme',
+      'css_path' => '',
+      'advanced__active_tab' => 'edit-basic',
+    ),
+    'rdf_mapping' => array(),
+  );
+
   return $profiles;
 }
