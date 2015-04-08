@@ -27,44 +27,13 @@ function antistatique_site_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'bueditor_roles';
+  $strongarm->name = 'breakpoints_multipliers';
   $strongarm->value = array(
-    4 => array(
-      'weight' => '0',
-      'editor' => '5',
-      'alt' => '0',
-    ),
-    3 => array(
-      'weight' => '0',
-      'editor' => '5',
-      'alt' => '0',
-    ),
-    2 => array(
-      'editor' => '5',
-      'alt' => '0',
-      'weight' => 11,
-    ),
-    1 => array(
-      'editor' => '5',
-      'alt' => '0',
-      'weight' => 12,
-    ),
+    '1x' => '1x',
+    '2x' => '2x',
+    '1.5x' => '1.5x',
   );
-  $export['bueditor_roles'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'bueditor_user1';
-  $strongarm->value = '5';
-  $export['bueditor_user1'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'bueditor_user1_alt';
-  $strongarm->value = '0';
-  $export['bueditor_user1_alt'] = $strongarm;
+  $export['breakpoints_multipliers'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -676,6 +645,13 @@ function antistatique_site_strongarm() {
   $strongarm->name = 'markdowneditor_eid';
   $strongarm->value = '5';
   $export['markdowneditor_eid'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'media__file_extensions';
+  $strongarm->value = 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov m4v mp4 mpeg avi ogg oga ogv wmv ico';
+  $export['media__file_extensions'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

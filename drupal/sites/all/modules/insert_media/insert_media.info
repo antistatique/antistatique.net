@@ -1,7 +1,0 @@
-name = Insert media
-description = This module provides the integration between Media and Insert module.
-core = 7.x
-package = Media
-
-dependencies[] = media
-dependencies[] = insert

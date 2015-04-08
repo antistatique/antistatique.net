@@ -124,6 +124,134 @@ function antistatique_site_image_default_styles() {
     ),
   );
 
+  // Exported image style: large_breakpoints_theme_bootstrap_screen-lg-min_1x.
+  $styles['large_breakpoints_theme_bootstrap_screen-lg-min_1x'] = array(
+    'label' => 'large_breakpoints_theme_bootstrap_screen-lg-min_1x',
+    'effects' => array(
+      28 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 555,
+          'height' => 555,
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: large_breakpoints_theme_bootstrap_screen-lg-min_2x.
+  $styles['large_breakpoints_theme_bootstrap_screen-lg-min_2x'] = array(
+    'label' => 'large_breakpoints_theme_bootstrap_screen-lg-min_2x',
+    'effects' => array(
+      31 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1110,
+          'height' => 1110,
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: large_breakpoints_theme_bootstrap_screen-md-max_1x.
+  $styles['large_breakpoints_theme_bootstrap_screen-md-max_1x'] = array(
+    'label' => 'large_breakpoints_theme_bootstrap_screen-md-max_1x',
+    'effects' => array(
+      27 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 620,
+          'height' => 620,
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: large_breakpoints_theme_bootstrap_screen-md-max_2x.
+  $styles['large_breakpoints_theme_bootstrap_screen-md-max_2x'] = array(
+    'label' => 'large_breakpoints_theme_bootstrap_screen-md-max_2x',
+    'effects' => array(
+      30 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1240,
+          'height' => 1240,
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: large_breakpoints_theme_bootstrap_screen-sm-max_1x.
+  $styles['large_breakpoints_theme_bootstrap_screen-sm-max_1x'] = array(
+    'label' => 'large_breakpoints_theme_bootstrap_screen-sm-max_1x',
+    'effects' => array(
+      26 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 600,
+          'height' => 600,
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: large_breakpoints_theme_bootstrap_screen-sm-max_2x.
+  $styles['large_breakpoints_theme_bootstrap_screen-sm-max_2x'] = array(
+    'label' => 'large_breakpoints_theme_bootstrap_screen-sm-max_2x',
+    'effects' => array(
+      29 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1200,
+          'height' => 1200,
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: large_breakpoints_theme_bootstrap_screen-xs-max_1x.
+  $styles['large_breakpoints_theme_bootstrap_screen-xs-max_1x'] = array(
+    'label' => 'large_breakpoints_theme_bootstrap_screen-xs-max_1x',
+    'effects' => array(
+      25 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 768,
+          'height' => 768,
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: large_breakpoints_theme_bootstrap_screen-xs-max_2x.
+  $styles['large_breakpoints_theme_bootstrap_screen-xs-max_2x'] = array(
+    'label' => 'large_breakpoints_theme_bootstrap_screen-xs-max_2x',
+    'effects' => array(
+      24 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1536,
+          'height' => 1536,
+          'upscale' => 0,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
   return $styles;
 }
 

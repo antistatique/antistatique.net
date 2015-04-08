@@ -230,15 +230,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'breakpoints',
   );
 
-  // Exported permission: 'administer bueditor'.
-  $permissions['administer bueditor'] = array(
-    'name' => 'administer bueditor',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'bueditor',
-  );
-
   // Exported permission: 'administer content types'.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
@@ -1151,6 +1142,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'filter',
   );

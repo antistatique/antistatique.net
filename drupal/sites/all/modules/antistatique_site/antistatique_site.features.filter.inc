@@ -18,29 +18,27 @@ function antistatique_site_filter_default_formats() {
     'status' => 1,
     'weight' => 0,
     'filters' => array(
-      'filter_url' => array(
-        'weight' => 0,
+      'filter_markdown' => array(
+        'weight' => -49,
         'status' => 1,
-        'settings' => array(
-          'filter_url_length' => 72,
-        ),
+        'settings' => array(),
       ),
       'filter_html' => array(
-        'weight' => 1,
+        'weight' => -46,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <img> <p> <hr> <pre> <dl> <dt> <picture> <aside>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
       ),
-      'filter_autop' => array(
-        'weight' => 2,
+      'picture' => array(
+        'weight' => -45,
         'status' => 1,
         'settings' => array(),
       ),
-      'filter_htmlcorrector' => array(
-        'weight' => 10,
+      'media_filter' => array(
+        'weight' => -44,
         'status' => 1,
         'settings' => array(),
       ),
@@ -85,6 +83,25 @@ function antistatique_site_filter_default_formats() {
     'filters' => array(
       'filter_markdown' => array(
         'weight' => -50,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_html' => array(
+        'weight' => -49,
+        'status' => 1,
+        'settings' => array(
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <img> <hr> <pre> <dl> <dt> <picture> <aside> <drupal-entity> <p> ',
+          'filter_html_help' => 1,
+          'filter_html_nofollow' => 0,
+        ),
+      ),
+      'media_filter' => array(
+        'weight' => -47,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'picture' => array(
+        'weight' => -42,
         'status' => 1,
         'settings' => array(),
       ),
