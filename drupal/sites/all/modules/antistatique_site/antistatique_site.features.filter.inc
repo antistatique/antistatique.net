@@ -22,7 +22,7 @@ function antistatique_site_filter_default_formats() {
         'weight' => -46,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <img> <p> <hr> <pre> <dl> <dt> <picture> <aside>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <img> <p> <hr> <pre> <dl> <dt> <picture> <aside> <div>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),

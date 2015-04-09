@@ -72,6 +72,7 @@ dependencies[] = picture
 dependencies[] = rdf
 dependencies[] = role_delegation
 dependencies[] = search
+dependencies[] = smart_trim
 dependencies[] = strongarm
 dependencies[] = system
 dependencies[] = taxonomy

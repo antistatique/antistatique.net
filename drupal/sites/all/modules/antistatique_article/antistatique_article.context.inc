@@ -35,6 +35,12 @@ function antistatique_article_context_default_contexts() {
           'region' => 'content_below',
           'weight' => '-10',
         ),
+        'views-news-block_foggy' => array(
+          'module' => 'views',
+          'delta' => 'news-block_foggy',
+          'region' => 'above_footer',
+          'weight' => '-10',
+        ),
       ),
     ),
   );
