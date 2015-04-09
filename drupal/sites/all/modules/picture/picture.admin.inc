@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Picture - map breakpoints and image styles
+ * Picture - map breakpoints and image styles.
  */
 
 /**
@@ -37,6 +37,9 @@ function picture_select_breakpoint_group_form($form, &$form_state) {
   return $form;
 }
 
+/**
+ * Validate breakpoint group.
+ */
 function picture_select_breakpoint_group_form_validate($form, &$form_state) {
   if (!isset($form_state['values']['breakpoint_group']) || empty($form_state['values']['breakpoint_group'])) {
     form_error($form['breakpoint_group'], t('No breakpoint group was selected.'));
@@ -50,6 +53,9 @@ function picture_select_breakpoint_group_form_submit($form, &$form_state) {
   $form_state['item']->setBreakpointGroup($form_state['values']['breakpoint_group']);
 }
 
+/**
+ * Build picture mapping form.
+ */
 function picture_mapping_form(&$form, &$form_state) {
   $picture_mapping = $form_state['item'];
   $form['info']['label']['#required'] = TRUE;
@@ -145,6 +151,9 @@ function picture_mapping_form(&$form, &$form_state) {
   return $form;
 }
 
+/**
+ * Helper function for the form.
+ */
 function picture_mapping_form_change_breakpoint_group($form, &$form_state) {
   return $form['mapping'];
 }
@@ -174,7 +183,6 @@ function picture_mapping_form_validate($form, &$form_state) {
 function picture_admin_settings() {
   $form = array();
   $picture_mappings = picture_get_mapping_options();
-  $ckeditor_mappins = array();
 
   // Check if picture mappings have been configured before proceeding.
   if ($picture_mappings) {
@@ -182,7 +190,7 @@ function picture_admin_settings() {
     $form['description'] = array(
       '#type' => 'item',
       '#title' => t('Choose which picture mappings will be available in the CKEditor image dialog.'),
-      '#description' => 'See picture_wysiwyg.css for an example of how to style these images in your theme using the selectors suggested below.',
+      '#description' => t('See picture_wysiwyg.css for an example of how to style these images in your theme using the selectors suggested below.'),
     );
 
     // Retrieve pre-existing settings.
@@ -240,7 +248,7 @@ function picture_admin_settings() {
 
   $form['picture_js_scope'] = array(
     '#title' => t('Picture JavaScript scope'),
-    '#description' => t('For performance reasons, JS should be loaded in the footer. However, you can move the Picture module\'s JS to the header so that it loads before JS from other modules like Views Slideshow.'),
+    '#description' => t("For performance reasons, JS should be loaded in the footer. However, you can move the Picture module's JS to the header so that it loads before JS from other modules like Views Slideshow."),
     '#type' => 'radios',
     '#options' => array(
       'header' => t('Header'),
@@ -270,6 +278,7 @@ function picture_admin_settings() {
 
 /**
  * Validate handler for the picture_ckeditor_settings form.
+ *
  * It checks that a fallback image style is selected for every
  * picture mapping that has been enabled for the CKEditor image dialog.
  */
@@ -288,8 +297,7 @@ function picture_admin_settings_validate($form, &$form_state) {
 }
 
 /**
- * Submit handler for the picture_ckeditor_settings form. Places chosen picture
- * groups into the variables table.
+ * Submit handler, places chosen picture groups into the variables table.
  */
 function picture_admin_settings_submit($form, &$form_state) {
   $picture_mappings = picture_mapping_load_all();
@@ -337,7 +345,7 @@ function _picture_update_to_file_entity_2() {
       $current_displays = file_displays_load($file_type->type, $view_mode, TRUE);
       if (isset($current_displays['file_picture']) && $current_displays['file_picture']->status) {
         if (!isset($current_displays['file_field_picture']) || !$current_displays['file_field_picture']->status) {
-          $display = file_display_new($file_type->type, $view_mode, 'file_field_picture');//clone $current_displays['file_picture'];
+          $display = file_display_new($file_type->type, $view_mode, 'file_field_picture');
           $display->settings = $current_displays['file_picture']->settings;
           unset($display->settings['alt']);
           unset($display->settings['title']);
@@ -361,8 +369,8 @@ function _picture_update_to_file_entity_2() {
 }
 
 /**
-  * Helper function to sort picture groups for the CKEditor image dialog
-  */
+ * Sort picture groups for the CKEditor image dialog.
+ */
 function picture_compare_weights($a, $b) {
   if ($a['weight'] == $b['weight']) {
     return 0;
