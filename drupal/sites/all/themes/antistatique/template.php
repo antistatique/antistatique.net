@@ -6,8 +6,7 @@
 
 function antistatique_preprocess_node(&$vars, $hook) {
   // load the blocks regions to enable display in node templates
-
-  if($vars['node']->type == 'article') {
+  if($vars['node']->type == 'article' && $vars['page']) {
     if ($reaction = context_get_plugin('reaction', 'block')) {
       $vars['region']['content_below'] = $reaction->block_get_blocks_by_region('content_below');
       drupal_static_reset('context_reaction_block_list');
@@ -76,8 +75,7 @@ function antistatique_preprocess_node(&$vars, $hook) {
 
 }
 
-function antistatique_preprocess_field(&$vars) {
-  // dpm($vars);
+function antistatique_preprocess_page(&$vars) {
 }
 
 /**
@@ -110,4 +108,20 @@ function antistatique_preprocess_user_profile(&$vars) {
 
   // Preprocess fields.
   field_attach_preprocess('user', $account, $vars['elements'], $vars);
+}
+
+/**
+ * Set name instead of username for field_co_author
+ */
+function antistatique_preprocess_field(&$variables, $hook) {
+  $element = $variables['element'];
+  if (isset($element['#field_name'])) {
+    if ($element['#field_name'] == 'field_co_author' && $element['#formatter'] == 'entityreference_label') {
+      $username = $element['#items'][0]['entity']->name;
+      $firstname = $element['#items'][0]['entity']->field_firstname['und'][0]['safe_value'];
+      $variables['items'][0]['#markup'] = '<a href="/users/'.$username.'">'.$firstname.'</a>';
+    }
+  }
+}
+
 }

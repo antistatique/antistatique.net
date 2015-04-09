@@ -5,11 +5,10 @@
   }
 }
 
-.readmore {
-  a:before {
-    content: '›';
-    margin: 0 4px;
-  }
+.readmore a:before,
+.more-link:before {
+  content: '›';
+  margin: 0 4px;
 }
 
 .embed-responsive {

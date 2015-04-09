@@ -115,14 +115,6 @@ hide($content['field_hero_image_is_dark']);
     <?php if ($page && $display_submitted): ?>
 
       <?php if ($display_submitted): ?>
-        <script type="text/javascript">
-          (function () {
-            var s = document.createElement('script'); s.async = true;
-            s.type = 'text/javascript'; s.src = '//antistatique.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-          }());
-        </script>
-
         <div class="row">
           <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
             <header>
@@ -182,6 +174,7 @@ hide($content['field_hero_image_is_dark']);
         <?php endif ?>
 
         <?php print render($content); ?>
+        <div class="spacer spacer-sm"></div>
 
         <?php if (isset($region['content_below'])): ?>
           <?php print render($region['content_below']); ?>
@@ -189,7 +182,7 @@ hide($content['field_hero_image_is_dark']);
           <?php if ($page && $display_submitted): ?>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
           <?php endif; ?>
-          <div class="spacer spacer-sm"></div>
+          <div class="spacer spacer-md"></div>
         <?php endif; ?>
       </div>
     </div>

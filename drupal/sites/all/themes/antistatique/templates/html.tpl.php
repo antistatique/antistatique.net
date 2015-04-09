@@ -70,5 +70,16 @@
   <?php print $page_bottom; ?>
 
   <?php print $scripts; ?>
+
+  <?php // make this conditionnal for better performances (only when article
+        // nodes are shown)
+  ?>
+  <script type="text/javascript">
+    (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.type = 'text/javascript'; s.src = '//antistatique.disqus.com/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+  </script>
 </body>
 </html>
