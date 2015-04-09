@@ -111,10 +111,10 @@ hide($content['field_hero_image_is_dark']);
     <?php endif; ?>
     <?php print render($title_suffix); ?>
   </div>
-  <div class="container <?php if ($display_submitted) : ?>cover-overlap<?php endif; ?>">
-    <?php if ($page && $display_submitted): ?>
 
-      <?php if ($display_submitted): ?>
+  <?php if ($display_submitted): ?>
+    <div class="container cover-overlap">
+      <?php if ($page && $display_submitted): ?>
         <div class="row">
           <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
             <header>
@@ -127,26 +127,35 @@ hide($content['field_hero_image_is_dark']);
           </div>
         </div>
       <?php endif; ?>
-
-    <?php endif; ?>
-    <div class="row">
-      <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 content">
-        <?php print render($content['body']); ?>
-      </div>
-      <?php if (!empty($content['field_links'])): ?>
-        <div class="col-sm-1 col-md-2 col-lg-3">
-          <?php print render($content['field_links']); ?>
-          <div class="spacer spacer-md"></div>
-          <div class="field-year">
-            <?php print render($content['field_year']); ?>
-          </div>
-          <div class="field-client">
-            <?php print render($content['field_client']); ?>
-          </div>
-        </div>
-      <?php endif ?>
     </div>
-  </div>
+  <?php endif; ?>
+
+  <?php if (isset($region['content_above'])): ?>
+    <?php print render($region['content_above']); ?>
+  <?php endif; ?>
+
+  <?php if (!empty($content['body'])): ?>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 content">
+          <?php print render($content['body']); ?>
+        </div>
+        <?php if (!empty($content['field_links'])): ?>
+          <div class="col-sm-1 col-md-2 col-lg-3">
+            <?php print render($content['field_links']); ?>
+            <div class="spacer spacer-md"></div>
+            <div class="field-year">
+              <?php print render($content['field_year']); ?>
+            </div>
+            <div class="field-client">
+              <?php print render($content['field_client']); ?>
+            </div>
+          </div>
+        <?php endif ?>
+      </div>
+    </div>
+  <?php endif; ?>
 
   <?php print render($content['field_paragraphs']); ?>
 
@@ -174,9 +183,9 @@ hide($content['field_hero_image_is_dark']);
         <?php endif ?>
 
         <?php print render($content); ?>
-        <div class="spacer spacer-sm"></div>
 
-        <?php if (isset($region['content_below'])): ?>
+        <?php if (!empty($region['content_below'])): ?>
+          <div class="spacer spacer-sm"></div>
           <?php print render($region['content_below']); ?>
 
           <?php if ($page && $display_submitted): ?>
@@ -188,7 +197,7 @@ hide($content['field_hero_image_is_dark']);
     </div>
   </div>
 
-  <div class="spacer spacer-lg"></div>
+  <div class="spacer spacer-md"></div>
 
 
   <?php if (!empty($content['links'])): ?>

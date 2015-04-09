@@ -82,12 +82,10 @@
 
 <a href="<?php print $node_url; ?>">
   <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix card"<?php print $attributes; ?>>
-    <?php print render($content['field_hero_image']); ?>
-    <?php print render($content['field_client']); ?>
-    <img src="img/boulot_devs_yann_gilles.jpg" alt="image">
+    <?php print render($content['field_teammate_hero_image']); ?>
     <div class="card-content">
-      <p><small>Branding • Symfony • Responsive</small></p>
-      <h4>Title of the project</h4>
+      <p><?php print render($content['field_skills']); ?></p>
+      <h4><?php print $title; ?></h4>
     </div>
   </div>
 </a>

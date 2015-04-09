@@ -127,6 +127,21 @@ category: Layout - Buttons
   }
 }
 
+.view {
+  .more-link {
+    text-align: center;
+    margin-bottom: 50px;
+    &:before {
+      content: '';
+      margin: 0;
+    }
+    a {
+      @extend .btn;
+      @extend .btn-primary;
+    }
+  }
+}
+
 /*doc
 ---
 title: Sizes
