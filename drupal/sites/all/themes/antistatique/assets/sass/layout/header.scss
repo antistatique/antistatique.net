@@ -98,6 +98,11 @@ category: Layout - Cover
     padding-right: 15px; // (because not in a container)
     margin-bottom: 0;
     z-index: 1;
+    span {
+      display: block;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
     @media only screen and (min-width: $screen-sm-min) {
       padding-bottom: 1em;
       text-align: center;

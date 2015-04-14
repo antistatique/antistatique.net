@@ -107,7 +107,7 @@ hide($content['field_hero_image_is_dark']);
     <div class="hidden-xs"><?php print render($content['field_svg_title']); ?></div>
     <?php print render($title_prefix); ?>
     <?php if (!empty($title)): ?>
-      <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
+      <h1<?php print $title_attributes; ?>><span><?php print $title; ?></span></h1>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
   </div>
