@@ -232,9 +232,6 @@ gulp.task('twig', function () {
   */
 gulp.task('serve', ['default'], function () {
   browserSync({
-    server: {
-      baseDir: ['styleguide'],
-    },
     open: false
   });
   gulp.watch(['drupal/sites/all/themes/antistatique/assets/sass/**/*.scss'], function() {
