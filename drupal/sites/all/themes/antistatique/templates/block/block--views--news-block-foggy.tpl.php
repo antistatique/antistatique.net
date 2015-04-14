@@ -45,16 +45,15 @@
  * @ingroup themeable
  */
 ?>
-<div class="bg-foggy">
-  <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> container clearfix"<?php print $attributes; ?>>
 
-    <?php print render($title_prefix); ?>
-    <?php if ($title): ?>
-      <h2 class="h3 text-center"><?php print $title; ?></h2>
-    <?php endif;?>
-    <?php print render($title_suffix); ?>
+<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> container clearfix"<?php print $attributes; ?>>
 
-    <?php print $content ?>
+  <?php print render($title_prefix); ?>
+  <?php if ($title): ?>
+    <h2 class="h3 text-center"><?php print $title; ?></h2>
+  <?php endif;?>
+  <?php print render($title_suffix); ?>
 
-  </section>
-</div>
+  <?php print $content ?>
+
+</section>
