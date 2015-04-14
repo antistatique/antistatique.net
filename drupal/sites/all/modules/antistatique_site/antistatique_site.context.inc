@@ -38,11 +38,17 @@ function antistatique_site_context_default_contexts() {
           'region' => 'above_footer',
           'weight' => '-10',
         ),
-        'views-news-block_foggy_other' => array(
-          'module' => 'views',
-          'delta' => 'news-block_foggy_other',
+        'block-3' => array(
+          'module' => 'block',
+          'delta' => '3',
           'region' => 'above_footer',
           'weight' => '-9',
+        ),
+        'views-news-block_foggy' => array(
+          'module' => 'views',
+          'delta' => 'news-block_foggy',
+          'region' => 'above_footer',
+          'weight' => '-8',
         ),
       ),
     ),
