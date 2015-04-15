@@ -98,6 +98,8 @@ hide($content['field_year']);
 hide($content['field_links']);
 hide($content['field_credits']);
 hide($content['field_skills']);
+hide($content['field_breadcrumb_tagline']);
+hide($content['field_section']);
 
 hide($content['field_hero_image_is_dark']);
 ?>

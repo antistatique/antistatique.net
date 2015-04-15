@@ -125,6 +125,9 @@ function antistatique_article_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'small_teaser' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

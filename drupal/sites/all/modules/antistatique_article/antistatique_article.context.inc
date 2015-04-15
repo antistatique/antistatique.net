@@ -35,9 +35,9 @@ function antistatique_article_context_default_contexts() {
           'region' => 'content_below',
           'weight' => '-10',
         ),
-        'views-news-block_foggy' => array(
+        'views-news-block_foggy_other' => array(
           'module' => 'views',
-          'delta' => 'news-block_foggy',
+          'delta' => 'news-block_foggy_other',
           'region' => 'above_footer',
           'weight' => '-10',
         ),

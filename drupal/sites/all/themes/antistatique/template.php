@@ -82,7 +82,17 @@ function antistatique_preprocess_node(&$vars, $hook) {
 
 }
 
-function antistatique_preprocess_page(&$vars) {
+function antistatique_preprocess_page(&$variables) {
+  $nid = arg(1);
+  if (arg(0) == 'node' && is_numeric($nid)) {
+    if (isset($variables['page']['content']['system_main']['nodes'][$nid])) {
+      $variables['node_content'] = &$variables['page']['content']['system_main']['nodes'][$nid];
+      // tagline generator
+      $variables['breadcrumb_tagline'] =
+        $variables['node_content']['field_section'][0]['#title'];
+
+    }
+  }
 }
 
 /**

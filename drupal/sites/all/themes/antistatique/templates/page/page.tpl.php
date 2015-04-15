@@ -130,15 +130,14 @@
       <?php endif; ?>
 
     </div>
-    <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+    <div class="breadcrumb">
+      <?php if (!empty($page['header'])): ?>
+        <?php print $breadcrumb_tagline; ?>
+        <?php print render($page['header']); ?>
+      <?php endif; ?>
+    </div>
   </div>
 </header>
-
-<?php if (!empty($page['header'])): ?>
-  <header role="banner" id="page-header">
-    <?php print render($page['header']); ?>
-  </header> <!-- /#page-header -->
-<?php endif; ?>
 
 <div class="main-container">
 

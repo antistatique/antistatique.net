@@ -787,7 +787,7 @@ $badge-border-radius:         10px !default;
 //##
 
 $breadcrumb-padding-vertical:   8px !default;
-$breadcrumb-padding-horizontal: 15px !default;
+$breadcrumb-padding-horizontal: 0 !default;
 //** Breadcrumb background color
 $breadcrumb-bg:                 none !default;
 //** Breadcrumb text color
@@ -795,7 +795,7 @@ $breadcrumb-color:              $text-color !default;
 //** Text color of current page in the breadcrumb
 $breadcrumb-active-color:       $text-color !default;
 //** Textual separator for between breadcrumb elements
-$breadcrumb-separator:          "," !default;
+$breadcrumb-separator:          "" !default;
 
 
 //== Carousel

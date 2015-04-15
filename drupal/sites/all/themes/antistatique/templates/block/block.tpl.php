@@ -48,7 +48,7 @@
 <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
-  <?php if ($title): ?>
+  <?php if (!empty($title)): ?>
     <h2 class="h3"><?php print $title; ?></h2>
   <?php endif;?>
   <?php print render($title_suffix); ?>

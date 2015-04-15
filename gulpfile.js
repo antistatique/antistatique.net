@@ -133,14 +133,6 @@ gulp.task('styles', function() {
       precision: 10,
       includePaths: ['.']
     }))
-    .on('error', $.notify.onError({
-      title: function(error) {
-        return error.message
-      },
-      message: function(error) {
-        return error.fileName + ':' + error.lineNumber
-      }
-    }))
     .pipe($.postcss([
       require('autoprefixer-core')({
         browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1'],
@@ -165,14 +157,6 @@ gulp.task('styleguide-styles', function() {
       outputStyle: 'nested', // libsass doesn't support expanded yet
       precision: 10,
       includePaths: ['.']
-    }))
-    .on('error', $.notify.onError({
-      title: function(error) {
-        return error.message
-      },
-      message: function(error) {
-        return error.fileName + ':' + error.lineNumber
-      }
     }))
     .pipe($.postcss([
       require('autoprefixer-core')({
