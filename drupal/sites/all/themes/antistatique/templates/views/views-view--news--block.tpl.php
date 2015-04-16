@@ -26,9 +26,8 @@
  *
  * @ingroup views_templates
  */
-dpm($classes_array);
 ?>
-<div class="<?php print $classes; ?> bg-foggy clearfix">
+<div class="<?php print $classes; ?> <?php if ($display_id != 'block_all') {print 'bg-foggy';} ?> clearfix">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>

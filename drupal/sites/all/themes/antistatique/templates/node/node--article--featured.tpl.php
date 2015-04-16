@@ -84,7 +84,6 @@ if (!empty($content['field_co_author'])) {
   hide($content['field_co_author']);
 }
 ?>
-<div class="spacer spacer-md"></div>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="row">
     <div class="col-md-6">
@@ -93,11 +92,13 @@ if (!empty($content['field_co_author'])) {
       </div>
     </div>
     <div class="col-md-6">
-      <p class="meta small">
+      <div class="spacer spacer-sm visible-sm-block visible-xs-block"></div>
+      <a href="<?php print $node_url; ?>"><h3 class="media-heading"><?php print $title; ?></h3></a>
+      <div class="spacer spacer-xs"></div>
+      <p class="meta small text-muted">
         <span class="pull-right"><a href="<?php print $node_url; ?>#disqus_thread"><i class="fa fa-comment"></i></a></span>
         <span><?php print format_date($created, 'custom', t('j.m.Y')); ?> › <?php print t('by'); ?> <?php print render($content['field_co_author']); ?> <?php print t('in ') . render($content['field_category']); ?></span>
       </p>
-      <a href="<?php print $node_url; ?>"><h3 class="h6"><?php print $title; ?></h3></a>
       <?php print render($content); ?>
       <?php print render($content['links']); ?>
     </div>

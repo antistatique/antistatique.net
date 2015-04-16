@@ -84,7 +84,7 @@ function antistatique_preprocess_node(&$vars, $hook) {
 
 function antistatique_preprocess_page(&$variables) {
   $nid = arg(1);
-  if (arg(0) == 'node' && is_numeric($nid) && !$variables['is_front']) {
+  if (arg(0) == 'node' && is_numeric($nid) && $variables['node']->type == 'page' && !$variables['is_front']) {
     if (isset($variables['page']['content']['system_main']['nodes'][$nid])) {
       $variables['node_content'] = &$variables['page']['content']['system_main']['nodes'][$nid];
       // tagline generator
