@@ -117,10 +117,14 @@ function antistatique_preprocess_user_profile(&$vars) {
   * the url into $matches. Replace the old
   * string with just the url to pass to node.
   */
-  $string = $vars['user_profile']['user_picture']['#markup'];
-  preg_match_all('#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#', $string, $match);
-  if($picture = $vars['user_profile']['user_picture']) {
-    $vars['user_profile']['user_picture'] = $match[0][0];
+  if ($vars['user_id'] != '0') {
+    $string = $vars['user_profile']['user_picture']['#markup'];
+    preg_match_all('#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#', $string, $match);
+    if($picture = $vars['user_profile']['user_picture']) {
+      $vars['user_profile']['user_picture'] = $match[0][0];
+    }
+  } else {
+    $vars['user_profile']['user_picture'] = '/' . drupal_get_path('theme',$GLOBALS['theme']) . '/build/img/logo_white.png';
   }
 
   // Preprocess fields.
@@ -134,9 +138,13 @@ function antistatique_preprocess_field(&$variables, $hook) {
   $element = $variables['element'];
   if (isset($element['#field_name'])) {
     if ($element['#field_name'] == 'field_co_author' && $element['#formatter'] == 'entityreference_label') {
-      $username = $element['#items'][0]['entity']->name;
-      $firstname = $element['#items'][0]['entity']->field_firstname['und'][0]['safe_value'];
-      $variables['items'][0]['#markup'] = '<a href="/users/'.$username.'">'.$firstname.'</a>';
+      if (!empty($element['#items'][0]['entity']->name)) {
+        $username = $element['#items'][0]['entity']->name;
+        $firstname = $element['#items'][0]['entity']->field_firstname['und'][0]['safe_value'];
+        $variables['items'][0]['#markup'] = '<a href="/users/'.$username.'">'.$firstname.'</a>';
+      } else {
+        $variables['items'][0]['#markup'] = 'Antistatique';
+      }
     }
   }
 }

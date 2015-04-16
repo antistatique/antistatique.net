@@ -113,11 +113,12 @@ category: Antistatique - Team
       display: inline;
     }
   }
-
+}
+a.team-tiny,
+.team-teaser {
   .h6 {
     text-decoration: underline;
   }
-
   &:hover {
     .team-avatar {
       &:before {

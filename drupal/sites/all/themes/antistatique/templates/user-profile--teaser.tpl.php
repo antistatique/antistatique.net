@@ -39,9 +39,18 @@ $username = render($user_profile['field_firstname'][0]['#markup']) .' '. render(
 $userpath = '/' . $language->language . '/' . drupal_get_path_alias('user/' . $user_id);
 
 ?>
-<a href="<?php print $userpath; ?>" class="profile team-tiny"<?php print $attributes; ?>>
-  <div class="team-avatar">
-    <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print $username; ?>" class="img-circle img-responsive">
-  </div>
-  <p class="h6 text-md text-dark hidden-xs"><?php print $username; ?></p>
-</a>
+<?php if ($username != ' '): ?>
+  <a href="<?php print $userpath; ?>" class="profile team-tiny"<?php print $attributes; ?>>
+    <div class="team-avatar">
+      <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print $username; ?>" class="img-circle img-responsive">
+    </div>
+    <p class="h6 text-md text-dark hidden-xs"><?php print  $username; ?></p>
+  </a>
+<?php else: ?>
+  <span class="field-co-author"><span href="/fr/users/noemie" class="profile team-tiny">
+    <div class="team-avatar">
+      <img src="<?php print render($user_profile['user_picture']); ?>" alt="Antistatique" class="img-circle img-responsive">
+    </div>
+    <p class="h6 text-md text-dark hidden-xs">Antistatique</p>
+  </span></span>
+<?php endif ?>
