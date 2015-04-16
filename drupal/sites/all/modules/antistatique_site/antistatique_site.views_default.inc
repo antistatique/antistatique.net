@@ -116,6 +116,7 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'jump_menu';
   $handler->display->display_options['style_options']['hide'] = TRUE;
   $handler->display->display_options['style_options']['path'] = 'path';
+  $handler->display->display_options['style_options']['text'] = '';
   $handler->display->display_options['style_options']['choose'] = '';
   $handler->display->display_options['style_options']['default_value'] = TRUE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;

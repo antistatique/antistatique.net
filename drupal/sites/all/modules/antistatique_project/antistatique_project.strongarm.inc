@@ -40,6 +40,9 @@ function antistatique_project_strongarm() {
       'small_teaser' => array(
         'custom_settings' => TRUE,
       ),
+      'featured' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

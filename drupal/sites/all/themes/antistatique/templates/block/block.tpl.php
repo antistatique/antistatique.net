@@ -49,7 +49,8 @@
 
   <?php print render($title_prefix); ?>
   <?php if (!empty($title)): ?>
-    <h2 class="h3"><?php print $title; ?></h2>
+    <div class="spacer spacer-md"></div>
+    <h2 class="h3 text-center"><?php print $title; ?></h2>
   <?php endif;?>
   <?php print render($title_suffix); ?>
 
