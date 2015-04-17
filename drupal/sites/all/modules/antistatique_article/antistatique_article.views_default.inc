@@ -23,7 +23,7 @@ function antistatique_article_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['link_display'] = 'page_1';
+  $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -75,6 +75,7 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'Go to the blog';
+  $handler->display->display_options['link_url'] = 'nous/bloggons';
   $handler->display->display_options['block_description'] = 'From the blog';
 
   /* Display: Other posts */
