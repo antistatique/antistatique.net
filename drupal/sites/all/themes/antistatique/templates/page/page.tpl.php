@@ -132,7 +132,7 @@
     </div>
     <div class="breadcrumb">
       <?php if (!empty($page['header'])): ?>
-        <?php print $breadcrumb_tagline; ?>
+        <?php print $breadcrumb_tagline_section; ?>
         <?php print render($page['header']); ?>
       <?php endif; ?>
     </div>

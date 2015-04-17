@@ -29,6 +29,12 @@ function antistatique_article_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-breadcrumb-block_2' => array(
+          'module' => 'views',
+          'delta' => 'breadcrumb-block_2',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
         'disqus-disqus_comments' => array(
           'module' => 'disqus',
           'delta' => 'disqus_comments',

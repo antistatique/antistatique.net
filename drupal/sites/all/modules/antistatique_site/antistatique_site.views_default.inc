@@ -110,8 +110,8 @@ function antistatique_site_views_default_views() {
   $handler = $view->new_display('block', 'Dropdown', 'block');
   $handler->display->display_options['block_description'] = 'Dropdown';
 
-  /* Display: Jump Menu */
-  $handler = $view->new_display('block', 'Jump Menu', 'block_1');
+  /* Display: Jump Menu Pages */
+  $handler = $view->new_display('block', 'Jump Menu Pages', 'block_1');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'jump_menu';
   $handler->display->display_options['style_options']['hide'] = TRUE;
@@ -186,7 +186,80 @@ function antistatique_site_views_default_views() {
     'section' => 'section',
   );
   $handler->display->display_options['arguments']['tid']['require_value'] = TRUE;
-  $handler->display->display_options['block_description'] = 'Jump Menu';
+  $handler->display->display_options['block_description'] = 'Jump Menu Pages';
+
+  /* Display: Jump Menu Blog */
+  $handler = $view->new_display('block', 'Jump Menu Blog', 'block_2');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'jump_menu';
+  $handler->display->display_options['style_options']['hide'] = TRUE;
+  $handler->display->display_options['style_options']['path'] = 'path';
+  $handler->display->display_options['style_options']['text'] = '';
+  $handler->display->display_options['style_options']['choose'] = '';
+  $handler->display->display_options['style_options']['default_value'] = TRUE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Category (field_category) */
+  $handler->display->display_options['relationships']['field_category_tid']['id'] = 'field_category_tid';
+  $handler->display->display_options['relationships']['field_category_tid']['table'] = 'field_data_field_category';
+  $handler->display->display_options['relationships']['field_category_tid']['field'] = 'field_category_tid';
+  $handler->display->display_options['relationships']['field_category_tid']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'field_category_tid';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: Taxonomy term: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['relationship'] = 'field_category_tid';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Category (field_category) */
+  $handler->display->display_options['arguments']['field_category_tid']['id'] = 'field_category_tid';
+  $handler->display->display_options['arguments']['field_category_tid']['table'] = 'field_data_field_category';
+  $handler->display->display_options['arguments']['field_category_tid']['field'] = 'field_category_tid';
+  $handler->display->display_options['arguments']['field_category_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_category_tid']['default_argument_options']['term_page'] = FALSE;
+  $handler->display->display_options['arguments']['field_category_tid']['default_argument_options']['node'] = TRUE;
+  $handler->display->display_options['arguments']['field_category_tid']['default_argument_options']['anyall'] = '+';
+  $handler->display->display_options['arguments']['field_category_tid']['default_argument_options']['vocabularies'] = array(
+    'category' => 'category',
+  );
+  $handler->display->display_options['arguments']['field_category_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_category_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_category_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Taxonomy term: Vocabulary */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['relationship'] = 'field_category_tid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['block_description'] = 'Jump Menu Blog';
   $translatables['breadcrumb'] = array(
     t('Master'),
     t('more'),
@@ -199,9 +272,11 @@ function antistatique_site_views_default_views() {
     t('[node:url]'),
     t('All'),
     t('Dropdown'),
-    t('Jump Menu'),
+    t('Jump Menu Pages'),
     t('No tagline'),
     t('[path]'),
+    t('Jump Menu Blog'),
+    t('term from field_category'),
   );
   $export['breadcrumb'] = $view;
 

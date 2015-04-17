@@ -84,13 +84,13 @@ function antistatique_preprocess_node(&$vars, $hook) {
 
 function antistatique_preprocess_page(&$variables) {
   $nid = arg(1);
-  if (arg(0) == 'node' && is_numeric($nid) && $variables['node']->type == 'page' && !$variables['is_front']) {
-    if (isset($variables['page']['content']['system_main']['nodes'][$nid])) {
+  if (arg(0) == 'node' && is_numeric($nid) && !$variables['is_front']) {
+    if ($variables['node']->type == 'page' && isset($variables['page']['content']['system_main']['nodes'][$nid])) {
       $variables['node_content'] = &$variables['page']['content']['system_main']['nodes'][$nid];
       // tagline generator
-      $variables['breadcrumb_tagline'] =
-        $variables['node_content']['field_section'][0]['#title'];
-
+      $variables['breadcrumb_tagline_section'] = $variables['node_content']['field_section'][0]['#title'];
+    } elseif ($variables['node']->type == 'article') {
+      $variables['breadcrumb_tagline_section'] = t('Nous bloggons à propos de ');
     }
   }
 }
