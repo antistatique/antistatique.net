@@ -24,6 +24,7 @@ dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
+features[context][] = blog_all
 features[context][] = blog_article
 features[ctools][] = context:context:3
 features[ctools][] = field_group:field_group:1

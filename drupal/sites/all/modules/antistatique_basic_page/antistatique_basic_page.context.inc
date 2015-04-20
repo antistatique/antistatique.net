@@ -13,27 +13,27 @@ function antistatique_basic_page_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'we';
+  $context->name = 'page';
   $context->description = '';
   $context->tag = 'sections';
   $context->conditions = array(
-    'node_taxonomy' => array(
+    'node' => array(
       'values' => array(
-        18 => 18,
+        'page' => 'page',
       ),
       'options' => array(
-        'node_form' => '1',
+        'node_form' => '0',
       ),
     ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-breadcrumb-block' => array(
+        'views-breadcrumb-block_1' => array(
           'module' => 'views',
-          'delta' => 'breadcrumb-block',
+          'delta' => 'breadcrumb-block_1',
           'region' => 'header',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
       ),
     ),
@@ -43,7 +43,7 @@ function antistatique_basic_page_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('sections');
-  $export['we'] = $context;
+  $export['page'] = $context;
 
   return $export;
 }

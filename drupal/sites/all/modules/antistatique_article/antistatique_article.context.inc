@@ -13,6 +13,44 @@ function antistatique_article_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'blog_all';
+  $context->description = '';
+  $context->tag = 'blog';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'nous/bloggons' => 'nous/bloggons',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-news-block_single' => array(
+          'module' => 'views',
+          'delta' => 'news-block_single',
+          'region' => 'above_footer',
+          'weight' => '-10',
+        ),
+        'views-news-block_all' => array(
+          'module' => 'views',
+          'delta' => 'news-block_all',
+          'region' => 'above_footer',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('blog');
+  $export['blog_all'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'blog_article';
   $context->description = 'The article page, displaying a single article.';
   $context->tag = 'blog';

@@ -19,6 +19,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = title
 dependencies[] = views
+features[context][] = page
 features[ctools][] = context:context:3
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
