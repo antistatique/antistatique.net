@@ -5,6 +5,7 @@ version = 7.x-1.0
 project = antistatique_teammate
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = draggableviews
 dependencies[] = email
 dependencies[] = entity
 dependencies[] = entityreference
