@@ -199,13 +199,9 @@ hide($content['field_hero_image_is_dark']);
     </div>
   </div>
 
-  <div class="spacer spacer-md"></div>
-
 
   <?php if (!empty($content['links'])): ?>
-    <footer>
-      <?php print render($content['links']); ?>
-    </footer>
+    <?php print render($content['links']); ?>
   <?php endif; ?>
 
 
