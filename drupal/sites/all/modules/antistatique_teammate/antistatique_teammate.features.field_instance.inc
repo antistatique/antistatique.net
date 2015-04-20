@@ -17,6 +17,12 @@ function antistatique_teammate_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Has to be @antistatique.net',
     'display' => array(
+      'big_teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'email',
@@ -57,6 +63,13 @@ function antistatique_teammate_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'big_teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -100,6 +113,13 @@ function antistatique_teammate_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'big_teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -143,6 +163,12 @@ function antistatique_teammate_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'big_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'number',
@@ -159,7 +185,7 @@ function antistatique_teammate_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'user',
@@ -190,6 +216,12 @@ function antistatique_teammate_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Your prefered project you worked on',
     'display' => array(
+      'big_teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'entityreference',
@@ -234,6 +266,12 @@ function antistatique_teammate_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'big_teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -281,6 +319,13 @@ function antistatique_teammate_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'To know if you\'re part of the team',
     'display' => array(
+      'big_teaser' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'list',
@@ -318,6 +363,12 @@ function antistatique_teammate_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'big_teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -385,6 +436,13 @@ function antistatique_teammate_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'What\'s on your business card ?',
     'display' => array(
+      'big_teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -396,7 +454,7 @@ function antistatique_teammate_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'user',
@@ -426,6 +484,12 @@ function antistatique_teammate_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'User font awesome syntax for class',
     'display' => array(
+      'big_teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
@@ -437,7 +501,7 @@ function antistatique_teammate_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'user',

@@ -73,7 +73,7 @@ hide($user_profile['field_teammate_currently_working']);
     <?php if (!empty($user_profile['field_related_project'])): ?>
       <div class="spacer"></div>
       <div class="row">
-        <h2 class="h3 text-center"><?php print t('Some of the project done with !user', array('!user' => render($user_profile['field_firstname'])) ); ?></h2>
+        <h2 class="h3 text-center"><?php print t('Some of the projects done with !user', array('!user' => render($user_profile['field_firstname'])) ); ?></h2>
         <?php print render($user_profile['field_related_project']); ?>
       </div>
     <?php endif ?>

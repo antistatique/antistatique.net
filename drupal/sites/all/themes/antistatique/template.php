@@ -102,8 +102,13 @@ function antistatique_preprocess_page(&$variables) {
 function antistatique_preprocess_user_profile(&$vars) {
   $account = $vars['elements']['#account'];
 
-  if ($vars['elements']['#view_mode'] == 'teaser') {
-    $vars['theme_hook_suggestions'][] = 'user_profile__teaser';
+  if ($vars['elements']['#view_mode'] == 'teaser' || $vars['elements']['#view_mode'] == 'big_teaser') {
+
+    if ($vars['elements']['#view_mode'] == 'teaser') {
+      $vars['theme_hook_suggestions'][] = 'user_profile__teaser';
+    } else {
+      $vars['theme_hook_suggestions'][] = 'user_profile__big_teaser';
+    }
 
     //Add the user ID into the user profile as a variable
     $vars['user_id'] = $account->uid;
@@ -120,8 +125,10 @@ function antistatique_preprocess_user_profile(&$vars) {
     if ($vars['user_id'] != '0') {
       $string = $vars['user_profile']['user_picture']['#markup'];
       preg_match_all('#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#', $string, $match);
-      if($picture = $vars['user_profile']['user_picture']) {
+      if($picture = $vars['user_profile']['user_picture'] && !empty($vars['user_profile']['user_picture']['#markup'])) {
         $vars['user_profile']['user_picture'] = $match[0][0];
+      } else {
+        $vars['user_profile']['user_picture'] = 'http://placehold.it/180x180';
       }
     } else {
       $vars['user_profile']['user_picture'] = '/' . drupal_get_path('theme',$GLOBALS['theme']) . '/build/img/logo_white.png';
