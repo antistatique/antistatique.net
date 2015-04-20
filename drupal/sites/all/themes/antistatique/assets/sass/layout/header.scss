@@ -26,7 +26,7 @@ category: Layout - Cover
   position: relative;
 
   h1 {
-    margin-bottom: $font-size-base * 2;
+    margin-bottom: $font-size-base * 4;
   }
   h2 {
     padding-bottom: 38px;
@@ -88,7 +88,7 @@ category: Layout - Cover
   background-position: 50% 50%;
   transition: min-height ease-in-out 0.3s;
   position: relative;
-  h1{
+  h1 {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -98,7 +98,7 @@ category: Layout - Cover
     padding-right: 15px; // (because not in a container)
     margin-bottom: 0;
     z-index: 1;
-    span {
+    & > span {
       display: block;
       margin: 0 auto;
       max-width: 1200px;
@@ -131,7 +131,7 @@ category: Layout - Cover
       width: 100%;
     }
   }
-  .img-svg-title, .field-name-field-svg-title img{
+  .img-svg-title, .field-name-field-svg-title img {
     position: absolute;
     bottom: 30%;
   }
@@ -177,8 +177,8 @@ category: Layout - Cover
     width: 100%;
   }
 }
-.teammate-hero{
-  h1{
+.teammate-hero {
+  h1 {
     @media only screen and (min-width: $screen-sm-min) {
       padding-bottom: 80px;
     }

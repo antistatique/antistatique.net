@@ -88,7 +88,7 @@ function antistatique_teammate_field_group_info() {
     'children' => array(
       0 => 'field_teammate_hero_image',
       1 => 'picture',
-      2 => 'field_hero_image_is_dark',
+      2 => 'field_four_images',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

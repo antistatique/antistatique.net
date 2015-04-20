@@ -21,7 +21,7 @@ function antistatique_teammate_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'email',
         'settings' => array(),
-        'type' => 'email_default',
+        'type' => 'email_plain',
         'weight' => 5,
       ),
       'teaser' => array(
@@ -73,6 +73,7 @@ function antistatique_teammate_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'user',
+    'fences_wrapper' => 'span',
     'field_name' => 'field_firstname',
     'label' => 'Firstname',
     'required' => 1,
@@ -115,6 +116,7 @@ function antistatique_teammate_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'user',
+    'fences_wrapper' => 'span',
     'field_name' => 'field_lastname',
     'label' => 'Lastname',
     'required' => 1,
@@ -189,12 +191,13 @@ function antistatique_teammate_field_default_field_instances() {
     'description' => 'Your prefered project you worked on',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'links' => 1,
+          'view_mode' => 'teaser',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 8,
       ),
       'teaser' => array(
@@ -205,6 +208,7 @@ function antistatique_teammate_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'user',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_related_project',
     'label' => 'Related project',
     'required' => 0,
@@ -278,9 +282,10 @@ function antistatique_teammate_field_default_field_instances() {
     'description' => 'To know if you\'re part of the team',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_key',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -422,7 +427,7 @@ function antistatique_teammate_field_default_field_instances() {
     'description' => 'User font awesome syntax for class',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',

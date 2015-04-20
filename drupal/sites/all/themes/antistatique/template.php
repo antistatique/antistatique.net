@@ -100,35 +100,99 @@ function antistatique_preprocess_page(&$variables) {
 * Adds theme suggestions for the user view mode teaser
 */
 function antistatique_preprocess_user_profile(&$vars) {
+  $account = $vars['elements']['#account'];
+
   if ($vars['elements']['#view_mode'] == 'teaser') {
     $vars['theme_hook_suggestions'][] = 'user_profile__teaser';
-  }
 
-  $account = $vars['elements']['#account'];
-  //Add the user ID into the user profile as a variable
-  $vars['user_id'] = $account->uid;
-  // Helpful $user_profile variable for templates.
-  foreach (element_children($vars['elements']) as $key) {
-    $vars['user_profile'][$key] = $vars['elements'][$key];
-  }
-
-  /*
-  * Take the user picture string and regex
-  * the url into $matches. Replace the old
-  * string with just the url to pass to node.
-  */
-  if ($vars['user_id'] != '0') {
-    $string = $vars['user_profile']['user_picture']['#markup'];
-    preg_match_all('#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#', $string, $match);
-    if($picture = $vars['user_profile']['user_picture']) {
-      $vars['user_profile']['user_picture'] = $match[0][0];
+    //Add the user ID into the user profile as a variable
+    $vars['user_id'] = $account->uid;
+    // Helpful $user_profile variable for templates.
+    foreach (element_children($vars['elements']) as $key) {
+      $vars['user_profile'][$key] = $vars['elements'][$key];
     }
-  } else {
-    $vars['user_profile']['user_picture'] = '/' . drupal_get_path('theme',$GLOBALS['theme']) . '/build/img/logo_white.png';
-  }
 
-  // Preprocess fields.
-  field_attach_preprocess('user', $account, $vars['elements'], $vars);
+    /*
+    * Take the user picture string and regex
+    * the url into $matches. Replace the old
+    * string with just the url to pass to node.
+    */
+    if ($vars['user_id'] != '0') {
+      $string = $vars['user_profile']['user_picture']['#markup'];
+      preg_match_all('#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#', $string, $match);
+      if($picture = $vars['user_profile']['user_picture']) {
+        $vars['user_profile']['user_picture'] = $match[0][0];
+      }
+    } else {
+      $vars['user_profile']['user_picture'] = '/' . drupal_get_path('theme',$GLOBALS['theme']) . '/build/img/logo_white.png';
+    }
+
+    // Preprocess fields.
+    field_attach_preprocess('user', $account, $vars['elements'], $vars);
+  } elseif ($vars['elements']['#view_mode'] == 'full') {
+    /*
+        Define hero image to display on node header.
+
+        These styles must use the exact path that is defined by the breakpoint and
+        picture module.
+
+        TODO: fix this MASSIVELY duplicated code here :-)
+      */
+      $hero = field_get_items('user', $account, 'field_teammate_hero_image');
+      $vars['hero_xs'] = field_view_value('user', $account, 'field_teammate_hero_image', $hero[0], array(
+        'type' => 'image_url',
+        'settings' => array(
+          'image_style' => 'hero_breakpoints_theme_bootstrap_screen-xs-max_1x'
+        ),
+      ));
+      $vars['hero_xs2'] = field_view_value('user', $account, 'field_teammate_hero_image', $hero[0], array(
+        'type' => 'image_url',
+        'settings' => array(
+          'image_style' => 'hero_breakpoints_theme_bootstrap_screen-xs-max_2x'
+        ),
+      ));
+      $vars['hero_sm'] = field_view_value('user', $account, 'field_teammate_hero_image', $hero[0], array(
+        'type' => 'image_url',
+        'settings' => array(
+          'image_style' => 'hero_breakpoints_theme_bootstrap_screen-sm-max_1x'
+        ),
+      ));
+      $vars['hero_md'] = field_view_value('user', $account, 'field_teammate_hero_image', $hero[0], array(
+        'type' => 'image_url',
+        'settings' => array(
+          'image_style' => 'hero_breakpoints_theme_bootstrap_screen-md-max_1x'
+        ),
+      ));
+      $vars['hero_lg'] = field_view_value('user', $account, 'field_teammate_hero_image', $hero[0], array(
+        'type' => 'image_url',
+        'settings' => array(
+          'image_style' => 'hero_breakpoints_theme_bootstrap_screen-lg-min_1x'
+        ),
+      ));
+      $css = "@media only screen and (min-width: 1200px) {
+        #user-" . $account->uid . " .img-hero {
+          background-image:url('" . render($vars['hero_lg']) . "');
+        }
+      }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        #user-" . $account->uid . " .img-hero {
+          background-image:url('" . render($vars['hero_md']) . "');
+        }
+      }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        #user-" . $account->uid . " .img-hero {
+          background-image:url('" . render($vars['hero_sm']) . "');
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        #user-" . $account->uid . " .img-hero {
+          background-image:url('" . render($vars['hero_xs']) . "');
+        }
+      }";
+
+      drupal_add_css($css, 'inline');
+
+  }
 }
 
 /**
@@ -180,4 +244,30 @@ function antistatique_menu_local_tasks(&$variables) {
   }
 
   return $output;
+}
+
+/**
+ * Formats a link.
+ */
+function antistatique_link_formatter_link_default($vars) {
+  $link_options = $vars['element'];
+  unset($link_options['title']);
+  unset($link_options['url']);
+
+  if (isset($link_options['attributes']['class'])) {
+    $classes = array($link_options['attributes']['class']);
+    $classes = '<i class="'.implode($classes).'"></i> ';
+    $link_options['attributes']['class'] = 'btn btn-default';
+  }
+  // Display a normal link if both title and URL are available.
+  if (!empty($vars['element']['title']) && !empty($vars['element']['url'])) {
+    return l($classes . $vars['element']['title'], $vars['element']['url'], $link_options);
+  }
+  // If only a title, display the title.
+  elseif (!empty($vars['element']['title'])) {
+    return $link_options['html'] ? $vars['element']['title'] : check_plain($vars['element']['title']);
+  }
+  elseif (!empty($vars['element']['url'])) {
+    return l($vars['element']['title'], $vars['element']['url'], $link_options);
+  }
 }
