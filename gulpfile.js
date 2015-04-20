@@ -33,7 +33,7 @@ gulp.task('vendors', function() {
  */
 gulp.task('css-vendors', function() {
   return gulp.src([
-      ''
+      'bower_components/bootstrap-select/dist/css/bootstrap-select.min.css'
     ])
     .pipe($.concat('vendors.css'))
     .pipe($.minifyCss())
@@ -59,7 +59,8 @@ gulp.task('js-vendors', function() {
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
-      'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js'
+      'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+      'bower_components/bootstrap-select/dist/js/bootstrap-select.min.js'
     ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())

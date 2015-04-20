@@ -21,6 +21,17 @@
   display: inline;
 }
 
+.container-inline { // fix for breadcrumb menu
+  select,
+  .dropdown-menu,
+  .btn.ctools-jump-menu-button {
+    display: none;
+  }
+  .open .dropdown-menu {
+    display: block;
+  }
+}
+
 .half-width {
   float: left;
   width: 50%;
