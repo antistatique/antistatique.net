@@ -15,7 +15,7 @@ function antistatique_site_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'homepage';
   $context->description = '';
-  $context->tag = 'general';
+  $context->tag = 'specific';
   $context->conditions = array(
     'path' => array(
       'values' => array(
@@ -57,7 +57,7 @@ function antistatique_site_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('general');
+  t('specific');
   $export['homepage'] = $context;
 
   $context = new stdClass();

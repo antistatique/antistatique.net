@@ -15,7 +15,7 @@ function antistatique_article_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'blog_all';
   $context->description = '';
-  $context->tag = 'blog';
+  $context->tag = 'sections';
   $context->conditions = array(
     'path' => array(
       'values' => array(
@@ -45,7 +45,7 @@ function antistatique_article_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('blog');
+  t('sections');
   $export['blog_all'] = $context;
 
   $context = new stdClass();
@@ -53,7 +53,7 @@ function antistatique_article_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'blog_article';
   $context->description = 'The article page, displaying a single article.';
-  $context->tag = 'blog';
+  $context->tag = 'specific';
   $context->conditions = array(
     'node' => array(
       'values' => array(
@@ -93,7 +93,7 @@ function antistatique_article_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('The article page, displaying a single article.');
-  t('blog');
+  t('specific');
   $export['blog_article'] = $context;
 
   return $export;
