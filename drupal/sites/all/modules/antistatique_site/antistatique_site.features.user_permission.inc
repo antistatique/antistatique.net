@@ -171,6 +171,8 @@ function antistatique_site_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
       'collaborator' => 'collaborator',
     ),
     'module' => 'user',
@@ -1150,7 +1152,9 @@ function antistatique_site_user_default_permissions() {
   // Exported permission: 'view any unpublished article content'.
   $permissions['view any unpublished article content'] = array(
     'name' => 'view any unpublished article content',
-    'roles' => array(),
+    'roles' => array(
+      'collaborator' => 'collaborator',
+    ),
     'module' => 'view_unpublished',
   );
 
