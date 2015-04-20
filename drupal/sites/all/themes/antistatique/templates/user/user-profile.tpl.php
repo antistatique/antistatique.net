@@ -50,8 +50,12 @@ hide($user_profile['field_teammate_currently_working']);
       <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
         <header>
           <div class="spacer spacer-sm visible-xs"></div>
-          <?php print render($user_profile['user_picture']); ?>
-          <h2 class="h6 text-md"><?php print render($user_profile['field_teammate_job_title']) ?></h2>
+          <div class="team-tiny">
+            <div class="team-avatar">
+              <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print $user_profile['field_firstname'][0]['#markup']; ?>" class="img-circle img-responsive">
+              <h2 class="h6 text-md"><?php print render($user_profile['field_teammate_job_title']) ?></h2>
+            </div>
+          </div>
         </header>
         <?php print render($user_profile['field_teammate_body']); ?>
         <hr>

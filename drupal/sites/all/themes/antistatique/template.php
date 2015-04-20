@@ -110,32 +110,6 @@ function antistatique_preprocess_user_profile(&$vars) {
       $vars['theme_hook_suggestions'][] = 'user_profile__big_teaser';
     }
 
-    //Add the user ID into the user profile as a variable
-    $vars['user_id'] = $account->uid;
-    // Helpful $user_profile variable for templates.
-    foreach (element_children($vars['elements']) as $key) {
-      $vars['user_profile'][$key] = $vars['elements'][$key];
-    }
-
-    /*
-    * Take the user picture string and regex
-    * the url into $matches. Replace the old
-    * string with just the url to pass to node.
-    */
-    if ($vars['user_id'] != '0') {
-      $string = $vars['user_profile']['user_picture']['#markup'];
-      preg_match_all('#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#', $string, $match);
-      if($picture = $vars['user_profile']['user_picture'] && !empty($vars['user_profile']['user_picture']['#markup'])) {
-        $vars['user_profile']['user_picture'] = $match[0][0];
-      } else {
-        $vars['user_profile']['user_picture'] = 'http://placehold.it/180x180';
-      }
-    } else {
-      $vars['user_profile']['user_picture'] = '/' . drupal_get_path('theme',$GLOBALS['theme']) . '/build/img/logo_white.png';
-    }
-
-    // Preprocess fields.
-    field_attach_preprocess('user', $account, $vars['elements'], $vars);
   } elseif ($vars['elements']['#view_mode'] == 'full') {
     /*
         Define hero image to display on node header.
@@ -200,6 +174,32 @@ function antistatique_preprocess_user_profile(&$vars) {
       drupal_add_css($css, 'inline');
 
   }
+
+  //Add the user ID into the user profile as a variable
+  $vars['user_id'] = $account->uid;
+  // Helpful $user_profile variable for templates.
+  foreach (element_children($vars['elements']) as $key) {
+    $vars['user_profile'][$key] = $vars['elements'][$key];
+  }
+  /*
+  * Take the user picture string and regex
+  * the url into $matches. Replace the old
+  * string with just the url to pass to node.
+  */
+  if ($vars['user_id'] != '0') {
+    $string = $vars['user_profile']['user_picture']['#markup'];
+    preg_match_all('#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#', $string, $match);
+    if($picture = $vars['user_profile']['user_picture'] && !empty($vars['user_profile']['user_picture']['#markup'])) {
+      $vars['user_profile']['user_picture'] = $match[0][0];
+    } else {
+      $vars['user_profile']['user_picture'] = 'http://placehold.it/180x180';
+    }
+  } else {
+    $vars['user_profile']['user_picture'] = '/' . drupal_get_path('theme',$GLOBALS['theme']) . '/build/img/logo_white.png';
+  }
+
+  // Preprocess fields.
+  field_attach_preprocess('user', $account, $vars['elements'], $vars);
 }
 
 /**
