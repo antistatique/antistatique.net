@@ -20,6 +20,7 @@ function antistatique_teammate_context_default_contexts() {
     'path' => array(
       'values' => array(
         'nous/sommes-une-equipe' => 'nous/sommes-une-equipe',
+        'nous' => 'nous',
       ),
     ),
   );
