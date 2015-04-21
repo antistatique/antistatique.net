@@ -68,6 +68,7 @@ function antistatique_teammate_views_default_views() {
     3 => '3',
     4 => '4',
   );
+  $handler->display->display_options['filters']['rid']['reduce_duplicates'] = TRUE;
   /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
