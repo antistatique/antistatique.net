@@ -199,10 +199,4 @@ hide($content['field_hero_image_is_dark']);
     </div>
   </div>
 
-
-  <?php if (!empty($content['links'])): ?>
-    <?php print render($content['links']); ?>
-  <?php endif; ?>
-
-
 </article>
