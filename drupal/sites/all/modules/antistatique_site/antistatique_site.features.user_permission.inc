@@ -88,6 +88,15 @@ function antistatique_site_user_default_permissions() {
     'module' => 'dashboard',
   );
 
+  // Exported permission: 'access draggableviews'.
+  $permissions['access draggableviews'] = array(
+    'name' => 'access draggableviews',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'draggableviews',
+  );
+
   // Exported permission: 'access environment indicator'.
   $permissions['access environment indicator'] = array(
     'name' => 'access environment indicator',
@@ -704,6 +713,13 @@ function antistatique_site_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in section'.
+  $permissions['delete terms in section'] = array(
+    'name' => 'delete terms in section',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in skills'.
   $permissions['delete terms in skills'] = array(
     'name' => 'delete terms in skills',
@@ -778,6 +794,13 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'collaborator' => 'collaborator',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in section'.
+  $permissions['edit terms in section'] = array(
+    'name' => 'edit terms in section',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
