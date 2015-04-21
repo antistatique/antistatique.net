@@ -163,9 +163,16 @@ category: Components - Navbar
       position: absolute;
       top: 18px;
       right: 15px;
+      & + .navbar-btn {
+        right: 40px;
+      }
     }
   }
 
+}
+
+.lang-switcher {
+  margin-left: 10px;
 }
 
 /*doc

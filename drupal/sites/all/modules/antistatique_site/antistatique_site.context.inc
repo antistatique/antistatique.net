@@ -73,7 +73,18 @@ function antistatique_site_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'locale-language_content' => array(
+          'module' => 'locale',
+          'delta' => 'language_content',
+          'region' => 'navigation',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables

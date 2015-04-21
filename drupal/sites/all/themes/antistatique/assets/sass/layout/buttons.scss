@@ -19,6 +19,7 @@ category: Layout - Buttons
 | <button type="button" class="btn btn-primary">Primary</button> | <code>btn btn-primary</code> |
 | <button type="button" class="btn btn-primary btn-wire">Primary</button> | <code>btn btn-primary btn-wire</code> |
 | <button type="button" class="btn btn-dark">Dark</button>     | <code>btn btn-dark</code>  |
+| <button type="button" class="btn btn-white">Dark</button>     | <code>btn btn-white</code>  |
 | <button type="button" class="btn btn-success">Success</button> | <code>btn btn-success</code> |
 | <button type="button" class="btn btn-info">Info</button>       | <code>btn btn-info</code>    |
 | <button type="button" class="btn btn-warning">Warning</button> | <code>btn btn-warning</code> |
@@ -70,6 +71,9 @@ category: Layout - Buttons
       background: $white;
     }
   }
+  &.active {
+    @extend .btn-dark;
+  }
 }
 
 .btn-dark {
@@ -79,6 +83,17 @@ category: Layout - Buttons
   &:hover {
     color: $link-color;
     .fa {color: $white;}
+  }
+}
+
+.btn-white {
+  background: $white;
+  color: $text-color;
+  font-weight: 600;
+  &:hover,
+  &.active {
+    color: $white;
+    background: $text-color;
   }
 }
 
@@ -120,11 +135,15 @@ category: Layout - Buttons
 
 // Tweaks for btn with icons only
 .btn-dark {
-  padding-right: 9px;
   .fa-external-link {
     top: 3px;
     margin-right: 0;
   }
+}
+
+.btn-xxs {
+  font-size: .55em;
+  padding: 3px 4px 1px 4px;
 }
 
 .view {
@@ -136,6 +155,10 @@ category: Layout - Buttons
       @extend .btn-primary;
     }
   }
+}
+
+.btn-group-vertical > .btn-default + .btn-default {
+  margin-top: 0;
 }
 
 /*doc

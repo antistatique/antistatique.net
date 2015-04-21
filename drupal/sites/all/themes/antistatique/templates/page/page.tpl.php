@@ -118,6 +118,11 @@
               <?php print render($primary_nav); ?>
             <?php endif; ?>
           </nav>
+          <?php if ($page['navigation']): ?>
+            <div class="nav navbar-btn navbar-right">
+              <?php print render($page['navigation']); ?>
+            </div>
+          <?php endif ?>
           <div class="nav navbar-right navbar-btn">
             <a href="/contact" class="btn btn-primary"><?php print t('Contact Us'); ?></a>
           </div>

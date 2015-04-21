@@ -278,3 +278,27 @@ function antistatique_link_formatter_link_default($vars) {
     return l($vars['element']['title'], $vars['element']['url'], $link_options);
   }
 }
+
+function antistatique_links__locale_block(&$variables) {
+  global $language;
+
+  $output = '<div class="btn-group-vertical lang-switcher">';
+  foreach($variables['links'] as $lang => $info) {
+    $name = $info['language']->native;
+    $href = isset($info['href']) ? $info['href'] : '';
+
+    $link_classes = array('btn', 'btn-white', 'btn-xxs', 'text-uppercase');
+
+    $options = array(
+      'attributes' => array('class' => $link_classes),
+      'language' => $info['language'],
+      'html' => true
+      );
+
+    if ($href) $output .= l($lang, $href, $options);
+  }
+
+  $output .= '</div>';
+
+  return $output;
+}
