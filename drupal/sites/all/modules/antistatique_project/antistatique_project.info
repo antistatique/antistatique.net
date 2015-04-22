@@ -30,6 +30,7 @@ dependencies[] = title
 dependencies[] = user_settings_access
 dependencies[] = views
 dependencies[] = views_bulk_operations
+features[context][] = project
 features[context][] = projects
 features[ctools][] = context:context:3
 features[ctools][] = field_group:field_group:1
