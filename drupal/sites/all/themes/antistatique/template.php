@@ -90,7 +90,7 @@ function antistatique_preprocess_page(&$variables) {
       // tagline generator
       $variables['breadcrumb_tagline_section'] = $variables['node_content']['field_section'][0]['#title'];
     } elseif ($variables['node']->type == 'article') {
-      $variables['breadcrumb_tagline_section'] = t('Nous bloggons à propos de ');
+      $variables['breadcrumb_tagline_section'] = t('Nous <a href="/fr/nous/bloggons">bloggons</a> à propos de ');
     }
   }
 }
