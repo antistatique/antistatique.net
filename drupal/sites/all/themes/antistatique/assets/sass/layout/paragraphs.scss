@@ -102,14 +102,9 @@ blockquote.blockquote-paragraph {
 }
 
 .paragraphs-item-image-wide {
-  .centered {
-    img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
   .half {
+    margin: 0 auto;
+    max-width: 2600px;
     @media only screen and (min-width: $screen-sm-min) {
       @include clearfix;
       .field-wide-images {

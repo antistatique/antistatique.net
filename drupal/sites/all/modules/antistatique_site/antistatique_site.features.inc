@@ -262,6 +262,21 @@ function antistatique_site_image_default_styles() {
     ),
   );
 
+  // Exported image style: wide_image.
+  $styles['wide_image'] = array(
+    'label' => 'Wide Image (1300x820)',
+    'effects' => array(
+      39 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1300,
+          'height' => 820,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: wide_thumbnail.
   $styles['wide_thumbnail'] = array(
     'label' => 'Wide Thumbnail (740x300)',
