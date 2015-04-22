@@ -84,13 +84,15 @@ function antistatique_preprocess_node(&$vars, $hook) {
 
 function antistatique_preprocess_page(&$variables) {
   $nid = arg(1);
+  // tagline generator
   if (arg(0) == 'node' && is_numeric($nid) && !$variables['is_front']) {
     if ($variables['node']->type == 'page' && isset($variables['page']['content']['system_main']['nodes'][$nid])) {
       $variables['node_content'] = &$variables['page']['content']['system_main']['nodes'][$nid];
-      // tagline generator
       $variables['breadcrumb_tagline_section'] = $variables['node_content']['field_section'][0]['#title'];
     } elseif ($variables['node']->type == 'article') {
       $variables['breadcrumb_tagline_section'] = t('Nous <a href="/fr/nous/bloggons">bloggons</a> à propos de ');
+    } elseif ($variables['node']->type == 'project') {
+      $variables['breadcrumb_tagline_section'] = t('Nous faisons <a href="/fr/travaillons">de beaux projets</a> avec ');
     }
   }
 }

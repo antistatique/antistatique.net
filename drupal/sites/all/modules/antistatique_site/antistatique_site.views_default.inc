@@ -186,6 +186,22 @@ function antistatique_site_views_default_views() {
     'section' => 'section',
   );
   $handler->display->display_options['arguments']['tid']['require_value'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'page' => 'page',
+  );
   $handler->display->display_options['block_description'] = 'Jump Menu Pages';
 
   /* Display: Jump Menu Blog */
@@ -260,6 +276,62 @@ function antistatique_site_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['block_description'] = 'Jump Menu Blog';
+
+  /* Display: Jump Menu Projects */
+  $handler = $view->new_display('block', 'Jump Menu Projects', 'block_4');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'jump_menu';
+  $handler->display->display_options['style_options']['hide'] = TRUE;
+  $handler->display->display_options['style_options']['path'] = 'path';
+  $handler->display->display_options['style_options']['text'] = '';
+  $handler->display->display_options['style_options']['choose'] = '';
+  $handler->display->display_options['style_options']['default_value'] = TRUE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['path']['alter']['text'] = '[path]';
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  /* Field: Content: Client */
+  $handler->display->display_options['fields']['field_client']['id'] = 'field_client';
+  $handler->display->display_options['fields']['field_client']['table'] = 'field_data_field_client';
+  $handler->display->display_options['fields']['field_client']['field'] = 'field_client';
+  $handler->display->display_options['fields']['field_client']['label'] = '';
+  $handler->display->display_options['fields']['field_client']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_client']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_client']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_client']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_client']['empty'] = '-client name missing-';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'project' => 'project',
+  );
+  $handler->display->display_options['block_description'] = 'Jump Menu Projects';
   $translatables['breadcrumb'] = array(
     t('Master'),
     t('more'),
@@ -277,6 +349,8 @@ function antistatique_site_views_default_views() {
     t('[path]'),
     t('Jump Menu Blog'),
     t('term from field_category'),
+    t('Jump Menu Projects'),
+    t('-client name missing-'),
   );
   $export['breadcrumb'] = $view;
 
