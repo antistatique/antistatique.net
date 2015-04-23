@@ -311,7 +311,7 @@ function antistatique_site_paragraphs_info() {
       'locked' => '1',
     ),
     'image_foggy' => array(
-      'name' => 'Centered image on grey background',
+      'name' => 'Centered image on grey background (optional device)',
       'bundle' => 'image_foggy',
       'locked' => '1',
     ),

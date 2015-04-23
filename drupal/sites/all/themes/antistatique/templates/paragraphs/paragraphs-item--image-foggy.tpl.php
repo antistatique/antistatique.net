@@ -25,14 +25,40 @@
  * @see template_preprocess_entity()
  * @see template_process()
  */
+if (isset($content['field_device'])) $device = $content['field_device'][0]['#markup'];
+$landscape = isset($content['field_landscape']) && $content['field_landscape']['#items'][0]['value'] ? 'landscape' : '';
+
+switch ($content['field_image_width_centered'][0]['#markup']) {
+  case 'col10':
+    $image_width = 'col-md-offset-1 col-sm-10';
+    break;
+  case 'col8':
+    $image_width = 'col-md-offset-2 col-sm-8';
+    break;
+  default:
+    $image_width = 'col-md-offset-3 col-sm-6';
+    break;
+}
 ?>
 <div class="spacer spacer-md"></div>
 <div class="bg-foggy">
   <div class="<?php print $classes; ?> container"<?php print $attributes; ?>>
     <div class="spacer spacer-md"></div>
     <div class="row content"<?php print $content_attributes; ?>>
-      <div class="col-md-offset-3 col-md-6">
-        <?php print render($content['field_image']); ?>
+      <div class="<?php print $image_width; ?>">
+        <?php if (isset($device)): ?>
+          <div class="marvel-device <?php print $device; ?> <?php print $landscape; ?> silver">
+              <div class="top-bar"></div>
+              <div class="sleep"></div>
+              <div class="volume"></div>
+              <div class="screen">
+        <?php endif; ?>
+              <?php print render($content['field_image']); ?>
+        <?php if (isset($device)): ?>
+              </div>
+              <div class="bottom-bar"></div>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
     <div class="spacer spacer-md"></div>
