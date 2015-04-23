@@ -101,6 +101,37 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_device'
+  $field_bases['field_device'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_device',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'iphone6' => 'iPhone 6',
+        'iphone5S' => 'iPohne 5S',
+        'ipad' => 'iPad Mini',
+        'nexus5' => 'Nexus 5',
+        's5' => 'Galaxy S5',
+        'lumia920' => 'Lumia 920',
+        'htc-one' => 'HTC One',
+      ),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_four_images'
   $field_bases['field_four_images'] = array(
     'active' => 1,

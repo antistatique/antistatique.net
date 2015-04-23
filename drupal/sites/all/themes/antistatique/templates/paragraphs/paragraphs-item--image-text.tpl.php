@@ -26,26 +26,73 @@
  * @see template_process()
  */
 hide($content['field_alignment']);
+$alignment = $content['field_alignment'][0]['#markup'];
+if (isset($content['field_device'])) {
+  $device = $content['field_device'][0]['#markup'];
+}
 ?>
-<div class="<?php print $classes; ?> container"<?php print $attributes; ?>>
-  <div class="spacer spacer-md"></div>
-  <div class="row content"<?php print $content_attributes; ?>>
-    <div class="col-md-offset-2 col-md-4">
-      <?php if ($content['field_alignment'][0]['#markup'] == 'left'): ?>
-        <?php print render($content['field_image']); ?>
-        <div class="spacer spacer-sm"></div>
+<?php if (isset($device)): ?>
+  <div class="<?php print $classes; ?> table-wrapper container"<?php print $attributes; ?>>
+    <!-- <div class="spacer spacer-md"></div> -->
+    <div class="row content table-row"<?php print $content_attributes; ?>>
+      <?php if ($alignment == 'left'): ?>
+          <div class="col-xs-5 col-sm-offset-1 col-sm-4 no-float">
+            <div class="marvel-device <?php print $device; ?> silver">
+                <div class="top-bar"></div>
+                <div class="sleep"></div>
+                <div class="volume"></div>
+                <div class="screen">
+                  <?php print render($content['field_image']); ?>
+                </div>
+                <div class="bottom-bar"></div>
+            </div>
+          </div>
+          <div class="col-xs-7 col-sm-6 no-float">
+            <?php print render($content['field_body']); ?>
+          </div>
       <?php else: ?>
-        <?php print render($content['field_body']); ?>
+          <div class="col-xs-7 col-sm-offset-1 col-sm-6 no-float">
+            <?php print render($content['field_body']); ?>
+          </div>
+          <div class="col-xs-5 col-sm-4 no-float">
+            <div class="marvel-device <?php print $device; ?> silver">
+                <div class="top-bar"></div>
+                <div class="sleep"></div>
+                <div class="volume"></div>
+                <div class="screen">
+                  <?php print render($content['field_image']); ?>
+                </div>
+                <div class="bottom-bar"></div>
+            </div>
+          </div>
       <?php endif ?>
+      </div>
     </div>
-    <div class="col-md-4">
-      <?php if ($content['field_alignment'][0]['#markup'] == 'left'): ?>
-        <?php print render($content['field_body']); ?>
-      <?php else: ?>
-        <?php print render($content['field_image']); ?>
-        <div class="spacer spacer-sm"></div>
-      <?php endif ?>
-    </div>
+    <div class="spacer spacer-md"></div>
   </div>
-  <div class="spacer spacer-md"></div>
+<?php else: ?>
+  <div class="<?php print $classes; ?> container"<?php print $attributes; ?>>
+    <div class="spacer spacer-md"></div>
+    <div class="row content"<?php print $content_attributes; ?>>
+        <?php if ($content['field_alignment'][0]['#markup'] == 'left'): ?>
+          <div class="col-md-offset-1 col-md-4">
+            <?php print render($content['field_image']); ?>
+        <?php else: ?>
+          <div class="col-md-offset-1 col-md-5">
+            <?php print render($content['field_body']); ?>
+        <?php endif ?>
+          <div class="spacer spacer-sm"></div>
+      </div>
+        <?php if ($content['field_alignment'][0]['#markup'] == 'left'): ?>
+        <div class="col-md-5">
+            <?php print render($content['field_body']); ?>
+        <?php else: ?>
+          <div class="col-md-4">
+            <?php print render($content['field_image']); ?>
+          <div class="spacer spacer-sm"></div>
+        <?php endif ?>
+      </div>
+    </div>
+    <div class="spacer spacer-md"></div>
 </div>
+<?php endif ?>

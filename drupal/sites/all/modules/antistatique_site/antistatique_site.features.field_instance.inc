@@ -368,7 +368,7 @@ function antistatique_site_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -409,7 +409,48 @@ function antistatique_site_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-image_text-field_device'
+  $field_instances['paragraphs_item-image_text-field_device'] = array(
+    'bundle' => 'image_text',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select a device and we will magically add the corresponding device around your image.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_device',
+    'label' => 'Device',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 0,
     ),
   );
 
@@ -485,7 +526,7 @@ function antistatique_site_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -653,10 +694,12 @@ function antistatique_site_field_default_field_instances() {
   t('Alignment');
   t('Aside');
   t('Body');
+  t('Device');
   t('Format: "Saniha • Digital Project Manager"');
   t('Image');
   t('Image Width');
   t('Quote Author');
+  t('Select a device and we will magically add the corresponding device around your image.');
   t('The image will be set at width=100%. If you upload 2 images, both will be at 50%.');
   t('Wide Image(s)');
 

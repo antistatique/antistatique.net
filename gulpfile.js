@@ -33,7 +33,8 @@ gulp.task('vendors', function() {
  */
 gulp.task('css-vendors', function() {
   return gulp.src([
-      'bower_components/bootstrap-select/dist/css/bootstrap-select.min.css'
+      'bower_components/bootstrap-select/dist/css/bootstrap-select.min.css',
+      'bower_components/devices.css/assets/devices.min.css'
     ])
     .pipe($.concat('vendors.css'))
     .pipe($.minifyCss())

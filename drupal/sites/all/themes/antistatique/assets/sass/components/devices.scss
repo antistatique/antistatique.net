@@ -1,0 +1,23 @@
+.marvel-device {
+  &.iphone6,
+  &.iphone5s,
+  &.nexus5,
+  &.s5,
+  &.lumia920,
+  &.ipad,
+  &.htc-one {
+    height: auto;
+    width: auto;
+  }
+  @media only screen and (max-width: $screen-sm-max) {
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    &:before,
+    &:after,
+    .top-bar,
+    .sleep,
+    .volume,
+    .bottom-bar {display:none;}
+  }
+}

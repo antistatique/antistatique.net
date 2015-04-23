@@ -316,7 +316,7 @@ function antistatique_site_paragraphs_info() {
       'locked' => '1',
     ),
     'image_text' => array(
-      'name' => 'Image with text',
+      'name' => 'Device image or normal image with text',
       'bundle' => 'image_text',
       'locked' => '1',
     ),

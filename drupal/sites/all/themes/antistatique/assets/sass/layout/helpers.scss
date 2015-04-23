@@ -95,3 +95,17 @@
     color: $white;
   }
 }
+
+// wrapper
+.table-wrapper {
+  display: table;
+  padding: 0;
+}
+.table-row {
+  display: table-row;
+}
+.no-float {
+  display: table-cell;
+  float: none;
+  vertical-align: middle;
+}
