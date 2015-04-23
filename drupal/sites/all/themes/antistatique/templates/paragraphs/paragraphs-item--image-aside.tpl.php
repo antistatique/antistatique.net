@@ -37,14 +37,29 @@ if ($content['field_alignment'][0]['#markup'] == 'left') {
   $alignment_aside = $image_width == 'col-6' ? 'col-md-pull-6 col-md-2' : 'col-md-pull-7 col-md-2';
 }
 
+if (isset($content['field_device'])) $device = $content['field_device'][0]['#markup'];
+$landscape = isset($content['field_landscape']) && $content['field_landscape']['#items'][0]['value'] ? 'landscape' : '';
+
 hide($content['field_alignment']);
 hide($content['field_image_width']);
 ?>
 <div class="<?php print $classes; ?> container"<?php print $attributes; ?>>
   <div class="spacer"></div>
-  <div class="row content"<?php print $content_attributes; ?>>
+  <div class="row content table-row"<?php print $content_attributes; ?>>
     <div class="<?php print $alignment_image; ?>">
-      <?php print render($content['field_image']); ?>
+      <?php if (isset($device)): ?>
+        <div class="marvel-device <?php print $device; ?> <?php print $landscape; ?> silver">
+            <div class="top-bar"></div>
+            <div class="sleep"></div>
+            <div class="volume"></div>
+            <div class="screen">
+      <?php endif; ?>
+            <?php print render($content['field_image']); ?>
+      <?php if (isset($device)): ?>
+            </div>
+            <div class="bottom-bar"></div>
+        </div>
+      <?php endif; ?>
     </div>
     <aside class="<?php print $alignment_aside; ?>">
       <?php print render($content['field_aside']); ?>

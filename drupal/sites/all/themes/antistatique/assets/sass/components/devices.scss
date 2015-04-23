@@ -1,4 +1,5 @@
 .marvel-device {
+  &.landscape,
   &.iphone6,
   &.iphone5s,
   &.nexus5,
@@ -6,8 +7,8 @@
   &.lumia920,
   &.ipad,
   &.htc-one {
-    height: auto;
-    width: auto;
+    height: auto !important;
+    width: auto !important;
   }
   @media only screen and (max-width: $screen-sm-max) {
     padding: 0 !important;
