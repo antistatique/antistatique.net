@@ -262,7 +262,7 @@ function antistatique_site_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please use "Wider" if you are uploading a device screenshot.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -279,6 +279,7 @@ function antistatique_site_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_image_width',
     'label' => 'Image Width',
     'required' => 1,
@@ -454,7 +455,7 @@ function antistatique_site_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -495,7 +496,7 @@ function antistatique_site_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -612,7 +613,7 @@ function antistatique_site_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -785,6 +786,7 @@ function antistatique_site_field_default_field_instances() {
   t('Image');
   t('Image Width');
   t('Landscape mode');
+  t('Please use "Wider" if you are uploading a device screenshot.');
   t('Quote Author');
   t('Select a device and we will magically add the corresponding device around your image.');
   t('The image will be set at width=100%. If you upload 2 images, both will be at 50%.');

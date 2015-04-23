@@ -306,7 +306,7 @@ function antistatique_site_paragraphs_info() {
       'locked' => '1',
     ),
     'image_aside' => array(
-      'name' => 'Image & Aside',
+      'name' => 'Image & Aside (optional device)',
       'bundle' => 'image_aside',
       'locked' => '1',
     ),
@@ -316,7 +316,7 @@ function antistatique_site_paragraphs_info() {
       'locked' => '1',
     ),
     'image_text' => array(
-      'name' => 'Device image or normal image with text',
+      'name' => 'Image with text (optional device)',
       'bundle' => 'image_text',
       'locked' => '1',
     ),
