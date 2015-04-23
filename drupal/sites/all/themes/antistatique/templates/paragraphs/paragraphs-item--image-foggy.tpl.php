@@ -26,6 +26,7 @@
  * @see template_process()
  */
 if (isset($content['field_device'])) $device = $content['field_device'][0]['#markup'];
+if (isset($content['field_browser'])) $browser = $content['field_browser'][0]['#markup'];
 $landscape = isset($content['field_landscape']) && $content['field_landscape']['#items'][0]['value'] ? 'landscape' : '';
 
 switch ($content['field_image_width_centered'][0]['#markup']) {
@@ -52,7 +53,17 @@ switch ($content['field_image_width_centered'][0]['#markup']) {
               <div class="sleep"></div>
               <div class="volume"></div>
               <div class="screen">
-        <?php endif; ?>
+        <?php elseif (isset($browser)): ?>
+          <div class="browser-window">
+            <div class="browser-buttons">
+              <div class="browser-close"></div>
+              <div class="browser-minimize"></div>
+              <div class="browser-maximize"></div>
+            </div>
+            <div class="browser-input"></div>
+            <div class="browser-new-tab"></div>
+          </div>
+        <?php endif ?>
               <?php print render($content['field_image']); ?>
         <?php if (isset($device)): ?>
               </div>

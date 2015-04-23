@@ -27,8 +27,17 @@
  */
 hide($content['field_alignment']);
 $alignment = $content['field_alignment'][0]['#markup'];
-if (isset($content['field_device'])) {
-  $device = $content['field_device'][0]['#markup'];
+if (isset($content['field_device'])) $device = $content['field_device'][0]['#markup'];
+if (isset($content['field_browser'])) {
+  $browser = '<div class="browser-window">
+                <div class="browser-buttons">
+                  <div class="browser-close"></div>
+                  <div class="browser-minimize"></div>
+                  <div class="browser-maximize"></div>
+                </div>
+                <div class="browser-input"></div>
+                <div class="browser-new-tab"></div>
+              </div>';
 }
 ?>
 <?php if (isset($device)): ?>
@@ -76,6 +85,7 @@ if (isset($content['field_device'])) {
     <div class="row content"<?php print $content_attributes; ?>>
         <?php if ($content['field_alignment'][0]['#markup'] == 'left'): ?>
           <div class="col-md-offset-1 col-md-4">
+            <?php print $browser; ?>
             <?php print render($content['field_image']); ?>
         <?php else: ?>
           <div class="col-md-offset-1 col-md-5">
@@ -88,6 +98,7 @@ if (isset($content['field_device'])) {
             <?php print render($content['field_body']); ?>
         <?php else: ?>
           <div class="col-md-4">
+            <?php print $browser; ?>
             <?php print render($content['field_image']); ?>
           <div class="spacer spacer-sm"></div>
         <?php endif ?>
