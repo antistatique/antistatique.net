@@ -93,6 +93,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'access draggableviews',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'draggableviews',
   );
@@ -162,6 +163,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'access site in maintenance mode',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'system',
   );
@@ -192,6 +194,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'administer account settings',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'user_settings_access',
   );
@@ -538,6 +541,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'user',
   );
