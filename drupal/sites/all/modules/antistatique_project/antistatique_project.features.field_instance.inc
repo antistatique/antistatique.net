@@ -210,12 +210,21 @@ function antistatique_project_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'picture',
         'settings' => array(
+          'colorbox_settings' => array(
+            'colorbox_caption' => 'auto',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_group' => '',
+            'colorbox_multivalue_index' => NULL,
+          ),
+          'fallback_image_style' => 'large',
           'image_link' => '',
-          'image_style' => '',
+          'picture_mapping' => 'large',
         ),
-        'type' => 'image',
+        'type' => 'picture',
         'weight' => 4,
       ),
       'small_teaser' => array(

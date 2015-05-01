@@ -18,6 +18,7 @@ dependencies[] = list
 dependencies[] = media
 dependencies[] = number
 dependencies[] = options
+dependencies[] = picture
 dependencies[] = text
 dependencies[] = views
 features[context][] = team

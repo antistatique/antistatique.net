@@ -22,7 +22,7 @@ function antistatique_basic_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -75,7 +75,7 @@ function antistatique_basic_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_plain',
-        'weight' => 9,
+        'weight' => 1,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -126,8 +126,8 @@ function antistatique_basic_page_field_default_field_instances() {
         'label' => 'above',
         'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 5,
+        'type' => 'list_key',
+        'weight' => 7,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -167,13 +167,22 @@ function antistatique_basic_page_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'picture',
         'settings' => array(
+          'colorbox_settings' => array(
+            'colorbox_caption' => 'auto',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_group' => '',
+            'colorbox_multivalue_index' => NULL,
+          ),
+          'fallback_image_style' => 'large',
           'image_link' => '',
-          'image_style' => '',
+          'picture_mapping' => 'large',
         ),
-        'type' => 'image',
-        'weight' => 2,
+        'type' => 'picture',
+        'weight' => 3,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -270,7 +279,7 @@ function antistatique_basic_page_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -339,7 +348,7 @@ function antistatique_basic_page_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -388,7 +397,7 @@ function antistatique_basic_page_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -457,13 +466,22 @@ function antistatique_basic_page_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
+        'module' => 'picture',
         'settings' => array(
+          'colorbox_settings' => array(
+            'colorbox_caption' => 'auto',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_group' => '',
+            'colorbox_multivalue_index' => NULL,
+          ),
+          'fallback_image_style' => 'hero-image',
           'image_link' => '',
-          'image_style' => '',
+          'picture_mapping' => 'hero',
         ),
-        'type' => 'image',
-        'weight' => 7,
+        'type' => 'picture',
+        'weight' => 0,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -543,7 +561,7 @@ function antistatique_basic_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 8,
       ),
       'small_teaser' => array(
         'label' => 'above',

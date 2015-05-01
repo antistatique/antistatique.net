@@ -14,6 +14,7 @@ dependencies[] = list
 dependencies[] = media
 dependencies[] = options
 dependencies[] = paragraphs
+dependencies[] = picture
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
