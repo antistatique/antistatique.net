@@ -38,12 +38,6 @@ function antistatique_site_context_default_contexts() {
           'region' => 'above_footer',
           'weight' => '-9',
         ),
-        'block-3' => array(
-          'module' => 'block',
-          'delta' => '3',
-          'region' => 'above_footer',
-          'weight' => '-8',
-        ),
         'views-news-block_foggy' => array(
           'module' => 'views',
           'delta' => 'news-block_foggy',
