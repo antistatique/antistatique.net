@@ -5,3 +5,75 @@
  */
 
 include_once 'antistatique_teammate.features.inc';
+
+/**
+ * Implements hook_cron().
+ * Update PingPong Ranking score
+ */
+function antistatique_teammate_cron() {
+  $scores = antistatique_teammate_get_scores();
+
+  $users = entity_load('user');
+  foreach ($users as $user) {
+    if($user->uid == 0) {
+      continue;
+    }
+
+    $ranking = antistatique_teammate_find_score_for_user($scores, $user);
+
+    $edit = array(
+      'field_pingpong_ranking' => array(
+        'und' => array(
+          0 => array(
+            'value' => $ranking,
+          )
+        )
+      )
+    );
+
+    user_save($user, $edit);
+  }
+}
+
+/**
+ * Return Ping Pong ranking scores via the API
+ *
+ * @return array
+ */
+function antistatique_teammate_get_scores()
+{
+  $host_api = variable_get('antistatique_teammate_pingpong_host_api', 'http://pingpongninja-api.antistatique.io');
+
+  $scores = file_get_contents($host_api);
+  if (!$scores) {
+
+    return [];
+  }
+
+  $scores = json_decode($scores);
+
+  return $scores;
+}
+
+/**
+ * Find and return Ping Pong score for a specific user.
+ *
+ * @param array  $scores
+ * @param object $user
+ *
+ * @return float
+ */
+function antistatique_teammate_find_score_for_user($scores, $user)
+{
+  $name = $user->field_firstname['und'][0]['value'];
+  $ranking = 0;
+
+  foreach ($scores as $score) {
+    if (mb_strtolower($name) == mb_strtolower($score->name)) {
+      $ranking = $score->points;
+      break;
+    }
+  }
+
+  return $ranking;
+}
