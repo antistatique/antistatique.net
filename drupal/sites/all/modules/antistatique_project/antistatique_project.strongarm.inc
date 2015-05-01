@@ -55,6 +55,9 @@ function antistatique_project_strongarm() {
         'path' => array(
           'weight' => '11',
         ),
+        'metatags' => array(
+          'weight' => '12',
+        ),
       ),
       'display' => array(),
     ),

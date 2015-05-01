@@ -52,6 +52,9 @@ function antistatique_basic_page_strongarm() {
         'path' => array(
           'weight' => '5',
         ),
+        'metatags' => array(
+          'weight' => '6',
+        ),
       ),
       'display' => array(),
     ),

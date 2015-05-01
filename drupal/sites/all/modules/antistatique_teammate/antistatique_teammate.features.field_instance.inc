@@ -312,7 +312,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -411,7 +411,7 @@ The fourth image should be <b>640x640</b>.',
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -460,7 +460,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -580,7 +580,7 @@ The fourth image should be <b>640x640</b>.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -644,7 +644,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 

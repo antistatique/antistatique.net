@@ -52,8 +52,9 @@ function antistatique_basic_page_field_group_info() {
     'label' => 'Infos',
     'weight' => '2',
     'children' => array(
-      0 => 'field_section',
-      1 => 'field_breadcrumb_tagline',
+      0 => 'field_breadcrumb_tagline',
+      1 => 'field_section',
+      2 => 'metatags',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

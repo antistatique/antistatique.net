@@ -143,6 +143,9 @@ function antistatique_article_strongarm() {
         'path' => array(
           'weight' => '5',
         ),
+        'metatags' => array(
+          'weight' => '6',
+        ),
       ),
       'display' => array(),
     ),

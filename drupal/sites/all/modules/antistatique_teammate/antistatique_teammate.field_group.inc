@@ -26,6 +26,7 @@ function antistatique_teammate_field_group_info() {
       0 => 'account',
       1 => 'timezone',
       2 => 'locale',
+      3 => 'wysiwyg',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -60,6 +61,7 @@ function antistatique_teammate_field_group_info() {
       5 => 'field_teammate_job_title',
       6 => 'field_teammate_links',
       7 => 'field_pingpong_ranking',
+      8 => 'metatags',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -87,8 +89,8 @@ function antistatique_teammate_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'field_teammate_hero_image',
-      1 => 'picture',
-      2 => 'field_four_images',
+      1 => 'field_four_images',
+      2 => 'picture',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -113,7 +115,7 @@ function antistatique_teammate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Project',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_related_project',
     ),
