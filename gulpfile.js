@@ -5,8 +5,6 @@
  */
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
-    browserSync = require('browser-sync'),
-    reload = browserSync.reload,
     runSequence = require('run-sequence'),
     argv = require('yargs').argv,
     del = require('del');
@@ -217,6 +215,10 @@ gulp.task('twig', function () {
   * Serve
   */
 gulp.task('serve', ['default'], function () {
+
+  var browserSync = require('browser-sync'),
+  reload = browserSync.reload;
+
   browserSync({
     open: false
   });
