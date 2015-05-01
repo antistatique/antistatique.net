@@ -25,6 +25,13 @@ function antistatique_basic_page_context_default_contexts() {
         'node_form' => '0',
       ),
     ),
+    'path' => array(
+      'values' => array(
+        '~fr/404' => '~fr/404',
+        '~en/404' => '~en/404',
+        '~<front>' => '~<front>',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -38,7 +45,7 @@ function antistatique_basic_page_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
