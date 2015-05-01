@@ -37,6 +37,9 @@ function antistatique_project_context_default_contexts() {
         ),
       ),
     ),
+    'menu' => array(
+      0 => 'main-menu:node/4',
+    ),
   );
   $context->condition_mode = 0;
 

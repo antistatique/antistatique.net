@@ -109,6 +109,12 @@ category: Components - Navbar
       padding: 45px 15px 29px 15px;
     }
   }
+  > .active-trail > a {
+    &, &:hover {
+      color: $navbar-default-link-active-color;
+      background-image: transparent;
+    }
+  }
 }
 
 .navbar-btn {

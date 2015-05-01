@@ -87,6 +87,9 @@ function antistatique_article_context_default_contexts() {
         ),
       ),
     ),
+    'menu' => array(
+      0 => 'main-menu:node/1',
+    ),
   );
   $context->condition_mode = 0;
 

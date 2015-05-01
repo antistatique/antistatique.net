@@ -29,7 +29,7 @@ Test based on Medium way of doing things! @Guillaume ;)
 }
 
 header.header {
-  .navbar-nav > li:not(.active) > a {
+  .navbar-nav > li:not(.active):not(.active-trail) > a {
     text-decoration: none;
     background-image: linear-gradient(to bottom, rgba($text-color,0) 50%, rgba($text-color,0.6) 50%);
     background-repeat: repeat-x;
