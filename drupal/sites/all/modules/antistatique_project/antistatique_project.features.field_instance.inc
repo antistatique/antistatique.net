@@ -543,7 +543,7 @@ function antistatique_project_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => -2,
+      'weight' => -1,
     ),
   );
 
@@ -880,6 +880,111 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-project-field_tile_image'
+  $field_instances['node-project-field_tile_image'] = array(
+    'bundle' => 'project',
+    'deleted' => 0,
+    'description' => 'This image gets displayed in the project teaser view. Will display hero image if not set.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 16,
+      ),
+      'small_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_tile_image',
+    'label' => 'Tile image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'project-tile',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '800x600',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 'private',
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          0 => 0,
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_hero-image' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_large' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_medium' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_project_thumbnail' => 0,
+          'image_square_thumbnail' => 0,
+          'image_thumbnail' => 0,
+          'image_wide_image' => 0,
+          'image_wide_thumbnail' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => -2,
+    ),
+  );
+
   // Exported field_instance: 'node-project-field_year'
   $field_instances['node-project-field_year'] = array(
     'bundle' => 'project',
@@ -1087,6 +1192,8 @@ function antistatique_project_field_default_field_instances() {
   t('Testimonial Quote');
   t('Testimonial position');
   t('The year this project was delivered to the client.');
+  t('This image gets displayed in the project teaser view. Will display hero image if not set.');
+  t('Tile image');
   t('Title');
   t('Year');
 

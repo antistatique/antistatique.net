@@ -82,7 +82,11 @@
 
 <a href="<?php print $node_url; ?>">
   <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix card"<?php print $attributes; ?>>
-    <?php print render($content['field_teammate_hero_image']); ?>
+    <?php if (!empty($content['field_tile_image'])): ?>
+      <?php print render($content['field_tile_image']); ?>
+    <?php else: ?>
+      <?php print render($content['field_teammate_hero_image']); ?>
+    <?php endif ?>
     <div class="card-content">
       <p><?php print render($content['field_skills']); ?></p>
       <h4><?php print $title; ?></h4>
