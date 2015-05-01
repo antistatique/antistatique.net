@@ -202,6 +202,18 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'page' => 'page',
   );
+  /* Filter criterion: Content: Nid */
+  $handler->display->display_options['filters']['nid']['id'] = 'nid';
+  $handler->display->display_options['filters']['nid']['table'] = 'node';
+  $handler->display->display_options['filters']['nid']['field'] = 'nid';
+  $handler->display->display_options['filters']['nid']['operator'] = '!=';
+  $handler->display->display_options['filters']['nid']['value']['value'] = '12';
+  /* Filter criterion: Content: Nid */
+  $handler->display->display_options['filters']['nid_1']['id'] = 'nid_1';
+  $handler->display->display_options['filters']['nid_1']['table'] = 'node';
+  $handler->display->display_options['filters']['nid_1']['field'] = 'nid';
+  $handler->display->display_options['filters']['nid_1']['operator'] = '!=';
+  $handler->display->display_options['filters']['nid_1']['value']['value'] = '25';
   $handler->display->display_options['block_description'] = 'Jump Menu Pages';
 
   /* Display: Jump Menu Blog */
