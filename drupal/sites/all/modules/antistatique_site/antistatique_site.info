@@ -31,6 +31,7 @@ dependencies[] = dashboard
 dependencies[] = date
 dependencies[] = date_api
 dependencies[] = dblog
+dependencies[] = devel
 dependencies[] = diff
 dependencies[] = disqus
 dependencies[] = draggableviews
