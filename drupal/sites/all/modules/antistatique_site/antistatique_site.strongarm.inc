@@ -542,6 +542,32 @@ function antistatique_site_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__section';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'metatags' => array(
+          'weight' => '40',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+        'description' => array(
+          'weight' => '0',
+        ),
+        'language' => array(
+          'weight' => '0',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_taxonomy_term__section'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'jquery_update_compression_type';
   $strongarm->value = 'min';
   $export['jquery_update_compression_type'] = $strongarm;
