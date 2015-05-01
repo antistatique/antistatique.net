@@ -28,7 +28,7 @@ role :db,            domain
 
 set  :keep_releases,   3
 
-after "deploy", "assets:build"
+before "drush:cache_clear", "assets:build"
 
 after "deploy:update", "deploy:cleanup"
 before "deploy:cleanup", "hotfix:fix_permissions"
