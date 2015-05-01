@@ -26,12 +26,6 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-2' => array(
-          'module' => 'block',
-          'delta' => '2',
-          'region' => 'content_above',
-          'weight' => '-10',
-        ),
         'views-projects-block_variant' => array(
           'module' => 'views',
           'delta' => 'projects-block_variant',
@@ -75,6 +69,12 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'block-2' => array(
+          'module' => 'block',
+          'delta' => '2',
+          'region' => 'content_above',
+          'weight' => '-10',
+        ),
         'block-3' => array(
           'module' => 'block',
           'delta' => '3',
@@ -113,6 +113,12 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'block-5' => array(
+          'module' => 'block',
+          'delta' => '5',
+          'region' => 'content_above',
+          'weight' => '-10',
+        ),
         'block-4' => array(
           'module' => 'block',
           'delta' => '4',
