@@ -14,12 +14,65 @@ function antistatique_article_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'blog_all';
-  $context->description = '';
+  $context->description = 'Blog page, on first page';
   $context->tag = 'sections';
   $context->conditions = array(
     'path' => array(
       'values' => array(
         'nous/bloggons' => 'nous/bloggons',
+        'we/blog' => 'we/blog',
+      ),
+    ),
+    'query_param' => array(
+      'values' => array(
+        'parameters' => 'a:1:{i:0;a:2:{s:4:"name";s:4:"page";s:8:"operator";s:7:"not_set";}}',
+        'require_all_params' => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-news-block_all' => array(
+          'module' => 'views',
+          'delta' => 'news-block_all',
+          'region' => 'above_footer',
+          'weight' => '-9',
+        ),
+        'views-news-block_single' => array(
+          'module' => 'views',
+          'delta' => 'news-block_single',
+          'region' => 'above_footer',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Blog page, on first page');
+  t('sections');
+  $export['blog_all'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'blog_all_second_page';
+  $context->description = 'Blog page, on second page or more (without featured first article)';
+  $context->tag = 'sections';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'nous/bloggons' => 'nous/bloggons',
+        'we/blog' => 'we/blog',
+      ),
+    ),
+    'query_param' => array(
+      'values' => array(
+        'parameters' => 'a:1:{i:0;a:2:{s:4:"name";s:4:"page";s:8:"operator";s:3:"set";}}',
+        'require_all_params' => 1,
       ),
     ),
   );
@@ -35,12 +88,13 @@ function antistatique_article_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Blog page, on second page or more (without featured first article)');
   t('sections');
-  $export['blog_all'] = $context;
+  $export['blog_all_second_page'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

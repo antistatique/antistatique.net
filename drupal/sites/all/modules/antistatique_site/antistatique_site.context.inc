@@ -13,9 +13,38 @@ function antistatique_site_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'darkheader';
+  $context->description = 'Is it a dark header ? Then add a class';
+  $context->tag = 'header';
+  $context->conditions = array(
+    'entity_field' => array(
+      'values' => array(
+        'entity_type' => 'a:8:{s:4:"node";s:4:"node";s:13:"taxonomy_term";i:0;s:16:"i18n_translation";i:0;s:15:"paragraphs_item";i:0;s:4:"file";i:0;s:19:"taxonomy_vocabulary";i:0;s:4:"user";i:0;s:15:"wysiwyg_profile";i:0;}',
+        'field_name' => 'field_hero_image_is_dark',
+        'field_value' => '1',
+        'field_empty' => 0,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'theme_html' => array(
+      'class' => 'dark-hero',
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Is it a dark header ? Then add a class');
+  t('header');
+  $export['darkheader'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'header';
-  $context->description = '';
-  $context->tag = 'general taxonomy';
+  $context->description = 'Taxonomy page, remove hero';
+  $context->tag = 'header';
   $context->conditions = array(
     'taxonomy_term' => array(
       'values' => array(
@@ -37,7 +66,8 @@ function antistatique_site_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('general taxonomy');
+  t('Taxonomy page, remove hero');
+  t('header');
   $export['header'] = $context;
 
   $context = new stdClass();
@@ -177,6 +207,35 @@ function antistatique_site_context_default_contexts() {
   t('Inject the Newsletter French block');
   t('specific');
   $export['homepage_fr'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'nohero';
+  $context->description = 'Add pattern';
+  $context->tag = 'header';
+  $context->conditions = array(
+    'entity_field' => array(
+      'values' => array(
+        'entity_type' => 'a:8:{s:4:"node";s:4:"node";s:13:"taxonomy_term";i:0;s:16:"i18n_translation";i:0;s:15:"paragraphs_item";i:0;s:4:"file";i:0;s:19:"taxonomy_vocabulary";i:0;s:4:"user";i:0;s:15:"wysiwyg_profile";i:0;}',
+        'field_name' => 'field_teammate_hero_image',
+        'field_value' => '1',
+        'field_empty' => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'theme_html' => array(
+      'class' => 'pattern-hero dark-hero',
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Add pattern');
+  t('header');
+  $export['nohero'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
