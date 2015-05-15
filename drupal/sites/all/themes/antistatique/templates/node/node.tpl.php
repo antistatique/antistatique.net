@@ -142,6 +142,7 @@ hide($content['field_hero_image_is_dark']);
       <div class="row">
         <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 content">
           <?php print render($content['body']); ?>
+          <div class="spacer spacer-md"></div>
         </div>
         <?php if (!empty($content['field_links'])): ?>
           <div class="col-sm-1 col-md-2 col-lg-3">
