@@ -21,7 +21,7 @@ function antistatique_site_locale_default_languages() {
     'formula' => '',
     'domain' => '',
     'prefix' => 'en',
-    'weight' => 0,
+    'weight' => -9,
   );
   // Exported language: fr.
   $languages['fr'] = array(
@@ -34,7 +34,7 @@ function antistatique_site_locale_default_languages() {
     'formula' => '',
     'domain' => '',
     'prefix' => 'fr',
-    'weight' => 0,
+    'weight' => -10,
   );
   return $languages;
 }

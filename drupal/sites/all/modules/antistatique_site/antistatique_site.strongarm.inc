@@ -614,7 +614,7 @@ function antistatique_site_strongarm() {
     'formula' => '',
     'domain' => '',
     'prefix' => 'fr',
-    'weight' => '0',
+    'weight' => '-10',
     'javascript' => '',
   );
   $export['language_default'] = $strongarm;
