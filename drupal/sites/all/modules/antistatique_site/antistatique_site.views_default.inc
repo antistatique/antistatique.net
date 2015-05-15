@@ -232,43 +232,35 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Category (field_category) */
-  $handler->display->display_options['relationships']['field_category_tid']['id'] = 'field_category_tid';
-  $handler->display->display_options['relationships']['field_category_tid']['table'] = 'field_data_field_category';
-  $handler->display->display_options['relationships']['field_category_tid']['field'] = 'field_category_tid';
-  $handler->display->display_options['relationships']['field_category_tid']['required'] = TRUE;
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'Category';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'category' => 'category',
+    'section' => 0,
+    'skills' => 0,
+  );
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['relationship'] = 'field_category_tid';
+  $handler->display->display_options['fields']['name']['relationship'] = 'term_node_tid';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-  /* Field: Broken/missing handler */
+  /* Field: Taxonomy term: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['path']['field'] = 'path';
-  $handler->display->display_options['fields']['path']['relationship'] = 'field_category_tid';
+  $handler->display->display_options['fields']['path']['relationship'] = 'term_node_tid';
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Category (field_category) */
-  $handler->display->display_options['arguments']['field_category_tid']['id'] = 'field_category_tid';
-  $handler->display->display_options['arguments']['field_category_tid']['table'] = 'field_data_field_category';
-  $handler->display->display_options['arguments']['field_category_tid']['field'] = 'field_category_tid';
-  $handler->display->display_options['arguments']['field_category_tid']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['field_category_tid']['default_argument_options']['term_page'] = FALSE;
-  $handler->display->display_options['arguments']['field_category_tid']['default_argument_options']['node'] = TRUE;
-  $handler->display->display_options['arguments']['field_category_tid']['default_argument_options']['anyall'] = '+';
-  $handler->display->display_options['arguments']['field_category_tid']['default_argument_options']['vocabularies'] = array(
-    'category' => 'category',
-  );
-  $handler->display->display_options['arguments']['field_category_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_category_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_category_tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -282,7 +274,7 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['filters']['vid']['id'] = 'vid';
   $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['vid']['field'] = 'vid';
-  $handler->display->display_options['filters']['vid']['relationship'] = 'field_category_tid';
+  $handler->display->display_options['filters']['vid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['filters']['vid']['value'] = array(
     1 => '1',
   );
@@ -359,7 +351,7 @@ function antistatique_site_views_default_views() {
     t('No tagline'),
     t('[path]'),
     t('Jump Menu Blog'),
-    t('term from field_category'),
+    t('Category'),
     t('Jump Menu Projects'),
     t('-client name missing-'),
   );
