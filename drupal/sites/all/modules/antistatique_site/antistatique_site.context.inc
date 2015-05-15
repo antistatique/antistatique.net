@@ -168,5 +168,69 @@ function antistatique_site_context_default_contexts() {
   t('general');
   $export['sitewide'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'we_page';
+  $context->description = '';
+  $context->tag = 'Three Pages';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'we' => 'we',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-4' => array(
+          'module' => 'block',
+          'delta' => '4',
+          'region' => 'above_footer',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Three Pages');
+  $export['we_page'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'we_page_fr';
+  $context->description = '';
+  $context->tag = 'Three Pages';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'nous' => 'nous',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-5' => array(
+          'module' => 'block',
+          'delta' => '5',
+          'region' => 'above_footer',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Three Pages');
+  $export['we_page_fr'] = $context;
+
   return $export;
 }
