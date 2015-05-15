@@ -192,6 +192,17 @@ category: Layout - Cover
   }
 }
 
+
+// SVG Logo
+.antistatique_logo{
+  fill: $pinkstatik;
+  .dark-hero &{
+    @media only screen and (min-width: $screen-sm-min) {
+      fill: $white;
+    }
+  }
+}
+
 .dark-hero{
   @media only screen and (min-width: $screen-sm-min) {
     .navbar-default .navbar-nav > li > a, .breadcrumb{
