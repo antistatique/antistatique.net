@@ -29,6 +29,7 @@ category: Antistatique - Components
 .socialize {
   background: url(../svg/we_socialize.svg) no-repeat -24px center;
   position: relative;
+  overflow: hidden;
 
   > div {
     position: relative;
