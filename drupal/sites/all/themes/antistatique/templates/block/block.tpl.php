@@ -45,7 +45,7 @@
  * @ingroup themeable
  */
 
-if ( $block->delta == "news-block_foggy_other" || $block->delta == "users-block" ) {
+if ( $block->delta == "news-block_foggy_other" || $block->delta == "users-block" || $block->delta == "projects-block_normal" ) {
   $classes .= ' bg-foggy';
 }
 
@@ -54,8 +54,9 @@ if ( $block->delta == "news-block_foggy_other" || $block->delta == "users-block"
 
   <?php print render($title_prefix); ?>
   <?php if (!empty($title)): ?>
-    <div class="spacer spacer-md"></div>
+    <div class="spacer spacer-xs"></div>
     <h2 class="h3 text-center"><?php print $title; ?></h2>
+    <div class="spacer spacer-sm"></div>
   <?php endif;?>
   <?php print render($title_suffix); ?>
 

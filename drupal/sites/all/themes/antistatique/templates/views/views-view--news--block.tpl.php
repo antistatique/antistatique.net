@@ -60,7 +60,6 @@
       <?php endif ?>
 
       <div class="row">
-        <div class="spacer spacer-sm"></div>
         <?php print $rows; ?>
       </div>
 

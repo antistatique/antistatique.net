@@ -208,6 +208,12 @@ function antistatique_site_context_default_contexts() {
           'region' => 'above_footer',
           'weight' => '1',
         ),
+        'views-projects-block_normal' => array(
+          'module' => 'views',
+          'delta' => 'projects-block_normal',
+          'region' => 'above_footer',
+          'weight' => '2',
+        ),
       ),
     ),
   );
@@ -245,6 +251,12 @@ function antistatique_site_context_default_contexts() {
           'delta' => '7',
           'region' => 'above_footer',
           'weight' => '1',
+        ),
+        'views-projects-block_normal' => array(
+          'module' => 'views',
+          'delta' => 'projects-block_normal',
+          'region' => 'above_footer',
+          'weight' => '2',
         ),
       ),
     ),
