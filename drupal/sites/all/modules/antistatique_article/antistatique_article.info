@@ -10,6 +10,7 @@ dependencies[] = override_node_options
 dependencies[] = smart_trim
 dependencies[] = views_bootstrap_responsive_grid
 features[context][] = blog_all
+features[context][] = blog_all_second_page
 features[context][] = blog_article
 features[ctools][] = context:context:3
 features[ctools][] = field_group:field_group:1
