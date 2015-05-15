@@ -27,7 +27,7 @@
  * @ingroup views_templates
  */
 ?>
-<div class="<?php print $classes; ?> <?php if ($display_id != 'block_all') {print 'bg-foggy';} ?> clearfix">
+<div class="<?php print $classes; ?> <?php if ($display_id != 'block_all' && $display_id != 'block_10cols') {print 'bg-foggy';} ?> clearfix">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>
@@ -53,11 +53,22 @@
 
   <?php if ($rows): ?>
     <div class="view-content container">
+
+      <?php if ($display_id == 'block_10cols'): ?>
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10">
+      <?php endif ?>
+
       <div class="row">
-        <div class="spacer"></div>
+        <div class="spacer spacer-sm"></div>
         <?php print $rows; ?>
-        <div class="spacer"></div>
       </div>
+
+      <?php if ($display_id == 'block_10cols'): ?>
+          </div>
+        </div>
+      <?php endif ?>
+
     </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">

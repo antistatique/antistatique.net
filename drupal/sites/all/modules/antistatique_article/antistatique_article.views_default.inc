@@ -88,7 +88,7 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['style_options']['item_per_row_xs'] = '1';
   $handler->display->display_options['style_options']['item_per_row_sm'] = '2';
   $handler->display->display_options['style_options']['item_per_row_md'] = '2';
-  $handler->display->display_options['style_options']['item_per_row_lg'] = '3';
+  $handler->display->display_options['style_options']['item_per_row_lg'] = '2';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
@@ -142,6 +142,20 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['block_description'] = 'First article';
+
+  /* Display: From the blog - 10cols */
+  $handler = $view->new_display('block', 'From the blog - 10cols', 'block_10cols');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'En direct du blog';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'aller vers le blog';
+  $handler->display->display_options['link_url'] = 'nous/bloggons';
+  $handler->display->display_options['block_description'] = 'En direct du blog - 10cols';
   $translatables['news'] = array(
     t('Master'),
     t('more'),
@@ -152,7 +166,7 @@ function antistatique_article_views_default_views() {
     t('Desc'),
     t('From the blog'),
     t('En direct du blog'),
-    t('Go to the blog'),
+    t('aller vers le blog'),
     t('Other posts'),
     t('All'),
     t('All posts but first'),
@@ -165,6 +179,8 @@ function antistatique_article_views_default_views() {
     t('last »'),
     t('All articles but first'),
     t('First article'),
+    t('From the blog - 10cols'),
+    t('En direct du blog - 10cols'),
   );
   $export['news'] = $view;
 

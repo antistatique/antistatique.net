@@ -32,9 +32,9 @@ function antistatique_site_context_default_contexts() {
           'region' => 'above_footer',
           'weight' => '-9',
         ),
-        'views-news-block_foggy' => array(
+        'views-news-block_10cols' => array(
           'module' => 'views',
-          'delta' => 'news-block_foggy',
+          'delta' => 'news-block_10cols',
           'region' => 'above_footer',
           'weight' => '-6',
         ),
