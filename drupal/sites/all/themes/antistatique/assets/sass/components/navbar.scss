@@ -84,6 +84,7 @@ category: Components - Navbar
   }
 }
 
+
 .navbar {
   font-weight: 700;
   @media only screen and (max-width: $screen-xs-max) {
@@ -179,6 +180,13 @@ category: Components - Navbar
 
 .lang-switcher {
   margin-left: 10px;
+}
+
+.no-hero-image{
+  .header {
+    margin: 20px 0;
+    position: static;
+  }
 }
 
 /*doc
