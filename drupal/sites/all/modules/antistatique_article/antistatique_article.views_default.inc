@@ -118,7 +118,7 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
-  $handler->display->display_options['pager']['options']['offset'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['block_description'] = 'All articles but first';
@@ -166,7 +166,7 @@ function antistatique_article_views_default_views() {
     t('Desc'),
     t('From the blog'),
     t('En direct du blog'),
-    t('aller vers le blog'),
+    t('Go to the blog'),
     t('Other posts'),
     t('All'),
     t('All posts but first'),
@@ -180,6 +180,7 @@ function antistatique_article_views_default_views() {
     t('All articles but first'),
     t('First article'),
     t('From the blog - 10cols'),
+    t('aller vers le blog'),
     t('En direct du blog - 10cols'),
   );
   $export['news'] = $view;
