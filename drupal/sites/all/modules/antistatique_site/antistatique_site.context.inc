@@ -244,6 +244,12 @@ function antistatique_site_context_default_contexts() {
           'region' => 'above_footer',
           'weight' => '2',
         ),
+        'block-10' => array(
+          'module' => 'block',
+          'delta' => '10',
+          'region' => 'above_footer',
+          'weight' => '-1',
+        ),
       ),
     ),
   );
@@ -287,6 +293,12 @@ function antistatique_site_context_default_contexts() {
           'delta' => 'projects-block_normal',
           'region' => 'above_footer',
           'weight' => '2',
+        ),
+        'block-11' => array(
+          'module' => 'block',
+          'delta' => '11',
+          'region' => 'above_footer',
+          'weight' => '-1',
         ),
       ),
     ),
