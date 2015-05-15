@@ -44,7 +44,7 @@ $userpath = '/' . $language->language . '/' . drupal_get_path_alias('user/' . $u
     <div class="team-avatar">
       <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print $username; ?>" class="img-circle img-responsive">
     </div>
-    <p class="h6 text-md text-dark hidden-xs"><?php print  $username; ?></p>
-    <small class="text-muted"><?php print render($user_profile['field_teammate_job_title']); ?></small>
+    <p class="h6 text-md text-dark"><?php print  $username; ?></p>
+    <small class="text-muted hidden-xs"><?php print render($user_profile['field_teammate_job_title']); ?></small>
   </a>
 <?php endif ?>
