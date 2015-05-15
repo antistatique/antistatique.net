@@ -220,6 +220,9 @@ gulp.task('serve', ['default'], function () {
   reload = browserSync.reload;
 
   browserSync({
+    server: {
+      baseDir: 'styleguide'
+    },
     open: false
   });
   gulp.watch(['drupal/sites/all/themes/antistatique/assets/sass/**/*.scss'], function() {

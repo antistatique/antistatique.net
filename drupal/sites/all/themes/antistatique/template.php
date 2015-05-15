@@ -289,7 +289,7 @@ function antistatique_links__locale_block(&$variables) {
     $name = $info['language']->native;
     $href = isset($info['href']) ? $info['href'] : '';
 
-    $link_classes = array('btn', 'btn-white', 'btn-xxs', 'text-uppercase');
+    $link_classes = array('btn', 'btn-gray', 'btn-xxs', 'text-uppercase');
 
     $options = array(
       'attributes' => array('class' => $link_classes),

@@ -19,7 +19,8 @@ category: Layout - Buttons
 | <button type="button" class="btn btn-primary">Primary</button> | <code>btn btn-primary</code> |
 | <button type="button" class="btn btn-primary btn-wire">Primary</button> | <code>btn btn-primary btn-wire</code> |
 | <button type="button" class="btn btn-dark">Dark</button>     | <code>btn btn-dark</code>  |
-| <button type="button" class="btn btn-white">Dark</button>     | <code>btn btn-white</code>  |
+| <button type="button" class="btn btn-white">White</button>     | <code>btn btn-white</code>  |
+| <button type="button" class="btn btn-gray">Gray</button>     | <code>btn btn-gray</code>  |
 | <button type="button" class="btn btn-success">Success</button> | <code>btn btn-success</code> |
 | <button type="button" class="btn btn-info">Info</button>       | <code>btn btn-info</code>    |
 | <button type="button" class="btn btn-warning">Warning</button> | <code>btn btn-warning</code> |
@@ -109,6 +110,21 @@ category: Layout - Buttons
   }
 }
 
+.btn-gray {
+  background: $dust;
+  color: $text-color;
+
+  &:hover {
+    background: darken($dust, 5%);
+    color: $text-color;
+  }
+  &.active {
+    background: $white;
+    color: $link-color;
+    box-shadow: none;
+  }
+}
+
 .btn-primary.btn-wire {
   background: white;
   color: $link-color;
@@ -142,8 +158,13 @@ category: Layout - Buttons
 }
 
 .btn-xxs {
-  font-size: .55em;
-  padding: 3px 4px 1px 4px;
+  font-size: .6em;
+  line-height: 1;
+  padding: 5px 6px 4px;
+
+  &:last-child {
+    padding-bottom: 3px;
+  }
 }
 
 .view {
