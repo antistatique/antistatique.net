@@ -21,6 +21,7 @@ dependencies[] = color
 dependencies[] = context
 dependencies[] = context_admin
 dependencies[] = context_layouts
+dependencies[] = context_query_param
 dependencies[] = context_ui
 dependencies[] = ctools
 dependencies[] = custom_breadcrumbs

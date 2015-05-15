@@ -608,13 +608,13 @@ function antistatique_site_strongarm() {
     'language' => 'fr',
     'name' => 'French',
     'native' => 'Français',
-    'direction' => '0',
+    'direction' => 0,
     'enabled' => 1,
-    'plurals' => '0',
+    'plurals' => 0,
     'formula' => '',
     'domain' => '',
     'prefix' => 'fr',
-    'weight' => '-10',
+    'weight' => -10,
     'javascript' => '',
   );
   $export['language_default'] = $strongarm;
