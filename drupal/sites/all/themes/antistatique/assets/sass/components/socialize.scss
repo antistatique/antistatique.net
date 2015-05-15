@@ -47,12 +47,12 @@ category: Antistatique - Components
   }
 
   @media only screen and (max-width: $screen-sm-max) {
-    background-position: -14px top;
+    background-position: -14px 50px;
     background-size: 245px;
     padding-top: 100px;
 
     &:after {
-      background-position: right top;
+      background-position: right 50px;
       background-size: 245px;
       right: -231px;
     }
