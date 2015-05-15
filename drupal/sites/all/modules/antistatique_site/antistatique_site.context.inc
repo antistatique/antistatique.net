@@ -81,6 +81,12 @@ function antistatique_site_context_default_contexts() {
           'region' => 'above_footer',
           'weight' => '-8',
         ),
+        'block-6' => array(
+          'module' => 'block',
+          'delta' => '6',
+          'region' => 'above_footer',
+          'weight' => '-7',
+        ),
       ),
     ),
   );
@@ -124,6 +130,12 @@ function antistatique_site_context_default_contexts() {
           'delta' => '4',
           'region' => 'above_footer',
           'weight' => '-8',
+        ),
+        'block-7' => array(
+          'module' => 'block',
+          'delta' => '7',
+          'region' => 'above_footer',
+          'weight' => '-7',
         ),
       ),
     ),

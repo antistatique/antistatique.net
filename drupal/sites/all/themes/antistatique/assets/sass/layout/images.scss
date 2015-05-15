@@ -57,6 +57,24 @@ category: Layout - Images
 ```html_example
 <img src="http://lorempixel.com/150/150/cats" alt="Some cats image" class="img-rounded">
 <img src="http://lorempixel.com/150/150/cats" alt="Some cats image" class="img-circle">
+<div class="img-a"><img src="http://lorempixel.com/150/150/cats" alt="Some cats image" class="img-circle"></div>
 <img src="http://lorempixel.com/150/150/cats" alt="Some cats image" class="img-thumbnail">
 ```
 */
+
+.img-a {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    background: url(../svg/A-logo.svg) no-repeat center center;
+    background-size: percentage(1/3);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
