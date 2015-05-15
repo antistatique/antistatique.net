@@ -20,6 +20,7 @@ dependencies[] = chosen
 dependencies[] = color
 dependencies[] = context
 dependencies[] = context_admin
+dependencies[] = context_bool_field
 dependencies[] = context_entity_field
 dependencies[] = context_layouts
 dependencies[] = context_query_param

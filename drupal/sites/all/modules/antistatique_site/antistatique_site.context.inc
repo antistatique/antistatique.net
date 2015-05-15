@@ -17,12 +17,12 @@ function antistatique_site_context_default_contexts() {
   $context->description = 'Is it a dark header ? Then add a class';
   $context->tag = 'header';
   $context->conditions = array(
-    'entity_field' => array(
+    'field_bool' => array(
       'values' => array(
-        'entity_type' => 'a:8:{s:4:"node";s:4:"node";s:13:"taxonomy_term";i:0;s:16:"i18n_translation";i:0;s:15:"paragraphs_item";i:0;s:4:"file";i:0;s:19:"taxonomy_vocabulary";i:0;s:4:"user";i:0;s:15:"wysiwyg_profile";i:0;}',
-        'field_name' => 'field_hero_image_is_dark',
-        'field_value' => '1',
-        'field_empty' => 0,
+        'field_hero_image_is_dark' => 'field_hero_image_is_dark',
+      ),
+      'options' => array(
+        'bool_field_value' => '1',
       ),
     ),
   );
