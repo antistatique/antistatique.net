@@ -22,7 +22,7 @@ function antistatique_project_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Some recent projects';
+  $handler->display->display_options['title'] = 'Nos derniers projets';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'View more projects';
@@ -128,7 +128,7 @@ function antistatique_project_views_default_views() {
   $handler->display->display_options['block_description'] = 'All Projects';
   $translatables['projects'] = array(
     t('Master'),
-    t('Some recent projects'),
+    t('Nos derniers projets'),
     t('View more projects'),
     t('Apply'),
     t('Reset'),

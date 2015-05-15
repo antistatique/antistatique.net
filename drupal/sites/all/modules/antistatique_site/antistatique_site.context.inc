@@ -36,7 +36,7 @@ function antistatique_site_context_default_contexts() {
           'module' => 'views',
           'delta' => 'news-block_foggy',
           'region' => 'above_footer',
-          'weight' => '-7',
+          'weight' => '-6',
         ),
       ),
     ),
@@ -81,11 +81,11 @@ function antistatique_site_context_default_contexts() {
           'region' => 'above_footer',
           'weight' => '-8',
         ),
-        'block-6' => array(
+        'block-8' => array(
           'module' => 'block',
-          'delta' => '6',
+          'delta' => '8',
           'region' => 'above_footer',
-          'weight' => '-7',
+          'weight' => '-5',
         ),
       ),
     ),
@@ -131,11 +131,11 @@ function antistatique_site_context_default_contexts() {
           'region' => 'above_footer',
           'weight' => '-8',
         ),
-        'block-7' => array(
+        'block-9' => array(
           'module' => 'block',
-          'delta' => '7',
+          'delta' => '9',
           'region' => 'above_footer',
-          'weight' => '-7',
+          'weight' => '-5',
         ),
       ),
     ),
@@ -196,11 +196,17 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-4' => array(
+        'block-3' => array(
           'module' => 'block',
-          'delta' => '4',
+          'delta' => '3',
           'region' => 'above_footer',
-          'weight' => '-10',
+          'weight' => '0',
+        ),
+        'block-6' => array(
+          'module' => 'block',
+          'delta' => '6',
+          'region' => 'above_footer',
+          'weight' => '1',
         ),
       ),
     ),
@@ -228,11 +234,17 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-5' => array(
+        'block-4' => array(
           'module' => 'block',
-          'delta' => '5',
+          'delta' => '4',
           'region' => 'above_footer',
-          'weight' => '-9',
+          'weight' => '0',
+        ),
+        'block-7' => array(
+          'module' => 'block',
+          'delta' => '7',
+          'region' => 'above_footer',
+          'weight' => '1',
         ),
       ),
     ),
