@@ -23,6 +23,7 @@ function antistatique_teammate_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Meet the team';
+  $handler->display->display_options['css_class'] = 'container';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access user profiles';
@@ -30,7 +31,11 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_responsive_grid_plugin_style';
+  $handler->display->display_options['style_options']['item_per_row_xs'] = '2';
+  $handler->display->display_options['style_options']['item_per_row_sm'] = '3';
+  $handler->display->display_options['style_options']['item_per_row_md'] = '4';
+  $handler->display->display_options['style_options']['item_per_row_lg'] = '4';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'big_teaser';
   /* Field: User: Name */
