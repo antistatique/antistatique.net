@@ -116,6 +116,9 @@ category: Components - Navbar
   > .active-trail > a {
     &, &:hover {
       color: $navbar-default-link-active-color;
+      .dark-hero & {
+        color: $navbar-inverse-link-active-color;
+      }
       background-image: transparent;
     }
   }
@@ -191,6 +194,44 @@ category: Components - Navbar
     position: static;
   }
 }
+
+
+// Inverse navbar with dark-hero
+
+.dark-hero {
+  .navbar-text {
+    color: $navbar-inverse-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $navbar-inverse-link-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-inverse-link-hover-color;
+        background-color: $navbar-inverse-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-inverse-link-active-color;
+        background-color: $navbar-inverse-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-inverse-link-disabled-color;
+        background-color: $navbar-inverse-link-disabled-bg;
+      }
+    }
+  }
+}
+
 
 /*doc
 ---
@@ -343,12 +384,12 @@ category: Components - Drupal tabs
 
 ```html_example
 <div class="logged-in">
-<ul class="tabs--primary nav nav-tabs">
-  <li class="active"><a href="/fr/nous" class="active">View<span class="element-invisible">(active tab)</span></a></li>
-  <li class=""><a href="/fr/node/1/edit">Edit</a></li>
-  <li class=""><a href="/fr/node/1/translate">Translate</a></li>
-  <li class=""><a href="/fr/node/1/revisions">Revisions</a></li>
-</ul>
+  <ul class="tabs--primary nav nav-tabs">
+    <li class="active"><a href="/fr/nous" class="active">View<span class="element-invisible">(active tab)</span></a></li>
+    <li class=""><a href="/fr/node/1/edit">Edit</a></li>
+    <li class=""><a href="/fr/node/1/translate">Translate</a></li>
+    <li class=""><a href="/fr/node/1/revisions">Revisions</a></li>
+  </ul>
 </div>
 ```
 */

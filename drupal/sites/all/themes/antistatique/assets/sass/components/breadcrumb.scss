@@ -31,3 +31,14 @@ category: Components - Breadcrumb
 .region-header {
   display: inline-block;
 }
+
+// Dark hero breadcrumb version
+.dark-hero{
+  .breadcrumb{
+    color: $navbar-inverse-color;
+    a{
+      color: $navbar-inverse-link-color;
+    }
+  }
+}
+

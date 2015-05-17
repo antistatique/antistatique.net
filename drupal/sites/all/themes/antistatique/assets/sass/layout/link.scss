@@ -31,12 +31,18 @@ Test based on Medium way of doing things! @Guillaume ;)
 header.header {
   .navbar-nav > li:not(.active):not(.active-trail) > a {
     text-decoration: none;
-    background-image: linear-gradient(to bottom, rgba($text-color,0) 50%, rgba($text-color,0.6) 50%);
+    background-image: linear-gradient(to bottom, rgba($navbar-default-link-color,0) 50%, rgba($navbar-default-link-color,0.6) 50%);
+    .dark-hero & {
+       background-image: linear-gradient(to bottom, rgba($navbar-inverse-link-color,0) 50%, rgba($navbar-inverse-link-color,0.6) 50%);
+    }
     background-repeat: repeat-x;
     background-size: 2px 2px;
     background-position: 0 34px;
     &:hover {
-      background-image: linear-gradient(to bottom, rgba($link-color,0) 50%, rgba($link-color,0.6) 50%);
+      background-image: linear-gradient(to bottom, rgba($navbar-default-link-hover-color,0) 50%, rgba($navbar-default-link-hover-color,0.6) 50%);
+      .dark-hero & {
+        background-image: linear-gradient(to bottom, rgba($navbar-inverse-link-hover-color,0) 50%, rgba($navbar-inverse-link-hover-color,0.6) 50%);
+      }
     }
   }
 }
