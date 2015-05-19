@@ -618,6 +618,12 @@ function antistatique_basic_page_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 1,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'description_field',
@@ -652,6 +658,12 @@ function antistatique_basic_page_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

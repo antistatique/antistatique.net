@@ -26,8 +26,9 @@
  *
  * @ingroup views_templates
  */
+$term = menu_get_object('taxonomy_term', 2);
 ?>
-<div class="<?php print $classes; ?> <?php if ($display_id != 'block_all' && $display_id != 'block_10cols') {print 'bg-foggy';} ?> clearfix">
+<div class="<?php print $classes; ?> <?php if ($display_id != 'block_all' && $display_id != 'block_10cols' && $display_id != 'block_taxonomy') {print 'bg-foggy';} ?> clearfix">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>
@@ -52,18 +53,16 @@
   <?php endif; ?>
 
   <?php if ($rows): ?>
-    <div class="view-content container">
+    <div class="view-content <?php if (!$term) { print 'container'; } ?>">
 
-      <?php if ($display_id == 'block_10cols'): ?>
+      <?php if ($display_id == 'block_10cols' || $display_id == 'block_taxonomy'): ?>
         <div class="row">
-          <div class="col-md-offset-1 col-md-10">
+          <div class="<?php print $display_id == 'block_10cols' ? 'col-md-offset-1 col-md-10' : 'col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6' ;?>">
       <?php endif ?>
 
-      <div class="row">
-        <?php print $rows; ?>
-      </div>
+      <?php print $rows; ?>
 
-      <?php if ($display_id == 'block_10cols'): ?>
+      <?php if ($display_id == 'block_10cols' || $display_id == 'block_taxonomy'): ?>
           </div>
         </div>
       <?php endif ?>

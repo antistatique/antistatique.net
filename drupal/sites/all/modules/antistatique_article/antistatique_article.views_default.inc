@@ -156,6 +156,37 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'aller vers le blog';
   $handler->display->display_options['link_url'] = 'nous/bloggons';
   $handler->display->display_options['block_description'] = 'En direct du blog - 10cols';
+
+  /* Display: Category Articles */
+  $handler = $view->new_display('block', 'Category Articles', 'block_taxonomy');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_responsive_grid_plugin_style';
+  $handler->display->display_options['style_options']['item_per_row_xs'] = '1';
+  $handler->display->display_options['style_options']['item_per_row_sm'] = '1';
+  $handler->display->display_options['style_options']['item_per_row_md'] = '1';
+  $handler->display->display_options['style_options']['item_per_row_lg'] = '1';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['block_description'] = 'Category Articles';
   $translatables['news'] = array(
     t('Master'),
     t('more'),
@@ -166,7 +197,7 @@ function antistatique_article_views_default_views() {
     t('Desc'),
     t('From the blog'),
     t('En direct du blog'),
-    t('Go to the blog'),
+    t('aller vers le blog'),
     t('Other posts'),
     t('All'),
     t('All posts but first'),
@@ -180,8 +211,8 @@ function antistatique_article_views_default_views() {
     t('All articles but first'),
     t('First article'),
     t('From the blog - 10cols'),
-    t('aller vers le blog'),
     t('En direct du blog - 10cols'),
+    t('Category Articles'),
   );
   $export['news'] = $view;
 
