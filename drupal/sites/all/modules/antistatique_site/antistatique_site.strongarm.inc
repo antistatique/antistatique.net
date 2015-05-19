@@ -608,13 +608,13 @@ function antistatique_site_strongarm() {
     'language' => 'fr',
     'name' => 'French',
     'native' => 'Français',
-    'direction' => '0',
+    'direction' => 0,
     'enabled' => 1,
-    'plurals' => '0',
+    'plurals' => 0,
     'formula' => '',
     'domain' => '',
     'prefix' => 'fr',
-    'weight' => '-10',
+    'weight' => -10,
     'javascript' => '',
   );
   $export['language_default'] = $strongarm;
@@ -844,13 +844,6 @@ function antistatique_site_strongarm() {
   $strongarm->name = 'pathauto_transliterate';
   $strongarm->value = 1;
   $export['pathauto_transliterate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'site_name';
-  $strongarm->value = 'antistatique.dev';
-  $export['site_name'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
