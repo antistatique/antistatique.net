@@ -194,7 +194,15 @@
     <ul class="action-links"><?php print render($action_links); ?></ul>
   <?php endif; ?>
 
+  <?php if (!isset($node)): ?>
+    <div class="container">
+  <?php endif ?>
+
   <?php print render($page['content']); ?>
+
+  <?php if (!isset($node)): ?>
+    </div>
+  <?php endif ?>
 
   <?php if (!empty($page['above_footer'])): ?>
     <div class="above_footer">
