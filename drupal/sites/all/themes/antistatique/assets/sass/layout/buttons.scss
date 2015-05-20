@@ -26,6 +26,7 @@ category: Layout - Buttons
 | <button type="button" class="btn btn-warning">Warning</button> | <code>btn btn-warning</code> |
 | <button type="button" class="btn btn-danger">Danger</button>   | <code>btn btn-danger</code>  |
 | <button type="button" class="btn btn-link">Link</button>       | <code>btn btn-link</code>    |
+| <button type="button" class="btn btn-link-dropdown">Link Dropdown</button>  | <code>btn btn-link-dropdown</code>    |
 */
 
 .btn {
@@ -185,6 +186,19 @@ category: Layout - Buttons
 
 .btn-wrap {
   white-space: normal;
+}
+
+.btn-link-dropdown {
+  color: $text-color;
+  background: none;
+  box-shadow: none;
+  padding-left: 0;
+  padding-top: 1px;
+  @include medium-link($position: 1.75em);
+
+  &:hover {
+    color: $link-color;
+  }
 }
 
 // Tweaks for btn with icons only

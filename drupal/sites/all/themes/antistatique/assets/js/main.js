@@ -1,7 +1,7 @@
 'use strict';
 (function($) {
   $('.ctools-jump-menu-select').selectpicker({
-    style: 'btn-wire'
+    style: 'btn-link-dropdown'
   });
 
   // say hi

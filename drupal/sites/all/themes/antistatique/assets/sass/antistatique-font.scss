@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "antistatique";
+  src: url('../fonts/antistatique.eot');
+  src: url('../fonts/antistatique.eot?#iefix') format('eot'),
+    url('../fonts/antistatique.woff') format('woff'),
+    url('../fonts/antistatique.ttf') format('truetype'),
+    url('../fonts/antistatique.svg#antistatique') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.antistatique:before {
+  display: inline-block;
+  font-family: "antistatique";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.antistatique-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.antistatique-2x { font-size: 2em; }
+.antistatique-3x { font-size: 3em; }
+.antistatique-4x { font-size: 4em; }
+.antistatique-5x { font-size: 5em; }
+.antistatique-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+.antistatique-caret:before { content: "\E001" }

@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
     runSequence = require('run-sequence'),
     argv = require('yargs').argv,
-    del = require('del');
+    del = require('del'),
+    slug = require('slug');
 
 /**
  * Init project
@@ -206,6 +207,33 @@ gulp.task('twig', function () {
         .pipe(gulp.dest('styleguide/pages'));
 });
 
+
+ /*
+  * Build icons font and stylesheets
+  */
+  var font_name = 'antistatique';
+  gulp.task('icons', function(){
+    gulp.src('drupal/sites/all/themes/antistatique/assets/icons/**/*')
+      .pipe($.iconfont({
+        fontName: font_name,
+        appendCodepoints: true,
+        normalize:true,
+        fontHeight: 1001
+      }))
+      .on('codepoints', function(codepoints, options) {
+        gulp.src('node_modules/toolbox-utils/templates/_icons.scss')
+          .pipe($.consolidate('lodash', {
+            glyphs: codepoints,
+            fontName: font_name,
+            fontPath: '../fonts/',
+            className: font_name
+          }))
+          .pipe($.rename(font_name + '-font.scss'))
+          .pipe(gulp.dest('drupal/sites/all/themes/antistatique/assets/sass/'));
+      })
+      .pipe(gulp.dest('drupal/sites/all/themes/antistatique/build/fonts'));
+  });
+
 /**
  * Clean output directories
  */
@@ -263,6 +291,6 @@ gulp.task('build',['clean'], function() {
  */
 gulp.task('default', ['clean'], function(cb) {
   var styleguide_styles = argv.production ? '' : 'styleguide-styles';
-  runSequence(['js-vendors', 'css-vendors', 'polyfills', 'fonts', 'styles', 'img', 'scripts', 'twig'], 'styleguide', styleguide_styles, cb);
+  runSequence(['js-vendors', 'css-vendors', 'polyfills', 'fonts', 'icons', 'styles', 'img', 'scripts', 'twig'], 'styleguide', styleguide_styles, cb);
 });
 
