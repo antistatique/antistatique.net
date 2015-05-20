@@ -7,8 +7,7 @@ var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
     runSequence = require('run-sequence'),
     argv = require('yargs').argv,
-    del = require('del'),
-    slug = require('slug');
+    del = require('del');
 
 /**
  * Init project
