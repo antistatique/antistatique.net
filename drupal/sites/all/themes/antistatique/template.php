@@ -95,9 +95,9 @@ function antistatique_preprocess_page(&$variables) {
       $variables['node_content'] = &$variables['page']['content']['system_main']['nodes'][$nid];
       $variables['breadcrumb_tagline_section'] = $variables['node_content']['field_section'][0]['#title'];
     } elseif ($variables['node']->type == 'article') {
-      $variables['breadcrumb_tagline_section'] = t('Nous <a href="/fr/nous/bloggons">bloggons</a> à propos de ');
+      $variables['breadcrumb_tagline_section'] = t('We <a href="/en/blog">blog</a> about ');
     } elseif ($variables['node']->type == 'project') {
-      $variables['breadcrumb_tagline_section'] = t('Nous faisons <a href="/fr/travaillons">de beaux projets</a> avec ');
+      $variables['breadcrumb_tagline_section'] = t('We work <a href="/en/work">on beautiful projects</a> with ');
     }
   }
 }
