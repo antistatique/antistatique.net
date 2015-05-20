@@ -36,7 +36,7 @@ category: Components - Breadcrumb
 .dark-hero{
   .breadcrumb{
     color: transparentize($navbar-inverse-color, 1/5);
-    a{
+    > a {
       color: $navbar-inverse-link-color;
     }
   }

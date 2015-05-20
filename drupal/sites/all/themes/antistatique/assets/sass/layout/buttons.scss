@@ -199,6 +199,13 @@ category: Layout - Buttons
   &:hover {
     color: $link-color;
   }
+  .dark-hero & {
+    color: $white;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
 }
 
 // Tweaks for btn with icons only
