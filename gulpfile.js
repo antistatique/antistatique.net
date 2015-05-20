@@ -282,7 +282,7 @@ gulp.task('deploy', function () {
  */
 gulp.task('build',['clean'], function() {
   argv.production = true;
-  return gulp.start('vendors', 'styles', 'img', 'scripts');
+  return gulp.start('vendors', 'styles', 'img', 'scripts', 'icons');
 });
 
 /**
