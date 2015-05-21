@@ -388,6 +388,11 @@ category: Layout - Header
     @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
       min-height: 600px;
     }
+    @media only screen and (max-height: 620px) and (max-width: $screen-lg-max) {
+      min-height: 500px;
+      h1 {font-size: $font-size-h1 / 1.4;}
+      .field-svg-title {display: none;}
+    }
   }
 }
 
