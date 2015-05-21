@@ -115,9 +115,9 @@ function antistatique_article_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-breadcrumb-block_2' => array(
+        'views-categories-inline' => array(
           'module' => 'views',
-          'delta' => 'breadcrumb-block_2',
+          'delta' => 'categories-inline',
           'region' => 'header',
           'weight' => '-10',
         ),

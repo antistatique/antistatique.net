@@ -249,70 +249,6 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['filters']['nid_5']['value']['value'] = '4';
   $handler->display->display_options['block_description'] = 'Jump Menu Pages';
 
-  /* Display: Jump Menu Blog */
-  $handler = $view->new_display('block', 'Jump Menu Blog', 'block_2');
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'jump_menu';
-  $handler->display->display_options['style_options']['hide'] = TRUE;
-  $handler->display->display_options['style_options']['path'] = 'path';
-  $handler->display->display_options['style_options']['text'] = '';
-  $handler->display->display_options['style_options']['choose'] = '';
-  $handler->display->display_options['style_options']['default_value'] = TRUE;
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Taxonomy terms on node */
-  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
-  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'Category';
-  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
-    'category' => 'category',
-    'section' => 0,
-    'skills' => 0,
-  );
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['relationship'] = 'term_node_tid';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-  /* Field: Taxonomy term: Path */
-  $handler->display->display_options['fields']['path']['id'] = 'path';
-  $handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['path']['field'] = 'path';
-  $handler->display->display_options['fields']['path']['relationship'] = 'term_node_tid';
-  $handler->display->display_options['fields']['path']['label'] = '';
-  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Taxonomy term: Vocabulary */
-  $handler->display->display_options['filters']['vid']['id'] = 'vid';
-  $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['vid']['field'] = 'vid';
-  $handler->display->display_options['filters']['vid']['relationship'] = 'term_node_tid';
-  $handler->display->display_options['filters']['vid']['value'] = array(
-    1 => '1',
-  );
-  $handler->display->display_options['block_description'] = 'Jump Menu Blog';
-
   /* Display: Jump Menu Projects */
   $handler = $view->new_display('block', 'Jump Menu Projects', 'block_4');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -384,8 +320,6 @@ function antistatique_site_views_default_views() {
     t('No tagline'),
     t('[path]'),
     t('Nid'),
-    t('Jump Menu Blog'),
-    t('Category'),
     t('Jump Menu Projects'),
     t('-client name missing-'),
   );

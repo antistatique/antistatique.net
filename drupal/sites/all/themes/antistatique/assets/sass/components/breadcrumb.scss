@@ -36,19 +36,23 @@ category: Components - Breadcrumb
 .dark-hero {
   .breadcrumb {
     color: transparentize($navbar-inverse-color, 1/5);
-    > a {
+    > a,
+    .view-categories a {
       color: $navbar-inverse-link-color;
     }
   }
 }
 
-.breadcrumb > a {
-  display: inline-block;
-  color: $text-color;
-  font-weight: 700;
-  @include medium-link($position: 29px);
+.breadcrumb  {
+  > a,
+  .view-categories a {
+    display: inline-block;
+    color: $text-color;
+    font-weight: 700;
+    @include medium-link($position: 29px);
 
-  &:hover {
-    color: $link-color;
+    &:hover {
+      color: $link-color;
+    }
   }
 }
