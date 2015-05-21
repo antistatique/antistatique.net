@@ -114,6 +114,7 @@ dependencies[] = view_unpublished
 dependencies[] = views
 dependencies[] = views_bootstrap_responsive_grid
 dependencies[] = views_bulk_operations
+dependencies[] = views_term_path
 dependencies[] = views_ui
 dependencies[] = wysiwyg
 features[breakpoint_group][] = bootstrap
