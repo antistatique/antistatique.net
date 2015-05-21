@@ -206,6 +206,17 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_responsive_grid_plugin_style';
+  $handler->display->display_options['style_options']['item_per_row_xs'] = '1';
+  $handler->display->display_options['style_options']['item_per_row_sm'] = '1';
+  $handler->display->display_options['style_options']['item_per_row_md'] = '1';
+  $handler->display->display_options['style_options']['item_per_row_lg'] = '1';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['block_description'] = 'All articles but first';
 
   /* Display: First article */

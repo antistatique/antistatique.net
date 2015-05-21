@@ -33,17 +33,17 @@ function antistatique_article_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-news-block_all' => array(
-          'module' => 'views',
-          'delta' => 'news-block_all',
-          'region' => 'above_footer',
-          'weight' => '-9',
-        ),
         'views-news-block_single' => array(
           'module' => 'views',
           'delta' => 'news-block_single',
-          'region' => 'above_footer',
+          'region' => 'content_above',
           'weight' => '-10',
+        ),
+        'views-news-block_all' => array(
+          'module' => 'views',
+          'delta' => 'news-block_all',
+          'region' => 'content_above',
+          'weight' => '-8',
         ),
       ),
     ),
