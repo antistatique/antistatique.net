@@ -110,6 +110,11 @@ function antistatique_preprocess_page(&$variables) {
       $variables['breadcrumb_tagline_section'] = t('We <a href="/en/we/work">work</a> on beautiful <a href="/en/we/work/with">projects</a> with people from ');
     }
   }
+
+  // remove title and containers on user profile page
+  if (isset($variables['page']['content']['system_main']['#theme']) && $variables['page']['content']['system_main']['#theme'] == 'user_profile') {
+    $variables['no_title'] = true;
+  }
 }
 
 /**
