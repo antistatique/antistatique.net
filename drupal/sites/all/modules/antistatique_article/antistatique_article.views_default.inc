@@ -298,6 +298,8 @@ function antistatique_article_views_default_views() {
 
   /* Display: Category Articles */
   $handler = $view->new_display('block', 'Category Articles', 'block_taxonomy');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'container';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
