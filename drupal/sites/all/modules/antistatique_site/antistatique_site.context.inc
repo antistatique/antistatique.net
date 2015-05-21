@@ -42,37 +42,6 @@ function antistatique_site_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'header';
-  $context->description = 'Taxonomy page, remove hero';
-  $context->tag = 'header';
-  $context->conditions = array(
-    'taxonomy_term' => array(
-      'values' => array(
-        'category' => 'category',
-        'section' => 'section',
-        'skills' => 'skills',
-      ),
-      'options' => array(
-        'term_form' => '1',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'theme_html' => array(
-      'class' => 'no-hero-image',
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Taxonomy page, remove hero');
-  t('header');
-  $export['header'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
   $context->name = 'homepage';
   $context->description = '';
   $context->tag = 'specific';
