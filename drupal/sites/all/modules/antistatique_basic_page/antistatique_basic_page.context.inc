@@ -27,9 +27,11 @@ function antistatique_basic_page_context_default_contexts() {
     ),
     'path' => array(
       'values' => array(
-        '~fr/404' => '~fr/404',
-        '~en/404' => '~en/404',
         '~<front>' => '~<front>',
+        '~node/1' => '~node/1',
+        '~node/3' => '~node/3',
+        '~node/4' => '~node/4',
+        '~404' => '~404',
       ),
     ),
   );
@@ -40,7 +42,7 @@ function antistatique_basic_page_context_default_contexts() {
           'module' => 'views',
           'delta' => 'breadcrumb-block_1',
           'region' => 'header',
-          'weight' => '-9',
+          'weight' => '-10',
         ),
       ),
     ),
