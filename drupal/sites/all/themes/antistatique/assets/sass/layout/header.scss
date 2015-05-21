@@ -283,7 +283,7 @@ category: Layout - Header
 ```
 
 */
-.img-hero{
+.img-hero {
   min-height: 600px;
   background-size: cover;
   background-position: 50% 50%;
@@ -297,7 +297,6 @@ category: Layout - Header
     padding-top: 2em;
     padding-left: 15px;  // avoids a too wide title on mobile
     padding-right: 15px; // (because not in a container)
-    margin-bottom: 0;
     z-index: 1;
     & > span {
       display: block;
@@ -305,10 +304,9 @@ category: Layout - Header
       max-width: 1200px;
     }
     @media only screen and (min-width: $screen-sm-min) {
+      margin-bottom: 0;
       padding-bottom: 1em;
       text-align: center;
-    }
-    @media only screen and (min-width: $screen-sm-min) {
       background: linear-gradient(to bottom, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
     }
   }
@@ -328,26 +326,20 @@ category: Layout - Header
     bottom: 30%;
   }
   @media only screen and (min-width: $screen-xl-min) {
-    min-height: 1000px;
+    min-height: 800px;
   }
   @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
-    min-height: 800px;
+    min-height: 720px;
   }
   @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
     min-height: 600px;
   }
-  @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    min-height: 400px;
-  }
   @media only screen and (max-width: $screen-xs-max) {
-    min-height: 200px;
+    min-height: 300px;
   }
-  @media only screen and (max-height: 600px) {
-    min-height: 200px;
+  @media only screen and (max-height: 800px) and (max-width: $screen-sm-max) {
+    min-height: 450px;
     h1 {font-size: $font-size-h1 / 1.4;}
-  }
-  @media only screen and (max-height: 800px) and (min-height: 601px) {
-    min-height: 400px;
   }
   @media only screen and (max-height: 1000px) and (min-height: 801px) {
     min-height: 600px;
@@ -363,7 +355,7 @@ category: Layout - Header
   .field-svg-title {
     margin-bottom: -5%;
     position: absolute;
-    bottom: 50%;
+    bottom: 41%;
     left: 0;
     height: auto;
     width: 100%;
@@ -377,11 +369,23 @@ category: Layout - Header
   }
 }
 
-.pattern-hero{
-  .img-hero{
+.pattern-hero {
+  .img-hero {
     background-image: url(../img/pattern_0.png);
     background-repeat: repeat;
     background-size: auto;
+  }
+}
+
+// frontpage only
+.front {
+  .img-hero {
+    @media only screen and (min-width: $screen-xl-min) {
+      min-height: 1000px;
+    }
+    @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+      min-height: 720px;
+    }
   }
 }
 
@@ -431,9 +435,9 @@ viewBox="0 0 332 61.9" style="enable-background:new 0 0 332 61.9;" xml:space="pr
 ```
 
 */
-.antistatique_logo{
+.antistatique_logo {
   fill: $pinkstatik;
-  .dark-hero &{
+  .dark-hero & {
     @media only screen and (min-width: $screen-sm-min) {
       fill: $white;
     }

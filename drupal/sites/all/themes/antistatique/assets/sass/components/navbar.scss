@@ -63,6 +63,13 @@ category: Components - Navbar
 */
 
 .header {
+  @media only screen and (max-width: $screen-xs-max) {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
   @media only screen and (min-width: $screen-sm-min) {
     position: absolute;
     z-index: 2;
@@ -88,7 +95,7 @@ category: Components - Navbar
 .navbar {
   font-weight: 700;
   @media only screen and (max-width: $screen-xs-max) {
-    margin: 20px 0;
+    margin: 5px 0 20px 0;
     position: static;
   }
   @media only screen and (min-width: $screen-sm-min) {
