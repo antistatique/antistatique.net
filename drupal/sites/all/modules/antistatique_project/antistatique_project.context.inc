@@ -57,8 +57,7 @@ function antistatique_project_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'nous/travaillons' => 'nous/travaillons',
-        'we/work' => 'we/work',
+        'node/232' => 'node/232',
       ),
     ),
   );

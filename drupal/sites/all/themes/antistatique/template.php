@@ -95,9 +95,6 @@ function antistatique_preprocess_page(&$variables) {
       $variables['node_content'] = &$variables['page']['content']['system_main']['nodes'][$nid];
 
       switch ($variables['node_content']['field_section'][0]['#title']) {
-        case 'We work with':
-          $breadcrumb = t('We <a href="/en/we/work">work</a> with people from');
-          break;
         case 'We work':
           $breadcrumb = t('We <a href="/en/we/work">work</a>');
           break;
@@ -110,7 +107,7 @@ function antistatique_preprocess_page(&$variables) {
     } elseif ($variables['node']->type == 'article') {
       $variables['breadcrumb_tagline_section'] = t('We <a href="/en/we/blog">blog</a> about ');
     } elseif ($variables['node']->type == 'project') {
-      $variables['breadcrumb_tagline_section'] = t('We <a href="/en/we/work">work</a> on beautiful <a href="/en/we/work/with">projects</a> with ');
+      $variables['breadcrumb_tagline_section'] = t('We <a href="/en/we/work">work</a> on beautiful <a href="/en/we/work/with">projects</a> with people from ');
     }
   }
 }
