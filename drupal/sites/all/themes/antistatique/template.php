@@ -96,7 +96,7 @@ function antistatique_preprocess_page(&$variables) {
 
       switch ($variables['node_content']['field_section'][0]['#title']) {
         case 'We work with':
-          $breadcrumb = t('We <a href="/en/we/work">work</a>') . t('with');
+          $breadcrumb = t('We <a href="/en/we/work">work</a> with people from');
           break;
         case 'We work':
           $breadcrumb = t('We <a href="/en/we/work">work</a>');
