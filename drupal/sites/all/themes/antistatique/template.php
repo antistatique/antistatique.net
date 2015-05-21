@@ -93,11 +93,24 @@ function antistatique_preprocess_page(&$variables) {
   if (arg(0) == 'node' && is_numeric($nid) && !$variables['is_front']) {
     if ($variables['node']->type == 'page' && isset($variables['page']['content']['system_main']['nodes'][$nid])) {
       $variables['node_content'] = &$variables['page']['content']['system_main']['nodes'][$nid];
-      $variables['breadcrumb_tagline_section'] = $variables['node_content']['field_section'][0]['#title'];
+
+      switch ($variables['node_content']['field_section'][0]['#title']) {
+        case 'We work with':
+          $breadcrumb = t('We <a href="/en/we/work">work</a>') . t('with');
+          break;
+        case 'We work':
+          $breadcrumb = t('We <a href="/en/we/work">work</a>');
+          break;
+        default:
+          $breadcrumb = t('<a href="/en/we">We</a>');
+          break;
+      }
+
+      $variables['breadcrumb_tagline_section'] = $breadcrumb;
     } elseif ($variables['node']->type == 'article') {
       $variables['breadcrumb_tagline_section'] = t('We <a href="/en/we/blog">blog</a> about ');
     } elseif ($variables['node']->type == 'project') {
-      $variables['breadcrumb_tagline_section'] = t('We work <a href="/en/we/work">on beautiful projects</a> with ');
+      $variables['breadcrumb_tagline_section'] = t('We <a href="/en/we/work">work</a> on beautiful <a href="/en/we/work/with">projects</a> with ');
     }
   }
 }
