@@ -130,6 +130,7 @@ features[context][] = homepage_en
 features[context][] = homepage_fr
 features[context][] = nohero
 features[context][] = sitewide
+features[context][] = taxonomy
 features[context][] = we_page
 features[context][] = we_page_fr
 features[ctools][] = breakpoints:default_breakpoint_group:1

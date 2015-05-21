@@ -192,6 +192,16 @@ function antistatique_site_context_default_contexts() {
         'field_empty' => 1,
       ),
     ),
+    'taxonomy_term' => array(
+      'values' => array(
+        'category' => 'category',
+        'section' => 'section',
+        'skills' => 'skills',
+      ),
+      'options' => array(
+        'term_form' => '0',
+      ),
+    ),
   );
   $context->reactions = array(
     'theme_html' => array(
@@ -237,6 +247,41 @@ function antistatique_site_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('general');
   $export['sitewide'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'taxonomy';
+  $context->description = '';
+  $context->tag = 'sections';
+  $context->conditions = array(
+    'taxonomy_term' => array(
+      'values' => array(
+        'category' => 'category',
+      ),
+      'options' => array(
+        'term_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-categories-block_1' => array(
+          'module' => 'views',
+          'delta' => 'categories-block_1',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('sections');
+  $export['taxonomy'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */

@@ -59,8 +59,8 @@ function antistatique_article_views_default_views() {
     'category' => 'category',
   );
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'inline');
+  /* Display: Current Categories List */
+  $handler = $view->new_display('block', 'Current Categories List', 'inline');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Taxonomy term: Content with term */
   $handler->display->display_options['relationships']['nid']['id'] = 'nid';
@@ -79,6 +79,48 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
   $handler->display->display_options['block_description'] = 'Current Categories';
+
+  /* Display: All Categories Jump Menu */
+  $handler = $view->new_display('block', 'All Categories Jump Menu', 'block_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'jump_menu';
+  $handler->display->display_options['style_options']['hide'] = TRUE;
+  $handler->display->display_options['style_options']['path'] = 'path';
+  $handler->display->display_options['style_options']['choose'] = 'all these topics';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'name' => 'name',
+  );
+  $handler->display->display_options['row_options']['separator'] = ',';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['text'] = '[name]';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['name']['element_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: Taxonomy term: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['block_description'] = 'All Categories Jump Menu';
   $translatables['categories'] = array(
     t('Master'),
     t('more'),
@@ -88,10 +130,11 @@ function antistatique_article_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('[name]'),
-    t('Block'),
+    t('Current Categories List'),
     t('node'),
     t('All'),
     t('Current Categories'),
+    t('All Categories Jump Menu'),
   );
   $export['categories'] = $view;
 

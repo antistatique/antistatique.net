@@ -37,7 +37,7 @@ category: Components - Breadcrumb
   .breadcrumb {
     color: transparentize($navbar-inverse-color, 1/5);
     > a,
-    .view-categories a {
+    .view-categories.view-display-id-inline a {
       color: $navbar-inverse-link-color;
     }
   }
@@ -45,7 +45,7 @@ category: Components - Breadcrumb
 
 .breadcrumb  {
   > a,
-  .view-categories a {
+  .view-categories.view-display-id-inline a {
     display: inline-block;
     color: $text-color;
     font-weight: 700;
