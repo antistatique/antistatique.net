@@ -13,7 +13,7 @@ function antistatique_preprocess_node(&$vars, $hook) {
     }
   }
 
-  if($vars['is_front'] && $vars['page']) {
+  if($vars['page']) {
     if ($reaction = context_get_plugin('reaction', 'block')) {
       $vars['region']['content_above'] = $reaction->block_get_blocks_by_region('content_above');
       drupal_static_reset('context_reaction_block_list');

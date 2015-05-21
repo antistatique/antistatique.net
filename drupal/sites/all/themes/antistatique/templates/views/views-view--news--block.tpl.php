@@ -29,6 +29,11 @@
 $term = menu_get_object('taxonomy_term', 2);
 ?>
 <div class="<?php print $classes; ?> <?php if ($display_id != 'block_all' && $display_id != 'block_10cols' && $display_id != 'block_taxonomy') {print 'bg-foggy';} ?> clearfix">
+
+  <?php if ($display_id == 'block_single'): ?>
+    <div class="spacer spacer-md"></div>
+  <?php endif ?>
+
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>
@@ -55,14 +60,14 @@ $term = menu_get_object('taxonomy_term', 2);
   <?php if ($rows): ?>
     <div class="view-content <?php if (!$term) { print 'container'; } ?>">
 
-      <?php if ($display_id == 'block_10cols' || $display_id == 'block_taxonomy'): ?>
+      <?php if ($display_id == 'block_10cols' || $display_id == 'block_taxonomy' || $display_id == 'block_all'): ?>
         <div class="row">
           <div class="<?php print $display_id == 'block_10cols' ? 'col-md-offset-1 col-md-10' : 'col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6' ;?>">
       <?php endif ?>
 
       <?php print $rows; ?>
 
-      <?php if ($display_id == 'block_10cols' || $display_id == 'block_taxonomy'): ?>
+      <?php if ($display_id == 'block_10cols' || $display_id == 'block_taxonomy' || $display_id == 'block_all'): ?>
           </div>
         </div>
       <?php endif ?>
@@ -101,3 +106,7 @@ $term = menu_get_object('taxonomy_term', 2);
   <?php endif; ?>
 
 </div><?php /* class view */ ?>
+
+<?php if ($display_id == 'block_single'): ?>
+  <div class="spacer"></div>
+<?php endif ?>
