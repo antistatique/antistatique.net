@@ -82,4 +82,9 @@ hide($user_profile['field_teammate_currently_working']);
       </div>
     <?php endif ?>
   </div>
+
+  <?php if (isset($region['content_below'])): ?>
+    <?php print render($region['content_below']); ?>
+  <?php endif; ?>
+
 </div>

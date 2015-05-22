@@ -201,6 +201,14 @@ function antistatique_preprocess_user_profile(&$vars) {
 
       drupal_add_css($css, 'inline');
 
+
+      // add regions to template
+
+      if ($reaction = context_get_plugin('reaction', 'block')) {
+        $vars['region']['content_below'] = $reaction->block_get_blocks_by_region('content_below');
+        drupal_static_reset('context_reaction_block_list');
+      }
+
   }
 
   //Add the user ID into the user profile as a variable
