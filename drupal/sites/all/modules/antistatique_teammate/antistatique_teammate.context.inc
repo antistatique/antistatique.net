@@ -67,7 +67,7 @@ function antistatique_teammate_context_default_contexts() {
         'views-news-block_articles_from_user' => array(
           'module' => 'views',
           'delta' => 'news-block_articles_from_user',
-          'region' => 'above_footer',
+          'region' => 'content_below',
           'weight' => '-10',
         ),
       ),

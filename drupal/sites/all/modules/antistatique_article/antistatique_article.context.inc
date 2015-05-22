@@ -147,5 +147,37 @@ function antistatique_article_context_default_contexts() {
   t('specific');
   $export['blog_article'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'blog_articles_from_user';
+  $context->description = '';
+  $context->tag = 'sections';
+  $context->conditions = array(
+    'views' => array(
+      'values' => array(
+        'news:page' => 'news:page',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-users-block_list' => array(
+          'module' => 'views',
+          'delta' => 'users-block_list',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('sections');
+  $export['blog_articles_from_user'] = $context;
+
   return $export;
 }

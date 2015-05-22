@@ -152,7 +152,7 @@ function antistatique_article_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Go to the blog';
+  $handler->display->display_options['use_more_text'] = 'aller vers le blog';
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -335,7 +335,14 @@ function antistatique_article_views_default_views() {
 
   /* Display: Articles from user */
   $handler = $view->new_display('block', 'Articles from user', 'block_articles_from_user');
-  $handler->display->display_options['link_url'] = '/en/we/blog';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'View more';
+  $handler->display->display_options['link_url'] = 'nous/bloggons/%1';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Displayed Author(s) (field_co_author) */
@@ -352,9 +359,72 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['arguments']['field_co_author_target_id']['validate']['type'] = 'user';
   $handler->display->display_options['arguments']['field_co_author_target_id']['validate_options']['type'] = 'either';
   $handler->display->display_options['block_description'] = 'Articles from user';
+
+  /* Display: All articles from user */
+  $handler = $view->new_display('page', 'All articles from user', 'page');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'aller vers le blog complet';
+  $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_responsive_grid_plugin_style';
+  $handler->display->display_options['style_options']['item_per_row_xs'] = '1';
+  $handler->display->display_options['style_options']['item_per_row_sm'] = '1';
+  $handler->display->display_options['style_options']['item_per_row_md'] = '1';
+  $handler->display->display_options['style_options']['item_per_row_lg'] = '1';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_co_author_target_id']['id'] = 'field_co_author_target_id';
+  $handler->display->display_options['relationships']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
+  $handler->display->display_options['relationships']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Displayed Author(s) (field_co_author) */
+  $handler->display->display_options['arguments']['field_co_author_target_id']['id'] = 'field_co_author_target_id';
+  $handler->display->display_options['arguments']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
+  $handler->display->display_options['arguments']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
+  $handler->display->display_options['arguments']['field_co_author_target_id']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['field_co_author_target_id']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['field_co_author_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_co_author_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_co_author_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_co_author_target_id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_co_author_target_id']['validate']['type'] = 'user';
+  $handler->display->display_options['arguments']['field_co_author_target_id']['validate_options']['type'] = 'either';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+  );
+  $handler->display->display_options['path'] = 'nous/bloggons/%';
   $translatables['news'] = array(
     t('Master'),
-    t('Go to the blog'),
+    t('aller vers le blog'),
     t('Apply'),
     t('Reset'),
     t('Sort by'),
@@ -362,7 +432,6 @@ function antistatique_article_views_default_views() {
     t('Desc'),
     t('From the blog'),
     t('En direct du blog'),
-    t('aller vers le blog'),
     t('Other posts'),
     t('more'),
     t('All'),
@@ -380,6 +449,10 @@ function antistatique_article_views_default_views() {
     t('En direct du blog - 10cols'),
     t('Category Articles'),
     t('Articles from user'),
+    t('View more'),
+    t('All articles from user'),
+    t('aller vers le blog complet'),
+    t('User entity referenced from field_co_author'),
   );
   $export['news'] = $view;
 

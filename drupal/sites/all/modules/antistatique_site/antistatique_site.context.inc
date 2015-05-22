@@ -202,6 +202,11 @@ function antistatique_site_context_default_contexts() {
         'term_form' => '0',
       ),
     ),
+    'views' => array(
+      'values' => array(
+        'news:page' => 'news:page',
+      ),
+    ),
   );
   $context->reactions = array(
     'theme_html' => array(

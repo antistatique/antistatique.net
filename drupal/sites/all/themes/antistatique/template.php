@@ -111,6 +111,9 @@ function antistatique_preprocess_page(&$variables) {
       $variables['breadcrumb_tagline_section'] = t('We <a href="/en/we/work">work</a> on beautiful <a href="/en/we/work/with">projects</a> with people from ');
     }
   }
+  if (!empty(views_get_page_view()) && views_get_page_view()->name == 'news' && views_get_page_view()->current_display == 'page') {
+    $variables['breadcrumb_tagline_section'] = t('We <a href="/en/we/blog">blog</a> and here are the posts from ');
+  }
 
 
   // remove title and containers on user profile page and taxonomy pages
@@ -342,6 +345,11 @@ function antistatique_links__locale_block(&$variables) {
 function antistatique_views_pre_render(&$view) {
   if ($view->name == 'news' && $view->current_display == 'block_articles_from_user') {
     $user = user_load($view->args[0]);
+    $username = $user->field_firstname['und'][0]['safe_value'];
+    $view->set_title( t('Blog articles from !username', array('!username' => $username)) );
+  }
+  if ($view->name == 'news' && $view->current_display == 'page') {
+    $user = user_load_by_name($view->args[0]);
     $username = $user->field_firstname['und'][0]['safe_value'];
     $view->set_title( t('Blog articles from !username', array('!username' => $username)) );
   }
