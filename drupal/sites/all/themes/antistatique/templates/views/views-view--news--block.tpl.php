@@ -28,7 +28,7 @@
  */
 $term = menu_get_object('taxonomy_term', 2);
 ?>
-<div class="<?php print $classes; ?> <?php if ($display_id != 'block_all' && $display_id != 'block_10cols' && $display_id != 'block_taxonomy') {print 'bg-foggy';} ?> clearfix">
+<div class="<?php print $classes; ?> <?php if ($display_id == 'block_foggy' && $display_id == 'block_foggy_other' && $display_id == 'block_single') {print 'bg-foggy';} ?> clearfix">
 
   <?php if ($display_id == 'block_single'): ?>
     <div class="spacer spacer-md"></div>

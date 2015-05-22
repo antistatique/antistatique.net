@@ -15,6 +15,7 @@ function antistatique_preprocess_node(&$vars, $hook) {
 
   if($vars['page']) {
     if ($reaction = context_get_plugin('reaction', 'block')) {
+      $vars['region']['above_footer'] = $reaction->block_get_blocks_by_region('above_footer');
       $vars['region']['content_above'] = $reaction->block_get_blocks_by_region('content_above');
       drupal_static_reset('context_reaction_block_list');
     }
@@ -328,4 +329,12 @@ function antistatique_links__locale_block(&$variables) {
   $output .= '</div>';
 
   return $output;
+}
+
+function antistatique_views_pre_render(&$view) {
+  if ($view->name == 'news' && $view->current_display == 'block_articles_from_user') {
+    $user = user_load($view->args[0]);
+    $username = $user->field_firstname['und'][0]['safe_value'];
+    $view->set_title( t('Blog articles from !username', array('!username' => $username)) );
+  }
 }

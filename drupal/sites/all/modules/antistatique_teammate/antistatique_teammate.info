@@ -16,6 +16,7 @@ dependencies[] = number
 dependencies[] = picture
 dependencies[] = views_bootstrap_responsive_grid
 features[context][] = team
+features[context][] = teammate
 features[ctools][] = context:context:3
 features[ctools][] = field_group:field_group:1
 features[ctools][] = views:views_default:3.0
