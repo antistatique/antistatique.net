@@ -445,9 +445,7 @@ viewBox="0 0 332 61.9" style="enable-background:new 0 0 332 61.9;" xml:space="pr
 .antistatique_logo {
   fill: $pinkstatik;
   .dark-hero & {
-    @media only screen and (min-width: $screen-sm-min) {
-      fill: $white;
-    }
+    fill: $white;
   }
 }
 
