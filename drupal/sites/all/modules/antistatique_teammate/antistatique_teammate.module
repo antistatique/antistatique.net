@@ -15,7 +15,7 @@ function antistatique_teammate_cron() {
 
   $users = entity_load('user');
   foreach ($users as $user) {
-    if($user->uid == 0) {
+    if($user->uid == 0 || !$user) {
       continue;
     }
 
