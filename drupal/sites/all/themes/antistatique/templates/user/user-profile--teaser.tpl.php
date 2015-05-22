@@ -35,7 +35,7 @@
  */
 global $language;
 
-$username = render($user_profile['field_firstname'][0]['#markup']) .' '. render($user_profile['field_lastname'][0]['#markup']);
+$username = render($user_profile['field_firstname'][0]['#markup']);
 $userpath = '/' . $language->language . '/' . drupal_get_path_alias('user/' . $user_id);
 
 ?>
