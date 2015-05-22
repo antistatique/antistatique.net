@@ -248,12 +248,15 @@ function antistatique_preprocess_field(&$variables, $hook) {
   $element = $variables['element'];
   if (isset($element['#field_name'])) {
     if ($element['#field_name'] == 'field_co_author' && $element['#formatter'] == 'entityreference_label') {
-      if (!empty($element['#items'][0]['entity']->name)) {
-        $username = $element['#items'][0]['entity']->name;
-        $firstname = $element['#items'][0]['entity']->field_firstname['und'][0]['safe_value'];
-        $variables['items'][0]['#markup'] = '<a href="/users/'.$username.'">'.$firstname.'</a>';
-      } else {
-        $variables['items'][0]['#markup'] = 'Antistatique';
+      foreach ($element['#items'] as $key => $item) {
+        if (!empty($element['#items'][$key]['entity']->name)) {
+          $username = $element['#items'][$key]['entity']->name;
+          $firstname = $element['#items'][$key]['entity']->field_firstname['und'][0]['safe_value'];
+          $variables['items'][$key]['#markup'] = $key > 0 ? '& ': '';
+          $variables['items'][$key]['#markup'] .= '<a href="/users/'.$username.'">'.$firstname.'</a>';
+        } else {
+          $variables['items'][$key]['#markup'] = 'Antistatique';
+        }
       }
     }
   }
