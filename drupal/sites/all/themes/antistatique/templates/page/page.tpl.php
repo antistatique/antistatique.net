@@ -128,7 +128,7 @@
           </a>
         <?php endif; ?>
 
-        <a href="/contact" type="button" class="pull-right btn btn-primary navbar-btn visible-xs">
+        <a href="<?php print url('node/4'); ?>" type="button" class="pull-right btn btn-primary navbar-btn visible-xs">
           <i class="fa fa-paper-plane"></i>
           <span class="sr-only"><?php print t('Contact'); ?></span>
         </a>
@@ -158,7 +158,7 @@
             </div>
           <?php endif ?>
           <div class="nav navbar-right navbar-btn">
-            <a href="/contact" class="btn btn-primary"><?php print t('Contact Us'); ?></a>
+            <a href="<?php print url('node/4'); ?>" class="btn btn-primary"><?php print t('Contact Us'); ?></a>
           </div>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Close navigation</span>
