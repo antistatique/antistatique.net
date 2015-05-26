@@ -69,7 +69,7 @@ function antistatique_project_views_default_views() {
   $handler = $view->new_display('block', 'Featured Projects', 'block_variant');
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
-  $handler->display->display_options['link_url'] = 'node/3';
+  $handler->display->display_options['link_url'] = 'node/232';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
