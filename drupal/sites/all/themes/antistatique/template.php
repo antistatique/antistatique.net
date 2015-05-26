@@ -124,6 +124,10 @@ function antistatique_preprocess_page(&$variables) {
     $variables['no_title'] = true;
     $variables['breadcrumb_tagline_section'] = t('We also <a href="/en/we/blog">blog</a> about ');
   }
+  if  (arg(0) == 'user' && is_numeric(arg(1))) {
+    $variables['no_title'] = true;
+    $variables['breadcrumb_tagline_section'] = t('We <a href="/en/we/are-a-team">are a team</a>, meet ');
+  }
 }
 
 /**

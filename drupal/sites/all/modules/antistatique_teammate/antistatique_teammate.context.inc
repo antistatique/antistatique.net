@@ -29,9 +29,9 @@ function antistatique_teammate_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-users-block' => array(
+        'views-users-block_all' => array(
           'module' => 'views',
-          'delta' => 'users-block',
+          'delta' => 'users-block_all',
           'region' => 'above_footer',
           'weight' => '-10',
         ),
@@ -64,6 +64,12 @@ function antistatique_teammate_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-users-block_1' => array(
+          'module' => 'views',
+          'delta' => 'users-block_1',
+          'region' => 'header',
+          'weight' => '-9',
+        ),
         'views-news-block_articles_from_user' => array(
           'module' => 'views',
           'delta' => 'news-block_articles_from_user',

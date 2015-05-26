@@ -94,7 +94,7 @@ function antistatique_teammate_views_default_views() {
   );
 
   /* Display: All Teammates */
-  $handler = $view->new_display('block', 'All Teammates', 'block');
+  $handler = $view->new_display('block', 'All Teammates', 'block_all');
 
   /* Display: Order Page */
   $handler = $view->new_display('page', 'Order Page', 'page_1');
@@ -240,8 +240,8 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['menu']['context'] = 1;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
 
-  /* Display: List of teammates */
-  $handler = $view->new_display('block', 'List of teammates', 'block_list');
+  /* Display: List of teammates (BLOG) */
+  $handler = $view->new_display('block', 'List of teammates (BLOG)', 'block_list');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -292,7 +292,47 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['arguments']['uid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['uid']['validate']['type'] = 'user';
   $handler->display->display_options['arguments']['uid']['validate_options']['type'] = 'either';
-  $handler->display->display_options['block_description'] = 'List of teammates';
+  $handler->display->display_options['block_description'] = 'Jump Menu Teammates BLOG';
+
+  /* Display: List of teammates (profiles) */
+  $handler = $view->new_display('block', 'List of teammates (profiles)', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'jump_menu';
+  $handler->display->display_options['style_options']['hide'] = TRUE;
+  $handler->display->display_options['style_options']['path'] = 'uid';
+  $handler->display->display_options['style_options']['text'] = '';
+  $handler->display->display_options['style_options']['choose'] = '';
+  $handler->display->display_options['style_options']['default_value'] = TRUE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: User: Firstname */
+  $handler->display->display_options['fields']['field_firstname']['id'] = 'field_firstname';
+  $handler->display->display_options['fields']['field_firstname']['table'] = 'field_data_field_firstname';
+  $handler->display->display_options['fields']['field_firstname']['field'] = 'field_firstname';
+  $handler->display->display_options['fields']['field_firstname']['label'] = '';
+  $handler->display->display_options['fields']['field_firstname']['alter']['text'] = 'asdf';
+  $handler->display->display_options['fields']['field_firstname']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_firstname']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_firstname']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_firstname']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_firstname']['field_api_classes'] = TRUE;
+  /* Field: User: Uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'users';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['label'] = '';
+  $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['uid']['alter']['text'] = 'user/[uid]';
+  $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Jump Menu Teammates';
   $translatables['users'] = array(
     t('Master'),
     t('Meet the team'),
@@ -307,10 +347,14 @@ function antistatique_teammate_views_default_views() {
     t('Order Page'),
     t('- Choose an operation -'),
     t('Delete user'),
-    t('List of teammates'),
+    t('List of teammates (BLOG)'),
     t('asdf'),
     t('nous/bloggons/[name]'),
     t('All'),
+    t('Jump Menu Teammates BLOG'),
+    t('List of teammates (profiles)'),
+    t('user/[uid]'),
+    t('Jump Menu Teammates'),
   );
   $export['users'] = $view;
 
