@@ -10,6 +10,61 @@
 function antistatique_site_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-webform-title_field'
+  $field_instances['node-webform-title_field'] = array(
+    'bundle' => 'webform',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'small_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-body-field_body'
   $field_instances['paragraphs_item-body-field_body'] = array(
     'bundle' => 'body',
@@ -1097,6 +1152,7 @@ function antistatique_site_field_default_field_instances() {
   t('Quote Author');
   t('Select a device and we will magically add the corresponding device around your image.');
   t('The image will be set at width=100%. If you upload 2 images, both will be at 50%.');
+  t('Title');
   t('Wide Image(s)');
 
   return $field_instances;

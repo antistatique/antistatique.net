@@ -400,5 +400,69 @@ function antistatique_site_context_default_contexts() {
   t('Three Pages');
   $export['we_page_fr'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'with_you_page';
+  $context->description = '';
+  $context->tag = 'Three Pages';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'we/work/with/you' => 'we/work/with/you',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'webform-client-block-235' => array(
+          'module' => 'webform',
+          'delta' => 'client-block-235',
+          'region' => 'content_below',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Three Pages');
+  $export['with_you_page'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'with_you_page_fr';
+  $context->description = '';
+  $context->tag = 'Three Pages';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'nous/travaillons/avec/vous' => 'nous/travaillons/avec/vous',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'webform-client-block-235' => array(
+          'module' => 'webform',
+          'delta' => 'client-block-235',
+          'region' => 'content_below',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Three Pages');
+  $export['with_you_page_fr'] = $context;
+
   return $export;
 }
