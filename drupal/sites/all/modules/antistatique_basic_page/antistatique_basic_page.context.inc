@@ -54,5 +54,93 @@ function antistatique_basic_page_context_default_contexts() {
   t('sections');
   $export['page'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'work_page';
+  $context->description = '';
+  $context->tag = 'Three Pages';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'we/work' => 'we/work',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-projects-block_variant' => array(
+          'module' => 'views',
+          'delta' => 'projects-block_variant',
+          'region' => 'above_footer',
+          'weight' => '-10',
+        ),
+        'block-13' => array(
+          'module' => 'block',
+          'delta' => '13',
+          'region' => 'above_footer',
+          'weight' => '-9',
+        ),
+        'block-15' => array(
+          'module' => 'block',
+          'delta' => '15',
+          'region' => 'above_footer',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Three Pages');
+  $export['work_page'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'work_page_fr';
+  $context->description = '';
+  $context->tag = 'Three Pages';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'nous/travaillons' => 'nous/travaillons',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-projects-block_variant' => array(
+          'module' => 'views',
+          'delta' => 'projects-block_variant',
+          'region' => 'above_footer',
+          'weight' => '-10',
+        ),
+        'block-12' => array(
+          'module' => 'block',
+          'delta' => '12',
+          'region' => 'above_footer',
+          'weight' => '-9',
+        ),
+        'block-14' => array(
+          'module' => 'block',
+          'delta' => '14',
+          'region' => 'above_footer',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Three Pages');
+  $export['work_page_fr'] = $context;
+
   return $export;
 }
