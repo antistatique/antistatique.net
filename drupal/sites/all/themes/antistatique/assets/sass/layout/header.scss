@@ -285,10 +285,14 @@ category: Layout - Header
 */
 .img-hero {
   min-height: 600px;
+  background-color: $dust;
   background-size: cover;
   background-position: 50% 50%;
   transition: min-height ease-in-out 0.3s;
   position: relative;
+  .dark-hero &{
+      background-color: $midnight-blue;
+  }
   h1 {
     position: absolute;
     bottom: 0;
