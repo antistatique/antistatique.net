@@ -304,29 +304,35 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-3' => array(
-          'module' => 'block',
-          'delta' => '3',
-          'region' => 'above_footer',
-          'weight' => '0',
-        ),
-        'block-6' => array(
-          'module' => 'block',
-          'delta' => '6',
-          'region' => 'above_footer',
-          'weight' => '1',
-        ),
-        'views-projects-block_normal' => array(
+        'views-users-block_all' => array(
           'module' => 'views',
-          'delta' => 'projects-block_normal',
+          'delta' => 'users-block_all',
           'region' => 'above_footer',
-          'weight' => '2',
+          'weight' => '-10',
         ),
         'block-10' => array(
           'module' => 'block',
           'delta' => '10',
           'region' => 'above_footer',
-          'weight' => '-1',
+          'weight' => '-9',
+        ),
+        'block-3' => array(
+          'module' => 'block',
+          'delta' => '3',
+          'region' => 'above_footer',
+          'weight' => '-8',
+        ),
+        'block-6' => array(
+          'module' => 'block',
+          'delta' => '6',
+          'region' => 'above_footer',
+          'weight' => '-7',
+        ),
+        'views-projects-block_normal' => array(
+          'module' => 'views',
+          'delta' => 'projects-block_normal',
+          'region' => 'above_footer',
+          'weight' => '-6',
         ),
       ),
     ),
@@ -354,29 +360,35 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-4' => array(
-          'module' => 'block',
-          'delta' => '4',
-          'region' => 'above_footer',
-          'weight' => '0',
-        ),
-        'block-7' => array(
-          'module' => 'block',
-          'delta' => '7',
-          'region' => 'above_footer',
-          'weight' => '1',
-        ),
-        'views-projects-block_normal' => array(
+        'views-users-block_all' => array(
           'module' => 'views',
-          'delta' => 'projects-block_normal',
+          'delta' => 'users-block_all',
           'region' => 'above_footer',
-          'weight' => '2',
+          'weight' => '-10',
         ),
         'block-11' => array(
           'module' => 'block',
           'delta' => '11',
           'region' => 'above_footer',
-          'weight' => '-1',
+          'weight' => '-9',
+        ),
+        'block-4' => array(
+          'module' => 'block',
+          'delta' => '4',
+          'region' => 'above_footer',
+          'weight' => '-8',
+        ),
+        'block-7' => array(
+          'module' => 'block',
+          'delta' => '7',
+          'region' => 'above_footer',
+          'weight' => '-7',
+        ),
+        'views-projects-block_normal' => array(
+          'module' => 'views',
+          'delta' => 'projects-block_normal',
+          'region' => 'above_footer',
+          'weight' => '-6',
         ),
       ),
     ),
