@@ -209,7 +209,7 @@ The fourth image should be <b>640x640</b>.',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -362,7 +362,7 @@ The fourth image should be <b>640x640</b>.',
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -460,7 +460,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 

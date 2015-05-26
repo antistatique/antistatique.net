@@ -21,7 +21,7 @@ function antistatique_teammate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Account',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'account',
       1 => 'timezone',
@@ -57,11 +57,8 @@ function antistatique_teammate_field_group_info() {
       1 => 'field_firstname',
       2 => 'field_lastname',
       3 => 'field_teammate_body',
-      4 => 'field_teammate_currently_working',
-      5 => 'field_teammate_job_title',
-      6 => 'field_teammate_links',
-      7 => 'field_pingpong_ranking',
-      8 => 'metatags',
+      4 => 'field_teammate_links',
+      5 => 'field_pingpong_ranking',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -86,11 +83,12 @@ function antistatique_teammate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Images',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_teammate_hero_image',
       1 => 'field_four_images',
-      2 => 'picture',
+      2 => 'field_hero_image_is_dark',
+      3 => 'picture',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -114,19 +112,22 @@ function antistatique_teammate_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Project',
-    'weight' => '5',
+    'label' => 'Work',
+    'weight' => '2',
     'children' => array(
-      0 => 'field_related_project',
+      0 => 'field_teammate_currently_working',
+      1 => 'field_teammate_job_title',
+      2 => 'field_related_project',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Work',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-project field-group-tab',
         'required_fields' => 1,
+        'classes' => 'group-project field-group-tab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_project|user|user|form'] = $field_group;
