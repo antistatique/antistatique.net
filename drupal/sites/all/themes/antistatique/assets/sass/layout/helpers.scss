@@ -8,6 +8,28 @@
   }
 }
 
+.top-decoration {
+  position: relative;
+  margin-top: 50px;
+
+  &:before {
+    content: '\E001';
+    font-family: 'antistatique';
+    font-size: 10px;
+    display: inline-block;
+    width: 64px;
+    line-height: 64px;
+    border-radius: 32px;
+    margin-left: -32px;
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    z-index: 99999999;
+    background: $dust;
+    text-align: center;
+  }
+}
+
 .inverse {
   background: $text-color;
   color: $body-bg;
