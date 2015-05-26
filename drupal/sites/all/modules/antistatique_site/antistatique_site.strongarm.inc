@@ -905,7 +905,7 @@ function antistatique_site_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_page_pattern';
-  $strongarm->value = '';
+  $strongarm->value = '[node:title]';
   $export['pathauto_node_page_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -919,21 +919,21 @@ function antistatique_site_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_pattern';
-  $strongarm->value = 'content/[node:title]';
+  $strongarm->value = '[node:title]';
   $export['pathauto_node_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_project_en_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'we/work/with/[node:field_client]';
   $export['pathauto_node_project_en_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_project_fr_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'nous/travaillons/avec/[node:field_client]';
   $export['pathauto_node_project_fr_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -947,7 +947,7 @@ function antistatique_site_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_project_und_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'nous/travaillons/avec/[node:field_client]';
   $export['pathauto_node_project_und_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
