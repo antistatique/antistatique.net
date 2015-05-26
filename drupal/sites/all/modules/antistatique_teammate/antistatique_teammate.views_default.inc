@@ -95,6 +95,29 @@ function antistatique_teammate_views_default_views() {
 
   /* Display: All Teammates */
   $handler = $view->new_display('block', 'All Teammates', 'block_all');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'container text-center';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Our team';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'node/2';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_responsive_grid_plugin_style';
+  $handler->display->display_options['style_options']['item_per_row_xs'] = '2';
+  $handler->display->display_options['style_options']['item_per_row_sm'] = '4';
+  $handler->display->display_options['style_options']['item_per_row_md'] = '6';
+  $handler->display->display_options['style_options']['item_per_row_lg'] = '6';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
 
   /* Display: Order Page */
   $handler = $view->new_display('page', 'Order Page', 'page_1');
@@ -333,6 +356,33 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['block_description'] = 'Jump Menu Teammates';
+
+  /* Display: All Teammates Bigger */
+  $handler = $view->new_display('block', 'All Teammates Bigger', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Our team';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'container text-center';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Our team';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'node/2';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_responsive_grid_plugin_style';
+  $handler->display->display_options['style_options']['item_per_row_xs'] = '2';
+  $handler->display->display_options['style_options']['item_per_row_sm'] = '3';
+  $handler->display->display_options['style_options']['item_per_row_md'] = '4';
+  $handler->display->display_options['style_options']['item_per_row_lg'] = '4';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'big_teaser';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $translatables['users'] = array(
     t('Master'),
     t('Meet the team'),
@@ -344,6 +394,7 @@ function antistatique_teammate_views_default_views() {
     t('Desc'),
     t('Name'),
     t('All Teammates'),
+    t('Our team'),
     t('Order Page'),
     t('- Choose an operation -'),
     t('Delete user'),
@@ -355,6 +406,7 @@ function antistatique_teammate_views_default_views() {
     t('List of teammates (profiles)'),
     t('user/[uid]'),
     t('Jump Menu Teammates'),
+    t('All Teammates Bigger'),
   );
   $export['users'] = $view;
 

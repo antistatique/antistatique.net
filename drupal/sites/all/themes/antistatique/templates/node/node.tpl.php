@@ -122,7 +122,6 @@ hide($content['field_hero_image_is_dark']);
             <header>
               <div class="spacer spacer-sm visible-xs"></div>
               <?php print render($content['field_co_author']); ?>
-              <div class="spacer spacer-sm hidden-xs"></div>
               <hr>
               <p class="meta"><?php print format_date($created, 'custom', 'M jS Y'); ?> <?php print t('in'); ?> <?php print render($content['field_category']); ?><span class="pull-right"><a href="#disqus_thread"></a> </span></p>
             </header>

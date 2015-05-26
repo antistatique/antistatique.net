@@ -20,8 +20,6 @@ function antistatique_teammate_context_default_contexts() {
     'path' => array(
       'values' => array(
         'nous/sommes-une-equipe' => 'nous/sommes-une-equipe',
-        'nous' => 'nous',
-        'we' => 'we',
         'we/are-a-team' => 'we/are-a-team',
       ),
     ),
@@ -29,9 +27,9 @@ function antistatique_teammate_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-users-block_all' => array(
+        'views-users-block_2' => array(
           'module' => 'views',
-          'delta' => 'users-block_all',
+          'delta' => 'users-block_2',
           'region' => 'above_footer',
           'weight' => '-10',
         ),
