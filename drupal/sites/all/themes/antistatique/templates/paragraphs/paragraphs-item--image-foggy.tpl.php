@@ -26,7 +26,7 @@
  * @see template_process()
  */
 if (isset($content['field_device'])) $device = $content['field_device'][0]['#markup'];
-if (isset($content['field_browser'])) $browser = $content['field_browser'][0]['#markup'];
+if (isset($content['field_browser']) && $content['field_browser'][0]['#markup']) $browser = $content['field_browser'][0]['#markup'];
 $landscape = isset($content['field_landscape']) && $content['field_landscape']['#items'][0]['value'] ? 'landscape' : '';
 
 switch ($content['field_image_width_centered'][0]['#markup']) {
