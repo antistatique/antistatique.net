@@ -79,7 +79,6 @@ blockquote.blockquote-paragraph {
   @media only screen and (min-width: $screen-sm-min) {
     &:before,
     &:after {
-      font-size: 70px;
       position: absolute;
       color: $dust;
       font-size: 100px;
@@ -87,7 +86,6 @@ blockquote.blockquote-paragraph {
     &:before {
       content: '“';
       left: 0;
-      top: 57px;
       top: 51px;
     }
     &:after {
@@ -111,6 +109,12 @@ blockquote.blockquote-paragraph {
         max-width: 50%;
         float: left;
       }
+    }
+  }
+  .centered {
+    img {
+      display: block;
+      margin: 0 auto;
     }
   }
 }

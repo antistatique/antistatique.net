@@ -943,7 +943,8 @@ function antistatique_site_field_default_field_instances() {
   $field_instances['paragraphs_item-image_wide-field_wide_images'] = array(
     'bundle' => 'image_wide',
     'deleted' => 0,
-    'description' => 'The image will be set at width=100%. If you upload 2 images, both will be at 50%.',
+    'description' => 'The image will be set at width=100%. If you upload 2 images, both will be at 50%.<br>
+<b>Minimum 1300x820px</b>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -963,6 +964,7 @@ function antistatique_site_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_wide_images',
     'label' => 'Wide Image(s)',
     'required' => 0,
@@ -974,7 +976,7 @@ function antistatique_site_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '',
+      'min_resolution' => '1300x820',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -987,6 +989,7 @@ function antistatique_site_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'audio' => 0,
           'default' => 0,
           'image' => 'image',
@@ -1001,10 +1004,31 @@ function antistatique_site_field_default_field_instances() {
           'icon_link' => 0,
           'image' => 0,
           'image_hero-image' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_large' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_medium' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_project_thumbnail' => 0,
           'image_square_thumbnail' => 0,
           'image_thumbnail' => 0,
+          'image_wide_image' => 0,
+          'image_wide_thumbnail' => 0,
           'link' => 0,
         ),
         'insert_width' => '',
@@ -1151,7 +1175,8 @@ function antistatique_site_field_default_field_instances() {
   t('Please use "Wider" if you are uploading a device screenshot.');
   t('Quote Author');
   t('Select a device and we will magically add the corresponding device around your image.');
-  t('The image will be set at width=100%. If you upload 2 images, both will be at 50%.');
+  t('The image will be set at width=100%. If you upload 2 images, both will be at 50%.<br>
+<b>Minimum 1300x820px</b>');
   t('Title');
   t('Wide Image(s)');
 
