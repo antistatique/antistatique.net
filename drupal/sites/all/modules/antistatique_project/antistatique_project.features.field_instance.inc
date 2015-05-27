@@ -605,7 +605,7 @@ function antistatique_project_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
-      'default_image' => 320,
+      'default_image' => 176,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'hero-project',
       'file_extensions' => 'png gif jpg jpeg',
