@@ -65,15 +65,6 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['filters']['field_teammate_currently_working_value']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: User: Roles */
-  $handler->display->display_options['filters']['rid']['id'] = 'rid';
-  $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
-  $handler->display->display_options['filters']['rid']['field'] = 'rid';
-  $handler->display->display_options['filters']['rid']['value'] = array(
-    3 => '3',
-    4 => '4',
-  );
-  $handler->display->display_options['filters']['rid']['reduce_duplicates'] = TRUE;
   /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
