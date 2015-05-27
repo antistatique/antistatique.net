@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/*doc
+---
+title: Login
+name: a-login
+category: Antistatique - Login
+---
+
+
+```html_example
+<div class="page-user-login" >
+  <div class="login">
+    <div id="top_part">
+      <h1 id="the_logo">
+        <a href="/fr">
+          <img src="../../logo.png" alt="antistatique.dev">
+        </a>
+      </h1>
+    </div>
+
+    <div id="middle_part">
+      <h2 class="title">Login</h2>
+
+      <div class="region region-content">
+        <section id="block-system-main" class="block block-system clearfix">
+
+
+          <form action="#" method="post" id="user-login" accept-charset="UTF-8">
+            <div>
+              <div class="form-item form-item-name form-type-textfield form-group">
+                <label class="control-label" for="edit-name">
+                  Username <span class="form-required" title="This field is required.">*</span>
+                </label>
+                <input autofocus="autofocus" class="form-control form-text required" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" />
+              </div>
+              <div class="form-item form-item-pass form-type-password form-group">
+                <label class="control-label" for="edit-pass">
+                  Password <span class="form-required" title="This field is required.">*</span>
+                </label>
+                <input class="form-control form-text required" type="password" id="edit-pass" name="pass" size="60" maxlength="128" />
+              </div>
+              <div class="form-actions form-wrapper form-group">
+                <button value="Log in" type="submit" class="btn btn-default form-submit">
+                  Log in
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <div id="bottom_part">
+      <div class="password_link">
+        <a href="/fr/user/password">Forgot your password?</a>    </div>
+
+        <div class="register_link">
+          <a href="/fr/user/register">Register a new account</a>    </div>
+
+          <div class="back_link">
+            <a href="/fr">&larr; Back antistatique.dev</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+```
+*/
+
+.page-user-login{
+  background: $dust;
+  padding-top: 140px;
+}
+
