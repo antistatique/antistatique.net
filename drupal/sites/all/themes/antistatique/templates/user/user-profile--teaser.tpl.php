@@ -40,12 +40,16 @@ $userpath = '/' . $language->language . '/' . drupal_get_path_alias('user/' . $u
 
 ?>
 <?php if ($username != ' '): ?>
+  <?php if ($user_profile['field_teammate_currently_working'][0]['#markup']): ?>
   <a href="<?php print $userpath; ?>" class="profile team-tiny"<?php print $attributes; ?>>
+  <?php endif ?>
     <div class="team-avatar">
       <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print $username; ?>" class="img-circle img-responsive">
     </div>
     <p class="h6 text-md text-dark"><?php print  $username; ?></p>
+  <?php if ($user_profile['field_teammate_currently_working'][0]['#markup']): ?>
   </a>
+  <?php endif ?>
 <?php else: ?>
   <span class="field-co-author"><span href="/fr/users/noemie" class="profile team-tiny">
     <div class="team-avatar">
