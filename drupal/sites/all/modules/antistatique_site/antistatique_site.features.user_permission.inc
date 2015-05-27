@@ -231,6 +231,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'administer blocks',
     'roles' => array(
       'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
     ),
     'module' => 'block',
   );
