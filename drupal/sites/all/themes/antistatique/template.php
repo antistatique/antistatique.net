@@ -150,6 +150,13 @@ function antistatique_preprocess_user_profile(&$vars) {
     }
 
   } elseif ($vars['elements']['#view_mode'] == 'full') {
+
+    // redirect to 404 if teammate is no longer working here
+    if (!$vars['elements']['field_teammate_currently_working']['#items'][0]['value']) {
+      drupal_goto('404');
+    }
+
+
     /*
         Define hero image to display on node header.
 
