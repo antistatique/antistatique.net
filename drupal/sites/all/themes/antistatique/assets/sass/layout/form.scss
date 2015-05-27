@@ -17,6 +17,10 @@ category: Layout - Form
 
 .form-control {
   box-shadow: none;
+
+  .well-white & {
+    background: $dust;
+  }
 }
 
 .control-label {
