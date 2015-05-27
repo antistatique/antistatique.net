@@ -34,6 +34,7 @@
  * @ingroup themeable
  */
 $account = menu_get_object('user');
+$is_working = $user_profile['field_teammate_currently_working'][0]['#markup'];
 hide($user_profile['field_teammate_currently_working']);
 ?>
 <div id="user-<?php print $account->uid; ?>" class="profile profile-full bg-foggy"<?php print $attributes; ?>>
@@ -63,7 +64,9 @@ hide($user_profile['field_teammate_currently_working']);
             <?php print render($user_profile['field_teammate_links']) ?>
           </div>
           <div class="col-md-6">
-            <p><?php print render($user_profile['field_email']); ?></p>
+            <?php if ($is_working): ?>
+              <p><?php print render($user_profile['field_email']); ?></p>
+            <?php endif ?>
             <p><?php print t('<a href="/fr/nous/bloggons/@username" class="btn btn-default"><i class="fa fa-pencil <?php print $classes; ?>"></i> !name\'s articles</a>', array('@username' => $account->name, '!name' => $user_profile['field_firstname'][0]['#markup'])); ?></p>
           </div>
         </div>
