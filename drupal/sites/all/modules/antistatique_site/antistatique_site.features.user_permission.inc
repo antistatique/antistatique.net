@@ -1056,6 +1056,16 @@ function antistatique_site_user_default_permissions() {
     'module' => 'entity_translation',
   );
 
+  // Exported permission: 'translate admin strings'.
+  $permissions['translate admin strings'] = array(
+    'name' => 'translate admin strings',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'i18n_string',
+  );
+
   // Exported permission: 'translate any entity'.
   $permissions['translate any entity'] = array(
     'name' => 'translate any entity',
@@ -1104,6 +1114,16 @@ function antistatique_site_user_default_permissions() {
       'collaborator' => 'collaborator',
     ),
     'module' => 'entity_translation',
+  );
+
+  // Exported permission: 'translate user-defined strings'.
+  $permissions['translate user-defined strings'] = array(
+    'name' => 'translate user-defined strings',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'i18n_string',
   );
 
   // Exported permission: 'use advanced search'.
