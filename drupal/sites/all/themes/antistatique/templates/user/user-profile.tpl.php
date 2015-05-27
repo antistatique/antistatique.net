@@ -34,7 +34,6 @@
  * @ingroup themeable
  */
 $account = menu_get_object('user');
-hide($user_profile['field_teammate_hero_image']);
 hide($user_profile['field_teammate_currently_working']);
 ?>
 <div id="user-<?php print $account->uid; ?>" class="profile profile-full bg-foggy"<?php print $attributes; ?>>

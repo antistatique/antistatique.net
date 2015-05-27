@@ -81,7 +81,7 @@
   </div>
 <?php endif; ?>
 
-<header id="navbar" role="banner" class="header">
+<header id="navbar" role="banner" class="header <?php print $classes; ?>">
   <div class="container">
     <div class="navbar navbar-default">
       <div class="navbar-header">

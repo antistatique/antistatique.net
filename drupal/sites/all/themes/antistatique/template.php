@@ -117,9 +117,6 @@ function antistatique_preprocess_page(&$variables) {
 
 
   // remove title and containers on user profile page and taxonomy pages
-  if (isset($variables['page']['content']['system_main']['#theme']) && $variables['page']['content']['system_main']['#theme'] == 'user_profile') {
-    $variables['no_title'] = true;
-  }
   if  (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
     $variables['no_title'] = true;
     $variables['breadcrumb_tagline_section'] = t('We also <a href="/en/we/blog">blog</a> about ');
@@ -127,6 +124,13 @@ function antistatique_preprocess_page(&$variables) {
   if  (arg(0) == 'user' && is_numeric(arg(1))) {
     $variables['no_title'] = true;
     $variables['breadcrumb_tagline_section'] = t('We <a href="/en/we/are-a-team">are a team</a>, meet ');
+
+    // set dark-hero if no hero image
+    if (empty($variables['page']['content']['system_main']['field_teammate_hero_image'])) {
+      $variables['classes_array'][] = 'dark-hero';
+    } elseif (isset($variables['page']['content']['system_main']['field_hero_image_is_dark']) && $variables['page']['content']['system_main']['field_hero_image_is_dark'][0]['#markup']) {
+      $variables['classes_array'][] = 'dark-hero';
+    }
   }
 }
 
