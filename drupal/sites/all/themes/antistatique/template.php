@@ -92,7 +92,7 @@ function antistatique_preprocess_page(&$variables) {
   $nid = arg(1);
   // tagline generator
   if (arg(0) == 'node' && is_numeric($nid) && !$variables['is_front']) {
-    if ($variables['node']->type == 'page' && isset($variables['page']['content']['system_main']['nodes'][$nid])) {
+    if ($variables['node']->type == 'page' && isset($variables['page']['content']['system_main']['nodes'][$nid]) && isset($variables['page']['content']['system_main']['nodes'][$nid]['field_section'])) {
       $variables['node_content'] = &$variables['page']['content']['system_main']['nodes'][$nid];
 
       switch ($variables['node_content']['field_section'][0]['#title']) {

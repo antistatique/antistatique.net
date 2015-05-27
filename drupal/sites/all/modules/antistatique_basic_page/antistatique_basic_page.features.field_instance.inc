@@ -335,11 +335,7 @@ function antistatique_basic_page_field_default_field_instances() {
   // Exported field_instance: 'node-page-field_section'
   $field_instances['node-page-field_section'] = array(
     'bundle' => 'page',
-    'default_value' => array(
-      0 => array(
-        'tid' => 18,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -367,7 +363,7 @@ function antistatique_basic_page_field_default_field_instances() {
     'fences_wrapper' => 'div',
     'field_name' => 'field_section',
     'label' => 'Section',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,

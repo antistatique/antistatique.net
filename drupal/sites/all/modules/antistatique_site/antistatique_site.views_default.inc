@@ -108,6 +108,22 @@ function antistatique_site_views_default_views() {
 
   /* Display: Dropdown */
   $handler = $view->new_display('block', 'Dropdown', 'block');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'page' => 'page',
+  );
   $handler->display->display_options['block_description'] = 'Dropdown';
 
   /* Display: Jump Menu Pages */
@@ -203,50 +219,18 @@ function antistatique_site_views_default_views() {
     'page' => 'page',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Nid */
-  $handler->display->display_options['filters']['nid']['id'] = 'nid';
-  $handler->display->display_options['filters']['nid']['table'] = 'node';
-  $handler->display->display_options['filters']['nid']['field'] = 'nid';
-  $handler->display->display_options['filters']['nid']['operator'] = '!=';
-  $handler->display->display_options['filters']['nid']['value']['value'] = '1';
-  $handler->display->display_options['filters']['nid']['expose']['operator_id'] = 'nid_op';
-  $handler->display->display_options['filters']['nid']['expose']['label'] = 'Nid';
-  $handler->display->display_options['filters']['nid']['expose']['operator'] = 'nid_op';
-  $handler->display->display_options['filters']['nid']['expose']['identifier'] = 'nid';
-  /* Filter criterion: Content: Nid */
-  $handler->display->display_options['filters']['nid_1']['id'] = 'nid_1';
-  $handler->display->display_options['filters']['nid_1']['table'] = 'node';
-  $handler->display->display_options['filters']['nid_1']['field'] = 'nid';
-  $handler->display->display_options['filters']['nid_1']['operator'] = '!=';
-  $handler->display->display_options['filters']['nid_1']['value']['value'] = '25';
-  /* Filter criterion: Content: Nid */
-  $handler->display->display_options['filters']['nid_2']['id'] = 'nid_2';
-  $handler->display->display_options['filters']['nid_2']['table'] = 'node';
-  $handler->display->display_options['filters']['nid_2']['field'] = 'nid';
-  $handler->display->display_options['filters']['nid_2']['operator'] = '!=';
-  $handler->display->display_options['filters']['nid_2']['value']['value'] = '12';
-  $handler->display->display_options['filters']['nid_2']['expose']['operator_id'] = 'nid_2_op';
-  $handler->display->display_options['filters']['nid_2']['expose']['label'] = 'Nid';
-  $handler->display->display_options['filters']['nid_2']['expose']['operator'] = 'nid_2_op';
-  $handler->display->display_options['filters']['nid_2']['expose']['identifier'] = 'nid_2';
-  /* Filter criterion: Content: Nid */
-  $handler->display->display_options['filters']['nid_3']['id'] = 'nid_3';
-  $handler->display->display_options['filters']['nid_3']['table'] = 'node';
-  $handler->display->display_options['filters']['nid_3']['field'] = 'nid';
-  $handler->display->display_options['filters']['nid_3']['operator'] = '!=';
-  $handler->display->display_options['filters']['nid_3']['value']['value'] = '45';
-  /* Filter criterion: Content: Nid */
-  $handler->display->display_options['filters']['nid_4']['id'] = 'nid_4';
-  $handler->display->display_options['filters']['nid_4']['table'] = 'node';
-  $handler->display->display_options['filters']['nid_4']['field'] = 'nid';
-  $handler->display->display_options['filters']['nid_4']['operator'] = '!=';
-  $handler->display->display_options['filters']['nid_4']['value']['value'] = '3';
-  /* Filter criterion: Content: Nid */
-  $handler->display->display_options['filters']['nid_5']['id'] = 'nid_5';
-  $handler->display->display_options['filters']['nid_5']['table'] = 'node';
-  $handler->display->display_options['filters']['nid_5']['field'] = 'nid';
-  $handler->display->display_options['filters']['nid_5']['operator'] = '!=';
-  $handler->display->display_options['filters']['nid_5']['value']['value'] = '4';
+  /* Filter criterion: Content: Section (field_section) */
+  $handler->display->display_options['filters']['field_section_tid']['id'] = 'field_section_tid';
+  $handler->display->display_options['filters']['field_section_tid']['table'] = 'field_data_field_section';
+  $handler->display->display_options['filters']['field_section_tid']['field'] = 'field_section_tid';
+  $handler->display->display_options['filters']['field_section_tid']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_section_tid']['value'] = array(
+    18 => '18',
+    19 => '19',
+    20 => '20',
+  );
+  $handler->display->display_options['filters']['field_section_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_section_tid']['vocabulary'] = 'section';
   $handler->display->display_options['block_description'] = 'Jump Menu Pages';
 
   /* Display: Jump Menu Projects */
@@ -319,7 +303,6 @@ function antistatique_site_views_default_views() {
     t('Jump Menu Pages'),
     t('No tagline'),
     t('[path]'),
-    t('Nid'),
     t('Jump Menu Projects'),
     t('-client name missing-'),
   );
