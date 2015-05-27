@@ -416,16 +416,16 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'webform-client-block-235' => array(
+        'webform-client-block-236' => array(
           'module' => 'webform',
-          'delta' => 'client-block-235',
-          'region' => 'content_below',
+          'delta' => 'client-block-236',
+          'region' => 'above_footer',
           'weight' => '-10',
         ),
         'block-16' => array(
           'module' => 'block',
           'delta' => '16',
-          'region' => 'content_below',
+          'region' => 'above_footer',
           'weight' => '-9',
         ),
       ),
@@ -457,9 +457,9 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'webform-client-block-235' => array(
+        'webform-client-block-236' => array(
           'module' => 'webform',
-          'delta' => 'client-block-235',
+          'delta' => 'client-block-236',
           'region' => 'above_footer',
           'weight' => '-10',
         ),
