@@ -260,8 +260,10 @@ function antistatique_preprocess_field(&$variables, $hook) {
         if (!empty($element['#items'][$key]['entity']->name)) {
           $username = $element['#items'][$key]['entity']->name;
           $firstname = $element['#items'][$key]['entity']->field_firstname['und'][0]['safe_value'];
+          $is_working = $element['#items'][$key]['entity']->field_teammate_currently_working['und'][0]['value'];
+
           $variables['items'][$key]['#markup'] = $key > 0 ? '& ': '';
-          $variables['items'][$key]['#markup'] .= '<a href="/users/'.$username.'">'.$firstname.'</a>';
+          $variables['items'][$key]['#markup'] .= $is_working ? '<a href="/users/'.$username.'">'.$firstname.'</a>' : $firstname;
         } else {
           $variables['items'][$key]['#markup'] = 'Antistatique';
         }
