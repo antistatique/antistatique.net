@@ -312,7 +312,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 12,
+      'weight' => 10,
     ),
   );
 
@@ -411,7 +411,7 @@ The fourth image should be <b>640x640</b>.',
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -676,7 +676,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
