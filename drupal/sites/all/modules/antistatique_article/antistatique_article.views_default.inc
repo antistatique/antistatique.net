@@ -152,7 +152,7 @@ function antistatique_article_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'aller vers le blog';
+  $handler->display->display_options['use_more_text'] = 'Go to the blog';
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -198,16 +198,9 @@ function antistatique_article_views_default_views() {
   /* Display: From the blog */
   $handler = $view->new_display('block', 'From the blog', 'block_foggy');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'En direct du blog';
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_always'] = TRUE;
-  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'aller vers le blog';
+  $handler->display->display_options['title'] = 'Live from our blog';
   $handler->display->display_options['link_url'] = 'node/7';
-  $handler->display->display_options['block_description'] = 'En direct du blog';
+  $handler->display->display_options['block_description'] = 'Live from our blog';
 
   /* Display: Other posts */
   $handler = $view->new_display('block', 'Other posts', 'block_foggy_other');
@@ -246,6 +239,12 @@ function antistatique_article_views_default_views() {
 
   /* Display: All posts but first */
   $handler = $view->new_display('block', 'All posts but first', 'block_all');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Go to the blog';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
@@ -267,6 +266,12 @@ function antistatique_article_views_default_views() {
 
   /* Display: First article */
   $handler = $view->new_display('block', 'First article', 'block_single');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Go to the blog';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
@@ -288,21 +293,20 @@ function antistatique_article_views_default_views() {
   /* Display: From the blog - 10cols */
   $handler = $view->new_display('block', 'From the blog - 10cols', 'block_10cols');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'En direct du blog';
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_always'] = TRUE;
-  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'aller vers le blog';
+  $handler->display->display_options['title'] = 'Live from our blog';
   $handler->display->display_options['link_url'] = 'node/7';
-  $handler->display->display_options['block_description'] = 'En direct du blog - 10cols';
+  $handler->display->display_options['block_description'] = 'Live from our blog - 10cols';
 
   /* Display: Category Articles */
   $handler = $view->new_display('block', 'Category Articles', 'block_taxonomy');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'container';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Go to the blog';
   $handler->display->display_options['link_url'] = 'node/7';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
@@ -367,7 +371,7 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'aller vers le blog complet';
+  $handler->display->display_options['use_more_text'] = 'Go to the complete blog';
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -424,16 +428,16 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['path'] = 'nous/bloggons/%';
   $translatables['news'] = array(
     t('Master'),
-    t('aller vers le blog'),
+    t('Go to the blog'),
     t('Apply'),
     t('Reset'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
     t('From the blog'),
-    t('En direct du blog'),
-    t('Other posts'),
+    t('Live from our blog'),
     t('more'),
+    t('Other posts'),
     t('All'),
     t('All posts but first'),
     t('Items per page'),
@@ -446,12 +450,12 @@ function antistatique_article_views_default_views() {
     t('All articles but first'),
     t('First article'),
     t('From the blog - 10cols'),
-    t('En direct du blog - 10cols'),
+    t('Live from our blog - 10cols'),
     t('Category Articles'),
     t('Articles from user'),
     t('View more'),
     t('All articles from user'),
-    t('aller vers le blog complet'),
+    t('Go to the blog complet'),
     t('User entity referenced from field_co_author'),
   );
   $export['news'] = $view;
