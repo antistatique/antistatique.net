@@ -422,7 +422,16 @@ function antistatique_site_context_default_contexts() {
           'region' => 'content_below',
           'weight' => '-10',
         ),
+        'block-16' => array(
+          'module' => 'block',
+          'delta' => '16',
+          'region' => 'content_below',
+          'weight' => '-9',
+        ),
       ),
+    ),
+    'theme_html' => array(
+      'class' => 'article-foggy',
     ),
   );
   $context->condition_mode = 0;
@@ -451,10 +460,19 @@ function antistatique_site_context_default_contexts() {
         'webform-client-block-235' => array(
           'module' => 'webform',
           'delta' => 'client-block-235',
-          'region' => 'content_below',
+          'region' => 'above_footer',
           'weight' => '-10',
         ),
+        'block-17' => array(
+          'module' => 'block',
+          'delta' => '17',
+          'region' => 'above_footer',
+          'weight' => '-9',
+        ),
       ),
+    ),
+    'theme_html' => array(
+      'class' => 'article-foggy',
     ),
   );
   $context->condition_mode = 0;

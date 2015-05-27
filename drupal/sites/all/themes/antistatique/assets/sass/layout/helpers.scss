@@ -8,6 +8,10 @@
   }
 }
 
+.article-foggy article.node {
+  @extend .bg-foggy;
+}
+
 .top-decoration {
   position: relative;
   margin-top: 50px;
@@ -90,6 +94,17 @@
   &-bottom {margin-bottom: 0;}
 }
 
+.bottom-overflow {
+  &:after {
+    content: '';
+    display: block;
+    height: 300px;
+    width: 100%;
+    background: $white;
+    margin-top: -180px;
+  }
+}
+
 /**
  * Text helpers
  */
@@ -108,6 +123,9 @@
   &-xs {
     font-size: ceil(($font-size-base * 0.7));
     margin-bottom: ceil(($font-size-base * 0.6));
+  }
+  &-huge {
+    font-size: 10vw;
   }
 
   &-dark {
