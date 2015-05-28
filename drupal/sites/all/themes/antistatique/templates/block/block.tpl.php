@@ -45,7 +45,7 @@
  * @ingroup themeable
  */
 
-if ( $block->delta == "news-block_foggy_other" || $block->delta == "users-block" || $block->delta == "projects-block_normal" ) {
+if ( $block->delta == "news-block_foggy_other" || $block->delta == "users-block" || $block->delta == "users-block_all" || $block->delta == "users-block_2" || $block->delta == "projects-block_normal" ) {
   $classes .= ' bg-foggy';
 }
 
