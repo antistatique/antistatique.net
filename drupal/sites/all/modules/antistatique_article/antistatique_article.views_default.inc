@@ -293,7 +293,13 @@ function antistatique_article_views_default_views() {
   /* Display: From the blog - 10cols */
   $handler = $view->new_display('block', 'From the blog - 10cols', 'block_10cols');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Live from our blog';
+  $handler->display->display_options['title'] = 'Live from our <a href="/en/we/blog">blog</a>';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Go to the blog';
   $handler->display->display_options['link_url'] = 'node/7';
   $handler->display->display_options['block_description'] = 'Live from our blog - 10cols';
 
@@ -349,7 +355,7 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['link_url'] = 'nous/bloggons/%1';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Co-Author (field_co_author) */
+  /* Contextual filter: Content: Displayed Author(s) (field_co_author) */
   $handler->display->display_options['arguments']['field_co_author_target_id']['id'] = 'field_co_author_target_id';
   $handler->display->display_options['arguments']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['arguments']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
@@ -397,7 +403,7 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['relationships']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['relationships']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Co-Author (field_co_author) */
+  /* Contextual filter: Content: Displayed Author(s) (field_co_author) */
   $handler->display->display_options['arguments']['field_co_author_target_id']['id'] = 'field_co_author_target_id';
   $handler->display->display_options['arguments']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['arguments']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
@@ -450,12 +456,13 @@ function antistatique_article_views_default_views() {
     t('All articles but first'),
     t('First article'),
     t('From the blog - 10cols'),
+    t('Live from our <a href="/en/we/blog">blog</a>'),
     t('Live from our blog - 10cols'),
     t('Category Articles'),
     t('Articles from user'),
     t('View more'),
     t('All articles from user'),
-    t('Go to the blog complet'),
+    t('Go to the complete blog'),
     t('User entity referenced from field_co_author'),
   );
   $export['news'] = $view;
