@@ -195,6 +195,7 @@ category: Layout - Buttons
   padding-left: 0;
   padding-top: 1px;
   @include medium-link($position: 1.75em);
+  transition: color .2s;
 
   &:hover {
     color: $link-color;

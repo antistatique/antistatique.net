@@ -17,20 +17,21 @@ Test based on Medium way of doing things! @Guillaume ;)
 
 */
 
-.content a {
-  @include medium-link();
+a,
+button {
+  transition: all .2s;
 }
 
+// TODO move this to a better file...
 header.header {
   .navbar-nav > li:not(.active):not(.active-trail) > a {
-    @include medium-link($hover-color: $midnight-blue-light,$position: 34px);
-    // @include medium-link(currentColor, $link-hover-color, 34px);
+    @include medium-link($hover-color: $link-color,$position: 34px);
     .dark-hero & {
        background-image: linear-gradient(to bottom, rgba($navbar-inverse-link-color,0) 50%, $navbar-inverse-link-color 50%);
     }
     &:hover {
       .dark-hero & {
-        background-image: linear-gradient(to bottom, rgba($navbar-inverse-link-hover-color,0) 50%, $navbar-inverse-link-hover-color 50%);
+        background-image: linear-gradient(to bottom, rgba($link-color,0) 50%, $link-color 50%);
       }
     }
   }

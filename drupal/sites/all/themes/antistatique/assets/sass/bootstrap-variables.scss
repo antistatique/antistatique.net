@@ -370,7 +370,7 @@ $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
 $navbar-default-link-color:                $text-color !default;
-$navbar-default-link-hover-color:          darken($midnight-blue-light, 10%) !default;
+$navbar-default-link-hover-color:          $link-color !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         darken($midnight-blue-light, 15%) !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
@@ -396,9 +396,9 @@ $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !def
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 $white !default;
-$navbar-inverse-link-hover-color:           darken($dust, 10%) !default;
+$navbar-inverse-link-hover-color:           $link-color !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
-$navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
+$navbar-inverse-link-active-color:          darken($dust, 10%) !default;
 $navbar-inverse-link-active-bg:             transparent !default;
 $navbar-inverse-link-disabled-color:        #444 !default;
 $navbar-inverse-link-disabled-bg:           transparent !default;
