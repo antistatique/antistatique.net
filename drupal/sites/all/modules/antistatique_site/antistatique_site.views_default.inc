@@ -25,6 +25,7 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['css_class'] = 'btn-group';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'access administration menu';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -71,6 +72,10 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['type'] = 'text_plain';
   $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['field_api_classes'] = TRUE;
+  /* Field: Draggableviews: Content */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
@@ -108,6 +113,35 @@ function antistatique_site_views_default_views() {
 
   /* Display: Dropdown */
   $handler = $view->new_display('block', 'Dropdown', 'block');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Breadcrumb Tagline */
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['id'] = 'field_breadcrumb_tagline';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['table'] = 'field_data_field_breadcrumb_tagline';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['field'] = 'field_breadcrumb_tagline';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['label'] = '';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['empty'] = '[node:url]';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['type'] = 'title_linked';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['settings'] = array(
+    'title_style' => '_none',
+    'title_link' => 'content',
+    'title_class' => '',
+  );
+  /* Field: Content: Breadcrumb Tagline */
+  $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['id'] = 'field_breadcrumb_tagline_1';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['table'] = 'field_data_field_breadcrumb_tagline';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['field'] = 'field_breadcrumb_tagline';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['label'] = '';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline_1']['field_api_classes'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -181,6 +215,13 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Draggableviews: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'breadcrumb:page_1';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -288,6 +329,96 @@ function antistatique_site_views_default_views() {
     'project' => 'project',
   );
   $handler->display->display_options['block_description'] = 'Jump Menu Projects';
+
+  /* Display: Order pages in breadcrumb */
+  $handler = $view->new_display('page', 'Order pages in breadcrumb', 'page_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_breadcrumb_tagline' => 'field_breadcrumb_tagline',
+    'field_breadcrumb_tagline_1' => 'field_breadcrumb_tagline_1',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_breadcrumb_tagline' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_breadcrumb_tagline_1' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Draggableviews: Content */
+  $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
+  $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['label'] = '';
+  $handler->display->display_options['fields']['draggableviews']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  /* Field: Content: Section */
+  $handler->display->display_options['fields']['field_section']['id'] = 'field_section';
+  $handler->display->display_options['fields']['field_section']['table'] = 'field_data_field_section';
+  $handler->display->display_options['fields']['field_section']['field'] = 'field_section';
+  $handler->display->display_options['fields']['field_section']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_section']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_section']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_section']['field_api_classes'] = TRUE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Draggableviews: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'breadcrumb:page_1';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'page' => 'page',
+  );
+  /* Filter criterion: Content: Section (field_section) */
+  $handler->display->display_options['filters']['field_section_tid']['id'] = 'field_section_tid';
+  $handler->display->display_options['filters']['field_section_tid']['table'] = 'field_data_field_section';
+  $handler->display->display_options['filters']['field_section_tid']['field'] = 'field_section_tid';
+  $handler->display->display_options['filters']['field_section_tid']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_section_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_section_tid']['vocabulary'] = 'section';
+  $handler->display->display_options['path'] = 'admin/order-breadcrumb';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Order pages in breadcrumb';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'management';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $translatables['breadcrumb'] = array(
     t('Master'),
     t('more'),
@@ -298,6 +429,7 @@ function antistatique_site_views_default_views() {
     t('Desc'),
     t('<a href="#" class="text-strong dropdown-toggle" data-toggle="dropdown">[field_breadcrumb_tagline_1] <span class="caret"></span></a>'),
     t('[node:url]'),
+    t('Content'),
     t('All'),
     t('Dropdown'),
     t('Jump Menu Pages'),
@@ -305,6 +437,9 @@ function antistatique_site_views_default_views() {
     t('[path]'),
     t('Jump Menu Projects'),
     t('-client name missing-'),
+    t('Order pages in breadcrumb'),
+    t('Title'),
+    t('Section'),
   );
   $export['breadcrumb'] = $view;
 

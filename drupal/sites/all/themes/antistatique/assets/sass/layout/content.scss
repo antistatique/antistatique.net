@@ -5,11 +5,21 @@
   }
 }
 
-.readmore a:before,
-.field-body .more-link:before {
-  content: '›';
-  margin: 0 4px;
+.readmore a,
+.field-body .more-link {
+  position: relative;
+  margin-left: 20px;
+  @include medium-link-hover($position: 1.1em);
+
+  &:before,
+  &:before {
+    content: '›';
+    margin: 0 4px;
+    position: absolute;
+    left: -15px;
+  }
 }
+
 
 .embed-responsive {
   margin-top: 25px;

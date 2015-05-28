@@ -230,6 +230,8 @@ category: Layout - Buttons
   .more-link {
     text-align: center;
     margin-bottom: 50px;
+    font-weight: 700;
+
     a {
       @extend .btn;
       @extend .btn-primary;
