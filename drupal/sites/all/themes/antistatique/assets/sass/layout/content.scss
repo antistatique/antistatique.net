@@ -9,7 +9,7 @@
 .field-body .more-link {
   position: relative;
   margin-left: 20px;
-  @include medium-link-hover($position: 1.1em);
+  @include medium-link-hover($position: .95em);
 
   &:before,
   &:before {
