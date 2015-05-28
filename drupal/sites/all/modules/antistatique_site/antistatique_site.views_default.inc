@@ -312,6 +312,16 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['fields']['field_client']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_client']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_client']['empty'] = '-client name missing-';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Year (field_year) */
+  $handler->display->display_options['sorts']['field_year_value']['id'] = 'field_year_value';
+  $handler->display->display_options['sorts']['field_year_value']['table'] = 'field_data_field_year';
+  $handler->display->display_options['sorts']['field_year_value']['field'] = 'field_year_value';
+  $handler->display->display_options['sorts']['field_year_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Client (field_client) */
+  $handler->display->display_options['sorts']['field_client_value']['id'] = 'field_client_value';
+  $handler->display->display_options['sorts']['field_client_value']['table'] = 'field_data_field_client';
+  $handler->display->display_options['sorts']['field_client_value']['field'] = 'field_client_value';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;

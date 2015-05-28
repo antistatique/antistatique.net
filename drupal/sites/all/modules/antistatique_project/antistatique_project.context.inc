@@ -35,6 +35,12 @@ function antistatique_project_context_default_contexts() {
           'region' => 'header',
           'weight' => '-10',
         ),
+        'views-projects-block_1' => array(
+          'module' => 'views',
+          'delta' => 'projects-block_1',
+          'region' => 'above_footer',
+          'weight' => '-10',
+        ),
       ),
     ),
     'menu' => array(
