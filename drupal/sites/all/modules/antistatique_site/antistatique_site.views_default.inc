@@ -221,6 +221,7 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'breadcrumb:page_1';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
@@ -368,6 +369,7 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['hierarchy_handler'] = 'draggableviews_hierarchy_handler_native';
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -381,6 +383,21 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['fields']['field_section']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_section']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_section']['field_api_classes'] = TRUE;
+  /* Field: Content: Breadcrumb Tagline */
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['id'] = 'field_breadcrumb_tagline';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['table'] = 'field_data_field_breadcrumb_tagline';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['field'] = 'field_breadcrumb_tagline';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['label'] = 'Breadcrumb';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_breadcrumb_tagline']['field_api_classes'] = TRUE;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = 'Actions';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Draggableviews: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -440,6 +457,8 @@ function antistatique_site_views_default_views() {
     t('Order pages in breadcrumb'),
     t('Title'),
     t('Section'),
+    t('Breadcrumb'),
+    t('Actions'),
   );
   $export['breadcrumb'] = $view;
 

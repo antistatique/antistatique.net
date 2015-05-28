@@ -337,7 +337,7 @@ function antistatique_basic_page_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If <b>- None -</b> is selected, the page will not appear in the breadcrumb menu select! How amazing is that?',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -695,6 +695,7 @@ function antistatique_basic_page_field_default_field_instances() {
   t('Breadcrumb Tagline');
   t('Description');
   t('Hero image is dark');
+  t('If <b>- None -</b> is selected, the page will not appear in the breadcrumb menu select! How amazing is that?');
   t('L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.');
   t('Name');
   t('Paragraphs');
