@@ -46,6 +46,7 @@ $userpath = '/' . $language->language . '/' . drupal_get_path_alias('user/' . $u
     <div class="team-avatar">
       <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print $username; ?>" class="img-circle img-responsive">
     </div>
+    <div class="clearfix"></div>
     <p class="h6 text-md text-dark"><?php print  $username; ?></p>
   <?php if ($user_profile['field_teammate_currently_working'][0]['#markup']): ?>
   </a>

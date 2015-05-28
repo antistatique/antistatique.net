@@ -117,10 +117,12 @@ category: Antistatique - Team
 a.team-tiny,
 .team-teaser {
   .h6 {
-    transition: $transition-duration;
-    text-decoration: underline;
+    display: inline-block;
   }
   &:hover {
+    .h6 {
+      @include medium-link($position: 1em);
+    }
     .team-avatar {
       &:before {
         background: $link-color;
