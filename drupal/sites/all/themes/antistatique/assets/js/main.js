@@ -1,8 +1,14 @@
 'use strict';
 (function($) {
-  $('.ctools-jump-menu-select').selectpicker({
-    style: 'btn-link-dropdown'
-  });
+
+  var selectpickerTarget = $('.ctools-jump-menu-select'),
+      isMobile = $(window).width() < 768 ? true : false,
+      options = {
+        style: 'btn-link-dropdown',
+        mobile: isMobile
+      };
+
+  $(selectpickerTarget).selectpicker(options);
 
   // wrap iframes in blog content
   var iframes = $('.blog-content').find('iframe');
