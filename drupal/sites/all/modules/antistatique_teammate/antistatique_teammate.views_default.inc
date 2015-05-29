@@ -87,7 +87,7 @@ function antistatique_teammate_views_default_views() {
   /* Display: All Teammates */
   $handler = $view->new_display('block', 'All Teammates', 'block_all');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'container text-center';
+  $handler->display->display_options['css_class'] = 'container text-center bg-foggy';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;

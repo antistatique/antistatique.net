@@ -213,6 +213,55 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
+  // Exported field_instance: 'user-user-field_hero_image_is_dark'
+  $field_instances['user-user-field_hero_image_is_dark'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'big_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'user',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_hero_image_is_dark',
+    'label' => 'Hero image is dark',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_lastname'
   $field_instances['user-user-field_lastname'] = array(
     'bundle' => 'user',
@@ -695,6 +744,7 @@ The fourth image should be <b>640x640</b>.',
   t('Firstname');
   t('Four Images');
   t('Has to be @antistatique.net');
+  t('Hero image is dark');
   t('Job title');
   t('L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.');
   t('Lastname');
