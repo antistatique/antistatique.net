@@ -30,6 +30,7 @@
             <div class="team-avatar">
               <img src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/img/Antistatique-wants-You.png" alt="We want you!" class="img-circle img-responsive">
             </div>
+            <div class="clearfix"></div>
             <p class="h6 text-md text-dark"><?php print t('We are hiring'); ?></p>
           </a>
           <div class="spacer spacer-sm"></div>

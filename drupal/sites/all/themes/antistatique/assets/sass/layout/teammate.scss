@@ -96,6 +96,8 @@ category: Antistatique - Team
     text-align: center;
     position: relative;
     display: inline-block;
+    margin-bottom: 10px;
+
     &:before {
       content: '';
       width: 100%;
@@ -117,11 +119,11 @@ category: Antistatique - Team
 a.team-tiny,
 .team-teaser {
   .h6 {
-    display: inline-block;
+    display: inline;
   }
   &:hover {
     .h6 {
-      @include medium-link($position: 1em);
+      @include medium-link($position: 1.1em);
     }
     .team-avatar {
       &:before {
