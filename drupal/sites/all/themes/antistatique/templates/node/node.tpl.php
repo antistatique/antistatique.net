@@ -139,7 +139,7 @@ hide($content['field_hero_image_is_dark']);
     <div class="container">
 
       <div class="row">
-        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 content">
+        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 content <?php if ($type == 'article'): ?>blog-content<?php endif ?>">
           <?php print render($content['body']); ?>
           <div class="spacer spacer-md"></div>
         </div>
