@@ -67,7 +67,7 @@ hide($user_profile['field_teammate_currently_working']);
             <?php if ($is_working): ?>
               <p><?php print render($user_profile['field_email']); ?></p>
             <?php endif ?>
-            <p><?php print t('<a href="/fr/nous/bloggons/@username" class="btn btn-default"><i class="fa fa-pencil <?php print $classes; ?>"></i> !name\'s articles</a>', array('@username' => $account->name, '!name' => $user_profile['field_firstname'][0]['#markup'])); ?></p>
+            <p><?php print t('<a href="/fr/nous/bloggons/@username" class="btn btn-default"><i class="fa fa-pencil"></i> !name\'s articles</a>', array('@username' => $account->name, '!name' => $user_profile['field_firstname'][0]['#markup'])); ?></p>
           </div>
         </div>
       </div>
