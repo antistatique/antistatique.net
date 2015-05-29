@@ -31,6 +31,16 @@ category: Antistatique - Components
   position: relative;
   overflow: hidden;
 
+  &.fr {
+    background-image: url(../svg/nous-socialisons.svg);
+    background-position: -130px center;
+
+    &:after {
+      background-image: url(../svg/nous-socialisons.svg);
+      right: -532px;
+    }
+  }
+
   > div {
     position: relative;
     z-index: 10;
