@@ -29,28 +29,19 @@ $recruit = node_view($node, $view_mode = 'teaser');
             <?php endif ?>
           <?php endforeach ?>
         <?php endforeach ?>
-        <div class=" col-xs-6  col-sm-3  col-md-2  col-lg-2">
-          <a href="/en/user/35" class="profile team-tiny" typeof="sioc:UserAccount" about="/en/user/35">
-              <div class="team-avatar">
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="<?php print url("node/6"); ?>" class="profile team-teaser">
+            <div class="team-avatar">
               <img src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/img/Antistatique-wants-You.png" alt="We want you!" class="img-circle img-responsive">
             </div>
-            <p class="h6 text-md text-dark">We are hiring</p>
-            </a>
-          <div class="spacer spacer-sm"></div>
+            <p class="h6 text-md text-dark"><?php print t('We are hiring'); ?></p>
+            <small class="text-muted hidden-xs">
+              <div class="field-teammate-job-title">
+                <?php print t('Check the open positions'); ?>
+              </div>
+            </small>
+          </a>
         </div>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-        <a href="<?php print url("node/6"); ?>" class="profile team-teaser">
-          <div class="team-avatar">
-            <img src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/build/img/Antistatique-wants-You.png" alt="We want you!" class="img-circle img-responsive">
-          </div>
-          <p class="h6 text-md text-dark"><?php print t('We are hiring'); ?></p>
-          <small class="text-muted hidden-xs">
-            <div class="field-teammate-job-title">
-              <?php print t('Check the open positions'); ?>
-            </div>
-          </small>
-        </a>
       </div>
 
     <?php endif ?>
