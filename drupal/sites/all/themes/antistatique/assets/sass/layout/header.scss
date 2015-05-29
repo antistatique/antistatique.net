@@ -359,7 +359,7 @@ category: Layout - Header
   }
 
   .field-svg-title {
-    margin-bottom: -5%;
+    margin-bottom: -1%;
     position: absolute;
     bottom: 41%;
     left: 0;
@@ -400,6 +400,9 @@ category: Layout - Header
       min-height: 500px;
       h1 {font-size: $font-size-h1 / 1.4;}
       .field-svg-title {display: none;}
+    }
+    .field-svg-title {
+      margin-bottom: -5%;
     }
   }
 }
