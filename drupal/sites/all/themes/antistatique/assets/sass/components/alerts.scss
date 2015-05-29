@@ -67,14 +67,15 @@ category: Components - Alerts
   }
 }
 
-.alert-dismissable {
+.alert-dismissable,
+.alert-dismissible {
   position: relative;
   .close {
     position: absolute;
     top: 50%;
-    margin-top: -40px;
+    margin-top: -25px;
     right: 15px;
-    font-size: 70px;
+    font-size: 40px;
     opacity: .8;
     &:hover {
       opacity: 1;

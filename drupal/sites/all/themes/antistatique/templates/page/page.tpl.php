@@ -74,10 +74,10 @@
  */
 ?>
 
-<?php if (!empty($page['page_top']) || !empty($messages)): ?>
+<?php if (!empty($page['page_above']) || !empty($messages)): ?>
   <div class="page-top">
     <?php print $messages; ?>
-    <?php print render($page['page_top']); ?>
+    <?php print render($page['page_above']); ?>
   </div>
 <?php endif; ?>
 
