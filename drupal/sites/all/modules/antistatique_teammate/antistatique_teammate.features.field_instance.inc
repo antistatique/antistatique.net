@@ -678,7 +678,7 @@ The fourth image should be <b>640x640</b>.',
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'User font awesome syntax for class',
+    'description' => 'Use font awesome syntax for classes (http://fortawesome.github.io/Font-Awesome/icons/) "fa fa-twitter" for twitter.',
     'display' => array(
       'big_teaser' => array(
         'label' => 'hidden',
@@ -701,6 +701,7 @@ The fourth image should be <b>640x640</b>.',
       ),
     ),
     'entity_type' => 'user',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_teammate_links',
     'label' => 'links',
     'required' => 0,
@@ -754,7 +755,7 @@ The fourth image should be <b>640x640</b>.',
 The second and third images should be <b>320x320</b>.<br>
 The fourth image should be <b>640x640</b>.');
   t('To know if you\'re part of the team');
-  t('User font awesome syntax for class');
+  t('Use font awesome syntax for classes (http://fortawesome.github.io/Font-Awesome/icons/) "fa fa-twitter" for twitter.');
   t('What\'s on your business card ?');
   t('Your prefered project you worked on');
   t('body');

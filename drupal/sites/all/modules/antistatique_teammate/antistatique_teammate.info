@@ -14,7 +14,6 @@ dependencies[] = list
 dependencies[] = media
 dependencies[] = number
 dependencies[] = picture
-dependencies[] = views_bootstrap_responsive_grid
 features[context][] = team
 features[context][] = teammate
 features[ctools][] = context:context:3
