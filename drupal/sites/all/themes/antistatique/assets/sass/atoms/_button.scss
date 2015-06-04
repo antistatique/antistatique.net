@@ -89,7 +89,8 @@
   background: $midnight-blue;
   color: $white;
   font-weight: 600;
-  &:hover {
+  &:hover,
+  &:focus {
     color: $link-color;
     .fa {color: $white;}
   }
