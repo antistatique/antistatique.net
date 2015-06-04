@@ -15,7 +15,6 @@ dependencies[] = field_group
 dependencies[] = image
 dependencies[] = link
 dependencies[] = list
-dependencies[] = media
 dependencies[] = menu_admin_per_menu
 dependencies[] = module_filter
 dependencies[] = options

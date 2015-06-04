@@ -25,7 +25,7 @@ function antistatique_project_views_default_views() {
   $handler->display->display_options['title'] = 'Our last projects';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = TRUE;
-  $handler->display->display_options['use_more_text'] = 'View more projects';
+  $handler->display->display_options['use_more_text'] = 'Tous nos projets';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -102,7 +102,7 @@ function antistatique_project_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'View more projects';
+  $handler->display->display_options['use_more_text'] = 'Tous nos projets';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = '#';
@@ -240,8 +240,8 @@ function antistatique_project_views_default_views() {
   $handler->display->display_options['block_caching'] = '8';
   $translatables['projects'] = array(
     t('Master'),
-    t('View more projects'),
     t('Our last projects'),
+    t('Tous nos projets'),
     t('Apply'),
     t('Reset'),
     t('Sort by'),

@@ -156,7 +156,7 @@ The fourth image should be <b>640x640</b>.',
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
         'allowed_schemes' => array(
           'private' => 'private',
@@ -206,9 +206,10 @@ The fourth image should be <b>640x640</b>.',
           'link' => 0,
         ),
         'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'image_image',
       'weight' => 8,
     ),
   );
@@ -571,7 +572,7 @@ The fourth image should be <b>640x640</b>.',
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
         'allowed_schemes' => array(
           0 => 'public',
@@ -620,7 +621,7 @@ The fourth image should be <b>640x640</b>.',
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'image_image',
       'weight' => 6,
     ),
   );

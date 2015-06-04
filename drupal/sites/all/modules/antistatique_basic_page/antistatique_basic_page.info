@@ -12,7 +12,6 @@ dependencies[] = features
 dependencies[] = field_group
 dependencies[] = image
 dependencies[] = list
-dependencies[] = media
 dependencies[] = options
 dependencies[] = paragraphs
 dependencies[] = picture

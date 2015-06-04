@@ -371,16 +371,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'menu_admin_per_menu',
   );
 
-  // Exported permission: 'administer media'.
-  $permissions['administer media'] = array(
-    'name' => 'administer media',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'media',
-  );
-
   // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
@@ -763,16 +753,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit media'.
-  $permissions['edit media'] = array(
-    'name' => 'edit media',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'media',
-  );
-
   // Exported permission: 'edit own page content'.
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
@@ -853,16 +833,6 @@ function antistatique_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'features',
-  );
-
-  // Exported permission: 'import media'.
-  $permissions['import media'] = array(
-    'name' => 'import media',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'media',
   );
 
   // Exported permission: 'manage features'.
@@ -1232,18 +1202,6 @@ function antistatique_site_user_default_permissions() {
       'collaborator' => 'collaborator',
     ),
     'module' => 'view_unpublished',
-  );
-
-  // Exported permission: 'view media'.
-  $permissions['view media'] = array(
-    'name' => 'view media',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-      'collaborator' => 'collaborator',
-    ),
-    'module' => 'media',
   );
 
   // Exported permission: 'view own unpublished content'.

@@ -314,7 +314,7 @@ function antistatique_article_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
         'allowed_schemes' => array(
           'private' => 0,
@@ -356,9 +356,10 @@ function antistatique_article_field_default_field_instances() {
           'link' => 0,
         ),
         'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'image_image',
       'weight' => -2,
     ),
   );
@@ -416,7 +417,7 @@ function antistatique_article_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
@@ -437,9 +438,10 @@ function antistatique_article_field_default_field_instances() {
           0 => 'auto',
         ),
         'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'image_image',
       'weight' => -2,
     ),
   );
@@ -519,7 +521,7 @@ function antistatique_article_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
         'allowed_schemes' => array(
           'private' => 0,
@@ -569,9 +571,10 @@ function antistatique_article_field_default_field_instances() {
           'link' => 0,
         ),
         'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'image_image',
       'weight' => -4,
     ),
   );
