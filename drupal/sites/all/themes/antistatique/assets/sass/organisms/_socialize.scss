@@ -39,5 +39,16 @@
       background-size: 245px;
       right: -231px;
     }
+
+    &.fr {
+      background-position: -80px top;
+      background-size: 400px;
+
+      &:after {
+        background-position: right top;
+        background-size: 400px;
+        right: -318px;
+      }
+    }
   }
 }
