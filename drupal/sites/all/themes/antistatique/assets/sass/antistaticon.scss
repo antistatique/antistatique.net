@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "antistaticon";
+  src: url('../fonts/antistaticon.eot');
+  src: url('../fonts/antistaticon.eot?#iefix') format('eot'),
+    url('../fonts/antistaticon.woff') format('woff'),
+    url('../fonts/antistaticon.ttf') format('truetype'),
+    url('../fonts/antistaticon.svg#antistaticon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.antistaticon:before {
+  display: inline-block;
+  font-family: "antistaticon";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.antistaticon-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.antistaticon-2x { font-size: 2em; }
+.antistaticon-3x { font-size: 3em; }
+.antistaticon-4x { font-size: 4em; }
+.antistaticon-5x { font-size: 5em; }
+.antistaticon-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+.antistaticon-caret:before { content: "\E001" }
