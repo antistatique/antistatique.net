@@ -2,7 +2,7 @@
 (function($) {
 
   var selectpickerTarget = $('.ctools-jump-menu-select'),
-      isMobile = $(window).width() < 768 ? true : false,
+      isMobile = true, // always use a select option is more accessible
       options = {
         style: 'btn-link-dropdown',
         mobile: isMobile
