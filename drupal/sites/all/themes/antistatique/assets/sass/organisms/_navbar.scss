@@ -1,0 +1,193 @@
+.header {
+  @media only screen and (max-width: $screen-xs-max) {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  @media only screen and (min-width: $screen-sm-min) {
+    position: absolute;
+    z-index: 2;
+  }
+  width: 100%;
+}
+
+.navbar-brand {
+  @media only screen and (min-width: $screen-sm-min) {
+    padding-left: 0;
+  }
+  img {
+    min-width: 29px;
+    width: 30px;
+    max-height: 31px;
+    @media only screen and (min-width: $screen-md-min) {
+      width: 165px;
+    }
+  }
+}
+
+
+.navbar {
+  font-weight: 700;
+  @media only screen and (max-width: $screen-xs-max) {
+    margin: 5px 0 20px 0;
+    position: static;
+  }
+  @media only screen and (min-width: $screen-sm-min) {
+    border-bottom: 1px solid rgba($midnight-blue, 0.25);
+    .dark-hero & {
+      border-bottom-color: rgba($white, 0.25);
+    }
+  }
+}
+
+.navbar-nav > li > a {
+  @media only screen and (max-width: $screen-xs-max) {
+    display: inline-block;
+  }
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-default .navbar-nav {
+  > li {
+    @media only screen and (min-width: $screen-sm-min) {
+      padding: 45px 15px 29px 15px;
+    }
+  }
+  > .active-trail > a {
+    &, &:hover {
+      color: $navbar-default-link-active-color;
+      .dark-hero & {
+        color: $navbar-inverse-link-active-color;
+      }
+      background-image: transparent;
+    }
+  }
+}
+
+.navbar-btn {
+  margin-top: 11px;
+  @media only screen and (min-width: $screen-sm-min) {
+    margin-top: 43px;
+  }
+}
+
+.navbar-header {
+  .btn {
+    height: 44px;
+    width: 44px;
+    padding: 11px 0 0 4px;
+    font-size: 17px;
+  }
+  .dark-hero & {
+     > .navbar-toggle {
+      color: $white;
+    }
+    .icon-bar {
+      background: $white;
+    }
+  }
+}
+
+.navbar-collapse.navbar-mobile {
+  @media only screen and (max-width: $screen-xs-max) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding-left: 0;
+    padding-right: 0;
+
+    > nav {
+      padding: 20px 15px;
+    }
+
+    .navbar-toggle {
+      display: block;
+      float: none;
+      margin: 0 auto;
+    }
+    .navbar-nav {
+      margin: 0;
+
+      > li:not(.active) > a {
+        color: $white;
+        background-image: linear-gradient(to bottom, rgba($white, 0) 25%, rgba($white, 0.6) 25%);
+        background-repeat: repeat-x;
+        background-size: 3px 3px;
+        &:hover {
+          color: $link-color;
+        }
+      }
+    }
+    .navbar-btn {
+      position: absolute;
+      top: 18px;
+      right: 15px;
+      & + .navbar-btn {
+        right: 40px;
+      }
+    }
+  }
+
+}
+
+.lang-switcher {
+  margin-left: 10px;
+}
+
+.no-hero-image{
+  .header {
+    margin: 20px 0;
+    position: static;
+  }
+}
+
+
+// Inverse navbar with dark-hero
+
+.dark-hero {
+  .navbar-text {
+    color: $navbar-inverse-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $navbar-inverse-link-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-inverse-link-hover-color;
+        background-color: $navbar-inverse-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-inverse-link-active-color;
+        background-color: $navbar-inverse-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-inverse-link-disabled-color;
+        background-color: $navbar-inverse-link-disabled-bg;
+      }
+    }
+  }
+}
+
+// Dark version
+.logged-in .tabs--primary{
+  position: fixed;
+  bottom: 0px;
+  z-index: 999;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.67) none repeat scroll 0% 0%;
+}

@@ -1,0 +1,200 @@
+/**
+ * Background and block styles
+ */
+
+.bg {
+  &-foggy {
+    background: $dust;
+  }
+}
+
+.article-foggy article.node {
+  @extend .bg-foggy;
+}
+
+.top-decoration {
+  position: relative;
+  margin-top: 50px;
+
+  &:before {
+    content: '\E001';
+    font-family: 'antistatique';
+    font-size: 10px;
+    display: inline-block;
+    width: 64px;
+    line-height: 64px;
+    border-radius: 32px;
+    margin-left: -32px;
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    z-index: 99999999;
+    background: $dust;
+    text-align: center;
+  }
+}
+
+.inverse {
+  background: $text-color;
+  color: $body-bg;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.container-inline { // fix for breadcrumb menu
+  select,
+  .dropdown-menu,
+  .btn.ctools-jump-menu-button {
+    display: none;
+  }
+  .open .dropdown-menu {
+    display: block;
+  }
+}
+
+.half-width {
+  float: left;
+  width: 50%;
+}
+
+.spacer {
+  height: 65px;
+  &.spacer-xl {height: 120px;}
+  &.spacer-lg {height: 90px;}
+  &.spacer-md {height: 45px;}
+  &.spacer-sm {height: 30px;}
+  &.spacer-xs {height: 15px;}
+  @media only screen and (max-width: $screen-sm-max) {
+    height: 30px;
+    &.spacer-xl {height: 50px;}
+    &.spacer-lg {height: 50px;}
+    &.spacer-md {height: 35px;}
+    &.spacer-sm {height: 20px;}
+    &.spacer-xs {height: 10px;}
+  }
+}
+
+.hr-lg {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/**
+ * Margin helpers
+ */
+
+.no-margin {
+  &-top {margin-top: 0;}
+  &-bottom {margin-bottom: 0;}
+}
+
+.bottom-overflow {
+  &:after {
+    content: '';
+    display: block;
+    height: 200px;
+    @media only screen and (min-width: $screen-sm-min) {
+      height: 300px;
+    }
+    width: 100%;
+    background: $white;
+    margin-top: -180px;
+  }
+}
+
+/**
+ * Text helpers
+ */
+
+.text {
+  &-thin {
+    font-weight: 100; // to apply only on big text (due to font-smoothing)
+  }
+  &-md {
+    font-size: $font-size-base;
+    margin-bottom: ceil(($font-size-base / 3));
+  }
+  &-sm {
+    @extend small;
+  }
+  &-xs {
+    font-size: ceil(($font-size-base * 0.7));
+    margin-bottom: ceil(($font-size-base * 0.6));
+  }
+  &-huge {
+    font-size: 10vw;
+  }
+
+  &-dark {
+    color: $text-color;
+  }
+  &-white {
+    color: $white;
+  }
+  &-strong {
+    font-weight: 700;
+  }
+}
+
+// wrapper
+.table-wrapper {
+  display: table;
+  padding: 0;
+}
+.table-row {
+  display: table-row;
+}
+.no-float {
+  display: table-cell;
+  float: none;
+  vertical-align: middle;
+}
+
+/**
+ * Large styling
+ * =============
+ *
+ * We added this to Bootstrap. Mainly for the Teammate single page.
+ *
+ * NOTE:
+ * An element that is visible in screen-lg will also be visible in screen-xl.
+ *
+ *
+ */
+
+@include responsive-invisibility('.visible-xl');
+
+.visible-xl-block,
+.visible-xl-inline,
+.visible-xl-inline-block {
+  display: none !important;
+}
+
+@media (min-width: $screen-xl-min) {
+  @include responsive-visibility('.visible-xl');
+}
+.visible-xl-block {
+  @media (min-width: $screen-xl-min) {
+    display: block !important;
+  }
+}
+.visible-xl-inline {
+  @media (min-width: $screen-xl-min) {
+    display: inline !important;
+  }
+}
+.visible-xl-inline-block {
+  @media (min-width: $screen-xl-min) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $screen-xl-min) {
+  @include responsive-invisibility('.hidden-xl');
+}

@@ -1,65 +1,18 @@
-// Specific styles for the styleguide only!
-// Will be built into the build/styleguide.css file.
+html {
+  font-size: 16px !important;
+}
 
-.header.styleguide {
-  .navbar-fixed-top {
-    background: white;
+.f-item-notes {
+  margin-bottom: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  td, th {
+    padding: 12px 18px;
+    border: 1px solid #ddd;
   }
-  .navbar-nav>li>a {
-    padding: 0;
-  }
-  .navbar-brand {
-    padding: 11px 15px 11px 0;
-  }
-  .navbar-default .navbar-nav > li {
-    padding: 12px 15px;
-  }
-  .navbar>.container .navbar-brand {
-    margin-left: 0;
-  }
-
-  .nav.nav-pills > li > a {
-    padding: 3px 5px !important;
-  }
-}
-
-.navbar-default.styleguide .navbar-nav > li {
-  padding: 0;
-}
-
-.exampleOutput {
-  position: relative;
-  padding: 50px 0;
-}
-
-.show-code {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.cortana-footer {
-  margin-top: 80px;
-}
-
-h1.styleguide {
-  border-top: 1px solid #999;
-  padding-top: 110px;
-  margin-top: 0;
-}
-
-table.styleguide {
-  margin-top: 30px;
-}
-
-.styleguide-padding {
-  padding: 20px 40px;
-}
-
-.footer.styleguide {
-  height: 200px;
-  small {
-    margin-top: 90px;
-    display: block;
+  thead {
+    border-bottom: 2px solid #ddd;
   }
 }

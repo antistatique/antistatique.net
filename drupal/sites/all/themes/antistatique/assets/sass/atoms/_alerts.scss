@@ -1,0 +1,32 @@
+.page-top {
+  .alert {
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
+.alert-success,
+.alert-danger {
+  a {
+    color: $white;
+    &:hover {
+      color: rgba(#000, .5);
+    }
+  }
+}
+
+.alert-dismissable,
+.alert-dismissible {
+  position: relative;
+  .close {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    right: 15px;
+    font-size: 40px;
+    opacity: .8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

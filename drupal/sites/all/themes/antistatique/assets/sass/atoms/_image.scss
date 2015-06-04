@@ -1,0 +1,32 @@
+.img-center {
+  margin: 0 auto;
+}
+
+.img-full {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.img-a {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    background: url(../svg/A-logo.svg) no-repeat center center;
+    background-size: percentage(1/3);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}

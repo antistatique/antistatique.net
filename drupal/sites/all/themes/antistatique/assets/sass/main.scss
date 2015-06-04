@@ -2,70 +2,65 @@
 
 // Init ------------------------------------
 @import 'antistatique-font';
-@import 'antistatique-mixins';
-@import 'antistatique-variables';
+@import 'main-variables';
+@import 'main-mixins';
 @import 'bootstrap';
 
-@import 'layout/large'; // large breakpoint
+// Others ---------------------------------
+@import 'others/drupal';
+@import "others/helpers";
 
-@import '../../../../../../../bower_components/font-awesome/scss/font-awesome';
+// Atoms -----------------------------------
+@import 'atoms/alerts';
+@import 'atoms/badges';
+@import 'atoms/blockquote';
+@import 'atoms/button';
+@import 'atoms/description';
+@import 'atoms/heading';
+@import 'atoms/icon';
+@import 'atoms/image';
+@import 'atoms/inline-elements';
+@import 'atoms/input';
+@import 'atoms/labels';
+@import 'atoms/link';
+@import 'atoms/list';
+@import 'atoms/paragraph';
 
-// LAYOUT ----------------------------------
-@import 'layout/buttons';
-@import 'layout/code';
-@import 'layout/form';
-@import 'layout/icons';
-@import 'layout/images';
-@import 'layout/tables';
-@import 'layout/typography';
+// Molecules --------------------------------
+@import 'molecules/address';
+@import 'molecules/breadcrumb';
+@import 'molecules/button-groups';
+@import 'molecules/card';
+@import 'molecules/collapse';
+@import 'molecules/devices';
+@import 'molecules/dropdown';
+@import 'molecules/input-groups';
+@import 'molecules/list-group';
+@import 'molecules/media';
+@import 'molecules/modal';
+@import 'molecules/nav';
+@import 'molecules/pager';
+@import 'molecules/paginations';
+@import 'molecules/panels';
+@import 'molecules/popover';
+@import 'molecules/progress';
+@import 'molecules/tab';
+@import 'molecules/thumbnails';
+@import 'molecules/tooltips';
+@import 'molecules/well';
 
-// COMPONENTS -------------------------------
-@import 'components/alerts';
-@import 'components/badges';
-@import 'components/breadcrumb';
-@import 'components/button-groups';
-@import 'components/input-groups';
-@import 'components/jumbotron';
-@import 'components/labels';
-@import 'components/list-group';
-@import 'components/media';
-@import 'components/nav';
-@import 'components/navbar';
-@import 'components/pager';
-@import 'components/paginations';
-@import 'components/panels';
-@import 'components/progress-bar';
-@import 'components/thumbnails';
-@import 'components/well';
-@import 'components/devices';
-@import 'components/drupal';
-@import 'components/socialize';
+// Organisms --------------------------------
+@import 'organisms/article';
+@import 'organisms/carousel';
+@import 'organisms/footer';
+@import 'organisms/form';
+@import 'organisms/header';
+@import 'organisms/jumbotron';
+@import 'organisms/login';
+@import 'organisms/navbar';
+@import 'organisms/paragraphs';
+@import 'organisms/socialize';
+@import 'organisms/teammates';
 
-// JAVASCRIPT WIDGET -------------------------
-@import 'javascript/alert';
-@import 'javascript/buttons';
-@import 'javascript/carousel';
-@import 'javascript/collapse';
-@import 'javascript/dropdown';
-@import 'javascript/modal';
-@import 'javascript/popover';
-@import 'javascript/scrollspy';
-@import 'javascript/tab';
-@import 'javascript/tooltips';
-
-// CUSTOM COMPONENTS -------------------------
-@import 'layout/helpers';
-@import 'layout/article';
-@import 'layout/login';
-@import 'layout/teammate';
-@import 'layout/project';
-@import 'components/text-layout';
-@import 'components/card';
-@import 'components/testimonial';
-@import 'components/quote';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/content';
-@import 'layout/link';
-@import 'layout/paragraphs';
-// <here> $ yo styleguide:component will add new components right here. Do not remove this line.
+// Templates ---------------------------------
+@import 'templates/demo';
