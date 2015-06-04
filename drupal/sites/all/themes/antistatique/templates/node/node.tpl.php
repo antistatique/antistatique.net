@@ -143,7 +143,7 @@ hide($content['field_hero_image_is_dark']);
           <?php print render($content['body']); ?>
           <div class="spacer spacer-md"></div>
         </div>
-        <?php if (!empty($content['field_links'])): ?>
+        <?php if ($type = 'project'): ?>
           <div class="col-sm-1 col-md-2 col-lg-3">
             <?php print render($content['field_links']); ?>
             <div class="spacer spacer-md"></div>

@@ -19,14 +19,14 @@
 <?php foreach ($items as $delta => $item): ?>
   <?php if ($item_count === 1): ?>
     <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-      <a class="btn btn-dark btn-wrap" href="<?php print render($item['#element']['url']); ?>">
+      <a target="_blank" class="btn btn-dark btn-wrap" href="<?php print render($item['#element']['url']); ?>">
         <i class="fa fa-external-link visible-sm-inline-block visible-md-inline-block"></i>
         <span class="hidden-sm hidden-md"><?php print render($item['#element']['title']); ?></span>
         </a>
     </div>
   <?php else: ?>
     <li>
-      <a href="<?php print render($item['#element']['url']); ?>"><?php print render($item['#element']['title']); ?></a>
+      <a target="_blank" href="<?php print render($item['#element']['url']); ?>"><?php print render($item['#element']['title']); ?></a>
     </li>
   <?php endif ?>
 <?php endforeach; ?>
