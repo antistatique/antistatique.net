@@ -24,7 +24,7 @@ regions[above_footer]    = 'Above Footer'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = build/css/vendors.css
+stylesheets[all][] = build/css/vendors.min.css
 stylesheets[all][] = build/css/main.css
 scripts[] = build/js/vendors.min.js
 scripts[] = build/js/main.js
