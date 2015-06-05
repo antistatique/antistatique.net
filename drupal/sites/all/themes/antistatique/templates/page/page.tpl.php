@@ -149,6 +149,7 @@
       <?php if (!empty($primary_nav)): ?>
         <div class="navbar-collapse navbar-mobile collapse">
           <nav role="navigation">
+            <a href="<?php print $front_page; ?>" class="visible-xs-block logo"><span class="sr-only">Antistatique</span></a>
             <?php if (!empty($primary_nav)): ?>
               <?php print render($primary_nav); ?>
             <?php endif; ?>
@@ -163,7 +164,6 @@
               <?php endif ?>
             </div>
           </nav>
-          <div class="visible-xs-block spacer spacer-xs"></div>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Close navigation</span>
             <span class="h3">&times;</span>
