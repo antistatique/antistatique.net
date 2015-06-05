@@ -148,23 +148,26 @@
 
       <?php if (!empty($primary_nav)): ?>
         <div class="navbar-collapse navbar-mobile collapse">
-          <nav role="navigation" class="inverse">
+          <nav role="navigation">
             <?php if (!empty($primary_nav)): ?>
               <?php print render($primary_nav); ?>
             <?php endif; ?>
-          </nav>
-          <?php if ($page['navigation']): ?>
-            <div class="nav navbar-btn navbar-right">
-              <?php print render($page['navigation']); ?>
+            <div class="navbar-right">
+              <div class="nav navbar-btn inline-block">
+                <a href="<?php print url('node/4'); ?>" class="btn btn-primary"><?php print t('Contact Us'); ?></a>
+              </div>
+              <?php if ($page['navigation']): ?>
+                <div class="nav navbar-btn inline-block">
+                  <?php print render($page['navigation']); ?>
+                </div>
+              <?php endif ?>
             </div>
-          <?php endif ?>
-          <div class="nav navbar-right navbar-btn">
-            <a href="<?php print url('node/4'); ?>" class="btn btn-primary"><?php print t('Contact Us'); ?></a>
-          </div>
+          </nav>
+          <div class="visible-xs-block spacer spacer-xs"></div>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Close navigation</span>
-            <span class="h5">&times;</span>
-            <?php print t('Close'); ?>
+            <span class="h3">&times;</span>
+            <?php print t('Menu'); ?>
           </button>
         </div>
       <?php endif; ?>

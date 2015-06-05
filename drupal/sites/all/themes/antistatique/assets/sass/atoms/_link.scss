@@ -6,7 +6,7 @@ button {
 // TODO move this to a better file...
 header.header {
   .navbar-nav > li:not(.active):not(.active-trail) > a {
-    @include medium-link($hover-color: $link-color,$position: 34px);
+    @include medium-link($hover-color: $link-color,$position: 40px);
     .dark-hero & {
        background-image: linear-gradient(to bottom, rgba($navbar-inverse-link-color,0) 50%, $navbar-inverse-link-color 50%);
     }

@@ -70,7 +70,7 @@
 .navbar-btn {
   margin-top: 11px;
   @media only screen and (min-width: $screen-sm-min) {
-    margin-top: 43px;
+    margin-top: 45px;
   }
 }
 
@@ -91,8 +91,48 @@
   }
 }
 
-.navbar-collapse.navbar-mobile {
+.navbar-default .navbar-toggle {
   @media only screen and (max-width: $screen-xs-max) {
+    color: $white;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    float: none;
+
+    .icon-bar {
+      background: $white;
+    }
+  }
+}
+
+.navbar-collapse.navbar-mobile {
+
+  @media only screen and (max-width: $screen-xs-max) {
+
+    &:before{
+      content:"";
+      position: absolute;
+      z-index: 1;
+      background: url('../svg/logo.svg') no-repeat;
+      background-position: -120px 50%;
+      width:300px;
+      height: 80px;
+      top: 10px;
+      left: 0;
+      margin-top: 0;
+    }
+    &:after{
+      content:"";
+      position: absolute;
+      background: url('../svg/logo.svg') no-repeat;
+      background-position: center 50%;
+      height: 80px;
+      width:300px;
+      right: -180px;
+      top: 10px;
+      margin-top: 0;
+    }
+
     position: absolute;
     top: 0;
     left: 0;
@@ -101,8 +141,25 @@
     padding-left: 0;
     padding-right: 0;
 
+    &.in {
+      overflow: visible;
+    }
+
     > nav {
-      padding: 20px 15px;
+      padding: 90px 20px 15px;
+      background: $white;
+      position: relative;
+
+      &:after {
+        content: '';
+        background: linear-gradient(to top, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
+        width: 100%;
+        height: 150px;
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
     }
 
     .navbar-toggle {
@@ -112,9 +169,10 @@
     }
     .navbar-nav {
       margin: 0;
+      text-align: center;
+      font-size: 1.5em;
 
       > li:not(.active) > a {
-        color: $white;
         background-image: linear-gradient(to bottom, rgba($white, 0) 25%, rgba($white, 0.6) 25%);
         background-repeat: repeat-x;
         background-size: 3px 3px;
@@ -124,11 +182,10 @@
       }
     }
     .navbar-btn {
-      position: absolute;
-      top: 18px;
-      right: 15px;
-      & + .navbar-btn {
-        right: 40px;
+      display: block;
+
+      .btn-primary {
+        width: 100%;
       }
     }
   }
@@ -136,7 +193,20 @@
 }
 
 .lang-switcher {
-  margin-left: 10px;
+  @media only screen and (min-width: $screen-sm-min) {
+    margin-left: 10px;
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    &.btn-group-vertical  {
+      display: block;
+      text-align: center;
+
+      > .btn {
+        width: auto;
+        display: inline-block;
+      }
+    }
+  }
 }
 
 .no-hero-image{
