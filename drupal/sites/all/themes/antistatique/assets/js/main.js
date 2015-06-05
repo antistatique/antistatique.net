@@ -8,7 +8,9 @@
         mobile: isMobile
       };
 
-  $(selectpickerTarget).selectpicker(options);
+  $(selectpickerTarget).selectpicker(options).hover(function() {
+    $(this).parent().find('button').toggleClass('hover');
+  });
 
   // wrap iframes in blog content
   var iframes = $('.blog-content').find('iframe');

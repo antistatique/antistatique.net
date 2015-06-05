@@ -173,7 +173,8 @@
   .dark-hero & {
     color: $white;
 
-    &:hover {
+    &:hover,
+    &.hover {
       color: $link-color;
     }
   }
