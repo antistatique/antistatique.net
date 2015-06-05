@@ -9,7 +9,8 @@
   .team-avatar {
     text-align: center;
     position: relative;
-    display: block;
+    display: inline-block;
+    max-width: 100%;
     margin-bottom: 10px;
     padding: 3px;
 
@@ -26,6 +27,7 @@
     }
     img {
       position: relative;
+      display: inline-block;
     }
   }
 }
