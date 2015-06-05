@@ -4,7 +4,7 @@
   margin-bottom: 30px;
 
   img {
-    max-width: 100%;
+    width: 100%;
   }
   &:before {
     content: '';
@@ -13,7 +13,8 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to top, rgba($midnight-blue, 1), rgba($midnight-blue, 0));
+    background: rgba($midnight-blue, .4);
+    background: linear-gradient(to top, rgba($midnight-blue, 1), rgba($midnight-blue, 0));
     display: block;
     transition: all .2s ease-in;
   }
