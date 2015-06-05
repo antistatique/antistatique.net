@@ -1,6 +1,7 @@
 .btn {
   border: 0;
   text-decoration: none;
+  white-space: normal;
 
   // fix font alignment to center of button
   padding-bottom: $padding-base-vertical * (2/3);
