@@ -236,7 +236,7 @@
         <span class="hidden-xs"> &nbsp;  +41 21 623 63 03 &nbsp;  </span>
         <div class="visible-xs spacer spacer-xs"></div>
         <strong>&nbsp;<a href="mailto:hello@antistatique.net">hello@antistatique.net</a>&nbsp;</strong>
-        <div class="spacer spacer-md"></div>
+        <div class="spacer spacer-lg"></div>
         <?php print render($page['footer']); ?>
         <div class="spacer spacer-sm"></div>
       </div>
