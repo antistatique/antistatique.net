@@ -173,9 +173,3 @@
     fill: $white;
   }
 }
-
-.header {
-  @media only screen and (max-width: $screen-xs-max) {
-    background: linear-gradient(to top, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
-  }
-}
