@@ -2,6 +2,11 @@
  * Background and block styles
  */
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .bg {
   &-foggy {
     background: $dust;
