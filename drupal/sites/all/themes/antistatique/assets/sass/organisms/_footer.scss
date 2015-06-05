@@ -1,14 +1,27 @@
 .footer{
   border-top: 1px solid $dust;
-  background: url('../svg/logo.svg') no-repeat;
   background-size: 400px;
-  background-position: -150px 50%;
   position: relative;
   overflow: hidden;
   @media only screen and (max-width: $screen-sm-max) {
     padding-top: 80px;
-    background-position: -120px 20px;
-    background-size: 300px;
+  }
+  &:before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -40px;
+    background: url('../svg/logo.svg') no-repeat;
+    background-position: -155px 50%;
+    width: 400px;
+    height: 80px;
+    @media only screen and (max-width: $screen-sm-max) {
+      background-position: -120px 50%;
+      width:300px;
+      top: 20px;
+      margin-top: 0;
+    }
   }
   &:after{
     content:"";
