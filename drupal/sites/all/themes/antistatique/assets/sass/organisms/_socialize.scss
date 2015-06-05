@@ -5,11 +5,13 @@
 
   &.fr {
     background-image: url(../svg/nous-socialisons.svg);
-    background-position: -130px center;
+    background-size: 600px;
+    background-position: -118px center;
 
     &:after {
       background-image: url(../svg/nous-socialisons.svg);
-      right: -532px;
+      background-size: 600px;
+      right: -479px;
     }
   }
 
@@ -41,13 +43,13 @@
     }
 
     &.fr {
-      background-position: -80px top;
-      background-size: 400px;
+      background-position: -58px top;
+      background-size: 280px;
 
       &:after {
         background-position: right top;
-        background-size: 400px;
-        right: -318px;
+        background-size: 280px;
+        right: -220px;
       }
     }
   }
