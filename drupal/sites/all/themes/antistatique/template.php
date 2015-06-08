@@ -320,7 +320,10 @@ function antistatique_link_formatter_link_default($vars) {
   unset($link_options['title']);
   unset($link_options['url']);
 
-  if (isset($link_options['attributes']['class'])) {
+  if ($vars['field']['field_name'] == 'field_teammate_links') {
+     if (empty($link_options['attributes']['class'])) {
+         $link_options['attributes']['class'] = 'fa fa-external-link';
+     }
     $classes = array($link_options['attributes']['class']);
     $classes = '<i class="'.implode($classes).'"></i> ';
     $link_options['attributes']['class'] = 'btn btn-default';
