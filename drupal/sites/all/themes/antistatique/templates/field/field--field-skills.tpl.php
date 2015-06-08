@@ -17,5 +17,5 @@
 <?php endif; ?>
 
 <?php foreach ($items as $delta => $item): ?>
-  <small class="<?php print $classes; ?>"<?php print $attributes; ?>><?php print render($item); ?></small>
+    <?php if ($element['#label_display'] != 'inline'): ?><small class="<?php print $classes; ?>"<?php print $attributes; ?>><?php endif; print render($item); if ($element['#label_display'] != 'inline'): ?></small><?php endif; ?>
 <?php endforeach; ?>

@@ -153,6 +153,7 @@ hide($content['field_hero_image_is_dark']);
             <div class="field-client">
               <?php print render($content['field_client']); ?>
             </div>
+            <?php print render($content['field_skills']); ?>
           </div>
         <?php endif ?>
       </div>
