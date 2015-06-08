@@ -102,7 +102,8 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['text'] = '[name]';
+  $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['text'] = '#[name]';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['strip_tags'] = TRUE;
@@ -135,6 +136,7 @@ function antistatique_article_views_default_views() {
     t('All'),
     t('Current Categories'),
     t('All Categories Jump Menu'),
+    t('#[name]'),
   );
   $export['categories'] = $view;
 

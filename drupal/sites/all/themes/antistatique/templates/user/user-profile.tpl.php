@@ -60,10 +60,10 @@ hide($user_profile['field_teammate_currently_working']);
         <?php print render($user_profile['field_teammate_body']); ?>
         <hr>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <?php print render($user_profile['field_teammate_links']) ?>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-8">
             <?php if ($is_working): ?>
               <p><?php print render($user_profile['field_email']); ?></p>
             <?php endif ?>
