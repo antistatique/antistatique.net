@@ -225,7 +225,7 @@ function antistatique_project_field_default_field_instances() {
           'picture_mapping' => 'large',
         ),
         'type' => 'picture',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -433,11 +433,11 @@ function antistatique_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
+        'label' => 'inline',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 4,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -691,7 +691,7 @@ function antistatique_project_field_default_field_instances() {
           'image_style' => 'thumbnail',
         ),
         'type' => 'image',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -774,7 +774,7 @@ function antistatique_project_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -822,7 +822,7 @@ function antistatique_project_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -870,7 +870,7 @@ function antistatique_project_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -1130,6 +1130,12 @@ function antistatique_project_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 1,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'description_field',
@@ -1164,6 +1170,12 @@ function antistatique_project_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

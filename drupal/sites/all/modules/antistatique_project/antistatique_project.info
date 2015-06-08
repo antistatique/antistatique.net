@@ -12,6 +12,7 @@ dependencies[] = date
 dependencies[] = entity_translation
 dependencies[] = features
 dependencies[] = field_group
+dependencies[] = i18n_taxonomy
 dependencies[] = image
 dependencies[] = link
 dependencies[] = list

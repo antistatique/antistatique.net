@@ -22,7 +22,7 @@ function antistatique_project_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Our last projects';
+  $handler->display->display_options['title'] = 'Nos derniers projets';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'Tous nos projets';
@@ -130,14 +130,14 @@ function antistatique_project_views_default_views() {
   /* Display: Featured Projects - link to /work */
   $handler = $view->new_display('block', 'Featured Projects - link to /work', 'block_normal');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'And of course our work!';
+  $handler->display->display_options['title'] = 'Et bien sûr notre travail!';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Discover how we work';
+  $handler->display->display_options['use_more_text'] = 'Découvrez comment nous travaillons';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = 'node/3';
@@ -238,9 +238,62 @@ function antistatique_project_views_default_views() {
   $handler->display->display_options['filters']['field_year_value']['field'] = 'field_year_value';
   $handler->display->display_options['block_description'] = 'Other Projects';
   $handler->display->display_options['block_caching'] = '8';
+
+  /* Display: Projects Skill Page */
+  $handler = $view->new_display('block', 'Projects Skill Page', 'block_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'node/232';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_responsive_grid_plugin_style';
+  $handler->display->display_options['style_options']['item_per_row_xs'] = '1';
+  $handler->display->display_options['style_options']['item_per_row_sm'] = '0';
+  $handler->display->display_options['style_options']['item_per_row_md'] = '0';
+  $handler->display->display_options['style_options']['item_per_row_lg'] = '0';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'skills' => 'skills',
+  );
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'project' => 'project',
+  );
+  $handler->display->display_options['block_description'] = 'Projects Skill Page Block';
+  $handler->display->display_options['block_caching'] = '8';
   $translatables['projects'] = array(
     t('Master'),
-    t('Our last projects'),
+    t('Nos derniers projets'),
     t('Tous nos projets'),
     t('Apply'),
     t('Reset'),
@@ -251,12 +304,14 @@ function antistatique_project_views_default_views() {
     t('more'),
     t('All Projects'),
     t('Featured Projects - link to /work'),
-    t('And of course our work!'),
-    t('Discover how we work'),
+    t('Et bien sûr notre travail!'),
+    t('Découvrez comment nous travaillons'),
     t('Our Work - link to /work'),
     t('Other Projects'),
     t('Other projects'),
     t('All'),
+    t('Projects Skill Page'),
+    t('Projects Skill Page Block'),
   );
   $export['projects'] = $view;
 
