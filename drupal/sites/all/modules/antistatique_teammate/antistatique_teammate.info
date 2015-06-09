@@ -45,6 +45,7 @@ features[field_instance][] = user-user-field_teammate_currently_working
 features[field_instance][] = user-user-field_teammate_hero_image
 features[field_instance][] = user-user-field_teammate_job_title
 features[field_instance][] = user-user-field_teammate_links
+features[image][] = square_thumbnail
 features[views_view][] = users
 features_exclude[dependencies][entity] = entity
 features_exclude[dependencies][views] = views
