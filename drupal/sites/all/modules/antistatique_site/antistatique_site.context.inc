@@ -343,7 +343,7 @@ function antistatique_site_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'taxonomy';
-  $context->description = '';
+  $context->description = 'for blog category terms';
   $context->tag = 'sections';
   $context->conditions = array(
     'taxonomy_term' => array(
@@ -358,6 +358,12 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'block-19' => array(
+          'module' => 'block',
+          'delta' => '19',
+          'region' => 'page_above',
+          'weight' => '-10',
+        ),
         'views-categories-block_1' => array(
           'module' => 'views',
           'delta' => 'categories-block_1',
@@ -371,6 +377,7 @@ function antistatique_site_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('for blog category terms');
   t('sections');
   $export['taxonomy'] = $context;
 
