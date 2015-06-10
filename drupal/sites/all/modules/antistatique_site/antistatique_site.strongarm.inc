@@ -1063,7 +1063,7 @@ function antistatique_site_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_category_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'we/blog/about/[term:name]';
   $export['pathauto_taxonomy_term_category_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1174,7 +1174,7 @@ function antistatique_site_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_picture_style';
-  $strongarm->value = '';
+  $strongarm->value = 'square_thumbnail';
   $export['user_picture_style'] = $strongarm;
 
   $strongarm = new stdClass();
