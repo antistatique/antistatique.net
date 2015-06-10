@@ -97,21 +97,20 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['text'] = '#[name]';
-  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['name']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['name']['element_type'] = '0';
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['name']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: Entity translation: Name: translated */
+  $handler->display->display_options['fields']['name_field_et']['id'] = 'name_field_et';
+  $handler->display->display_options['fields']['name_field_et']['table'] = 'field_data_name_field';
+  $handler->display->display_options['fields']['name_field_et']['field'] = 'name_field_et';
+  $handler->display->display_options['fields']['name_field_et']['label'] = '';
+  $handler->display->display_options['fields']['name_field_et']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['name_field_et']['alter']['text'] = '#[name_field_et]';
+  $handler->display->display_options['fields']['name_field_et']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['name_field_et']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['name_field_et']['element_type'] = '0';
+  $handler->display->display_options['fields']['name_field_et']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name_field_et']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['name_field_et']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['name_field_et']['type'] = 'text_plain';
   /* Field: Taxonomy term: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'taxonomy_term_data';
@@ -136,7 +135,7 @@ function antistatique_article_views_default_views() {
     t('All'),
     t('Current Categories'),
     t('All Categories Jump Menu'),
-    t('#[name]'),
+    t('#[name_field_et]'),
   );
   $export['categories'] = $view;
 
@@ -353,11 +352,11 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'View more';
+  $handler->display->display_options['use_more_text'] = 'Voir plus';
   $handler->display->display_options['link_url'] = 'nous/bloggons/%1';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Co-Author (field_co_author) */
+  /* Contextual filter: Content: Displayed Author(s) (field_co_author) */
   $handler->display->display_options['arguments']['field_co_author_target_id']['id'] = 'field_co_author_target_id';
   $handler->display->display_options['arguments']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['arguments']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
@@ -405,7 +404,7 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['relationships']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['relationships']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Co-Author (field_co_author) */
+  /* Contextual filter: Content: Displayed Author(s) (field_co_author) */
   $handler->display->display_options['arguments']['field_co_author_target_id']['id'] = 'field_co_author_target_id';
   $handler->display->display_options['arguments']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['arguments']['field_co_author_target_id']['field'] = 'field_co_author_target_id';

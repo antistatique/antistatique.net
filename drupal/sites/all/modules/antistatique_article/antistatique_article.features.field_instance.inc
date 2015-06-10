@@ -367,6 +367,7 @@ function antistatique_article_field_default_field_instances() {
   // Exported field_instance: 'node-article-field_svg_title'
   $field_instances['node-article-field_svg_title'] = array(
     'bundle' => 'article',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -449,6 +450,7 @@ function antistatique_article_field_default_field_instances() {
   // Exported field_instance: 'node-article-field_teammate_hero_image'
   $field_instances['node-article-field_teammate_hero_image'] = array(
     'bundle' => 'article',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.',
     'display' => array(
