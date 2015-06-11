@@ -1,8 +1,11 @@
 <?php
 /**
  * Script to check if all URLs Redirection is correctly setuped
+ *
+ *    Usage: php check-urls.php <testDomain> <checkOnlySection>
  */
-$testDomain = 'staging.antistatique.net';
+
+$testDomain = isset($argv[1]) ? $argv[1] : 'staging.antistatique.net';
 
 // Path to the XML WordPress export file
 // To generate it: http://antistatique.net/blog/wp-admin/export.php
@@ -54,7 +57,12 @@ $urls = [
 $urls['blog_posts'] = getBlogPostUrl($wordPressExportFile);
 
 foreach($urls as $key => $section) {
-    echo "\n\n=== $key ===\n";
+
+    if (isset($argv[2]) && $argv[2] !== $key) {
+        continue;
+    }
+
+    echo "\n=== $key ===\n";
     foreach($section as $url) {
         $url = 'http://' . $testDomain . $url;
         if (!checkUrl($url)) {
@@ -84,7 +92,7 @@ function getBlogPostUrl($xmlFile) {
     return $urls;
 }
 
-function getStatusCode($url) {
+function getHeaders($url) {
     $ch = curl_init();
 
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -93,23 +101,36 @@ function getStatusCode($url) {
     curl_setopt($ch, CURLOPT_HEADER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'HEAD');
     curl_setopt($ch, CURLOPT_NOBODY, true);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false); // do not follow redirect, this is what we want to know
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
 
     $headers = curl_exec($ch);
     curl_close($ch);
 
+    return $headers;
+}
+
+function getStatusCode($url) {
+    $headers = getHeaders($url);
+    $status = 0;
+
     // extract the status code
     if (preg_match('#HTTP/1.(?:0|1) ([0-9]{3})#', $headers, $matches)) {
-        return (int) $matches[1];
+        $status = (int) $matches[1];
     }
 
-    return 0;
+    // follow redirection
+    if ($status == 301 || $status == 302) {
+        if (preg_match('#Location: (.*)#', $headers, $matches)) {
+            $status = getStatusCode($matches[1]);
+        }
+    }
+
+    return $status;
 }
 
 function checkUrl($url) {
     $status = getStatusCode($url);
-
-    if ($status == 200 || $status == 301 || $status == 302) {
+    if ($status == 200 /*|| $status == 301 || $status == 302*/) {
         return true;
     }
 
