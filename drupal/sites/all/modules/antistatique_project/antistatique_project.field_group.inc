@@ -84,8 +84,8 @@ function antistatique_project_field_group_info() {
     'children' => array(
       0 => 'field_teammate_hero_image',
       1 => 'field_hero_image_is_dark',
-      2 => 'field_svg_title',
-      3 => 'field_tile_image',
+      2 => 'field_tile_image',
+      3 => 'field_svg_title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

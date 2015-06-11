@@ -388,13 +388,12 @@ function antistatique_basic_page_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'file_entity',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
+          'file_view_mode' => 'default',
         ),
-        'type' => 'image',
-        'weight' => 4,
+        'type' => 'file_rendered',
+        'weight' => 9,
       ),
       'small_teaser' => array(
         'label' => 'above',
@@ -410,48 +409,63 @@ function antistatique_basic_page_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_svg_title',
-    'label' => 'SVG title',
+    'label' => 'SVG Title',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'entity_translation_sync' => FALSE,
-      'file_directory' => '',
+      'description_field' => 0,
+      'entity_translation_sync' => 0,
+      'file_directory' => 'page-svg',
       'file_extensions' => 'svg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
+      'max_filesize' => '2 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'file',
       'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 0,
-        'insert_absolute' => FALSE,
+        'insert_absolute' => 0,
         'insert_class' => '',
-        'insert_default' => array(
-          0 => 'auto',
-        ),
+        'insert_default' => 'auto',
         'insert_styles' => array(
-          0 => 'auto',
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_hero-image' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_large' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_medium' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_project_thumbnail' => 0,
+          'image_square_thumbnail' => 0,
+          'image_square_thumbnail__max_100x100_' => 0,
+          'image_thumbnail' => 0,
+          'image_wide_image' => 0,
+          'image_wide_thumbnail' => 0,
+          'link' => 0,
         ),
         'insert_width' => '',
-        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'file_generic',
       'weight' => 15,
     ),
   );
@@ -702,7 +716,7 @@ function antistatique_basic_page_field_default_field_instances() {
   t('L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.');
   t('Name');
   t('Paragraphs');
-  t('SVG title');
+  t('SVG Title');
   t('Section');
   t('Title');
   t('hero-image');

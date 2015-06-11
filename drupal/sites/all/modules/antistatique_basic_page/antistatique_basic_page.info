@@ -10,6 +10,7 @@ dependencies[] = context
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = field_group
+dependencies[] = file_entity
 dependencies[] = image
 dependencies[] = list
 dependencies[] = options

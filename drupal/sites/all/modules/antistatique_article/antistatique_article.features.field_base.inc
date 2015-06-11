@@ -83,16 +83,17 @@ function antistatique_article_field_default_field_bases() {
       ),
     ),
     'locked' => 0,
-    'module' => 'image',
+    'module' => 'file',
     'settings' => array(
-      'default_image' => 0,
+      'display_default' => 0,
+      'display_field' => 0,
       'entity_translation_sync' => array(
         0 => 'fid',
       ),
       'uri_scheme' => 'public',
     ),
     'translatable' => 1,
-    'type' => 'image',
+    'type' => 'file',
   );
 
   return $field_bases;
