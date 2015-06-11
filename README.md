@@ -47,7 +47,7 @@ $ gulp build
 $ gulp serve
 ```
 
-### Publish to GH Pages
+### Publish to GH-Pages
 
 ```bash
 $ gulp deploy
