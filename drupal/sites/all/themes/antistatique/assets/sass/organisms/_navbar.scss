@@ -108,6 +108,10 @@
   }
 }
 
+.navbar-collapse {
+  border: none;
+}
+
 .navbar-collapse.navbar-mobile {
 
   @media only screen and (max-width: $screen-xs-max) {
