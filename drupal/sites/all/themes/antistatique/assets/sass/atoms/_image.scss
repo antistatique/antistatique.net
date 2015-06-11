@@ -30,3 +30,27 @@
     right: 0;
   }
 }
+
+.shop-sign {
+  display: none;
+  
+  &:hover {
+    transform-origin: center top;
+    animation: 2s dangle;
+  }
+}
+
+@keyframes dangle {
+    0% { -webkit-transform: rotate(0deg); }
+    5% { -webkit-transform: rotate(10deg); }
+    10% { -webkit-transform: rotate(-9deg); }
+    15% { -webkit-transform: rotate(8deg); }
+    20% { -webkit-transform: rotate(-7deg); }
+    25% { -webkit-transform: rotate(6deg); }
+    30% { -webkit-transform: rotate(-5deg); }
+    35% { -webkit-transform: rotate(4deg); }
+    40% { -webkit-transform: rotate(-3deg); }
+    45% { -webkit-transform: rotate(2deg); }
+    50% { -webkit-transform: rotate(-1deg); }
+    55% { -webkit-transform: rotate(0deg); }
+}

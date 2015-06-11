@@ -1,24 +1,40 @@
-<div class="container">
+<div class="bg-foggy">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-offset-2 col-sm-8">
+        <div class="text-center">
+          <h2 class="h3">Our offices</h2>
+          <p>We are <del>usually</del> open from <strong>08:30</strong> to <strong>18:00</strong><br>So currently</p>
+          <img class="shop-sign open" width="90px" src="/build/svg/Antistatique-open.svg" alt="open">
+          <img class="shop-sign closed" width="90px" src="/build/svg/Antistatique-close.svg" alt="closed">
+          <div class="spacer spacer-sm"></div>
+        </div>
 
-  {{> navbar }}
-  {{> jumbotron }}
-
-  <div class="row">
-    <div class="col-sm-4">
-      {{> heading level=3 content="My great news" }}
-      {{> paragraph }}
-    </div>
-    <div class="col-sm-4">
-      {{> heading level=3 content="My great news" }}
-      {{> paragraph }}
-    </div>
-    <div class="col-sm-4">
-      {{> heading level=3 content="My great news" }}
-      {{> paragraph }}
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="thumbnail">
+              <div class="caption">
+                <h2 class="media-heading h4">Lausanne</h2>
+                <p class="h5">Rue de Sébeillon 9b<br>1004 Lausanne</p>
+                <a href="https://goo.gl/maps/EtmV7">{{> icon class="fa fa-map-marker badge" }} View map</a>
+                <div class="spacer spacer-xs"></div>
+              </div>
+              {{> image source="https://unsplash.it/500/500/?random" }}
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="thumbnail">
+              {{> image source="https://unsplash.it/500/500/?random" }}
+              <div class="caption">
+                <h2 class="media-heading h4">Geneva</h2>
+                <p class="h5">Rue Fendt 1<br>1201 Geneva</p>
+                <a href="https://goo.gl/maps/hXVcB">{{> icon class="fa fa-map-marker badge" }} View map</a>
+                <div class="spacer spacer-xs"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <hr>
-
-  {{> address }}
 </div>

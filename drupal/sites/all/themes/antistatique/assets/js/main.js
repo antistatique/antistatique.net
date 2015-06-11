@@ -20,6 +20,20 @@
       .wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
   });
 
+  // display shop open/closed sign
+  var d = new Date();
+  var hours = d.getHours();
+  var minutes = d.getMinutes();
+  var time = hours + ':' + minutes;
+
+  if ((hours == 8 && minutes >= 30) || (hours >= 9 && hours < 18)) {
+    $('.shop-sign.open').show();
+    $('.shop-sign.closed').hide();
+  } else {
+    $('.shop-sign.open').hide();
+    $('.shop-sign.closed').show();
+  }
+
 
   // say hi
   if (window.console) {
