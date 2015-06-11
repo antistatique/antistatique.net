@@ -189,12 +189,17 @@
 }
 
 .btn-xxs {
-  font-size: .6em;
+  font-size: .8em;
   line-height: 1;
-  padding: 5px 6px 4px;
 
-  &:last-child {
-    padding-bottom: 3px;
+  @media only screen and (min-width: $screen-sm-min) {
+    font-size: .6em;
+    line-height: 1;
+    padding: 5px 6px 4px;
+
+    &:last-child {
+      padding-bottom: 3px;
+    }
   }
 }
 

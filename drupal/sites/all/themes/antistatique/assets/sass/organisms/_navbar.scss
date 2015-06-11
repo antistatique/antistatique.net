@@ -112,6 +112,12 @@
   border: none;
 }
 
+.navbar-toggle {
+  .icon-bar {
+    width: 16px;
+  }
+}
+
 .navbar-collapse.navbar-mobile {
 
   @media only screen and (max-width: $screen-xs-max) {
