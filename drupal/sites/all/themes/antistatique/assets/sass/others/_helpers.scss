@@ -99,17 +99,24 @@ body {
   &-bottom {margin-bottom: 0;}
 }
 
-.bottom-overflow {
+.bg-image {
+  background: url(../img/saniha_bureau.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+
   &:after {
     content: '';
-    display: block;
-    height: 200px;
-    @media only screen and (min-width: $screen-sm-min) {
-      height: 300px;
-    }
+    background: linear-gradient(to bottom, rgba($midnight-blue, 1), rgba($midnight-blue, 0));
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30%;
     width: 100%;
-    background: $white;
-    margin-top: -180px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
   }
 }
 

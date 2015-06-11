@@ -46,14 +46,17 @@
  */
 
 ?>
-<div class="bg-foggy bottom-overflow">
+<div class="bg-image">
+  <div class="spacer spacer-md"></div>
   <div class="container">
     <div class="row">
       <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
-        <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> well well-lg well-white clearfix"<?php print $attributes; ?>>
 
-          <?php print render($title_prefix); ?>
-          <?php print render($title_suffix); ?>
+        <?php print render($title_prefix); ?>
+        <h2 class="text-center text-white"><?php print t('The contact form!'); ?></h2>
+        <?php print render($title_suffix); ?>
+
+        <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> well well-white clearfix"<?php print $attributes; ?>>
 
           <?php print $content ?>
 
@@ -61,4 +64,5 @@
       </div>
     </div>
   </div>
+  <div class="spacer spacer-md"></div>
 </div>

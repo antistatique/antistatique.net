@@ -521,23 +521,29 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'webform-client-block-236' => array(
-          'module' => 'webform',
-          'delta' => 'client-block-236',
-          'region' => 'above_footer',
-          'weight' => '-10',
-        ),
         'block-16' => array(
           'module' => 'block',
           'delta' => '16',
           'region' => 'above_footer',
+          'weight' => '-10',
+        ),
+        'webform-client-block-236' => array(
+          'module' => 'webform',
+          'delta' => 'client-block-236',
+          'region' => 'above_footer',
           'weight' => '-9',
+        ),
+        'block-3' => array(
+          'module' => 'block',
+          'delta' => '3',
+          'region' => 'above_footer',
+          'weight' => '-8',
         ),
         'block-6' => array(
           'module' => 'block',
           'delta' => '6',
           'region' => 'above_footer',
-          'weight' => '-8',
+          'weight' => '-7',
         ),
       ),
     ),
@@ -568,23 +574,29 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'webform-client-block-236' => array(
-          'module' => 'webform',
-          'delta' => 'client-block-236',
-          'region' => 'above_footer',
-          'weight' => '-10',
-        ),
         'block-17' => array(
           'module' => 'block',
           'delta' => '17',
           'region' => 'above_footer',
-          'weight' => '-9',
+          'weight' => '-36',
+        ),
+        'webform-client-block-236' => array(
+          'module' => 'webform',
+          'delta' => 'client-block-236',
+          'region' => 'above_footer',
+          'weight' => '-35',
         ),
         'block-7' => array(
           'module' => 'block',
           'delta' => '7',
           'region' => 'above_footer',
-          'weight' => '-8',
+          'weight' => '-34',
+        ),
+        'block-4' => array(
+          'module' => 'block',
+          'delta' => '4',
+          'region' => 'above_footer',
+          'weight' => '-10',
         ),
       ),
     ),
