@@ -276,6 +276,12 @@ function antistatique_preprocess_field(&$variables, $hook) {
         }
       }
     }
+
+    if ($element['#field_name'] == 'field_testimonial_avatar') {
+      foreach ($variables['items'] as $key => $item) {
+        $variables['items'][ $key ]['#item']['attributes']['class'][] = 'img-circle';
+      }
+    }
   }
 }
 

@@ -167,7 +167,7 @@ hide($content['field_hero_image_is_dark']);
       <div class="row">
         <div class="col-sm-offset-2 col-sm-8">
           <div class="media media-testimonial">
-            <div class="pull-left img-rounded">
+            <div class="pull-left">
               <?php print render($content['field_testimonial_avatar']); ?>
             </div>
             <div class="media-body">
