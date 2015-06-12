@@ -21,12 +21,19 @@
   });
 
   // display shop open/closed sign
+  function isDST(t) { //t is the date object to check, returns true if daylight saving time is in effect.
+    var jan = new Date(t.getFullYear(),0,1);
+    var jul = new Date(t.getFullYear(),6,1);
+    return Math.min(jan.getTimezoneOffset(),jul.getTimezoneOffset()) === t.getTimezoneOffset();
+  }
   var d = new Date();
-  var hours = d.getHours();
-  var minutes = d.getMinutes();
-  var time = hours + ':' + minutes;
+  var hours = isDST(d) ? d.getUTCHours() + 2 : d.getUTCHours() + 1;
+  var minutes = d.getUTCMinutes();
+  var day = d.getUTCDay();
+  var isWeekDay = day < 6;
 
-  if ((hours == 8 && minutes >= 30) || (hours >= 9 && hours < 18)) {
+
+  if (isWeekDay && ((hours === 8 && minutes >= 30) || (hours >= 9 && hours < 18))) {
     $('.shop-sign.open').show();
     $('.shop-sign.closed').hide();
   } else {
