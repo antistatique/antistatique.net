@@ -46,10 +46,25 @@ $urls = [
         '/blog/author/gde/',
         '/blog/author/ludovic/',
         '/blog/author/admin/', // marc
+        '/blog/author/guillaume/',
+        '/blog/author/luc/',
+        '/blog/author/ludovic/',
+        '/blog/author/philippe/',
+        '/blog/author/saniha/',
+        '/blog/author/smi/',
         '/blog/author/nsz/',
         '/blog/author/agz/',
         '/blog/author/toni/',
-
+        '/blog/author/ygn/',
+/*
+        '/blog/author/spt/',
+        '/blog/author/damien/',
+        '/blog/author/rkr/',
+        '/blog/author/marion/',
+        '/blog/author/stefano/',
+        '/blog/author/vgn/',
+        '/blog/author/cedric/',
+*/
     ]
 ];
 
