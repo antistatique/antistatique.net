@@ -16,9 +16,8 @@ h5, .h5 {
   h4, .h4 { font-size: $font-size-h4 * 0.8; line-height: $headings-line-height * 0.95;}
   h5, .h5 { font-size: $font-size-h5 * 0.8; line-height: $headings-line-height * 0.95;}
   h6, .h6 { font-size: $font-size-h6 * 0.8; line-height: $headings-line-height * 0.95;}
-  p {
-    font-size: $font-size-base * 0.8;
-    line-height: $line-height-base * 0.95;
+  p, .field-body, abbr, cite, .main-content li {
+    font-size: $font-size-base * 0.9;
   }
 }
 
@@ -29,8 +28,8 @@ h5, .h5 {
   h4, .h4 { font-size: $font-size-h4 * 0.75; line-height: $headings-line-height * 0.95;}
   h5, .h5 { font-size: $font-size-h5 * 0.75; line-height: $headings-line-height * 0.95;}
   h6, .h6 { font-size: $font-size-h6 * 0.75; line-height: $headings-line-height * 0.95;}
-  p {
-    font-size: $font-size-base * 0.75;
+  p, .field-body, abbr, cite, .main-content li {
+    font-size: $font-size-base * 0.85;
     line-height: $line-height-base * 0.9;
   }
 }
