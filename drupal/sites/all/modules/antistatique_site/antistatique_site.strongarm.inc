@@ -86,6 +86,10 @@ function antistatique_site_strongarm() {
       0 => 'wysiwyg',
       1 => 'format',
     ),
+    'menu_link' => array(
+      0 => 'menu_links',
+      1 => 'mlid',
+    ),
   );
   $export['entityreference:base-tables'] = $strongarm;
 
