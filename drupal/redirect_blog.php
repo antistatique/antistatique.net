@@ -33,7 +33,8 @@ if (!$source_uri) {
 
 if ($uri_map = db_query("SELECT destination_uri FROM migrate_blog_url WHERE source_uri = :source_uri", array(':source_uri' => $source_uri))->fetchObject()) {
 
-    $destination_uri = $uri_map->destination_uri;
+    $host = 'http://' . $_SERVER['HTTP_HOST'];
+    $destination_uri = $host . $uri_map->destination_uri;
 
     header('Location: ' . $destination_uri, TRUE, 301);
 } else {
