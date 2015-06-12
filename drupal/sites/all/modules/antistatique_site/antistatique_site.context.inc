@@ -527,9 +527,9 @@ function antistatique_site_context_default_contexts() {
           'region' => 'above_footer',
           'weight' => '-10',
         ),
-        'webform-client-block-236' => array(
+        'webform-client-block-245' => array(
           'module' => 'webform',
-          'delta' => 'client-block-236',
+          'delta' => 'client-block-245',
           'region' => 'above_footer',
           'weight' => '-9',
         ),
