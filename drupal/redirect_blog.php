@@ -18,7 +18,12 @@
       RewriteRule ^blog/(.+) /redirect_blog.php [L]
 
  */
-$source_uri = $_SERVER['REDIRECT_URL'];
+$source_uri = $_SERVER['REQUEST_URI'];
+
+if (!$source_uri) {
+    header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
+    die('Source URI not found. <a href="http://antistatique.net">Go to homepage</a>');
+}
 
 define('DRUPAL_ROOT', getcwd());
 require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
@@ -26,10 +31,6 @@ require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 // Only bootstrap to DB so we are as fast as possible. Much of the Drupal API
 // is not available to us.
 drupal_bootstrap(DRUPAL_BOOTSTRAP_DATABASE);
-
-if (!$source_uri) {
-    die('Source URI not found. <a href="http://antistatique.net">Go to homepage</a>');
-}
 
 if ($uri_map = db_query("SELECT destination_uri FROM migrate_blog_url WHERE source_uri = :source_uri", array(':source_uri' => $source_uri))->fetchObject()) {
 
@@ -39,6 +40,6 @@ if ($uri_map = db_query("SELECT destination_uri FROM migrate_blog_url WHERE sour
     header('Location: ' . $destination_uri, TRUE, 301);
 } else {
   // Can't find the source URI. TODO: Make nice 404 page.
-  header('Status=Not Found', TRUE, 404);
+  header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
   print "Erreur 404. <a href='http://antistatique.net'>Retour a la page d'accueil</a>";
 }
