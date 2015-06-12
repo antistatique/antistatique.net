@@ -31,6 +31,10 @@
     right: -467px;
   }
 
+  .btn.btn-round:first-of-type {
+    padding-left: 0;
+  }
+
   @media only screen and (max-width: $screen-sm-max) {
     background-position: -14px 50px;
     background-size: 245px;
@@ -43,13 +47,31 @@
     }
 
     &.fr {
-      background-position: -58px top;
+      background-position: -58px 30px;
       background-size: 280px;
 
       &:after {
-        background-position: right top;
+        background-position: right 30px;
         background-size: 280px;
         right: -220px;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-md-max) {
+    .btn.btn-round {
+      display: table;
+      max-width: none;
+      padding-left: 0;
+      @include clearfix;
+
+      > i {
+        float: left;
+        margin-bottom: 0;
+      }
+      > span {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 10px;
       }
     }
   }
