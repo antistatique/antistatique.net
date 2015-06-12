@@ -33,6 +33,7 @@
     width: 400px;
     height: 80px;
     @media only screen and (max-width: $screen-sm-max) {
+      background-position-y: 50%;
       width:300px;
       right: -180px;
       top: 20px;
