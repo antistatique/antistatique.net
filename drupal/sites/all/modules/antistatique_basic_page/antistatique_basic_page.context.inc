@@ -64,6 +64,9 @@ function antistatique_basic_page_context_default_contexts() {
     'path' => array(
       'values' => array(
         'we/work' => 'we/work',
+        'we/work/technology-development' => 'we/work/technology-development',
+        'we/work/digital-strategy' => 'we/work/digital-strategy',
+        'we/work/ux-ui-branding-design' => 'we/work/ux-ui-branding-design',
       ),
     ),
   );
@@ -114,6 +117,9 @@ function antistatique_basic_page_context_default_contexts() {
     'path' => array(
       'values' => array(
         'nous/travaillons' => 'nous/travaillons',
+        'nous/travaillons/les-technologies' => 'nous/travaillons/les-technologies',
+        'nous/faisons/de-la-strategie-digitale' => 'nous/faisons/de-la-strategie-digitale',
+        'nous/faisons/du-design' => 'nous/faisons/du-design',
       ),
     ),
   );
