@@ -28,7 +28,8 @@
 hide($content['field_alignment']);
 $alignment = $content['field_alignment'][0]['#markup'];
 if (isset($content['field_device'])) $device = $content['field_device'][0]['#markup'];
-if (isset($content['field_browser'])) {
+$browser = '';
+if (isset($content['field_browser']) && $content['field_browser']['#items'][0]['value']) {
   $browser = '<div class="browser-window">
                 <div class="browser-buttons">
                   <div class="browser-close"></div>
