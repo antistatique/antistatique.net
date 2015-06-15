@@ -130,14 +130,14 @@ function antistatique_project_views_default_views() {
   /* Display: Featured Projects - link to /work */
   $handler = $view->new_display('block', 'Featured Projects - link to /work', 'block_normal');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Et bien sûr notre travail!';
+  $handler->display->display_options['title'] = 'And of course our work!';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Découvrez comment nous travaillons';
+  $handler->display->display_options['use_more_text'] = 'Discover how we work';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = 'node/3';
