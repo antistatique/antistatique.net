@@ -282,12 +282,12 @@ function antistatique_site_image_default_styles() {
 
   // Exported image style: wide_thumbnail.
   $styles['wide_thumbnail'] = array(
-    'label' => 'Wide Thumbnail (740x300)',
+    'label' => 'Wide Thumbnail (750x300)',
     'effects' => array(
-      32 => array(
+      3 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 700,
+          'width' => 750,
           'height' => 300,
         ),
         'weight' => 1,

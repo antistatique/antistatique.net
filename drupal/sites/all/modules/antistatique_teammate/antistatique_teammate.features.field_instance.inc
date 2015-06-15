@@ -313,6 +313,55 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
+  // Exported field_instance: 'user-user-field_pingpong_points'
+  $field_instances['user-user-field_pingpong_points'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'big_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'number',
+        'settings' => array(),
+        'type' => 'number_unformatted',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'user',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_pingpong_points',
+    'label' => 'Pingpong Points',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_pingpong_ranking'
   $field_instances['user-user-field_pingpong_ranking'] = array(
     'bundle' => 'user',
@@ -745,6 +794,7 @@ The fourth image should be <b>640x640</b>.',
   t('Job title');
   t('L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.');
   t('Lastname');
+  t('Pingpong Points');
   t('Pingpong Ranking');
   t('Related project');
   t('The first image should be <b>640x960</b>.<br>

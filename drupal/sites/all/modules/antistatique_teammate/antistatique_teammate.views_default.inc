@@ -436,6 +436,7 @@ function antistatique_teammate_views_default_views() {
     t('user/[uid]'),
     t('Jump Menu Teammates'),
     t('All Teammates Bigger'),
+    t('All Teammates except current'),
   );
   $export['users'] = $view;
 
