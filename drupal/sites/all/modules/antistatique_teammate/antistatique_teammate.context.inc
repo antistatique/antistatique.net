@@ -74,6 +74,12 @@ function antistatique_teammate_context_default_contexts() {
           'region' => 'content_below',
           'weight' => '-10',
         ),
+        'views-users-block_3' => array(
+          'module' => 'views',
+          'delta' => 'users-block_3',
+          'region' => 'content_below',
+          'weight' => '-9',
+        ),
       ),
     ),
   );
