@@ -56,6 +56,23 @@ DirectoryIndex index.php index.html index.htm
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+  Redirect /fr/team /fr/nous
+  Redirect /fr/portfolio /fr/nous/travaillons
+  Redirect /fr/job /fr/nous/embauchons
+  Redirect /fr/job/web-developer-drupal /fr/nous/embauchons
+  Redirect /en/job/web-developer-drupal /en/we/are-hiring
+
+  Redirect /fr/portfolio/uchitomi /fr/nous/travaillons/avec/uchitomi
+
+
+  # Redirect Wordpress content to new places
+  RedirectMatch "/blog/wp-content/uploads/(.*)" /sites/default/files/wordpress/uploads/$1
+
+  # Redirect old Wordpress blogpost to new one
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^blog/(.+) /redirect_blog.php [L]
+
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.

@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ * Code for the antistatique_site feature.
+ */
+
+include_once 'antistatique_site.features.inc';
+
+/**
+ * Implements hook_html_head_alter().
+ */
+function antistatique_site_html_head_alter(&$head_elements) {
+
+  foreach($head_elements as $key => $element) {
+    // remove canonical tag from 404 page
+    // From this hook I don't have access to the node so can't use `variable_get('site_404')`
+    // So this is why there is some hard coded references.
+    if (isset($element['#attributes']['rel']) && $element['#attributes']['rel'] == 'canonical') {
+      if (in_array($element['#attributes']['href'], array('/fr/404', '/404', '/en/404'))) {
+        unset($head_elements[$key]);
+      }
+    }
+  }
+}

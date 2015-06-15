@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Extend Views to add format "Bootstrap Responsive Grid"
+ * with custom options.
+ */
+
+/**
+ * Implements hook_views_api().
+ */
+function views_bootstrap_responsive_grid_views_api() {
+  return array("api" => "3.0");
+}
+

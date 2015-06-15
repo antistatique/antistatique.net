@@ -1,0 +1,4 @@
+<?php
+// This module's only purpose is to provide a dependency to
+// replicate_paragraphs. The actual implementation resides in
+// paragraphs_field_prepare_translation().
