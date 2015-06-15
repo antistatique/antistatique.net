@@ -37,13 +37,13 @@ global $language;
 
 $username = render($user_profile['field_firstname'][0]['#markup']);
 $userpath = '/' . $language->language . '/' . drupal_get_path_alias('user/' . $user_id);
-
+$winner = $user_profile['field_pingpong_ranking'][0]['#markup'] == 1;
 ?>
 <?php if ($username != ' '): ?>
   <?php if ($user_profile['field_teammate_currently_working'][0]['#markup']): ?>
   <a href="<?php print $userpath; ?>" class="profile team-tiny"<?php print $attributes; ?>>
   <?php endif ?>
-    <div class="team-avatar">
+    <div class="team-avatar <?php if ($winner) print 'winner'; ?>">
       <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print $username; ?>" class="img-circle img-responsive">
     </div>
     <div class="clearfix"></div>

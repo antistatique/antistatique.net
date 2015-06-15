@@ -25,6 +25,17 @@
       left: 0%;
       border-radius: 200px;
     }
+    &.winner {
+      position: relative;
+      &:after {
+        content: url(../svg/pingpong-badge.svg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 40%;
+      }
+    }
     img {
       position: relative;
       display: inline-block;
@@ -86,6 +97,19 @@ a.team-tiny,
   .user-picture {
     img {
       margin: 0 auto;
+    }
+  }
+}
+
+
+.cover-overlap {
+  .team-tiny {
+    .team-avatar.winner {
+      &:after {
+        right: auto;
+        left: 50%;
+        width: 50px;
+      }
     }
   }
 }
