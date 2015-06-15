@@ -204,6 +204,18 @@
   }
 }
 
+.btn-like {
+  &:hover {
+    cursor: default;
+  }
+
+  .antistaticon:before {
+    position: relative;
+    top: 4px;
+    font-size: 22px;
+  }
+}
+
 .view {
   .more-link {
     text-align: center;

@@ -21,7 +21,7 @@ function antistatique_teammate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Account',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'account',
       1 => 'timezone',
@@ -59,6 +59,7 @@ function antistatique_teammate_field_group_info() {
       3 => 'field_teammate_body',
       4 => 'field_teammate_links',
       5 => 'field_pingpong_ranking',
+      6 => 'field_pingpong_points',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -83,7 +84,7 @@ function antistatique_teammate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Images',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_teammate_hero_image',
       1 => 'field_four_images',
@@ -118,6 +119,7 @@ function antistatique_teammate_field_group_info() {
       0 => 'field_teammate_currently_working',
       1 => 'field_teammate_job_title',
       2 => 'field_related_project',
+      3 => 'googleanalytics',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

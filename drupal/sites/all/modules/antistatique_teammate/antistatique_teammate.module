@@ -25,7 +25,14 @@ function antistatique_teammate_cron() {
       'field_pingpong_ranking' => array(
         'und' => array(
           0 => array(
-            'value' => $ranking,
+            'value' => $ranking['rank'],
+          )
+        )
+      ),
+      'field_pingpong_points' => array(
+        'und' => array(
+          0 => array(
+            'value' => $ranking['points'],
           )
         )
       )
@@ -66,11 +73,12 @@ function antistatique_teammate_get_scores()
 function antistatique_teammate_find_score_for_user($scores, $user)
 {
   $name = $user->field_firstname['und'][0]['value'];
-  $ranking = 0;
+  $ranking = array();
 
   foreach ($scores as $score) {
     if (mb_strtolower($name) == mb_strtolower($score->name)) {
-      $ranking = $score->points;
+      $ranking['points'] = $score->points;
+      $ranking['rank'] = $score->rank;
       break;
     }
   }
