@@ -18,6 +18,16 @@ header.header {
   }
 }
 
+.link-inverse{
+  color: $navbar-inverse-link-color;
+  &:hover{
+    color: $navbar-inverse-link-hover-color;
+  }
+  &:active, &.active{
+    color: $navbar-inverse-link-active-color;
+  }
+}
+
 .link-image {
   position: relative;
   display: block;

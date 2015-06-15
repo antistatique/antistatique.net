@@ -1,0 +1,44 @@
+.services{
+    background: $midnight-blue url(../img/bg_services.jpg) 50% 50%;
+    background-size: cover;
+    min-height: 300px;
+    padding: 60px 0;
+}
+.triangle{
+    margin: 0 auto;
+    width: 450px;
+    height: 460px;
+    @media only screen and (max-width: $screen-md-max) {
+        width: 400px;
+        height: 420px;
+    }
+    @media only screen and (max-width: $screen-sm-max) {
+        width: 320px;
+        height: 340px;
+    }
+    @media only screen and (max-width: $screen-xs-max) {
+        width: 240px;
+        height: 250px;
+    }
+
+    background:transparent url('../img/triangle.png') 0 0 no-repeat;
+    background-size: contain;
+    position: relative;
+    .triangle-link{
+        position: absolute;
+    }
+    .triangle-link-strategy{
+        right: 85%;
+        top: 20%;
+    }
+    .triangle-link-design {
+        left: 85%;
+        top: 20%;
+    }
+    .triangle-link-technology{
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        width: 100%;
+    }
+}
