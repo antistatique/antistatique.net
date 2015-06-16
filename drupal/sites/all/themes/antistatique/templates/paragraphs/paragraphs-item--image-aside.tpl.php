@@ -37,7 +37,7 @@ if ($content['field_alignment'][0]['#markup'] == 'left') {
   $alignment_aside = $image_width == 'col-6' ? 'col-md-pull-6 col-md-2' : 'col-md-pull-7 col-md-2';
 }
 
-if (isset($content['field_browser']) && $content['field_browser'][0]['#markup']) $browser = $content['field_browser'][0]['#markup'];
+$browser = isset($content['field_browser']) && $content['field_browser']['#items'][0]['value'] ? $content['field_browser']['#items'][0]['value'] : '';
 if (isset($content['field_device'])) $device = $content['field_device'][0]['#markup'];
 $landscape = isset($content['field_landscape']) && $content['field_landscape']['#items'][0]['value'] ? 'landscape' : '';
 
@@ -54,7 +54,7 @@ hide($content['field_image_width']);
             <div class="sleep"></div>
             <div class="volume"></div>
             <div class="screen">
-      <?php elseif (isset($browser)): ?>
+      <?php elseif ($browser): ?>
         <div class="browser-window">
           <div class="browser-buttons">
             <div class="browser-close"></div>

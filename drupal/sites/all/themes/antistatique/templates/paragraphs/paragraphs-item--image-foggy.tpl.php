@@ -25,8 +25,8 @@
  * @see template_preprocess_entity()
  * @see template_process()
  */
-if (isset($content['field_device'])) $device = $content['field_device'][0]['#markup'];
-if (isset($content['field_browser']) && $content['field_browser'][0]['#markup']) $browser = $content['field_browser'][0]['#markup'];
+$device = isset($content['field_device'])? $content['field_device'][0]['#markup'] : '';
+$browser = isset($content['field_browser']) && $content['field_browser']['#items'][0]['value'] ? $content['field_browser']['#items'][0]['value'] : '';
 $landscape = isset($content['field_landscape']) && $content['field_landscape']['#items'][0]['value'] ? 'landscape' : '';
 
 switch ($content['field_image_width_centered'][0]['#markup']) {
@@ -47,13 +47,13 @@ switch ($content['field_image_width_centered'][0]['#markup']) {
     <div class="spacer spacer-md"></div>
     <div class="row content"<?php print $content_attributes; ?>>
       <div class="<?php print $image_width; ?>">
-        <?php if (isset($device)): ?>
+        <?php if ($device): ?>
           <div class="marvel-device <?php print $device; ?> <?php print $landscape; ?> silver">
               <div class="top-bar"></div>
               <div class="sleep"></div>
               <div class="volume"></div>
               <div class="screen">
-        <?php elseif (isset($browser)): ?>
+        <?php elseif ($browser): ?>
           <div class="browser-window">
             <div class="browser-buttons">
               <div class="browser-close"></div>
@@ -65,7 +65,7 @@ switch ($content['field_image_width_centered'][0]['#markup']) {
           </div>
         <?php endif ?>
               <?php print render($content['field_image']); ?>
-        <?php if (isset($device)): ?>
+        <?php if ($device): ?>
               </div>
               <div class="bottom-bar"></div>
           </div>

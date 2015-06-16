@@ -5,11 +5,11 @@
  *    Usage: php check-urls.php <testDomain> <checkOnlySection>
  */
 
-$testDomain = isset($argv[1]) ? $argv[1] : 'staging.antistatique.net';
+$testDomain = isset($argv[1]) ? $argv[1] : 'antistatique.net';
 
 // Path to the XML WordPress export file
 // To generate it: http://antistatique.net/blog/wp-admin/export.php
-$wordPressExportFile = 'data/antistatiquenetblog.wordpress.2015-06-11.xml';
+$wordPressExportFile = 'data/antistatiquenetblog.wordpress.2015-06-16.xml';
 
 $urls = [
     'general' => [

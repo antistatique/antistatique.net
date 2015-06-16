@@ -64,29 +64,38 @@ function antistatique_basic_page_context_default_contexts() {
     'path' => array(
       'values' => array(
         'we/work' => 'we/work',
+        'we/work/technology-development' => 'we/work/technology-development',
+        'we/work/digital-strategy' => 'we/work/digital-strategy',
+        'we/work/ux-ui-branding-design' => 'we/work/ux-ui-branding-design',
       ),
     ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'block-21' => array(
+          'module' => 'block',
+          'delta' => '21',
+          'region' => 'above_footer',
+          'weight' => '-10',
+        ),
         'views-projects-block_variant' => array(
           'module' => 'views',
           'delta' => 'projects-block_variant',
           'region' => 'above_footer',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'block-13' => array(
           'module' => 'block',
           'delta' => '13',
           'region' => 'above_footer',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'block-15' => array(
           'module' => 'block',
           'delta' => '15',
           'region' => 'above_footer',
-          'weight' => '-8',
+          'weight' => '-7',
         ),
       ),
     ),
@@ -108,29 +117,38 @@ function antistatique_basic_page_context_default_contexts() {
     'path' => array(
       'values' => array(
         'nous/travaillons' => 'nous/travaillons',
+        'nous/travaillons/les-technologies' => 'nous/travaillons/les-technologies',
+        'nous/faisons/de-la-strategie-digitale' => 'nous/faisons/de-la-strategie-digitale',
+        'nous/faisons/du-design' => 'nous/faisons/du-design',
       ),
     ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'block-20' => array(
+          'module' => 'block',
+          'delta' => '20',
+          'region' => 'above_footer',
+          'weight' => '-10',
+        ),
         'views-projects-block_variant' => array(
           'module' => 'views',
           'delta' => 'projects-block_variant',
           'region' => 'above_footer',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'block-12' => array(
           'module' => 'block',
           'delta' => '12',
           'region' => 'above_footer',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'block-14' => array(
           'module' => 'block',
           'delta' => '14',
           'region' => 'above_footer',
-          'weight' => '-8',
+          'weight' => '-7',
         ),
       ),
     ),

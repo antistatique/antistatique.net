@@ -22,7 +22,7 @@ function antistatique_project_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Nos derniers projets';
+  $handler->display->display_options['title'] = 'Our last projects';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'Tous nos projets';
@@ -293,7 +293,7 @@ function antistatique_project_views_default_views() {
   $handler->display->display_options['block_caching'] = '8';
   $translatables['projects'] = array(
     t('Master'),
-    t('Nos derniers projets'),
+    t('Our last projects'),
     t('Tous nos projets'),
     t('Apply'),
     t('Reset'),
@@ -304,8 +304,8 @@ function antistatique_project_views_default_views() {
     t('more'),
     t('All Projects'),
     t('Featured Projects - link to /work'),
-    t('Et bien sûr notre travail!'),
-    t('Découvrez comment nous travaillons'),
+    t('And of course our work!'),
+    t('Discover how we work'),
     t('Our Work - link to /work'),
     t('Other Projects'),
     t('Other projects'),

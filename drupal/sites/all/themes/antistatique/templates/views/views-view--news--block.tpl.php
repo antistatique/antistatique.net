@@ -62,7 +62,7 @@ $term = menu_get_object('taxonomy_term', 2);
 
       <?php if ($display_id == 'block_10cols' || $display_id == 'block_taxonomy' || $display_id == 'block_all'): ?>
         <div class="row">
-          <div class="<?php print $display_id == 'block_10cols' ? 'col-md-offset-1 col-md-10' : 'col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6' ;?>">
+          <div class="<?php print $display_id == 'block_10cols' ? 'col-md-offset-1 col-md-10' : 'col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8' ;?>">
       <?php endif ?>
 
       <?php print $rows; ?>

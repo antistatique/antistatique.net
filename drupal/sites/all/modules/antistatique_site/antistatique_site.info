@@ -185,6 +185,7 @@ features[field_instance][] = paragraphs_item-image_text-field_body
 features[field_instance][] = paragraphs_item-image_text-field_browser
 features[field_instance][] = paragraphs_item-image_text-field_device
 features[field_instance][] = paragraphs_item-image_text-field_image
+features[field_instance][] = paragraphs_item-image_text-field_landscape
 features[field_instance][] = paragraphs_item-image_wide-field_wide_images
 features[field_instance][] = paragraphs_item-quote-field_body
 features[field_instance][] = paragraphs_item-quote-field_quote_author

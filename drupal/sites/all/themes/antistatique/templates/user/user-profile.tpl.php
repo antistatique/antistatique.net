@@ -35,6 +35,7 @@
  */
 $account = menu_get_object('user');
 $is_working = $user_profile['field_teammate_currently_working'][0]['#markup'];
+$winner = $user_profile['field_pingpong_ranking'][0]['#markup'] == 1;
 hide($user_profile['field_teammate_currently_working']);
 ?>
 <div id="user-<?php print $account->uid; ?>" class="profile profile-full bg-foggy"<?php print $attributes; ?>>
@@ -51,7 +52,7 @@ hide($user_profile['field_teammate_currently_working']);
         <header>
           <div class="spacer spacer-sm visible-xs"></div>
           <div class="team-tiny">
-            <div class="team-avatar">
+            <div class="team-avatar <?php if ($winner) print 'winner'; ?>">
               <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print $user_profile['field_firstname'][0]['#markup']; ?>" class="img-circle img-responsive">
               <h2 class="h6 text-md"><?php print render($user_profile['field_teammate_job_title']) ?></h2>
             </div>
