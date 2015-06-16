@@ -56,13 +56,13 @@ DirectoryIndex index.php index.html index.htm
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
-  Redirect /fr/team /fr/nous
-  Redirect /fr/portfolio /fr/nous/travaillons
-  Redirect /fr/job /fr/nous/embauchons
-  Redirect /fr/job/web-developer-drupal /fr/nous/embauchons
-  Redirect /en/job/web-developer-drupal /en/we/are-hiring
+  Redirect 301 /fr/team /fr/nous
+  Redirect 301 /fr/portfolio /fr/nous/travaillons
+  Redirect 301 /fr/job /fr/nous/embauchons
+  Redirect 301 /fr/job/web-developer-drupal /fr/nous/embauchons
+  Redirect 301 /en/job/web-developer-drupal /en/we/are-hiring
 
-  Redirect /fr/portfolio/uchitomi /fr/nous/travaillons/avec/uchitomi
+  Redirect 301 /fr/portfolio/uchitomi /fr/nous/travaillons/avec/uchitomi
 
 
   # Redirect Wordpress content to new places
