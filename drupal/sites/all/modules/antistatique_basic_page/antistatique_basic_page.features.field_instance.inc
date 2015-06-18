@@ -203,7 +203,7 @@ function antistatique_basic_page_field_default_field_instances() {
     'label' => 'images',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'large-page',
@@ -514,7 +514,7 @@ function antistatique_basic_page_field_default_field_instances() {
     'label' => 'hero-image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'hero-page',

@@ -301,7 +301,7 @@ function antistatique_article_field_default_field_instances() {
     'label' => 'Images',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'large-article',
@@ -316,17 +316,6 @@ function antistatique_article_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 0,
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 1,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -351,8 +340,17 @@ function antistatique_article_field_default_field_instances() {
           'image_large_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
           'image_large_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_medium' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_project_thumbnail' => 0,
           'image_square_thumbnail' => 0,
+          'image_square_thumbnail__max_100x100_' => 0,
           'image_thumbnail' => 0,
+          'image_wide_image' => 0,
+          'image_wide_thumbnail' => 0,
           'link' => 0,
         ),
         'insert_width' => '',
@@ -463,7 +461,6 @@ function antistatique_article_field_default_field_instances() {
   // Exported field_instance: 'node-article-field_teammate_hero_image'
   $field_instances['node-article-field_teammate_hero_image'] = array(
     'bundle' => 'article',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.',
     'display' => array(
@@ -523,7 +520,7 @@ function antistatique_article_field_default_field_instances() {
     'label' => 'Hero-image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'hero-article',
@@ -538,17 +535,6 @@ function antistatique_article_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 0,
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -580,6 +566,7 @@ function antistatique_article_field_default_field_instances() {
           'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_project_thumbnail' => 0,
           'image_square_thumbnail' => 0,
+          'image_square_thumbnail__max_100x100_' => 0,
           'image_thumbnail' => 0,
           'image_wide_image' => 0,
           'image_wide_thumbnail' => 0,

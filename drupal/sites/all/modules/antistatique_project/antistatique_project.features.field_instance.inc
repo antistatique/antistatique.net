@@ -246,7 +246,7 @@ function antistatique_project_field_default_field_instances() {
     'label' => 'Images',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'large-project',
@@ -725,7 +725,7 @@ function antistatique_project_field_default_field_instances() {
     'label' => 'Testimonial Avatar',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'project-testimonial-avatar',
@@ -950,7 +950,7 @@ function antistatique_project_field_default_field_instances() {
     'label' => 'Tile image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'project-tile',

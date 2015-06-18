@@ -143,7 +143,7 @@ The fourth image should be <b>640x640</b>.',
     'label' => 'Four Images',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'user-four-images',

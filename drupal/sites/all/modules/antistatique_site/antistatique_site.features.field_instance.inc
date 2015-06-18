@@ -304,7 +304,7 @@ function antistatique_site_field_default_field_instances() {
     'label' => 'Image',
     'required' => 1,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'paragraph-image_aside',
@@ -556,7 +556,7 @@ function antistatique_site_field_default_field_instances() {
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'paragraph-image-foggy',
@@ -893,7 +893,7 @@ function antistatique_site_field_default_field_instances() {
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'paragraph-image-text',
@@ -1017,7 +1017,7 @@ function antistatique_site_field_default_field_instances() {
     'label' => 'Wide Image(s)',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'paragraph-image-wide',
