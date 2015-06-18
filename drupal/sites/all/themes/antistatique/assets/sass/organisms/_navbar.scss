@@ -34,12 +34,6 @@
     margin: 5px 0 20px 0;
     position: static;
   }
-  @media only screen and (min-width: $screen-sm-min) {
-    border-bottom: 1px solid rgba($midnight-blue, 0.25);
-    .dark-hero & {
-      border-bottom-color: rgba($white, 0.25);
-    }
-  }
 }
 
 .navbar-nav > li > a {
