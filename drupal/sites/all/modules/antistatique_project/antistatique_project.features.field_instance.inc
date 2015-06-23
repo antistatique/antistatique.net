@@ -506,8 +506,8 @@ function antistatique_project_field_default_field_instances() {
     'label' => 'SVG Title',
     'required' => 0,
     'settings' => array(
-      'description_field' => 0,
-      'entity_translation_sync' => FALSE,
+      'description_field' => 1,
+      'entity_translation_sync' => 0,
       'file_directory' => 'project-svg',
       'file_extensions' => 'svg',
       'max_filesize' => '2 MB',

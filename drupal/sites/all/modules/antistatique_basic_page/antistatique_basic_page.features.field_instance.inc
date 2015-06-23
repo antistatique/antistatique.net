@@ -414,7 +414,7 @@ function antistatique_basic_page_field_default_field_instances() {
     'label' => 'SVG Title',
     'required' => 0,
     'settings' => array(
-      'description_field' => 0,
+      'description_field' => 1,
       'entity_translation_sync' => 0,
       'file_directory' => 'page-svg',
       'file_extensions' => 'svg',
