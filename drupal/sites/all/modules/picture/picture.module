@@ -50,7 +50,7 @@ function picture_flush_caches() {
   // After update.php, caches are flushed. Check if file_entity has updated to
   // version 2.
   module_load_include('admin.inc', 'picture');
-  _picture_update_to_file_entity_2();
+  variable_set('picture_updated_to_file_entity_2', _picture_update_to_file_entity_2());
 }
 
 /**
@@ -131,7 +131,7 @@ function picture_library() {
     case 'min':
       $libraries['picturefill_head'] = array(
         'title' => t('Picturefill head fix'),
-        'version' => '2.1.0',
+        'version' => '2.3.1',
         'js' => array(
           'document.createElement( "picture" );' => array(
             'type' => 'inline',
@@ -146,7 +146,7 @@ function picture_library() {
       $libraries['picturefill'] = array(
         'title' => t('Picturefill'),
         'website' => 'https://github.com/scottjehl/picturefill',
-        'version' => '2.0',
+        'version' => '2.3.1',
         'js' => array(
           drupal_get_path('module', 'picture') . '/picturefill2/picturefill.min.js' => array(
             'type' => 'file',
@@ -178,7 +178,7 @@ function picture_library() {
     case 'dev':
       $libraries['picturefill_head'] = array(
         'title' => t('Picturefill head fix'),
-        'version' => '2.0',
+        'version' => '2.3.1',
         'js' => array(
           'document.createElement( "picture" );' => array(
             'type' => 'inline',
@@ -193,7 +193,7 @@ function picture_library() {
       $libraries['picturefill'] = array(
         'title' => t('Picturefill'),
         'website' => 'https://github.com/scottjehl/picturefill',
-        'version' => '2.0',
+        'version' => '2.3.1',
         'js' => array(
           drupal_get_path('module', 'picture') . '/picturefill2/picturefill.js' => array(
             'type' => 'file',
@@ -254,6 +254,7 @@ function picture_theme() {
         'title' => NULL,
         'attributes' => array(),
         'breakpoints' => array(),
+        'timestamp' => NULL,
       ),
     ),
     'picture_formatter' => array(
@@ -1036,11 +1037,13 @@ function theme_picture_formatter($variables) {
     '#breakpoints' => $variables['breakpoints'],
     '#uri' => $item['uri'],
     '#alt' => isset($item['alt']) ? $item['alt'] : '',
+    '#attributes' => isset($item['attributes']) ? $item['attributes'] : NULL,
+    '#timestamp' => $item['timestamp'],
   );
   if (isset($item['title']) && drupal_strlen($item['title']) != 0) {
     $responsive_image['#title'] = $item['title'];
   }
-  if (isset($variables['path']['path'])) {
+  if (is_array($variables['path']) && isset($variables['path']['path'])) {
     $path = $variables['path']['path'];
     $options = isset($variables['path']['options']) ? $variables['path']['options'] : array();
     $options['html'] = TRUE;
@@ -1195,7 +1198,7 @@ function theme_picture(array $variables) {
               // $derivative_mime_type = $mime_type;
               // $image_style->transformMimeType($derivative_mime_type);
               // $derivative_mime_types[] = $derivative_mime_type;
-              $srcset[$dimensions_clone['width']] = _picture_image_style_url($image_style_name, $variables['uri']) . ' ' . $dimensions_clone['width'] . 'w';
+              $srcset[$dimensions_clone['width']] = _picture_image_style_url($image_style_name, $variables['uri'], $variables['timestamp']) . ' ' . $dimensions_clone['width'] . 'w';
               $sizes = array_merge(explode(',', $mapping_definition['sizes']), $sizes);
             }
             break;
@@ -1205,7 +1208,7 @@ function theme_picture(array $variables) {
             // $derivative_mime_type = $mime_type;
             // $image_style->transformMimeType($derivative_mime_type);
             // $derivative_mime_types[] = $derivative_mime_type;
-            $srcset[$multiplier] = _picture_image_style_url($mapping_definition['image_style'], $variables['uri']) . ' ' . $multiplier;
+            $srcset[$multiplier] = _picture_image_style_url($mapping_definition['image_style'], $variables['uri'], $variables['timestamp']) . ' ' . $multiplier;
             break;
         }
       }
@@ -1246,39 +1249,51 @@ function theme_picture(array $variables) {
     $output[] = '<!--[if IE 9]><video style="display: none;"><![endif]-->';
     $output = array_merge($output, array_map('drupal_render', $sources));
     $output[] = '<!--[if IE 9]></video><![endif]-->';
-    $src = _picture_image_style_url($variables['style_name'], $variables['uri']);
+    $src = _picture_image_style_url($variables['style_name'], $variables['uri'], $variables['timestamp']);
 
-    // Fallback image for < IE9.
-    $min_ie9_fallback = array(
-      '#theme' => 'image',
-      '#path' => $src,
-      '#alt' => isset($attributes['alt']) ? $attributes['alt'] : '',
-      '#title' => isset($attributes['title']) ? $attributes['title'] : '',
-      '#attributes' => array_diff_key($attributes, array('alt' => '', 'title' => '')),
-    );
-    $output[] = '<!--[if lt IE 9]>';
-    $output[] = drupal_render($min_ie9_fallback);
-    $output[] = '<![endif]-->';
-
-    // Fallback image for > IE8.
-    $srcset = array(
-      'uri' => $src,
-    );
-    $dimensions_clone = $dimensions;
-    picture_get_image_dimensions($variables['style_name'], $dimensions_clone);
-    if (!empty($dimensions_clone['width'])) {
-      $srcset['width'] = $dimensions_clone['width'] . 'w';
+    if (variable_get('picture_fallback_method', 'src') === 'src') {
+      $min_ie9_fallback = array(
+        '#theme' => 'image_srcset',
+        '#uri' => $src,
+        '#alt' => isset($attributes['alt']) ? $attributes['alt'] : '',
+        '#title' => isset($attributes['title']) ? $attributes['title'] : '',
+        '#attributes' => array_diff_key($attributes, array('alt' => '', 'title' => '')),
+      );
+      $output[] = drupal_render($min_ie9_fallback);
     }
-    $plus_ie8_fallback = array(
-      '#theme' => 'image_srcset',
-      '#srcset' => array($srcset),
-      '#alt' => isset($attributes['alt']) ? $attributes['alt'] : '',
-      '#title' => isset($attributes['title']) ? $attributes['title'] : '',
-      '#attributes' => array_diff_key($attributes, array('alt' => '', 'title' => '')),
-    );
-    $output[] = '<!--[if !lt IE 9]><!-->';
-    $output[] = drupal_render($plus_ie8_fallback);
-    $output[] = '<!-- <![endif]-->';
+    else {
+      // Fallback image for < IE9.
+      $min_ie9_fallback = array(
+        '#theme' => 'image_srcset',
+        '#uri' => $src,
+        '#alt' => isset($attributes['alt']) ? $attributes['alt'] : '',
+        '#title' => isset($attributes['title']) ? $attributes['title'] : '',
+        '#attributes' => array_diff_key($attributes, array('alt' => '', 'title' => '')),
+      );
+      $output[] = '<!--[if lt IE 9]>';
+      $output[] = drupal_render($min_ie9_fallback);
+      $output[] = '<![endif]-->';
+
+      // Fallback image for > IE8.
+      $srcset = array(
+        'uri' => $src,
+      );
+      $dimensions_clone = $dimensions;
+      picture_get_image_dimensions($variables['style_name'], $dimensions_clone);
+      if (!empty($dimensions_clone['width'])) {
+        $srcset['width'] = $dimensions_clone['width'] . 'w';
+      }
+      $plus_ie8_fallback = array(
+        '#theme' => 'image_srcset',
+        '#srcset' => array($srcset),
+        '#alt' => isset($attributes['alt']) ? $attributes['alt'] : '',
+        '#title' => isset($attributes['title']) ? $attributes['title'] : '',
+        '#attributes' => array_diff_key($attributes, array('alt' => '', 'title' => '')),
+      );
+      $output[] = '<!--[if !lt IE 9]><!-->';
+      $output[] = drupal_render($plus_ie8_fallback);
+      $output[] = '<!-- <![endif]-->';
+    }
 
     $output[] = '</picture>';
 
@@ -1312,7 +1327,14 @@ function theme_picture(array $variables) {
  *   - attributes: Associative array of attributes to be placed in the img tag.
  */
 function theme_image_srcset(array $variables) {
+  // Sizes is mandatory, so make sure the key is set, default is 100vw.
+  if (!isset($variables['sizes']) || empty($variables['sizes'])) {
+    $attributes['sizes'] = '100vw';
+  }
+
+  // Make sure we have an array.
   $attributes = isset($variables['attributes']) ? $variables['attributes'] : array();
+
   if (isset($variables['uri']) && !empty($variables['uri'])) {
     // TODO: remove when https://www.drupal.org/node/1342504 is fixed.
     if (strpos($variables['uri'], 'data:') === 0) {
@@ -1350,7 +1372,6 @@ function theme_image_srcset(array $variables) {
     $attributes['srcset'] = implode(', ', $srcsets);
   }
   foreach (array('width', 'height', 'alt', 'title', 'sizes') as $key) {
-
     if (isset($variables[$key])) {
       $attributes[$key] = $variables[$key];
     }
@@ -1720,14 +1741,21 @@ function picture_ckeditor_plugin() {
 /**
  * Wrapper around image_style_url() so we can return an empty image.
  */
-function _picture_image_style_url($style_name, $path) {
+function _picture_image_style_url($style_name, $path, $timestamp = NULL) {
   if ($style_name == PICTURE_EMPTY_IMAGE) {
     return 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
   }
   if ($style_name == PICTURE_ORIGINAL_IMAGE) {
-    return file_create_url($path);
+    $url = file_create_url($path);
   }
-  return image_style_url($style_name, $path);
+  else {
+    $url = image_style_url($style_name, $path);
+  }
+
+  if (!empty($timestamp)) {
+    $url .= (strpos($url, '?') !== FALSE ? '&' : '?') . drupal_http_build_query(array('timestamp' => $timestamp));
+  }
+  return $url;
 }
 
 /**
@@ -1838,6 +1866,9 @@ function picture_link_types($instance) {
  * Picture mapping factory.
  */
 function picture_mapping_object_factory($schema, $data) {
+  if (!class_exists('PictureMapping')) {
+    module_load_include('php', 'picture', 'includes/PictureMapping');
+  }
   $mapping = new PictureMapping();
   $mapping->setValues($schema, $data);
   return $mapping;

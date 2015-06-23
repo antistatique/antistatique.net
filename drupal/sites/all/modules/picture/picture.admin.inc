@@ -209,7 +209,9 @@ function picture_admin_settings() {
       );
       $form[$machine_name]['css'] = array(
         '#type' => 'item',
-        '#markup' => 'Consider using the selector <code>span[data-picture-mapping="' . $machine_name . '"]</code> in your theme CSS.',
+        '#markup' => t('Consider using the selector <code>span[data-picture-mapping="@machine_name"]</code> in your theme CSS.', array(
+          '@machine_name' => $machine_name,
+        )),
       );
       $form[$machine_name]['weight'] = array(
         '#type' => 'select',
@@ -269,6 +271,17 @@ function picture_admin_settings() {
     '#default_value' => variable_get('picture_polyfill_version', 'min'),
   );
 
+  $form['picture_fallback_method'] = array(
+    '#title' => t('Picture fallback method'),
+    '#description' => t('Use the fallback method, the defualt is to use srcset since it avoids double downloads, but src is the right method and will also work if the browser does not support javascript.'),
+    '#type' => 'radios',
+    '#options' => array(
+      'src' => t('src fallback'),
+      'srcset' => t('srcset fallback'),
+    ),
+    '#default_value' => variable_get('picture_fallback_method', 'srcset'),
+  );
+
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => 'Save',
@@ -322,6 +335,7 @@ function picture_admin_settings_submit($form, &$form_state) {
 
   variable_set('picture_js_scope', $form_state['values']['picture_js_scope']);
   variable_set('picture_polyfill_version', $form_state['values']['picture_polyfill_version']);
+  variable_set('picture_fallback_method', $form_state['values']['picture_fallback_method']);
   drupal_set_message(t('Your settings have been saved'));
 }
 
