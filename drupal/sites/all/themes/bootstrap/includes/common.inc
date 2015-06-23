@@ -1243,20 +1243,3 @@ function _bootstrap_is_simple_string($string, $length = 250, $allowed_tags = NUL
   }
   return $strings[$string];
 }
-
-/**
- * Allows sub-themes to alter the array used for colorizing text.
- *
- * @param array $texts
- *   An associative array containing the text and classes to be matched, passed
- *   by reference.
- *
- * @see _bootstrap_colorize_text()
- */
-function antistatique_bootstrap_colorize_text_alter(&$texts) {
-  // This matches the exact string: "My Unique Button Text".
-  $texts['matches'][t('Send')] = 'primary';
-
-  // Remove matching for strings that contain "apply":
-  unset($texts['contains'][t('Apply')]);
-}

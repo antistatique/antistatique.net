@@ -139,8 +139,29 @@ function bootstrap_bootstrap_cdn_provider_jsdelivr_alter(&$provider, $request = 
     $json = drupal_json_decode($request->data);
   }
 
-  // The request or parsing of the JSON data failed, provide defaults.
-  if ($request->code !== '200' || !$json) {
+  // Expected library names from jsDelivr API v1. Must use "twitter-bootstrap"
+  // instead of "bootstrap" (which is just a folder alias).
+  // @see https://www.drupal.org/node/2504343
+  // @see https://github.com/jsdelivr/api/issues/94
+  $bootstrap = 'twitter-bootstrap';
+  $bootswatch = 'bootswatch';
+
+  // Extract the raw asset files from the JSON data for each framework.
+  $libraries = array();
+  if ($json) {
+    foreach ($json as $data) {
+      if ($data['name'] === $bootstrap || $data['name'] === $bootswatch) {
+        foreach ($data['assets'] as $asset) {
+          if (preg_match('/^' . BOOTSTRAP_VERSION_MAJOR . '\.\d\.\d$/', $asset['version'])) {
+            $libraries[$data['name']][$asset['version']] = $asset['files'];
+          }
+        }
+      }
+    }
+  }
+
+  // If the main bootstrap library could not be found, then provide defaults.
+  if (!isset($libraries[$bootstrap])) {
     $provider['error'] = TRUE;
     $provider['versions'][BOOTSTRAP_VERSION] = BOOTSTRAP_VERSION;
     $provider['themes'][BOOTSTRAP_VERSION] = array(
@@ -157,21 +178,8 @@ function bootstrap_bootstrap_cdn_provider_jsdelivr_alter(&$provider, $request = 
     return;
   }
 
-  // Extract the raw asset files from the JSON data for each framework.
-  $bootstrap = array();
-  $bootswatch = array();
-  foreach ($json as $data) {
-    if ($data['name'] === 'bootswatch' || $data['name'] === 'bootstrap') {
-      foreach ($data['assets'] as $asset) {
-        if (preg_match('/^' . BOOTSTRAP_VERSION_MAJOR . '\.\d\.\d$/', $asset['version'])) {
-          ${$data['name']}[$asset['version']] = $asset['files'];
-        }
-      }
-    }
-  }
-
   // Populate the provider array with the versions and themes available.
-  foreach (array_keys($bootstrap) as $version) {
+  foreach (array_keys($libraries[$bootstrap]) as $version) {
     $provider['versions'][$version] = $version;
 
     if (!isset($provider['themes'][$version])) {
@@ -179,11 +187,11 @@ function bootstrap_bootstrap_cdn_provider_jsdelivr_alter(&$provider, $request = 
     }
 
     // Extract Bootstrap themes.
-    $provider['themes'][$version] = drupal_array_merge_deep($provider['themes'][$version], _bootstrap_cdn_provider_jsdelivr_extract_themes($bootstrap[$version], "//cdn.jsdelivr.net/bootstrap/$version"));
+    $provider['themes'][$version] = drupal_array_merge_deep($provider['themes'][$version], _bootstrap_cdn_provider_jsdelivr_extract_themes($libraries[$bootstrap][$version], "//cdn.jsdelivr.net/bootstrap/$version"));
 
     // Extract Bootswatch themes.
-    if (isset($bootswatch[$version])) {
-      $provider['themes'][$version] = drupal_array_merge_deep($provider['themes'][$version], _bootstrap_cdn_provider_jsdelivr_extract_themes($bootswatch[$version], "//cdn.jsdelivr.net/bootswatch/$version"));
+    if (isset($libraries[$bootswatch][$version])) {
+      $provider['themes'][$version] = drupal_array_merge_deep($provider['themes'][$version], _bootstrap_cdn_provider_jsdelivr_extract_themes($libraries[$bootswatch][$version], "//cdn.jsdelivr.net/bootswatch/$version"));
     }
   }
 
@@ -299,8 +307,9 @@ function bootstrap_bootstrap_cdn_provider_custom_assets_alter(&$provider, $theme
  * @todo Create documentation when hook is real.
  */
 function bootstrap_bootstrap_cdn_provider_jsdelivr_assets_alter(&$provider, $theme = NULL) {
-  $version = bootstrap_setting('cdn_jsdelivr_version', $theme);
-  $theme = bootstrap_setting('cdn_jsdelivr_theme', $theme);
+  $error = !empty($provider['error']);
+  $version = $error ? BOOTSTRAP_VERSION : bootstrap_setting('cdn_jsdelivr_version', $theme);
+  $theme = $error ? 'bootstrap' : bootstrap_setting('cdn_jsdelivr_theme', $theme);
   if (isset($provider['themes'][$version][$theme])) {
     $provider = drupal_array_merge_deep($provider, $provider['themes'][$version][$theme]);
   }
