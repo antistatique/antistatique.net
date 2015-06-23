@@ -1,0 +1,41 @@
+styleguide_name: Antistatique
+
+# Directory to parse
+source: drupal/sites/all/themes/antistatique/assets
+
+# Directory to build the styleguide
+destination: styleguide
+
+# Hologram theme
+documentation_assets: bower_components/cortana-two
+custom_markdown: bower_components/cortana-two/CustomMarkdownRenderer.rb
+
+# To have a custom index page build with your README.md
+index: README
+
+dependencies:
+  - bower_components/jquery/dist/
+  - drupal/sites/all/themes/antistatique/build/js
+  - drupal/sites/all/themes/antistatique/build/css
+  - drupal/sites/all/themes/antistatique/build/img
+  - drupal/sites/all/themes/antistatique/build/svg
+  - drupal/sites/all/themes/antistatique/build/fonts
+
+# List all css to include for the styleguide render examples (path from styleguide directory)
+css_include:
+  - 'css/main.css'
+  - 'css/styleguide.css'
+
+# List all custom tags you want to appear in the <head> section of the
+head_tags:
+  - '<script src="//use.typekit.net/lfl3jyz.js"></script>'
+  - '<script>try{Typekit.load();}catch(e){}</script>'
+
+# List all js to include for the styleguide render examples (path from styleguide directory)
+js_include:
+  - 'dist/jquery.min.js'
+  - 'js/vendors.min.js'
+  - 'js/main.js'
+
+# String who is used to split the category name and create category wrapper
+name_scope: ' - '
