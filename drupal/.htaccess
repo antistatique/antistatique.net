@@ -56,42 +56,6 @@ DirectoryIndex index.php index.html index.htm
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
-  RewriteCond %{HTTP_HOST} ^staging\.(.+)$ [NC]
-  RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
-
-  Redirect 301 /fr/portfolio/tennislausanne /fr/nous/travaillons/avec/tennis-club-stade-lausanne
-  RedirectMatch 301 /fr/portfolio/(.*) /fr/nous/travaillons/avec/$1
-  RedirectMatch 301 /en/portfolio/(.*) /en/we/work/with/$1
-
-  # Blog authors
-  Redirect 301 /blog/author/gde /fr/meet/gilles
-  Redirect 301 /blog/author/nsu /fr/meet/noemie
-  Redirect 301 /blog/author/ygn /fr/meet/yann
-  Redirect 301 /blog/author/smi /fr/meet/sepehr
-  Redirect 301 /blog/author/admin /fr/meet/marc
-  RedirectMatch 301 /blog/author/(.*) /fr/meet/$1
-
-  Redirect 301 /blog /fr/nous/bloggons
-
-  Redirect 301 /fr/team /fr/nous
-  Redirect 301 /en/team /en/we
-  Redirect 301 /fr/portfolio /fr/nous/travaillons
-  Redirect 301 /en/portfolio /en/we/work
-  Redirect 301 /fr/job /fr/nous/embauchons
-  Redirect 301 /en/job /en/we/are-hiring
-  Redirect 301 /fr/job/web-developer-drupal /fr/nous/embauchons
-  Redirect 301 /en/job/web-developer-drupal /en/we/are-hiring
-  Redirect 301 /en/contact /en/we/work/with/you
-  Redirect 301 /fr/contact /fr/nous/travaillons/avec/vous
-
-  # Redirect Wordpress content to new places
-  RedirectMatch "/blog/wp-content/uploads/(.*)" /sites/default/files/wordpress/uploads/$1
-
-  # Redirect old Wordpress blogpost to new one
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^blog/(.+) /redirect_blog.php [L]
-
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
