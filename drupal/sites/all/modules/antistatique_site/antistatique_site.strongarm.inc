@@ -62,6 +62,10 @@ function antistatique_site_strongarm() {
       0 => 'taxonomy_term_data',
       1 => 'tid',
     ),
+    'flagging' => array(
+      0 => 'flagging',
+      1 => 'flagging_id',
+    ),
     'i18n_translation' => array(
       0 => 'i18n_translation_set',
       1 => 'tsid',

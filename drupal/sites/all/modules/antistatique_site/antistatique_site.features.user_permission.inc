@@ -16,6 +16,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'admin_menu',
   );
@@ -26,6 +27,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'system',
   );
@@ -85,6 +87,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'node',
   );
@@ -94,6 +97,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'access dashboard',
     'roles' => array(
       'administrator' => 'administrator',
+      'translator' => 'translator',
     ),
     'module' => 'dashboard',
   );
@@ -174,6 +178,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'system',
   );
@@ -360,6 +365,15 @@ function antistatique_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'administer flags'.
+  $permissions['administer flags'] = array(
+    'name' => 'administer flags',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'flag',
   );
 
   // Exported permission: 'administer image styles'.
@@ -976,6 +990,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'node',
   );
@@ -986,6 +1001,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'node',
   );
@@ -1065,6 +1081,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'edit terms in category',
     'roles' => array(
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'taxonomy',
   );
@@ -1081,6 +1098,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'edit terms in skills',
     'roles' => array(
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'taxonomy',
   );
@@ -1103,12 +1121,24 @@ function antistatique_site_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
+  // Exported permission: 'flag ready_for_translation'.
+  $permissions['flag ready_for_translation'] = array(
+    'name' => 'flag ready_for_translation',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+      'translator' => 'translator',
+    ),
+    'module' => 'flag',
+  );
+
   // Exported permission: 'flush caches'.
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'admin_menu',
   );
@@ -1320,6 +1350,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'i18n_string',
   );
@@ -1330,6 +1361,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'entity_translation',
   );
@@ -1340,6 +1372,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'locale',
   );
@@ -1350,6 +1383,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'entity_translation',
   );
@@ -1360,6 +1394,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'entity_translation',
   );
@@ -1370,6 +1405,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'entity_translation',
   );
@@ -1380,8 +1416,20 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'i18n_string',
+  );
+
+  // Exported permission: 'unflag ready_for_translation'.
+  $permissions['unflag ready_for_translation'] = array(
+    'name' => 'unflag ready_for_translation',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+      'translator' => 'translator',
+    ),
+    'module' => 'flag',
   );
 
   // Exported permission: 'use advanced search'.
@@ -1401,6 +1449,15 @@ function antistatique_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'ctools',
+  );
+
+  // Exported permission: 'use flag import'.
+  $permissions['use flag import'] = array(
+    'name' => 'use flag import',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'flag',
   );
 
   // Exported permission: 'use page manager'.
@@ -1439,6 +1496,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'filter',
   );
@@ -1459,6 +1517,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'view any unpublished article content',
     'roles' => array(
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'view_unpublished',
   );
@@ -1469,6 +1528,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'view_unpublished',
   );
@@ -1478,6 +1538,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'view any unpublished page content',
     'roles' => array(
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'view_unpublished',
   );
@@ -1487,6 +1548,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'view any unpublished project content',
     'roles' => array(
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'view_unpublished',
   );
@@ -1529,6 +1591,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'node',
   );
@@ -1559,6 +1622,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'system',
   );
