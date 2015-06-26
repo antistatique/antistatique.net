@@ -55,6 +55,9 @@ function antistatique_basic_page_strongarm() {
         'metatags' => array(
           'weight' => '6',
         ),
+        'xmlsitemap' => array(
+          'weight' => '5',
+        ),
       ),
       'display' => array(),
     ),
