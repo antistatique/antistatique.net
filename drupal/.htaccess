@@ -63,6 +63,9 @@ DirectoryIndex index.php index.html index.htm
   RedirectMatch 301 /fr/portfolio/(.*) /fr/nous/travaillons/avec/$1
   RedirectMatch 301 /en/portfolio/(.*) /en/we/work/with/$1
 
+  # Redirect Wordpress content to new places
+  RedirectMatch "/blog/wp-content/uploads/(.*)" /sites/default/files/wordpress/uploads/$1
+
   # Blog authors
   Redirect 301 /blog/author/gde /fr/meet/gilles
   Redirect 301 /blog/author/nsu /fr/meet/noemie
@@ -83,9 +86,6 @@ DirectoryIndex index.php index.html index.htm
   Redirect 301 /en/job/web-developer-drupal /en/we/are-hiring
   Redirect 301 /en/contact /en/we/work/with/you
   Redirect 301 /fr/contact /fr/nous/travaillons/avec/vous
-
-  # Redirect Wordpress content to new places
-  RedirectMatch "/blog/wp-content/uploads/(.*)" /sites/default/files/wordpress/uploads/$1
 
   # Redirect old Wordpress blogpost to new one
   RewriteCond %{REQUEST_FILENAME} !-f
