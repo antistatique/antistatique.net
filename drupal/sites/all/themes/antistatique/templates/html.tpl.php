@@ -78,6 +78,10 @@
   <meta name="msapplication-TileImage" content="/mstile-144x144.png">
   <meta name="theme-color" content="#ee2577">
 
+  <meta name="author" content="Antistatique">
+  <meta name="DC.Creator" content="Antistatique">
+  <meta name="copyright" content="© Antistatique, all rights reserved">
+  <meta name="DC.Rights" content="© Antistatique, all rights reserved">
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 
