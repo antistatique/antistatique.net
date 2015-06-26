@@ -367,15 +367,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: 'administer flags'.
-  $permissions['administer flags'] = array(
-    'name' => 'administer flags',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'flag',
-  );
-
   // Exported permission: 'administer image styles'.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
@@ -1121,17 +1112,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
-  // Exported permission: 'flag ready_for_translation'.
-  $permissions['flag ready_for_translation'] = array(
-    'name' => 'flag ready_for_translation',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-      'translator' => 'translator',
-    ),
-    'module' => 'flag',
-  );
-
   // Exported permission: 'flush caches'.
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
@@ -1421,17 +1401,6 @@ function antistatique_site_user_default_permissions() {
     'module' => 'i18n_string',
   );
 
-  // Exported permission: 'unflag ready_for_translation'.
-  $permissions['unflag ready_for_translation'] = array(
-    'name' => 'unflag ready_for_translation',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'collaborator' => 'collaborator',
-      'translator' => 'translator',
-    ),
-    'module' => 'flag',
-  );
-
   // Exported permission: 'use advanced search'.
   $permissions['use advanced search'] = array(
     'name' => 'use advanced search',
@@ -1449,15 +1418,6 @@ function antistatique_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'ctools',
-  );
-
-  // Exported permission: 'use flag import'.
-  $permissions['use flag import'] = array(
-    'name' => 'use flag import',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'flag',
   );
 
   // Exported permission: 'use page manager'.
