@@ -35,7 +35,6 @@ features[field_base][] = field_breadcrumb_tagline
 features[field_base][] = field_category
 features[field_base][] = field_hero_image
 features[field_base][] = field_images
-features[field_base][] = field_needs_translation
 features[field_base][] = field_section
 features[field_base][] = name_field
 features[field_base][] = title_field
