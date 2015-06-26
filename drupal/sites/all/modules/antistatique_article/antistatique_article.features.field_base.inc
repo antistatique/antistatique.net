@@ -70,6 +70,32 @@ function antistatique_article_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
+  // Exported field_base: 'field_needs_translation'
+  $field_bases['field_needs_translation'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_needs_translation',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_svg_title'
   $field_bases['field_svg_title'] = array(
     'active' => 1,

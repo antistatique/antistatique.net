@@ -146,8 +146,18 @@ function antistatique_article_strongarm() {
         'metatags' => array(
           'weight' => '6',
         ),
+        'xmlsitemap' => array(
+          'weight' => '5',
+        ),
       ),
-      'display' => array(),
+      'display' => array(
+        'disqus' => array(
+          'default' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__article'] = $strongarm;

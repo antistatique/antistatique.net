@@ -102,7 +102,7 @@ function antistatique_article_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'featured' => array(
         'label' => 'hidden',
@@ -161,7 +161,7 @@ function antistatique_article_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'featured' => array(
         'label' => 'hidden',
@@ -226,7 +226,7 @@ function antistatique_article_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_key',
-        'weight' => 7,
+        'weight' => 4,
       ),
       'featured' => array(
         'label' => 'hidden',
@@ -274,7 +274,7 @@ function antistatique_article_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 8,
       ),
       'featured' => array(
         'label' => 'hidden',
@@ -362,6 +362,62 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-article-field_needs_translation'
+  $field_instances['node-article-field_needs_translation'] = array(
+    'bundle' => 'article',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'This option indicates that this content is ready to be translated by the translator.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'small_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_needs_translation',
+    'label' => 'Ready for translation',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-article-field_svg_title'
   $field_instances['node-article-field_svg_title'] = array(
     'bundle' => 'article',
@@ -375,7 +431,7 @@ function antistatique_article_field_default_field_instances() {
           'file_view_mode' => 'default',
         ),
         'type' => 'file_rendered',
-        'weight' => 8,
+        'weight' => 5,
       ),
       'featured' => array(
         'label' => 'above',
@@ -592,7 +648,7 @@ function antistatique_article_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 9,
       ),
       'featured' => array(
         'label' => 'above',
@@ -645,7 +701,9 @@ function antistatique_article_field_default_field_instances() {
   t('Hero-image');
   t('Images');
   t('L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.');
+  t('Ready for translation');
   t('SVG Title');
+  t('This option indicates that this content is ready to be translated by the translator.');
   t('Tick if your hero image is dark (we\'ll set white text for the header)');
   t('Title');
 
