@@ -68,7 +68,8 @@ DirectoryIndex index.php index.html index.htm
 
   # Blog authors
   Redirect 301 /blog/author/gde /fr/meet/gilles
-  Redirect 301 /blog/author/nsu /fr/meet/noemie
+  Redirect 301 /blog/author/nsz /fr/meet/noemie
+  Redirect 301 /blog/author/agz /fr/meet/alberto
   Redirect 301 /blog/author/ygn /fr/meet/yann
   Redirect 301 /blog/author/smi /fr/meet/sepehr
   Redirect 301 /blog/author/admin /fr/meet/marc
