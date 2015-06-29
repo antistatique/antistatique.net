@@ -81,7 +81,7 @@ foreach($urls as $key => $section) {
     foreach($section as $url) {
         $url = 'http://' . $testDomain . $url;
         if (!checkUrl($url)) {
-            echo $url . ' is not redirected'."\n";
+            echo ' - [ ] ' . $url . "\n";
         }
     }
 }
