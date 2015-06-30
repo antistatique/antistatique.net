@@ -32,14 +32,16 @@ require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 // is not available to us.
 drupal_bootstrap(DRUPAL_BOOTSTRAP_DATABASE);
 
+$host = 'http://' . $_SERVER['HTTP_HOST'];
+
 if ($uri_map = db_query("SELECT destination_uri FROM migrate_blog_url WHERE source_uri = :source_uri", array(':source_uri' => $source_uri))->fetchObject()) {
 
-    $host = 'http://' . $_SERVER['HTTP_HOST'];
     $destination_uri = $host . $uri_map->destination_uri;
 
     header('Location: ' . $destination_uri, TRUE, 301);
 } else {
-  // Can't find the source URI. TODO: Make nice 404 page.
-  header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
-  print "Erreur 404. <a href='http://antistatique.net'>Retour a la page d'accueil</a>";
+  // Can't find the source URI. Let's guess we are lucky
+  $slug = substr($source_uri, 5); // remove '/blog' prefix
+  $destination_url = $host . '/fr/nous/bloggons' . $slug;
+  header('Location: ' . $destination_url, TRUE, 301);
 }
