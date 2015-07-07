@@ -63,7 +63,6 @@ features[variable][] = disqus_logo
 features[variable][] = disqus_nodetypes
 features[variable][] = disqus_sso
 features[variable][] = disqus_use_site_logo
-features[variable][] = disqus_useraccesstoken
 features[variable][] = disqus_weight
 features[variable][] = field_bundle_settings_node__article
 features[variable][] = language_content_type_article
