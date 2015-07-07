@@ -34,16 +34,16 @@ drupal_bootstrap(DRUPAL_BOOTSTRAP_DATABASE);
 
 $host = 'http://' . $_SERVER['HTTP_HOST'];
 
-$source_uri = rtrim($source_uri, '/') . '/';
+$source_uri_with_trailingslash = rtrim($source_uri, '/') . '/';
 
-if ($uri_map = db_query("SELECT destination_uri FROM migrate_blog_url WHERE source_uri = :source_uri", array(':source_uri' => $source_uri))->fetchObject()) {
+if ($uri_map = db_query("SELECT destination_uri FROM migrate_blog_url WHERE source_uri = :source_uri", array(':source_uri' => $source_uri_with_trailingslash))->fetchObject()) {
 
     $destination_uri = $host . $uri_map->destination_uri;
 
     header('Location: ' . $destination_uri, TRUE, 301);
 } else {
   // Can't find the source URI. Let's guess we are lucky
-  $slug = substr($source_uri, 5); // remove '/blog' prefix
+  $slug = rtrim(substr($source_uri, 5), '/'); // remove '/blog' prefix and remove trailing slash
   $destination_url = $host . '/fr/nous/bloggons' . $slug;
   header('Location: ' . $destination_url, TRUE, 301);
 }
