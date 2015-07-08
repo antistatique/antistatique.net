@@ -177,6 +177,12 @@ function antistatique_article_context_default_contexts() {
           'region' => 'page_above',
           'weight' => '-10',
         ),
+        'disqus-disqus_comments' => array(
+          'module' => 'disqus',
+          'delta' => 'disqus_comments',
+          'region' => 'content_below',
+          'weight' => '-10',
+        ),
       ),
     ),
   );

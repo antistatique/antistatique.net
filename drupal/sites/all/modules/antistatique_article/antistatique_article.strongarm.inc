@@ -67,6 +67,7 @@ function antistatique_article_strongarm() {
     'article' => 'article',
     'page' => 0,
     'project' => 0,
+    'webform' => 0,
   );
   $export['disqus_nodetypes'] = $strongarm;
 
@@ -76,13 +77,6 @@ function antistatique_article_strongarm() {
   $strongarm->name = 'disqus_sso';
   $strongarm->value = 0;
   $export['disqus_sso'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'disqus_useraccesstoken';
-  $strongarm->value = '';
-  $export['disqus_useraccesstoken'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
