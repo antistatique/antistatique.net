@@ -1,6 +1,9 @@
 CHANGELOG
 ---------
 
+## 1.0.0 (2015-07-08)
+ * Fix disqus migration
+
 ## 0.4.4 (2015-06-30)
  * Better fallback in the blogposts redirections
 
