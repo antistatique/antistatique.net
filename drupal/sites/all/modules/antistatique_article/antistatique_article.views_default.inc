@@ -252,6 +252,8 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '1';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '6';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« première page';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_responsive_grid_plugin_style';
   $handler->display->display_options['style_options']['item_per_row_xs'] = '1';
@@ -294,7 +296,7 @@ function antistatique_article_views_default_views() {
   /* Display: From the blog - 10cols */
   $handler = $view->new_display('block', 'From the blog - 10cols', 'block_10cols');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Live from our <a href="/en/we/blog">blog</a>';
+  $handler->display->display_options['title'] = 'En direct de notre <a href="/fr/nous/bloggons">blog</a>';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -321,6 +323,8 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '6';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« première page';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_responsive_grid_plugin_style';
   $handler->display->display_options['style_options']['item_per_row_xs'] = '1';
@@ -387,6 +391,8 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '6';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« première page';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_responsive_grid_plugin_style';
   $handler->display->display_options['style_options']['item_per_row_xs'] = '1';
@@ -450,18 +456,18 @@ function antistatique_article_views_default_views() {
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('« first'),
-    t('‹ previous'),
+    t('« première page'),
+    t('‹ précédent'),
     t('next ›'),
     t('last »'),
     t('All articles but first'),
     t('First article'),
     t('From the blog - 10cols'),
-    t('Live from our <a href="/en/we/blog">blog</a>'),
+    t('En direct de notre <a href="/fr/nous/bloggons">blog</a>'),
     t('Live from our blog - 10cols'),
     t('Category Articles'),
     t('Articles from user'),
-    t('View more'),
+    t('Voir plus'),
     t('All articles from user'),
     t('Go to the complete blog'),
     t('User entity referenced from field_co_author'),
