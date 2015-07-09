@@ -1,4 +1,4 @@
 set :branch,    "dev"
 set :deploy_to, "/home/antistatique/www/staging.antistatique.net"
 
-before "deploy:update", "staging:protect"
+after "deploy:update", "staging_env:protect"

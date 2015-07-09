@@ -18,9 +18,9 @@ namespace :assets do
   end
 end
 
-namespace :staging do
+namespace :staging_env do
   desc "Add HTTP basic AUTH"
   task :protect do
-    run "cat #{shared_path}/drupal/.htpasswd >> #{current_release}/drupal/.htaccess"
+    run "cat #{shared_path}/drupal/.htaccess.protect >> #{current_release}/drupal/.htaccess"
   end
 end
