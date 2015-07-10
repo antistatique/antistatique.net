@@ -95,6 +95,8 @@ DirectoryIndex index.php index.html index.htm
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^blog/(.+) /redirect_blog.php [L]
 
+  Redirect 301 /blog /fr/nous/bloggons
+
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
