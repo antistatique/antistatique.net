@@ -6,6 +6,7 @@ project = antistatique_article
 dependencies[] = antistatique_basic_page
 dependencies[] = disqus
 dependencies[] = field_group
+dependencies[] = file_entity
 dependencies[] = flippy
 dependencies[] = override_node_options
 dependencies[] = smart_trim
