@@ -94,6 +94,9 @@ if (!empty($content['field_testimonial_quote'])) {
   hide($content['field_testimonial_position']);
   hide($content['field_testimonial_avatar']);
 }
+if (!empty($content['flippy_pager'])) {
+  hide($content['flippy_pager']);
+}
 hide($content['field_year']);
 hide($content['field_links']);
 hide($content['field_credits']);
@@ -196,6 +199,11 @@ hide($content['field_hero_image_is_dark']);
           <?php endif; ?>
           <div class="spacer spacer-md"></div>
         <?php endif; ?>
+
+        <?php if (!empty($content['flippy_pager'])): ?>
+          <?php print render($content['flippy_pager']); ?>
+        <?php endif ?>
+
       </div>
     </div>
   </div>
