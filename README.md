@@ -2,6 +2,7 @@ Antistatique.net 2015
 =====================
 
 [![Stories in Ready](https://badge.waffle.io/antistatique/antistatique.net.png?label=ready&title=Ready)](http://waffle.io/antistatique/antistatique.net)
+[ ![Codeship Status for antistatique/antistatique.net](https://codeship.com/projects/c680f610-a626-0132-e064-7e6768721930/status?branch=dev)](https://codeship.com/projects/66926)
 
 Drupal 7 (yes, we tried with D8...)
 

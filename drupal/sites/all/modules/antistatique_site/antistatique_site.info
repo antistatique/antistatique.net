@@ -53,6 +53,7 @@ dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = file_entity
 dependencies[] = filter
+dependencies[] = flippy
 dependencies[] = googleanalytics
 dependencies[] = help
 dependencies[] = i18n
