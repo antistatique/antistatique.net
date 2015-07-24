@@ -46,7 +46,7 @@
  */
 
 ?>
-<div class="bg-image">
+<div id="contactus" class="bg-image">
   <div class="spacer spacer-md"></div>
   <div class="container">
     <div class="row">
