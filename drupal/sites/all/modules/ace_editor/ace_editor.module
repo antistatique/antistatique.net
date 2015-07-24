@@ -71,14 +71,17 @@ function ace_editor_add($content, $userSettings) {
 function ace_editor_form_alter(&$form, &$form_state, $form_id) {
 
 	if (isset($form['#node_edit_form']) && $form['#node_edit_form']
-		|| isset($form['module']) && $form['module']['#value'] == 'block') {
+		|| isset($form['module']) && $form['module']['#value'] == 'block'
+		// enable it for the taxonomy term description field
+		|| isset($form['description_field']) && isset($form['description_field'][$form['description_field']['#language']][0])) {
 			$formIdent = '';
 			if (isset($form['#node_edit_form']) && $form['#node_edit_form']) {
 				$formIdent = 'node_' . $form['nid']['#value'];
-			} else {
+			} else if(isset($form['module']['#value']) && $form['module']['#value'] == 'block') {
 				$formIdent = 'block_' . $form['delta']['#value'];
+			} else if(isset($form['description_field'])) {
+				$formIdent = 'edit-description-field-' . $form['description_field']['#language'] . '-0-value';
 			}
-			
 			// Add JavaScript to the form if the ace editor library is installed.
 			if (ace_editor_library_installed()) {
 				$form['ace_editor_identifier'] = array(
