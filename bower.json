@@ -8,6 +8,7 @@
     "font-awesome": "~4.3.0",
     "bootstrap-select": "1.6.4",
     "devices.css": "*",
-    "fabricator": "git@github.com:fbrctr/fabricator.git"
+    "fabricator": "git@github.com:fbrctr/fabricator.git",
+    "emojify.js": "~1.1.0"
   }
 }
