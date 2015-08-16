@@ -2,6 +2,13 @@
   aside {
     color: $text-muted;
     font-size: $font-size-small;
+    @media only screen and (min-width: $screen-lg-min) {
+      float: left;
+      width: 200px;
+      margin-left: -230px;
+      text-align: right;
+      margin-top: 0.1em;
+    }
     &:after {
       content: '';
       height: 0;
@@ -9,6 +16,9 @@
       width: 24px;
       margin-top: 15px;
       display: block;
+      @media only screen and (min-width: $screen-lg-min) {
+        margin-left: auto;
+      }
     }
   }
 }
