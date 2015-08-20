@@ -5,13 +5,11 @@
   }
 }
 
-.alert-success,
-.alert-danger {
-  a {
-    color: $white;
-    &:hover {
-      color: rgba(#000, .5);
-    }
+.alert .alert-link{
+  text-decoration: underline;
+  opacity: 0.8;
+  &:hover{
+    opacity: 1;
   }
 }
 
@@ -24,7 +22,8 @@
     margin-top: -25px;
     right: 15px;
     font-size: 40px;
-    opacity: .8;
+    opacity: .7;
+    color: $white;
     &:hover {
       opacity: 1;
     }
