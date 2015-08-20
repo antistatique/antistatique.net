@@ -1,6 +1,11 @@
 CHANGELOG
 ---------
 
+## 1.0.3 (2015-08-20)
+ * #284 adjust alert component design
+ * #176 add skills field in article content type
+ * #256 add emoji support
+
 ## 1.0.2 (2015-07-21)
  * Fix redirection /blog
  * Protect staging env
