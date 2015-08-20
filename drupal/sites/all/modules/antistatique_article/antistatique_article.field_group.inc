@@ -83,7 +83,8 @@ function antistatique_article_field_group_info() {
     'children' => array(
       0 => 'field_category',
       1 => 'field_co_author',
-      2 => 'path',
+      2 => 'field_skills',
+      3 => 'path',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
