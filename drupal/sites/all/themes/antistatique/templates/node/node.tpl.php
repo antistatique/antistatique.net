@@ -142,11 +142,11 @@ hide($content['field_hero_image_is_dark']);
     <div class="container">
 
       <div class="row">
-        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 content <?php if ($type == 'article'): ?>blog-content<?php endif ?>">
+        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 content <?php if ($type === 'article'): ?>blog-content<?php endif ?>">
           <?php print render($content['body']); ?>
           <div class="spacer spacer-md"></div>
         </div>
-        <?php if ($type = 'project'): ?>
+        <?php if ($type === 'project'): ?>
           <div class="col-sm-1 col-md-2 col-lg-3">
             <?php print render($content['field_links']); ?>
             <div class="spacer spacer-md"></div>
