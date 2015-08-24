@@ -1,12 +1,9 @@
-name = Metatag: Views
-description = Provides Metatag integration within the Views interface.
+name = Metatag:OpenGraph Products
+description = Provides additional Open Graph Protocol meta tags for describing products.
 package = SEO
 core = 7.x
-
 dependencies[] = metatag
-dependencies[] = views
-
-files[] = metatag_views_plugin_display_extender_metatags.inc
+dependencies[] = metatag_opengraph
 
 ; Information added by Drupal.org packaging script on 2015-07-24
 version = "7.x-1.7"
