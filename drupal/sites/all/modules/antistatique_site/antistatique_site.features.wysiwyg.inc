@@ -53,9 +53,11 @@ function antistatique_site_wysiwyg_default_profiles() {
       'acf_allowed_content' => '',
       'css_setting' => 'self',
       'css_path' => '/sites/all/themes/antistatique/build/css/main.css',
-      'stylesSet' => 'Lead=p.lead',
-      'block_formats' => 'p,code,pre,h2,h3,h4,h5,h6,dt,dd,aside',
-      'advanced__active_tab' => 'edit-basic',
+      'stylesSet' => 'Lead=p.lead
+Aside=aside.aside-left
+Aside Right=aside.aside-right',
+      'block_formats' => 'p,code,pre,h2,h3,h4,h5,h6,dt,dd',
+      'advanced__active_tab' => 'edit-css',
       'forcePasteAsPlainText' => 0,
     ),
     'rdf_mapping' => array(),
