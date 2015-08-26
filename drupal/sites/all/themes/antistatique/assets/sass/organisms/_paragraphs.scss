@@ -2,12 +2,27 @@
   aside {
     color: $text-muted;
     font-size: $font-size-small;
+    @include clearfix;
+    margin-bottom: 15px;
     @media only screen and (min-width: $screen-lg-min) {
       float: left;
       width: 200px;
       margin-left: -230px;
       text-align: right;
       margin-top: 0.1em;
+      &.aside-right {
+        float: right;
+        margin-left: 0;
+        margin-right: -230px;
+        text-align: left;
+
+        &:after {
+          @media only screen and (min-width: $screen-lg-min) {
+            margin-left: 0;
+            margin-right: auto;
+          }
+        }
+      }
     }
     &:after {
       content: '';
