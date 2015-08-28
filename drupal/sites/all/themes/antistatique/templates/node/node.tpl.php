@@ -159,6 +159,15 @@ hide($content['field_hero_image_is_dark']);
             <?php print render($content['field_skills']); ?>
           </div>
         <?php endif ?>
+        <?php if ($type === 'article' && !empty($content['field_skills'])): ?>
+            <div class="col-sm-1 col-md-2">
+                <?php foreach ($content['field_skills']['#items'] as $item => $value): ?>
+                    <a href="<?php print url(taxonomy_term_uri($content['field_skills'][$item]['#options']['entity'])['path']); ?>" data-toggle="tooltip" title="<?php print render($content['field_skills'][0]['#options']['entity']->name); ?>">
+                        <img src="<?php print image_style_url('large', $content['field_skills'][0]['#options']['entity']->field_picto['und'][0]['uri']); ?>" alt="<?php print render($content['field_skills'][0]['#options']['entity']->name); ?>">
+                    </a>
+                <?php endforeach ?>
+            </div>
+        <?php endif ?>
       </div>
     </div>
   <?php endif; ?>

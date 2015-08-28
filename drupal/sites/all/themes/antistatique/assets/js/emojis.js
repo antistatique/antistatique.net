@@ -4,7 +4,6 @@
 
 (function(emojify, $){
     $(document).ready(function() {
-      console.log('Hello6');
       emojify.setConfig({
           img_dir          : '/sites/all/themes/antistatique/build/img/'
       });
