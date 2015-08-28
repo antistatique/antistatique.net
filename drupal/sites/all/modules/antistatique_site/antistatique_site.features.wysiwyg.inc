@@ -29,6 +29,8 @@ function antistatique_site_wysiwyg_default_profiles() {
           'Strike' => 1,
           'BulletedList' => 1,
           'NumberedList' => 1,
+          'Outdent' => 1,
+          'Indent' => 1,
           'Link' => 1,
           'Unlink' => 1,
           'Image' => 1,
