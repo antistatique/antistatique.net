@@ -58,7 +58,7 @@
 
   <!-- Import fonts -->
   <script src="//use.typekit.net/lfl3jyz.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">

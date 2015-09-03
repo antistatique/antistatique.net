@@ -392,3 +392,9 @@ function antistatique_preprocess_file_entity(&$variables) {
 function antistatique_file_displays_alter($displays, &$file, $view_mode) {
     $file->alt = $file->description;
 }
+
+function antistatique_form_alter(&$form, &$form_state, $form_id) {
+  if (!empty($form['actions']) && $form['actions']['submit']) {
+    $form['actions']['submit']['#attributes'] = array('class' => array('btn-primary', 'btn', 'btn-block'));
+  }
+}

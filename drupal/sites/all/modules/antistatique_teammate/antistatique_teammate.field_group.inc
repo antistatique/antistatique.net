@@ -21,7 +21,7 @@ function antistatique_teammate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Account',
-    'weight' => '6',
+    'weight' => '4',
     'children' => array(
       0 => 'account',
       1 => 'timezone',
@@ -84,7 +84,7 @@ function antistatique_teammate_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Images',
-    'weight' => '5',
+    'weight' => '3',
     'children' => array(
       0 => 'field_teammate_hero_image',
       1 => 'field_four_images',
