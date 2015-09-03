@@ -1,6 +1,19 @@
 CHANGELOG
 ---------
 
+## 1.0.4 (2015-09-03)
+ * add Ace Editor to HTML text-formats
+ * #246 fix logos sizes on services page
+ * #287 #247 fix the `<aside>` element in blog articles
+ * #286 #284 adjust banner styles and design
+ * update to new Typekit syntax
+ * #246 fix spacing in the customers block
+ * #221 improve contact form
+ * #215 remove useless scss color variable
+ * #210 add indication about XML sitemap for user accounts
+ * #197 improve design for Maintenance page
+ * update all the modules
+
 ## 1.0.3 (2015-08-20)
  * #284 adjust alert component design
  * #176 add skills field in article content type
