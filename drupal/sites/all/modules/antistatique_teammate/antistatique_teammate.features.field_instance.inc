@@ -458,7 +458,7 @@ The fourth image should be <b>640x640</b>.',
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 6,
     ),
   );
 
@@ -520,7 +520,7 @@ The fourth image should be <b>640x640</b>.',
       ),
     ),
     'deleted' => 0,
-    'description' => 'To know if you\'re part of the team',
+    'description' => 'To know if you\'re part of the team. <b>Don\'t forget to set the XML Sitemap to <i>EXCLUDED</i> and to remove the <i>collaborator</i> role if the person is not working here anymore.</b>',
     'display' => array(
       'big_teaser' => array(
         'label' => 'hidden',
@@ -545,6 +545,7 @@ The fourth image should be <b>640x640</b>.',
       ),
     ),
     'entity_type' => 'user',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_teammate_currently_working',
     'label' => 'Currently working',
     'required' => 1,
@@ -557,7 +558,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 9,
+      'weight' => 5,
     ),
   );
 
@@ -716,7 +717,7 @@ The fourth image should be <b>640x640</b>.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 4,
     ),
   );
 
@@ -802,7 +803,7 @@ The fourth image should be <b>640x640</b>.',
   t('The first image should be <b>640x960</b>.<br>
 The second and third images should be <b>320x320</b>.<br>
 The fourth image should be <b>640x640</b>.');
-  t('To know if you\'re part of the team');
+  t('To know if you\'re part of the team. <b>Don\'t forget to set the XML Sitemap to <i>EXCLUDED</i> and to remove the <i>collaborator</i> role if the person is not working here anymore.</b>');
   t('Use font awesome syntax for classes (http://fortawesome.github.io/Font-Awesome/icons/) "fa fa-twitter" for twitter.');
   t('What\'s on your business card ?');
   t('Your prefered project you worked on');
