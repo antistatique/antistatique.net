@@ -22,6 +22,7 @@ function antistatique_site_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'ace_editor_filter_formats';
   $strongarm->value = array(
+    'full_html' => 'full_html',
     'ace_editor' => 'ace_editor',
   );
   $export['ace_editor_filter_formats'] = $strongarm;
