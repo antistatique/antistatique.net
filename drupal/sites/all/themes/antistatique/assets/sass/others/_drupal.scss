@@ -1,5 +1,14 @@
 body.cke_editable {
   padding: 15px;
+
+  aside {
+    color: $text-muted;
+    font-size: $font-size-small;
+
+    &.aside-right {
+      text-align: right;
+    }
+  }
 }
 
 .krumo-root {
