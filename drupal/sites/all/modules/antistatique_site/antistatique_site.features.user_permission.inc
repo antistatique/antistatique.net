@@ -1438,6 +1438,16 @@ function antistatique_site_user_default_permissions() {
     'module' => 'custom_breadcrumbs',
   );
 
+  // Exported permission: 'use text format ace_editor'.
+  $permissions['use text format ace_editor'] = array(
+    'name' => 'use text format ace_editor',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'filter',
+  );
+
   // Exported permission: 'use text format filtered_html'.
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',

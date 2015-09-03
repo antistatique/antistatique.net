@@ -10,6 +10,16 @@
 function antistatique_site_filter_default_formats() {
   $formats = array();
 
+  // Exported format: Ace Editor.
+  $formats['ace_editor'] = array(
+    'format' => 'ace_editor',
+    'name' => 'Ace Editor',
+    'cache' => 1,
+    'status' => 1,
+    'weight' => 100,
+    'filters' => array(),
+  );
+
   // Exported format: Filtered HTML.
   $formats['filtered_html'] = array(
     'format' => 'filtered_html',
