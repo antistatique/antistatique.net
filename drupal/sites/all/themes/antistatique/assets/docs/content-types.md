@@ -13,6 +13,7 @@
 | promoted to front page | default option | | | Yes | |
 
 <br>
+
 **To also be displayed**
 
 | Thing | Full | Teaser | Comment |
@@ -39,6 +40,7 @@
 https://projects.invisionapp.com/d/main#/console/1442313/54654736/preview
 
 <br>
+
 **Fields**
 
 | Field | Type | Full | Teaser | Required | Comment |
@@ -57,6 +59,7 @@ https://projects.invisionapp.com/d/main#/console/1442313/54654736/preview
 | product images | image (max 3) | ✔︎ | | | PNG |
 
 <br>
+
 **Questions**
 
 - **1** – is it possible in Drupal to choose the currency at this moment? And display it before or after number?
@@ -68,6 +71,7 @@ https://projects.invisionapp.com/d/main#/console/1442313/54654736/preview
 https://projects.invisionapp.com/d/main#/console/1442313/54654756/preview
 
 <br>
+
 **Fields**
 
 | Field | Type | Full | Teaser | Required | Comment |
@@ -92,12 +96,14 @@ https://projects.invisionapp.com/d/main#/console/1442313/54654756/preview
 | Stick to the top | default option | | | | Sera en haut de liste page projet |
 
 <br>
+
 **Questions**
 
 - **1** – What about the client? Does he have a page? Otherwise, just a Link field or Text field would be enough. Or Term reference to be able to display a related view in an article for example?
 - **2** – Service content type? Basic Page?
 
 <br>
+
 **To also be displayed**
 
 | Thing | Full | Teaser | Comment |
@@ -110,6 +116,7 @@ https://projects.invisionapp.com/d/main#/console/1442313/54654756/preview
 Our team is composed with teammates. Yes.
 
 <br>
+
 **Fields**
 
 | Field | Type | Full | Teaser | Tiny | Required | Comment |
@@ -128,12 +135,14 @@ Our team is composed with teammates. Yes.
 | Stick at the top | default option | | | | | Alberto + Marc + Gilles at the top! (cf comment 2 below) |
 
 <br>
+
 **Comments**
 
 - **#1** – First image will be formatted as a big one, two next small Instagram-style, and the fourth is again bigger. [see example](https://projects.invisionapp.com/d/main#/console/1442313/54654724/preview)
 - **#2** – We could create a custom ordering view (cf AISTS) to set the order and have more control over this (Juniors at the end, same jobs together)
 
 <br>
+
 **To also be displayed**
 
 | Thing | Full | Teaser | Comment |
