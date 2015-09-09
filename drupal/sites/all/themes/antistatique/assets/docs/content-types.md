@@ -1,4 +1,5 @@
-## Article
+---
+**Article**
 
 | Field | Type | Full | Teaser | Required | Comment |
 |-------|------|:----:|:------:|:--------:|---------|
@@ -11,14 +12,16 @@
 | author | default option | ✔︎ | ✔︎ | Yes | |
 | promoted to front page | default option | | | Yes | |
 
-### To also be displayed
+<br>
+**To also be displayed**
 
 | Thing | Full | Teaser | Comment |
 |-------|:----:|:------:|---------|
 | Comment count | ✔︎ | ✔︎ | based on Disqus |
 | Related articles | ✔︎ | | views to display the different  |
 
-## Basic Page
+---
+**Basic Page**
 
 | Field | Type | Full | Teaser | Required | Comment |
 |-------|------|:----:|:------:|:--------:|---------|
@@ -30,11 +33,13 @@
 | category | Term Reference (max 3) | ✔︎ | ✔︎ | Yes | basé sur la liste des catégories (read, listen, talk, socialize, etc.) |
 | promoted to front page | default option | | | Yes | |
 
-## Product
+---
+**Product**
 
 https://projects.invisionapp.com/d/main#/console/1442313/54654736/preview
 
-### Fields
+<br>
+**Fields**
 
 | Field | Type | Full | Teaser | Required | Comment |
 |-------|------|:----:|:------:|:--------:|---------|
@@ -51,16 +56,19 @@ https://projects.invisionapp.com/d/main#/console/1442313/54654736/preview
 | long description | text | ✔︎ | | | Description plus complète du "pourquoi" je vous propose ce produit/service/objet/etc. |
 | product images | image (max 3) | ✔︎ | | | PNG |
 
-### Questions
+<br>
+**Questions**
 
 - **1** – is it possible in Drupal to choose the currency at this moment? And display it before or after number?
 
-## Project
+---
+**Project**
 
 
 https://projects.invisionapp.com/d/main#/console/1442313/54654756/preview
 
-### Fields
+<br>
+**Fields**
 
 | Field | Type | Full | Teaser | Required | Comment |
 |-------|------|:----:|:------:|:--------:|---------|
@@ -83,22 +91,26 @@ https://projects.invisionapp.com/d/main#/console/1442313/54654756/preview
 | promoted to front page | default option | | | Yes | |
 | Stick to the top | default option | | | | Sera en haut de liste page projet |
 
-### Questions
+<br>
+**Questions**
 
 - **1** – What about the client? Does he have a page? Otherwise, just a Link field or Text field would be enough. Or Term reference to be able to display a related view in an article for example?
 - **2** – Service content type? Basic Page?
 
-### To also be displayed
+<br>
+**To also be displayed**
 
 | Thing | Full | Teaser | Comment |
 |-------|:----:|:------:|---------|
 | More projects | ✔︎ | | views based on skills / services ? |
 
-## Teammate
+---
+**Teammate**
 
 Our team is composed with teammates. Yes.
 
-### Fields
+<br>
+**Fields**
 
 | Field | Type | Full | Teaser | Tiny | Required | Comment |
 |-------|------|:----:|:------:|:----:|:--------:|---------|
@@ -115,12 +127,14 @@ Our team is composed with teammates. Yes.
 | Currently Working | boolean | | | | | If not, will not be displayed, but will stay as article author |
 | Stick at the top | default option | | | | | Alberto + Marc + Gilles at the top! (cf comment 2 below) |
 
-### Comments
+<br>
+**Comments**
 
 - **#1** – First image will be formatted as a big one, two next small Instagram-style, and the fourth is again bigger. [see example](https://projects.invisionapp.com/d/main#/console/1442313/54654724/preview)
 - **#2** – We could create a custom ordering view (cf AISTS) to set the order and have more control over this (Juniors at the end, same jobs together)
 
-### To also be displayed
+<br>
+**To also be displayed**
 
 | Thing | Full | Teaser | Comment |
 |-------|:----:|:------:|---------|
