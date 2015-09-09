@@ -13,7 +13,7 @@ module.exports = function() {
    * And jshint check to highlight errors as we go.
    */
   gulp.task('scripts', function() {
-    gulp.src(config.assets + 'js/*.js')
+    return gulp.src(config.assets + 'js/*.js')
       .pipe($.jshint())
       .pipe($.jshint.reporter('jshint-stylish'))
       .pipe($.concat('main.js'))

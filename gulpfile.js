@@ -8,23 +8,26 @@ var gulp          = require('gulp'),
     runSequence   = require('run-sequence');
 
 
-require(config.tasks + 'vendors')();     // $ gulp vendors
-require(config.tasks + 'images')();      // $ gulp img
-require(config.tasks + 'styles')();      // $ gulp styles
-require(config.tasks + 'scripts')();     // $ gulp scripts
-require(config.tasks + 'icons')();       // $ gulp icons
-require(config.tasks + 'clean')();       // $ gulp clean
-require(config.tasks + 'styleguide')();  // $ gulp styleguide
-require(config.tasks + 'server')();      // $ gulp serve
-require(config.tasks + 'gh-pages')();    // $ gulp deploy
-
+require(config.tasks + 'vendors')();            // $ gulp vendors
+require(config.tasks + 'images')();             // $ gulp img
+require(config.tasks + 'styles')();             // $ gulp styles
+require(config.tasks + 'scripts')();            // $ gulp scripts
+require(config.tasks + 'icons')();              // $ gulp icons
+require(config.tasks + 'favicons')();           // $ gulp favicons
+require(config.tasks + 'clean')();              // $ gulp clean
+require(config.tasks + 'styleguide')();         // $ gulp styleguide
+require(config.tasks + 'server')();             // $ gulp serve
+require(config.tasks + 'gh-pages')();           // $ gulp deploy
+require(config.tasks + 'tests-regression')();   // $ gulp regression
+require(config.tasks + 'tests-unit')();         // $ gulp test:unit
+require(config.tasks + 'tests-navigation')();   // $ gulp test:navigation
 
 
 /**
  * Init project
  */
 gulp.task('init', function() {
-  return gulp.src('bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss')
+  return gulp.src('node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss')
     .pipe($.rename('bootstrap-variables.scss'))
     .pipe(gulp.dest(config.assets + 'sass/'));
 });
@@ -42,5 +45,5 @@ gulp.task('build',['clean'], function() {
  * Default task
  */
 gulp.task('default', ['clean'], function(done){
-  runSequence(['vendors', 'img', 'icons', 'styles', 'scripts', 'styleguide-styles', 'styleguide-scripts'], 'styleguide', done);
+  runSequence(['css-vendors', 'js-vendors', 'fonts-vendors', 'polyfills-vendors', 'img', 'icons', 'styles', 'scripts', 'styleguide-styles', 'styleguide-scripts'], 'favicons', 'styleguide', done);
 });

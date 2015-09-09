@@ -1,0 +1,8 @@
+---
+notes: |
+  **Usage : `{{> button }}`**
+
+  **Options :**
+  - **btn-class** - String
+---
+<button class="btn {{#if btn-class }}{{btn-class}}{{^}}btn-primary{{/if}}">Button label</button>

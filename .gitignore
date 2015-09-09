@@ -1,12 +1,11 @@
-.DS_Store*
-
 node_modules
-dist
-.tmp
 .sass-cache
-bower_components
-test/bower_components
+*.DS_Store
+.publish
 
-styleguide
-build
-.idea/
+/dist
+/build
+/styleguide
+
+tests/regression/compare
+tests/regression/temp
