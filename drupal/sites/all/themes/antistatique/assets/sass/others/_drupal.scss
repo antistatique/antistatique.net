@@ -25,7 +25,8 @@ body.cke_editable {
 }
 
 .readmore a,
-.field-body .more-link {
+.field-body .more-link,
+a.more-link {
   position: relative;
   margin-left: 20px;
   @include medium-link-hover($position: .95em);

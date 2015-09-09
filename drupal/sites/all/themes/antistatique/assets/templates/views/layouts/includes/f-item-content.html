@@ -1,6 +1,9 @@
-{{#if notes}}<div class="f-item-notes" data-f-toggle="notes">
+{{#if notes}}<div class="f-item-notes well well-sm" data-f-toggle="notes">
 	{{{notes}}}
 </div>{{/if}}
+
+{{#if data.background-variant }}<div class="bg-foggy clearfix"><div class="spacer spacer-xs"></div>{{/if}}
+
 <div class="f-item-preview">
   {{#if data.wrapper }}<div class="{{data.wrapper}}">{{/if}}
 	 {{{material @key @root}}}
@@ -9,3 +12,5 @@
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">{{material @key @root}}</code></pre>
 </div>
+
+{{#if data.background-variant }}<div class="spacer spacer-xs"></div></div>{{/if}}

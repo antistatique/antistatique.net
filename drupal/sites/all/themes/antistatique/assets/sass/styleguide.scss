@@ -19,12 +19,16 @@ html {
   color: #fff;
 }
 
-.f-item-preview {
-  background: #fff;
-}
-
 .f-item-notes {
   margin-bottom: 30px;
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .f-control svg {
