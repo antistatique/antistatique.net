@@ -2,8 +2,33 @@ html {
   font-size: 16px !important;
 }
 
+.f-container {
+  max-width: 1170px;
+}
+
+.f-item-group {
+  margin-top: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.f-item-heading-group {
+  margin-bottom: 1.5rem;
+  padding: 0 15px;
+  background: #000032;
+  color: #fff;
+}
+
+.f-item-preview {
+  background: #fff;
+}
+
 .f-item-notes {
   margin-bottom: 30px;
+}
+
+.f-control svg {
+  vertical-align: top;
 }
 
 table {
@@ -16,3 +41,11 @@ table {
     border-bottom: 2px solid #ddd;
   }
 }
+
+// TYPOGRAPHY
+// ==========
+
+.f-item-heading {
+  font-size: 1em;
+}
+
