@@ -1,6 +1,18 @@
 CHANGELOG
 ---------
 
+## 1.0.5 (2015-10-26)
+ * Fix #297 h4 font size a bit smaller to respect hiearchy
+ * Update Drupal Core Drupal 7.39 7.41
+ * revert .htaccess changes after drupal core update to reset redirection
+ * Update module jquery_module 7.x-2.6 -> 7.x-2.7
+ * Update module Date (date) 7.x-2.8 7.x-2.9
+ * Update module Features (features) 7.x-2.6 7.x-2.7
+ * Update module Pathauto (pathauto) 7.x-1.2 7.x-1.3
+ * Update module Webform (webform) 7.x-4.10 7.x-4.12
+ * Update module Fences (fences) 7.x-1.0 7.x-1.2
+ * Update module Environment indicator (environment_indicator) 7.x-2.7 7.x-2.8
+
 ## 1.0.4 (2015-09-03)
  * add Ace Editor to HTML text-formats
  * #246 fix logos sizes on services page
