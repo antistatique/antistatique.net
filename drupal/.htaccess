@@ -78,7 +78,7 @@ DirectoryIndex index.php index.html index.htm
   Redirect 301 /blog/author/smi /fr/meet/sepehr
   Redirect 301 /blog/author/admin /fr/meet/marc
   RedirectMatch 301 /blog/author/(.*) /fr/meet/$1
-  
+
   Redirect 301 /fr/team /fr/nous
   Redirect 301 /en/team /en/we
   Redirect 301 /fr/portfolio /fr/nous/travaillons
@@ -181,4 +181,10 @@ DirectoryIndex index.php index.html index.htm
       Header append Vary Accept-Encoding
     </FilesMatch>
   </IfModule>
+</IfModule>
+
+# Add headers to all responses.
+<IfModule mod_headers.c>
+  # Disable content sniffing, since it's an attack vector.
+  Header always set X-Content-Type-Options nosniff
 </IfModule>
