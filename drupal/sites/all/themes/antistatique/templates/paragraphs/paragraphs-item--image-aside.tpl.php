@@ -30,7 +30,7 @@ $image_width = $content['field_image_width'][0]['#markup'];
 if ($content['field_alignment'][0]['#markup'] == 'left') {
   // image aligned to left
   $alignment_image = $image_width == 'col-6' ? 'col-md-6 col-md-offset-3' : 'col-md-8 col-md-offset-1';
-  $alignment_aside = 'col-md-2';
+  $alignment_aside = 'col-md-2 aside-right';
 } else {
   // image aligned to right
   $alignment_image = $image_width == 'col-6' ? 'col-md-6 col-md-offset-1 col-md-push-2' : 'col-md-8 col-md-push-3';
@@ -72,7 +72,7 @@ hide($content['field_image_width']);
         </div>
       <?php endif; ?>
     </div>
-    <aside class="<?php print $alignment_aside; ?>">
+    <aside class="<?php print $alignment_aside; ?><?php if (isset($device)): ?> aside-no-positionning<?php endif; ?>">
       <?php print render($content['field_aside']); ?>
     </aside>
   </div>
