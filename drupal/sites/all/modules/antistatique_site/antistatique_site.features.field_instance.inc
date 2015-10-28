@@ -987,12 +987,12 @@ function antistatique_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-image_wide-field_wide_images'
+  // Exported field_instance: 'paragraphs_item-image_wide-field_wide_images'.
   $field_instances['paragraphs_item-image_wide-field_wide_images'] = array(
     'bundle' => 'image_wide',
     'deleted' => 0,
     'description' => 'The image will be set at width=100%. If you upload 2 images, both will be at 50%.<br>
-<b>Minimum 1300x820px</b>',
+<b>Minimum should be something like 1300x820px</b>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1024,7 +1024,7 @@ function antistatique_site_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '1300x820',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1032,17 +1032,6 @@ function antistatique_site_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 'private',
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -1225,7 +1214,7 @@ function antistatique_site_field_default_field_instances() {
   t('Quote Author');
   t('Select a device and we will magically add the corresponding device around your image.');
   t('The image will be set at width=100%. If you upload 2 images, both will be at 50%.<br>
-<b>Minimum 1300x820px</b>');
+<b>Minimum should be something like 1300x820px</b>');
   t('Title');
   t('Wide Image(s)');
 
