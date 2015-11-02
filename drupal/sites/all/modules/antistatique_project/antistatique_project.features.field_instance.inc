@@ -10,7 +10,7 @@
 function antistatique_project_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-project-body'
+  // Exported field_instance: 'node-project-body'.
   $field_instances['node-project-body'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -59,7 +59,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_client'
+  // Exported field_instance: 'node-project-field_client'.
   $field_instances['node-project-field_client'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -106,7 +106,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_credits'
+  // Exported field_instance: 'node-project-field_credits'.
   $field_instances['node-project-field_credits'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -154,7 +154,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_hero_image_is_dark'
+  // Exported field_instance: 'node-project-field_hero_image_is_dark'.
   $field_instances['node-project-field_hero_image_is_dark'] = array(
     'bundle' => 'project',
     'default_value' => array(
@@ -202,7 +202,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_images'
+  // Exported field_instance: 'node-project-field_images'.
   $field_instances['node-project-field_images'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -309,7 +309,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_links'
+  // Exported field_instance: 'node-project-field_links'.
   $field_instances['node-project-field_links'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -373,7 +373,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_needs_translation'
+  // Exported field_instance: 'node-project-field_needs_translation'.
   $field_instances['node-project-field_needs_translation'] = array(
     'bundle' => 'project',
     'default_value' => array(
@@ -423,7 +423,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_paragraphs'
+  // Exported field_instance: 'node-project-field_paragraphs'.
   $field_instances['node-project-field_paragraphs'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -475,7 +475,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_skills'
+  // Exported field_instance: 'node-project-field_skills'.
   $field_instances['node-project-field_skills'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -522,7 +522,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_svg_title'
+  // Exported field_instance: 'node-project-field_svg_title'.
   $field_instances['node-project-field_svg_title'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -612,7 +612,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_teammate_hero_image'
+  // Exported field_instance: 'node-project-field_teammate_hero_image'.
   $field_instances['node-project-field_teammate_hero_image'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -740,7 +740,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_testimonial_avatar'
+  // Exported field_instance: 'node-project-field_testimonial_avatar'.
   $field_instances['node-project-field_testimonial_avatar'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -825,7 +825,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_testimonial_name'
+  // Exported field_instance: 'node-project-field_testimonial_name'.
   $field_instances['node-project-field_testimonial_name'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -873,7 +873,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_testimonial_position'
+  // Exported field_instance: 'node-project-field_testimonial_position'.
   $field_instances['node-project-field_testimonial_position'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -921,7 +921,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_testimonial_quote'
+  // Exported field_instance: 'node-project-field_testimonial_quote'.
   $field_instances['node-project-field_testimonial_quote'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -969,7 +969,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_tile_image'
+  // Exported field_instance: 'node-project-field_tile_image'.
   $field_instances['node-project-field_tile_image'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -1071,7 +1071,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_year'
+  // Exported field_instance: 'node-project-field_year'.
   $field_instances['node-project-field_year'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -1131,7 +1131,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-title_field'
+  // Exported field_instance: 'node-project-title_field'.
   $field_instances['node-project-title_field'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1180,7 +1180,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-skills-description_field'
+  // Exported field_instance: 'taxonomy_term-skills-description_field'.
   $field_instances['taxonomy_term-skills-description_field'] = array(
     'bundle' => 'skills',
     'default_value' => NULL,
@@ -1225,7 +1225,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-skills-field_picto'
+  // Exported field_instance: 'taxonomy_term-skills-field_picto'.
   $field_instances['taxonomy_term-skills-field_picto'] = array(
     'bundle' => 'skills',
     'deleted' => 0,
@@ -1314,7 +1314,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-skills-name_field'
+  // Exported field_instance: 'taxonomy_term-skills-name_field'.
   $field_instances['taxonomy_term-skills-name_field'] = array(
     'bundle' => 'skills',
     'default_value' => NULL,

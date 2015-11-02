@@ -10,7 +10,7 @@
 function antistatique_article_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-article-body'
+  // Exported field_instance: 'node-article-body'.
   $field_instances['node-article-body'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -90,7 +90,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_category'
+  // Exported field_instance: 'node-article-field_category'.
   $field_instances['node-article-field_category'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -146,7 +146,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_co_author'
+  // Exported field_instance: 'node-article-field_co_author'.
   $field_instances['node-article-field_co_author'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -210,7 +210,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_hero_image_is_dark'
+  // Exported field_instance: 'node-article-field_hero_image_is_dark'.
   $field_instances['node-article-field_hero_image_is_dark'] = array(
     'bundle' => 'article',
     'default_value' => array(
@@ -264,7 +264,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_images'
+  // Exported field_instance: 'node-article-field_images'.
   $field_instances['node-article-field_images'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -362,7 +362,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_needs_translation'
+  // Exported field_instance: 'node-article-field_needs_translation'.
   $field_instances['node-article-field_needs_translation'] = array(
     'bundle' => 'article',
     'default_value' => array(
@@ -418,7 +418,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_skills'
+  // Exported field_instance: 'node-article-field_skills'.
   $field_instances['node-article-field_skills'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -471,7 +471,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_svg_title'
+  // Exported field_instance: 'node-article-field_svg_title'.
   $field_instances['node-article-field_svg_title'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -567,7 +567,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_teammate_hero_image'
+  // Exported field_instance: 'node-article-field_teammate_hero_image'.
   $field_instances['node-article-field_teammate_hero_image'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -690,7 +690,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-title_field'
+  // Exported field_instance: 'node-article-title_field'.
   $field_instances['node-article-title_field'] = array(
     'bundle' => 'article',
     'default_value' => NULL,

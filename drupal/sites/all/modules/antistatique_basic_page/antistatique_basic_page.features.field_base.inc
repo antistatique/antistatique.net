@@ -10,7 +10,7 @@
 function antistatique_basic_page_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'description_field'
+  // Exported field_base: 'description_field'.
   $field_bases['description_field'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function antistatique_basic_page_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_breadcrumb_tagline'
+  // Exported field_base: 'field_breadcrumb_tagline'.
   $field_bases['field_breadcrumb_tagline'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -53,7 +53,7 @@ function antistatique_basic_page_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_category'
+  // Exported field_base: 'field_category'.
   $field_bases['field_category'] = array(
     'active' => 1,
     'cardinality' => 3,
@@ -81,7 +81,7 @@ function antistatique_basic_page_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_hero_image'
+  // Exported field_base: 'field_hero_image'.
   $field_bases['field_hero_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -106,7 +106,7 @@ function antistatique_basic_page_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_images'
+  // Exported field_base: 'field_images'.
   $field_bases['field_images'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -131,7 +131,7 @@ function antistatique_basic_page_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_section'
+  // Exported field_base: 'field_section'.
   $field_bases['field_section'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -159,7 +159,7 @@ function antistatique_basic_page_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'name_field'
+  // Exported field_base: 'name_field'.
   $field_bases['name_field'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -181,7 +181,7 @@ function antistatique_basic_page_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'title_field'
+  // Exported field_base: 'title_field'.
   $field_bases['title_field'] = array(
     'active' => 1,
     'cardinality' => 1,

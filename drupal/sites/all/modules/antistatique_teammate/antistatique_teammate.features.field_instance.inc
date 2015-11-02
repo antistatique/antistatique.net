@@ -10,7 +10,7 @@
 function antistatique_teammate_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'user-user-field_email'
+  // Exported field_instance: 'user-user-field_email'.
   $field_instances['user-user-field_email'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -56,7 +56,7 @@ function antistatique_teammate_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_firstname'
+  // Exported field_instance: 'user-user-field_firstname'.
   $field_instances['user-user-field_firstname'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -106,7 +106,7 @@ function antistatique_teammate_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_four_images'
+  // Exported field_instance: 'user-user-field_four_images'.
   $field_instances['user-user-field_four_images'] = array(
     'bundle' => 'user',
     'deleted' => 0,
@@ -214,7 +214,7 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
-  // Exported field_instance: 'user-user-field_hero_image_is_dark'
+  // Exported field_instance: 'user-user-field_hero_image_is_dark'.
   $field_instances['user-user-field_hero_image_is_dark'] = array(
     'bundle' => 'user',
     'default_value' => array(
@@ -263,7 +263,7 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
-  // Exported field_instance: 'user-user-field_lastname'
+  // Exported field_instance: 'user-user-field_lastname'.
   $field_instances['user-user-field_lastname'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -313,7 +313,7 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
-  // Exported field_instance: 'user-user-field_pingpong_points'
+  // Exported field_instance: 'user-user-field_pingpong_points'.
   $field_instances['user-user-field_pingpong_points'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -362,7 +362,7 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
-  // Exported field_instance: 'user-user-field_pingpong_ranking'
+  // Exported field_instance: 'user-user-field_pingpong_ranking'.
   $field_instances['user-user-field_pingpong_ranking'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -412,7 +412,7 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
-  // Exported field_instance: 'user-user-field_related_project'
+  // Exported field_instance: 'user-user-field_related_project'.
   $field_instances['user-user-field_related_project'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -462,7 +462,7 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
-  // Exported field_instance: 'user-user-field_teammate_body'
+  // Exported field_instance: 'user-user-field_teammate_body'.
   $field_instances['user-user-field_teammate_body'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -511,7 +511,7 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
-  // Exported field_instance: 'user-user-field_teammate_currently_working'
+  // Exported field_instance: 'user-user-field_teammate_currently_working'.
   $field_instances['user-user-field_teammate_currently_working'] = array(
     'bundle' => 'user',
     'default_value' => array(
@@ -562,7 +562,7 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
-  // Exported field_instance: 'user-user-field_teammate_hero_image'
+  // Exported field_instance: 'user-user-field_teammate_hero_image'.
   $field_instances['user-user-field_teammate_hero_image'] = array(
     'bundle' => 'user',
     'deleted' => 0,
@@ -673,7 +673,7 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
-  // Exported field_instance: 'user-user-field_teammate_job_title'
+  // Exported field_instance: 'user-user-field_teammate_job_title'.
   $field_instances['user-user-field_teammate_job_title'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -721,7 +721,7 @@ The fourth image should be <b>640x640</b>.',
     ),
   );
 
-  // Exported field_instance: 'user-user-field_teammate_links'
+  // Exported field_instance: 'user-user-field_teammate_links'.
   $field_instances['user-user-field_teammate_links'] = array(
     'bundle' => 'user',
     'default_value' => NULL,

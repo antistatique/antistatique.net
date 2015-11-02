@@ -10,7 +10,7 @@
 function antistatique_basic_page_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-page-body'
+  // Exported field_instance: 'node-page-body'.
   $field_instances['node-page-body'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -63,7 +63,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_breadcrumb_tagline'
+  // Exported field_instance: 'node-page-field_breadcrumb_tagline'.
   $field_instances['node-page-field_breadcrumb_tagline'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -111,7 +111,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_hero_image_is_dark'
+  // Exported field_instance: 'node-page-field_hero_image_is_dark'.
   $field_instances['node-page-field_hero_image_is_dark'] = array(
     'bundle' => 'page',
     'default_value' => array(
@@ -159,7 +159,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_images'
+  // Exported field_instance: 'node-page-field_images'.
   $field_instances['node-page-field_images'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -266,7 +266,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_needs_translation'
+  // Exported field_instance: 'node-page-field_needs_translation'.
   $field_instances['node-page-field_needs_translation'] = array(
     'bundle' => 'page',
     'default_value' => array(
@@ -316,7 +316,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_paragraphs'
+  // Exported field_instance: 'node-page-field_paragraphs'.
   $field_instances['node-page-field_paragraphs'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -383,7 +383,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_section'
+  // Exported field_instance: 'node-page-field_section'.
   $field_instances['node-page-field_section'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -430,7 +430,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_svg_title'
+  // Exported field_instance: 'node-page-field_svg_title'.
   $field_instances['node-page-field_svg_title'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -520,7 +520,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_teammate_hero_image'
+  // Exported field_instance: 'node-page-field_teammate_hero_image'.
   $field_instances['node-page-field_teammate_hero_image'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -613,7 +613,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-title_field'
+  // Exported field_instance: 'node-page-title_field'.
   $field_instances['node-page-title_field'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -668,7 +668,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-category-description_field'
+  // Exported field_instance: 'taxonomy_term-category-description_field'.
   $field_instances['taxonomy_term-category-description_field'] = array(
     'bundle' => 'category',
     'default_value' => NULL,
@@ -713,7 +713,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-category-name_field'
+  // Exported field_instance: 'taxonomy_term-category-name_field'.
   $field_instances['taxonomy_term-category-name_field'] = array(
     'bundle' => 'category',
     'default_value' => NULL,
