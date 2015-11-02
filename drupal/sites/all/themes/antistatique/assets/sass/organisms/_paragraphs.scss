@@ -6,10 +6,12 @@
     margin-bottom: 15px;
     @media only screen and (min-width: $screen-lg-min) {
       float: left;
-      width: 200px;
-      margin-left: -230px;
       text-align: right;
       margin-top: 0.1em;
+      &:not(.aside-no-positionning) {
+        width: 200px;
+        margin-left: -230px;
+      }
       &.aside-right {
         float: right;
         margin-left: 0;
@@ -22,6 +24,11 @@
             margin-right: auto;
           }
         }
+      }
+    }
+    &.aside-no-positionning {
+      @media only screen and (max-width: $screen-sm-max) {
+        margin-top: 15px;
       }
     }
     &:after {

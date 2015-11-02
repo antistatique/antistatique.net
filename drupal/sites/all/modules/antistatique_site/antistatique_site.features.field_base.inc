@@ -10,7 +10,7 @@
 function antistatique_site_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
+  // Exported field_base: 'body'.
   $field_bases['body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -33,7 +33,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_alignment'
+  // Exported field_base: 'field_alignment'.
   $field_bases['field_alignment'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -59,7 +59,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_aside'
+  // Exported field_base: 'field_aside'.
   $field_bases['field_aside'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -80,7 +80,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_body'
+  // Exported field_base: 'field_body'.
   $field_bases['field_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -101,7 +101,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_browser'
+  // Exported field_base: 'field_browser'.
   $field_bases['field_browser'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -127,7 +127,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_device'
+  // Exported field_base: 'field_device'.
   $field_bases['field_device'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -158,7 +158,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_four_images'
+  // Exported field_base: 'field_four_images'.
   $field_bases['field_four_images'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -183,7 +183,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_image'
+  // Exported field_base: 'field_image'.
   $field_bases['field_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -208,7 +208,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_image_width'
+  // Exported field_base: 'field_image_width'.
   $field_bases['field_image_width'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -234,7 +234,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_image_width_centered'
+  // Exported field_base: 'field_image_width_centered'.
   $field_bases['field_image_width_centered'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -261,7 +261,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_landscape'
+  // Exported field_base: 'field_landscape'.
   $field_bases['field_landscape'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -287,7 +287,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_quote_author'
+  // Exported field_base: 'field_quote_author'.
   $field_bases['field_quote_author'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -309,7 +309,7 @@ function antistatique_site_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_wide_images'
+  // Exported field_base: 'field_wide_images'.
   $field_bases['field_wide_images'] = array(
     'active' => 1,
     'cardinality' => 2,
