@@ -362,7 +362,7 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['arguments']['uid']['not'] = TRUE;
   $translatables['users'] = array(
     t('Master'),
-    t('Rencontrez notre équipe'),
+    t('Meet the team'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -385,6 +385,7 @@ function antistatique_teammate_views_default_views() {
     t('Jump Menu Teammates'),
     t('All Teammates Bigger'),
     t('All Teammates except current'),
+    t('Notre équipe'),
   );
   $export['users'] = $view;
 

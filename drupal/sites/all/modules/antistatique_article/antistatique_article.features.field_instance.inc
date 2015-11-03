@@ -586,6 +586,8 @@ function antistatique_article_field_default_field_instances() {
           ),
           'fallback_image_style' => 'hero-image',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'picture_mapping' => 'hero',
         ),
         'type' => 'picture',
