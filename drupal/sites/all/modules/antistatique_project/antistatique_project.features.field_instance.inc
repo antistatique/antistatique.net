@@ -206,7 +206,7 @@ function antistatique_project_field_default_field_instances() {
   $field_instances['node-project-field_images'] = array(
     'bundle' => 'project',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image should be at least <b>650px</b> wide.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -253,7 +253,7 @@ function antistatique_project_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '650x650',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -261,17 +261,6 @@ function antistatique_project_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 0,
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 1,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -296,8 +285,16 @@ function antistatique_project_field_default_field_instances() {
           'image_large_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
           'image_large_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_medium' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_project_thumbnail' => 0,
           'image_square_thumbnail' => 0,
           'image_thumbnail' => 0,
+          'image_wide_image' => 0,
+          'image_wide_thumbnail' => 0,
           'link' => 0,
         ),
         'insert_width' => '',
@@ -676,7 +673,7 @@ function antistatique_project_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '1600x900',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -684,17 +681,6 @@ function antistatique_project_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 'private',
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -973,7 +959,7 @@ function antistatique_project_field_default_field_instances() {
   $field_instances['node-project-field_tile_image'] = array(
     'bundle' => 'project',
     'deleted' => 0,
-    'description' => 'This image gets displayed in the project teaser view. Will display hero image if not set.',
+    'description' => 'This image gets displayed in the project teaser view. Will display hero image if not set. The image should be at least <b>800px</b> wide.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1007,7 +993,7 @@ function antistatique_project_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '800x600',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1015,17 +1001,6 @@ function antistatique_project_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 'private',
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -1367,6 +1342,7 @@ function antistatique_project_field_default_field_instances() {
   t('Description');
   t('Hero Image');
   t('Hero image is dark');
+  t('Image should be at least <b>650px</b> wide.');
   t('Images');
   t('L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.');
   t('Link(s)');
@@ -1383,7 +1359,7 @@ function antistatique_project_field_default_field_instances() {
   t('Testimonial Quote');
   t('Testimonial position');
   t('The year this project was delivered to the client.');
-  t('This image gets displayed in the project teaser view. Will display hero image if not set.');
+  t('This image gets displayed in the project teaser view. Will display hero image if not set. The image should be at least <b>800px</b> wide.');
   t('This option indicates that this content is ready to be translated by the translator.');
   t('Tile image');
   t('Title');

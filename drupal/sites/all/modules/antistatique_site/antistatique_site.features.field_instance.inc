@@ -992,14 +992,14 @@ function antistatique_site_field_default_field_instances() {
     'bundle' => 'image_wide',
     'deleted' => 0,
     'description' => 'The image will be set at width=100%. If you upload 2 images, both will be at 50%.<br>
-<b>Minimum should be something like 1300x820px</b>',
+<b>Minimum 1300x820px</b>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'wide_image',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -1214,7 +1214,7 @@ function antistatique_site_field_default_field_instances() {
   t('Quote Author');
   t('Select a device and we will magically add the corresponding device around your image.');
   t('The image will be set at width=100%. If you upload 2 images, both will be at 50%.<br>
-<b>Minimum should be something like 1300x820px</b>');
+<b>Minimum 1300x820px</b>');
   t('Title');
   t('Wide Image(s)');
 
