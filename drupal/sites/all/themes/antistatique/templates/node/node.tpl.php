@@ -121,7 +121,7 @@ hide($content['field_hero_image_is_dark']);
     <div class="container cover-overlap">
       <?php if ($page && $display_submitted): ?>
         <div class="row">
-          <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+          <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
             <header>
               <div class="spacer spacer-sm visible-xs"></div>
               <?php print render($content['field_co_author']); ?>
@@ -142,7 +142,7 @@ hide($content['field_hero_image_is_dark']);
     <div class="container">
 
       <div class="row">
-        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 content <?php if ($type === 'article'): ?>blog-content<?php endif ?>">
+        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8 content <?php if ($type === 'article'): ?>blog-content<?php endif ?>">
           <?php print render($content['body']); ?>
           <div class="spacer spacer-md"></div>
         </div>
@@ -193,7 +193,7 @@ hide($content['field_hero_image_is_dark']);
       </div>
     <?php endif ?>
     <div class="row">
-      <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 ">
+      <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8 ">
 
         <?php if (!empty($content['field_credits'])): ?>
           <?php print render($content['field_credits']); ?>
