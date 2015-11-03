@@ -159,6 +159,7 @@ hide($content['field_hero_image_is_dark']);
             <?php print render($content['field_skills']); ?>
           </div>
         <?php endif ?>
+        <?php /* ?>
         <?php if ($type === 'article' && !empty($content['field_skills'])): ?>
             <div class="col-sm-1 col-md-2">
                 <?php foreach ($content['field_skills']['#items'] as $item => $value): ?>
@@ -168,6 +169,7 @@ hide($content['field_hero_image_is_dark']);
                 <?php endforeach ?>
             </div>
         <?php endif ?>
+        <?php */ ?>
       </div>
     </div>
   <?php endif; ?>
