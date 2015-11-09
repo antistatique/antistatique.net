@@ -1,6 +1,20 @@
 CHANGELOG
 ---------
 
+## 1.0.6 (2015-11-09)
+ * #300 Fix Wide Image paragraph
+ * #299 set all content type to "not published" by default
+ * #176 remove article skills from template (waiting for images to re-add)
+ * #303 remove all image size restrictions
+ * fix styles for definition lists
+ * change base layout to 8 columns instead of 6
+ * update all modules
+ * #260 English features export issue fixed. Maybe.
+ * Update Bootstrap theme to 7.x-3.1-beta3+14-dev
+ * Update Picture module to 7.x-2.13
+ * Update Wysiwyg module to 7.x-2.2+70-dev
+ * Update Paragraphs module to 7.x-1.0-rc4
+
 ## 1.0.5 (2015-10-26)
  * Fix #297 h4 font size a bit smaller to respect hiearchy
  * Update Drupal Core Drupal 7.39 7.41

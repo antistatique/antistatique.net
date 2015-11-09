@@ -207,8 +207,7 @@ function antistatique_project_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_project';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_project'] = $strongarm;
 

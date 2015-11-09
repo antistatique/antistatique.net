@@ -10,7 +10,7 @@
 function antistatique_article_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_co_author'
+  // Exported field_base: 'field_co_author'.
   $field_bases['field_co_author'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -44,7 +44,7 @@ function antistatique_article_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_hero_image_is_dark'
+  // Exported field_base: 'field_hero_image_is_dark'.
   $field_bases['field_hero_image_is_dark'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -70,7 +70,7 @@ function antistatique_article_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_svg_title'
+  // Exported field_base: 'field_svg_title'.
   $field_bases['field_svg_title'] = array(
     'active' => 1,
     'cardinality' => 1,

@@ -10,7 +10,7 @@
 function antistatique_project_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-project-body'
+  // Exported field_instance: 'node-project-body'.
   $field_instances['node-project-body'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -59,7 +59,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_client'
+  // Exported field_instance: 'node-project-field_client'.
   $field_instances['node-project-field_client'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -106,7 +106,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_credits'
+  // Exported field_instance: 'node-project-field_credits'.
   $field_instances['node-project-field_credits'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -154,7 +154,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_hero_image_is_dark'
+  // Exported field_instance: 'node-project-field_hero_image_is_dark'.
   $field_instances['node-project-field_hero_image_is_dark'] = array(
     'bundle' => 'project',
     'default_value' => array(
@@ -202,11 +202,11 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_images'
+  // Exported field_instance: 'node-project-field_images'.
   $field_instances['node-project-field_images'] = array(
     'bundle' => 'project',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image should be at least <b>650px</b> wide.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -222,6 +222,8 @@ function antistatique_project_field_default_field_instances() {
           ),
           'fallback_image_style' => 'large',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'picture_mapping' => 'large',
         ),
         'type' => 'picture',
@@ -253,7 +255,7 @@ function antistatique_project_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '650x650',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -261,17 +263,6 @@ function antistatique_project_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 0,
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 1,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -296,8 +287,16 @@ function antistatique_project_field_default_field_instances() {
           'image_large_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
           'image_large_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_medium' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_project_thumbnail' => 0,
           'image_square_thumbnail' => 0,
           'image_thumbnail' => 0,
+          'image_wide_image' => 0,
+          'image_wide_thumbnail' => 0,
           'link' => 0,
         ),
         'insert_width' => '',
@@ -309,7 +308,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_links'
+  // Exported field_instance: 'node-project-field_links'.
   $field_instances['node-project-field_links'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -373,7 +372,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_needs_translation'
+  // Exported field_instance: 'node-project-field_needs_translation'.
   $field_instances['node-project-field_needs_translation'] = array(
     'bundle' => 'project',
     'default_value' => array(
@@ -423,7 +422,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_paragraphs'
+  // Exported field_instance: 'node-project-field_paragraphs'.
   $field_instances['node-project-field_paragraphs'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -475,7 +474,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_skills'
+  // Exported field_instance: 'node-project-field_skills'.
   $field_instances['node-project-field_skills'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -522,7 +521,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_svg_title'
+  // Exported field_instance: 'node-project-field_svg_title'.
   $field_instances['node-project-field_svg_title'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -612,7 +611,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_teammate_hero_image'
+  // Exported field_instance: 'node-project-field_teammate_hero_image'.
   $field_instances['node-project-field_teammate_hero_image'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -632,6 +631,8 @@ function antistatique_project_field_default_field_instances() {
           ),
           'fallback_image_style' => 'hero-image',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'picture_mapping' => 'hero',
         ),
         'type' => 'picture',
@@ -657,6 +658,8 @@ function antistatique_project_field_default_field_instances() {
           ),
           'fallback_image_style' => 'project_thumbnail',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'picture_mapping' => 'project_thumbnail',
         ),
         'type' => 'picture',
@@ -676,7 +679,7 @@ function antistatique_project_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '1600x900',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -684,17 +687,6 @@ function antistatique_project_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 'private',
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -740,7 +732,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_testimonial_avatar'
+  // Exported field_instance: 'node-project-field_testimonial_avatar'.
   $field_instances['node-project-field_testimonial_avatar'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -825,7 +817,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_testimonial_name'
+  // Exported field_instance: 'node-project-field_testimonial_name'.
   $field_instances['node-project-field_testimonial_name'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -873,7 +865,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_testimonial_position'
+  // Exported field_instance: 'node-project-field_testimonial_position'.
   $field_instances['node-project-field_testimonial_position'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -921,7 +913,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_testimonial_quote'
+  // Exported field_instance: 'node-project-field_testimonial_quote'.
   $field_instances['node-project-field_testimonial_quote'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -969,11 +961,11 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_tile_image'
+  // Exported field_instance: 'node-project-field_tile_image'.
   $field_instances['node-project-field_tile_image'] = array(
     'bundle' => 'project',
     'deleted' => 0,
-    'description' => 'This image gets displayed in the project teaser view. Will display hero image if not set.',
+    'description' => 'This image gets displayed in the project teaser view. Will display hero image if not set. The image should be at least <b>800px</b> wide.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1007,7 +999,7 @@ function antistatique_project_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '800x600',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1015,17 +1007,6 @@ function antistatique_project_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 'private',
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -1071,7 +1052,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-field_year'
+  // Exported field_instance: 'node-project-field_year'.
   $field_instances['node-project-field_year'] = array(
     'bundle' => 'project',
     'deleted' => 0,
@@ -1086,6 +1067,7 @@ function antistatique_project_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 3,
@@ -1131,7 +1113,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-project-title_field'
+  // Exported field_instance: 'node-project-title_field'.
   $field_instances['node-project-title_field'] = array(
     'bundle' => 'project',
     'default_value' => NULL,
@@ -1180,7 +1162,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-skills-description_field'
+  // Exported field_instance: 'taxonomy_term-skills-description_field'.
   $field_instances['taxonomy_term-skills-description_field'] = array(
     'bundle' => 'skills',
     'default_value' => NULL,
@@ -1225,7 +1207,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-skills-field_picto'
+  // Exported field_instance: 'taxonomy_term-skills-field_picto'.
   $field_instances['taxonomy_term-skills-field_picto'] = array(
     'bundle' => 'skills',
     'deleted' => 0,
@@ -1314,7 +1296,7 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-skills-name_field'
+  // Exported field_instance: 'taxonomy_term-skills-name_field'.
   $field_instances['taxonomy_term-skills-name_field'] = array(
     'bundle' => 'skills',
     'default_value' => NULL,
@@ -1366,6 +1348,7 @@ function antistatique_project_field_default_field_instances() {
   t('Description');
   t('Hero Image');
   t('Hero image is dark');
+  t('Image should be at least <b>650px</b> wide.');
   t('Images');
   t('L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.');
   t('Link(s)');
@@ -1382,7 +1365,7 @@ function antistatique_project_field_default_field_instances() {
   t('Testimonial Quote');
   t('Testimonial position');
   t('The year this project was delivered to the client.');
-  t('This image gets displayed in the project teaser view. Will display hero image if not set.');
+  t('This image gets displayed in the project teaser view. Will display hero image if not set. The image should be at least <b>800px</b> wide.');
   t('This option indicates that this content is ready to be translated by the translator.');
   t('Tile image');
   t('Title');

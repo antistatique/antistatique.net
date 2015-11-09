@@ -1,7 +1,8 @@
 {
   "name": "antistatique",
-  "version": "0.0.0",
+  "version": "1.0.6",
   "main": "index.html",
+  "private": true,
   "devDependencies": {
     "autoprefixer-core": "^5.1.11",
     "babel-core": "5.2.17",

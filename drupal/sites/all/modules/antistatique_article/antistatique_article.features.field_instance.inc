@@ -10,7 +10,7 @@
 function antistatique_article_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-article-body'
+  // Exported field_instance: 'node-article-body'.
   $field_instances['node-article-body'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -90,7 +90,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_category'
+  // Exported field_instance: 'node-article-field_category'.
   $field_instances['node-article-field_category'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -146,7 +146,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_co_author'
+  // Exported field_instance: 'node-article-field_co_author'.
   $field_instances['node-article-field_co_author'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -210,7 +210,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_hero_image_is_dark'
+  // Exported field_instance: 'node-article-field_hero_image_is_dark'.
   $field_instances['node-article-field_hero_image_is_dark'] = array(
     'bundle' => 'article',
     'default_value' => array(
@@ -264,11 +264,11 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_images'
+  // Exported field_instance: 'node-article-field_images'.
   $field_instances['node-article-field_images'] = array(
     'bundle' => 'article',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image should be at least <b>650px</b> wide.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -308,7 +308,7 @@ function antistatique_article_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '650x650',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -347,7 +347,6 @@ function antistatique_article_field_default_field_instances() {
           'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_project_thumbnail' => 0,
           'image_square_thumbnail' => 0,
-          'image_square_thumbnail__max_100x100_' => 0,
           'image_thumbnail' => 0,
           'image_wide_image' => 0,
           'image_wide_thumbnail' => 0,
@@ -362,7 +361,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_needs_translation'
+  // Exported field_instance: 'node-article-field_needs_translation'.
   $field_instances['node-article-field_needs_translation'] = array(
     'bundle' => 'article',
     'default_value' => array(
@@ -418,7 +417,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_skills'
+  // Exported field_instance: 'node-article-field_skills'.
   $field_instances['node-article-field_skills'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -471,7 +470,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_svg_title'
+  // Exported field_instance: 'node-article-field_svg_title'.
   $field_instances['node-article-field_svg_title'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -567,7 +566,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_teammate_hero_image'
+  // Exported field_instance: 'node-article-field_teammate_hero_image'.
   $field_instances['node-article-field_teammate_hero_image'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -587,6 +586,8 @@ function antistatique_article_field_default_field_instances() {
           ),
           'fallback_image_style' => 'hero-image',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'picture_mapping' => 'hero',
         ),
         'type' => 'picture',
@@ -636,7 +637,7 @@ function antistatique_article_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '1600x900',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -675,7 +676,6 @@ function antistatique_article_field_default_field_instances() {
           'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_project_thumbnail' => 0,
           'image_square_thumbnail' => 0,
-          'image_square_thumbnail__max_100x100_' => 0,
           'image_thumbnail' => 0,
           'image_wide_image' => 0,
           'image_wide_thumbnail' => 0,
@@ -690,7 +690,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-title_field'
+  // Exported field_instance: 'node-article-title_field'.
   $field_instances['node-article-title_field'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -752,6 +752,7 @@ function antistatique_article_field_default_field_instances() {
   t('Displayed Author(s)');
   t('Hero image is dark');
   t('Hero-image');
+  t('Image should be at least <b>650px</b> wide.');
   t('Images');
   t('L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.');
   t('Ready for translation');

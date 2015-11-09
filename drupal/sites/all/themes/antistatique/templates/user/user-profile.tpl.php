@@ -48,7 +48,7 @@ hide($user_profile['field_teammate_currently_working']);
 
   <div class="container cover-overlap">
     <div class="row">
-      <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+      <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
         <header>
           <div class="spacer spacer-sm visible-xs"></div>
           <div class="team-tiny">

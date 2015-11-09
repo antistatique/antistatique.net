@@ -461,7 +461,7 @@ function antistatique_article_views_default_views() {
     t('Live from our blog - 10cols'),
     t('Category Articles'),
     t('Articles from user'),
-    t('View more'),
+    t('Voir plus'),
     t('All articles from user'),
     t('Go to the complete blog'),
     t('User entity referenced from field_co_author'),

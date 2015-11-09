@@ -43,6 +43,5 @@ function antistatique_site_menu_default_menu_custom() {
   t('The <em>Management</em> menu contains links for administrative tasks.');
   t('The <em>Navigation</em> menu contains links intended for site visitors. Links are added to the <em>Navigation</em> menu automatically by some modules.');
 
-
   return $menus;
 }
