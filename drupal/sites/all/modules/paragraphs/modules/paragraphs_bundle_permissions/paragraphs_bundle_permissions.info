@@ -6,9 +6,9 @@ package = Paragraphs
 dependencies[] = paragraphs
 
 
-; Information added by Drupal.org packaging script on 2015-09-02
-version = "7.x-1.0-rc2"
+; Information added by Drupal.org packaging script on 2015-10-11
+version = "7.x-1.0-rc4"
 core = "7.x"
 project = "paragraphs"
-datestamp = "1441223670"
+datestamp = "1444523876"
 

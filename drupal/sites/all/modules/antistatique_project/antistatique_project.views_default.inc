@@ -303,6 +303,7 @@ function antistatique_project_views_default_views() {
     t('Featured Projects'),
     t('more'),
     t('All Projects'),
+    t('Tous nos projets'),
     t('Featured Projects - link to /work'),
     t('And of course our work!'),
     t('Discover how we work'),

@@ -10,7 +10,7 @@
 function antistatique_basic_page_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-page-body'
+  // Exported field_instance: 'node-page-body'.
   $field_instances['node-page-body'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -63,7 +63,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_breadcrumb_tagline'
+  // Exported field_instance: 'node-page-field_breadcrumb_tagline'.
   $field_instances['node-page-field_breadcrumb_tagline'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -111,7 +111,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_hero_image_is_dark'
+  // Exported field_instance: 'node-page-field_hero_image_is_dark'.
   $field_instances['node-page-field_hero_image_is_dark'] = array(
     'bundle' => 'page',
     'default_value' => array(
@@ -159,11 +159,11 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_images'
+  // Exported field_instance: 'node-page-field_images'.
   $field_instances['node-page-field_images'] = array(
     'bundle' => 'page',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image should be at least <b>650px</b> wide.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -179,6 +179,8 @@ function antistatique_basic_page_field_default_field_instances() {
           ),
           'fallback_image_style' => 'large',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'picture_mapping' => 'large',
         ),
         'type' => 'picture',
@@ -210,7 +212,7 @@ function antistatique_basic_page_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '650x650',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -218,17 +220,6 @@ function antistatique_basic_page_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 0,
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 1,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -253,8 +244,16 @@ function antistatique_basic_page_field_default_field_instances() {
           'image_large_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
           'image_large_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_medium' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_project_thumbnail' => 0,
           'image_square_thumbnail' => 0,
           'image_thumbnail' => 0,
+          'image_wide_image' => 0,
+          'image_wide_thumbnail' => 0,
           'link' => 0,
         ),
         'insert_width' => '',
@@ -266,7 +265,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_needs_translation'
+  // Exported field_instance: 'node-page-field_needs_translation'.
   $field_instances['node-page-field_needs_translation'] = array(
     'bundle' => 'page',
     'default_value' => array(
@@ -316,7 +315,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_paragraphs'
+  // Exported field_instance: 'node-page-field_paragraphs'.
   $field_instances['node-page-field_paragraphs'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -383,7 +382,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_section'
+  // Exported field_instance: 'node-page-field_section'.
   $field_instances['node-page-field_section'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -430,7 +429,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_svg_title'
+  // Exported field_instance: 'node-page-field_svg_title'.
   $field_instances['node-page-field_svg_title'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -520,7 +519,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_teammate_hero_image'
+  // Exported field_instance: 'node-page-field_teammate_hero_image'.
   $field_instances['node-page-field_teammate_hero_image'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -540,6 +539,8 @@ function antistatique_basic_page_field_default_field_instances() {
           ),
           'fallback_image_style' => 'hero-image',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'picture_mapping' => 'hero',
         ),
         'type' => 'picture',
@@ -571,7 +572,7 @@ function antistatique_basic_page_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '1600x900',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -579,16 +580,6 @@ function antistatique_basic_page_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 'private',
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -598,10 +589,31 @@ function antistatique_basic_page_field_default_field_instances() {
           'icon_link' => 0,
           'image' => 0,
           'image_hero-image' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_large' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_medium' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_project_thumbnail' => 0,
           'image_square_thumbnail' => 0,
           'image_thumbnail' => 0,
+          'image_wide_image' => 0,
+          'image_wide_thumbnail' => 0,
           'link' => 0,
         ),
         'insert_width' => '',
@@ -613,7 +625,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-title_field'
+  // Exported field_instance: 'node-page-title_field'.
   $field_instances['node-page-title_field'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -668,7 +680,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-category-description_field'
+  // Exported field_instance: 'taxonomy_term-category-description_field'.
   $field_instances['taxonomy_term-category-description_field'] = array(
     'bundle' => 'category',
     'default_value' => NULL,
@@ -713,7 +725,7 @@ function antistatique_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-category-name_field'
+  // Exported field_instance: 'taxonomy_term-category-name_field'.
   $field_instances['taxonomy_term-category-name_field'] = array(
     'bundle' => 'category',
     'default_value' => NULL,
@@ -763,6 +775,7 @@ function antistatique_basic_page_field_default_field_instances() {
   t('Description');
   t('Hero image is dark');
   t('If <b>- None -</b> is selected, the page will not appear in the breadcrumb menu select! How amazing is that?');
+  t('Image should be at least <b>650px</b> wide.');
   t('L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.');
   t('Name');
   t('Paragraphs');
