@@ -105,6 +105,12 @@ hide($content['field_breadcrumb_tagline']);
 hide($content['field_section']);
 
 hide($content['field_hero_image_is_dark']);
+
+if ($type == 'project') {
+    $content_classes = "col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6";
+  } else {
+    $content_classes = "col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8";
+  }
 ?>
 
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> main-content clearfix "<?php print $attributes; ?>>
@@ -121,7 +127,7 @@ hide($content['field_hero_image_is_dark']);
     <div class="container cover-overlap">
       <?php if ($page && $display_submitted): ?>
         <div class="row">
-          <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+          <div class="<?php print $content_classes; ?>">
             <header>
               <div class="spacer spacer-sm visible-xs"></div>
               <?php print render($content['field_co_author']); ?>
@@ -142,7 +148,7 @@ hide($content['field_hero_image_is_dark']);
     <div class="container">
 
       <div class="row">
-        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8 content <?php if ($type === 'article'): ?>blog-content<?php endif ?>">
+        <div class="<?php print $content_classes; ?> content <?php if ($type === 'article'): ?>blog-content<?php endif ?>">
           <?php print render($content['body']); ?>
           <div class="spacer spacer-md"></div>
         </div>
@@ -193,7 +199,7 @@ hide($content['field_hero_image_is_dark']);
       </div>
     <?php endif ?>
     <div class="row">
-      <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8 ">
+      <div class="<?php print $content_classes; ?> ">
 
         <?php if (!empty($content['field_credits'])): ?>
           <?php print render($content['field_credits']); ?>
