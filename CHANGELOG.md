@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.0.8 (2015-11-26)
+
+- Adding RSS feed view for articles
+
 ## 1.0.7 (2015-11-09)
 
 - Switching to a real SEMVER workflow
