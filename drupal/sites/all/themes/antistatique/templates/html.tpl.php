@@ -58,7 +58,7 @@
 
   <!-- Import fonts -->
   <script src="//use.typekit.net/lfl3jyz.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -78,6 +78,10 @@
   <meta name="msapplication-TileImage" content="/mstile-144x144.png">
   <meta name="theme-color" content="#ee2577">
 
+  <meta name="author" content="Antistatique">
+  <meta name="DC.Creator" content="Antistatique">
+  <meta name="copyright" content="© Antistatique, all rights reserved">
+  <meta name="DC.Rights" content="© Antistatique, all rights reserved">
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 

@@ -24,6 +24,7 @@ function _webform_defaults_number() {
       'unique' => 0,
       'title_display' => 0,
       'description' => '',
+      'description_above' => FALSE,
       'attributes' => array(),
       'private' => FALSE,
       'analysis' => FALSE,
@@ -377,7 +378,7 @@ function _webform_render_number($component, $value = NULL, $filter = TRUE, $subm
 /**
  * Implements _webform_display_component().
  */
-function _webform_display_number($component, $value, $format = 'html') {
+function _webform_display_number($component, $value, $format = 'html', $submission = array()) {
   $empty = !isset($value[0]) || $value[0] === '';
   return array(
     '#title' => $component['name'],
@@ -477,7 +478,7 @@ function _webform_analysis_number($component, $sids = array(), $single = FALSE, 
   if ($advanced_stats && $population_count && $sum != 0) {
     // Standard deviation.
     $stddev = 0;
-    foreach($population as $value) {
+    foreach ($population as $value) {
       // Obtain the total of squared variances.
       $stddev += pow(($value - $average), 2);
     }
@@ -522,21 +523,21 @@ function _webform_analysis_number($component, $sids = array(), $single = FALSE, 
     $stddev = _webform_number_format($component, $stddev);
     $low = _webform_number_format($component, $population[0]);
     $high = _webform_number_format($component, end($population));
-    foreach($limit as $key => $value) {
+    foreach ($limit as $key => $value) {
       $limit[$key] = _webform_number_format($component, $value);
     }
 
     // Column headings (override potential theme uppercase, e.g. Seven in D7).
     $header = array(
       t('Normal Distribution'),
-      array('data' => '-4' . $sigma, 'style' => 'text-transform: lowercase;',),
-      array('data' => '-3' . $sigma, 'style' => 'text-transform: lowercase;',),
-      array('data' => '-2' . $sigma, 'style' => 'text-transform: lowercase;',),
-      array('data' => '-1' . $sigma, 'style' => 'text-transform: lowercase;',),
-      array('data' => '+1' . $sigma, 'style' => 'text-transform: lowercase;',),
-      array('data' => '+2' . $sigma, 'style' => 'text-transform: lowercase;',),
-      array('data' => '+3' . $sigma, 'style' => 'text-transform: lowercase;',),
-      array('data' => '+4' . $sigma, 'style' => 'text-transform: lowercase;',),
+      array('data' => '-4' . $sigma, 'style' => 'text-transform: lowercase;'),
+      array('data' => '-3' . $sigma, 'style' => 'text-transform: lowercase;'),
+      array('data' => '-2' . $sigma, 'style' => 'text-transform: lowercase;'),
+      array('data' => '-1' . $sigma, 'style' => 'text-transform: lowercase;'),
+      array('data' => '+1' . $sigma, 'style' => 'text-transform: lowercase;'),
+      array('data' => '+2' . $sigma, 'style' => 'text-transform: lowercase;'),
+      array('data' => '+3' . $sigma, 'style' => 'text-transform: lowercase;'),
+      array('data' => '+4' . $sigma, 'style' => 'text-transform: lowercase;'),
     );
 
     // Insert row labels.
@@ -562,6 +563,14 @@ function _webform_analysis_number($component, $sids = array(), $single = FALSE, 
  */
 function _webform_table_number($component, $value) {
   return isset($value[0]) ? _webform_number_format($component, $value[0]) : '';
+}
+
+/**
+ * Implements _webform_action_set_component().
+ */
+function _webform_action_set_number($component, &$element, &$form_state, $value) {
+  $element['#value'] = $value;
+  form_set_value($element, $value, $form_state);
 }
 
 /**
@@ -793,7 +802,33 @@ function _webform_number_format($component, $value) {
  * Based on http://stackoverflow.com/questions/5917082/regular-expression-to-match-numbers-with-or-without-commas-and-decimals-in-text.
  */
 function webform_number_format_match($value, $point, $separator) {
-  return preg_match('/^-? ?\d{1,3}(?:' . ($separator ? (preg_quote($separator, '/') . '?') : '') . '\d{2,3})*(?:' . preg_quote($point, '/') . '\d+)?$/', $value);
+  // A valid number is:
+  //   1. optional minus sign
+  //   2. optional space
+  //   3. the rest of the string can't be just a decimal or blank.
+  //   3. optional integer portion, with thousands separators
+  //   4. optional decimal portion, starting is a decimal separator
+
+  $thousands = $separator ? (preg_quote($separator, '/') . '?') : '';
+  $decimal = preg_quote($point, '/');
+  return preg_match("/
+                    ^               # Start of string
+                    -?              # Optional minus sign
+                    \ ?             # Optional space
+                    (?!\.?$)        # Assert looking ahead, not just a decimal or nothing
+                      (?:           # Interger portion (non-grouping)
+                        \d{1,3}     #   1 to 3 digits
+                        (?:         #   Thousands group(s)
+                        $thousands  #     Optional thousands separator
+                        \d{2,3}     #     2 or 3 digits. Some countries use groups of 2 sometimes
+                      )*            #   0 or more of these thousands groups
+                    )?              # End of optional integer portion
+                    (?:             # Decimal portion (non-grouping)
+                      $decimal      #   Decimal point
+                      \d*           #   0 or more digits
+                    )?              # End of optional decimal portion
+                    $
+                    /x", $value);
 }
 
 /**

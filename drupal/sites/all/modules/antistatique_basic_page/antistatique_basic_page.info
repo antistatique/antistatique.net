@@ -45,6 +45,7 @@ features[field_instance][] = node-page-body
 features[field_instance][] = node-page-field_breadcrumb_tagline
 features[field_instance][] = node-page-field_hero_image_is_dark
 features[field_instance][] = node-page-field_images
+features[field_instance][] = node-page-field_needs_translation
 features[field_instance][] = node-page-field_paragraphs
 features[field_instance][] = node-page-field_section
 features[field_instance][] = node-page-field_svg_title

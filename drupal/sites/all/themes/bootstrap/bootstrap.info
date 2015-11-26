@@ -64,6 +64,10 @@ settings[bootstrap_breadcrumb_title] = 1
 settings[bootstrap_navbar_position] = ''
 settings[bootstrap_navbar_inverse] = 0
 
+; Pager
+; --------------
+settings[bootstrap_pager_first_and_last] = 1
+
 ; Region Wells
 ; --------------
 settings[bootstrap_region_well-navigation] = ''
@@ -201,9 +205,9 @@ multipliers[screen-md-max][] = 2x
 multipliers[screen-lg-min][] = 1.5x
 multipliers[screen-lg-min][] = 2x
 
-; Information added by Drupal.org packaging script on 2015-03-31
-version = "7.x-3.1-beta2+55-dev"
+; Information added by Drupal.org packaging script on 2015-11-03
+version = "7.x-3.1-beta3+14-dev"
 core = "7.x"
 project = "bootstrap"
-datestamp = "1427761084"
+datestamp = "1446514164"
 

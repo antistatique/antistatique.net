@@ -94,6 +94,9 @@ if (!empty($content['field_testimonial_quote'])) {
   hide($content['field_testimonial_position']);
   hide($content['field_testimonial_avatar']);
 }
+if (!empty($content['flippy_pager'])) {
+  hide($content['flippy_pager']);
+}
 hide($content['field_year']);
 hide($content['field_links']);
 hide($content['field_credits']);
@@ -102,6 +105,12 @@ hide($content['field_breadcrumb_tagline']);
 hide($content['field_section']);
 
 hide($content['field_hero_image_is_dark']);
+
+if ($type == 'project') {
+    $content_classes = "col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6";
+  } else {
+    $content_classes = "col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8";
+  }
 ?>
 
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> main-content clearfix "<?php print $attributes; ?>>
@@ -118,7 +127,7 @@ hide($content['field_hero_image_is_dark']);
     <div class="container cover-overlap">
       <?php if ($page && $display_submitted): ?>
         <div class="row">
-          <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+          <div class="<?php print $content_classes; ?>">
             <header>
               <div class="spacer spacer-sm visible-xs"></div>
               <?php print render($content['field_co_author']); ?>
@@ -139,11 +148,11 @@ hide($content['field_hero_image_is_dark']);
     <div class="container">
 
       <div class="row">
-        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 content <?php if ($type == 'article'): ?>blog-content<?php endif ?>">
+        <div class="<?php print $content_classes; ?> content <?php if ($type === 'article'): ?>blog-content<?php endif ?>">
           <?php print render($content['body']); ?>
           <div class="spacer spacer-md"></div>
         </div>
-        <?php if ($type = 'project'): ?>
+        <?php if ($type === 'project'): ?>
           <div class="col-sm-1 col-md-2 col-lg-3">
             <?php print render($content['field_links']); ?>
             <div class="spacer spacer-md"></div>
@@ -156,6 +165,17 @@ hide($content['field_hero_image_is_dark']);
             <?php print render($content['field_skills']); ?>
           </div>
         <?php endif ?>
+        <?php /* ?>
+        <?php if ($type === 'article' && !empty($content['field_skills'])): ?>
+            <div class="col-sm-1 col-md-2">
+                <?php foreach ($content['field_skills']['#items'] as $item => $value): ?>
+                    <a href="<?php print url(taxonomy_term_uri($content['field_skills'][$item]['#options']['entity'])['path']); ?>" data-toggle="tooltip" title="<?php print render($content['field_skills'][0]['#options']['entity']->name); ?>">
+                        <img src="<?php print image_style_url('large', $content['field_skills'][0]['#options']['entity']->field_picto['und'][0]['uri']); ?>" alt="<?php print render($content['field_skills'][0]['#options']['entity']->name); ?>">
+                    </a>
+                <?php endforeach ?>
+            </div>
+        <?php endif ?>
+        <?php */ ?>
       </div>
     </div>
   <?php endif; ?>
@@ -179,7 +199,7 @@ hide($content['field_hero_image_is_dark']);
       </div>
     <?php endif ?>
     <div class="row">
-      <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 ">
+      <div class="<?php print $content_classes; ?> ">
 
         <?php if (!empty($content['field_credits'])): ?>
           <?php print render($content['field_credits']); ?>
@@ -196,6 +216,11 @@ hide($content['field_hero_image_is_dark']);
           <?php endif; ?>
           <div class="spacer spacer-md"></div>
         <?php endif; ?>
+
+        <?php if (!empty($content['flippy_pager'])): ?>
+          <?php print render($content['flippy_pager']); ?>
+        <?php endif ?>
+
       </div>
     </div>
   </div>

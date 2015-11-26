@@ -237,11 +237,22 @@ function webform_admin_settings() {
     '#description' => t('By default, the configuration form for each webform allows the administrator to choose which roles may submit the form. You may want to allow users to always submit the form if you are using a separate node access module to control access to webform nodes themselves.'),
   );
 
+  $form['advanced']['webform_token_access']  = array(
+    '#type' => 'radios',
+    '#title' => t('Token access'),
+    '#options' => array(
+      '1' => t('Allow tokens to be used in Webforms.'),
+      '0' => t('Disable tokens in Webforms'),
+    ),
+    '#default_value' => webform_variable_get('webform_token_access'),
+    '#description' => t('Tokens can be used to reveal sensitive information. Allow tokens if Webform creators are trusted.'),
+  );
+
   $form['advanced']['webform_email_select_max'] = array(
     '#type' => 'textfield',
     '#title' => t("Select email mapping limit"),
     '#default_value' => webform_variable_get('webform_email_select_max'),
-    '#description' => t('When mapping emails addresses to a select component, limit the choice to components with less than the amount of options indicated. This is to avoid flooding the email settings form. '),
+    '#description' => t('When mapping emails addresses to a select component, limit the choice to components with less than the amount of options indicated. This is to avoid flooding the email settings form.'),
   );
 
   $form = system_settings_form($form);

@@ -16,6 +16,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'admin_menu',
   );
@@ -26,6 +27,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'system',
   );
@@ -85,6 +87,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'node',
   );
@@ -94,6 +97,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'access dashboard',
     'roles' => array(
       'administrator' => 'administrator',
+      'translator' => 'translator',
     ),
     'module' => 'dashboard',
   );
@@ -174,6 +178,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'system',
   );
@@ -976,6 +981,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'node',
   );
@@ -986,6 +992,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'node',
   );
@@ -1065,6 +1072,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'edit terms in category',
     'roles' => array(
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'taxonomy',
   );
@@ -1081,6 +1089,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'edit terms in skills',
     'roles' => array(
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'taxonomy',
   );
@@ -1109,6 +1118,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'admin_menu',
   );
@@ -1320,6 +1330,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'i18n_string',
   );
@@ -1330,6 +1341,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'entity_translation',
   );
@@ -1340,6 +1352,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'locale',
   );
@@ -1350,6 +1363,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'entity_translation',
   );
@@ -1360,6 +1374,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'entity_translation',
   );
@@ -1370,6 +1385,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'entity_translation',
   );
@@ -1380,6 +1396,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'i18n_string',
   );
@@ -1421,6 +1438,16 @@ function antistatique_site_user_default_permissions() {
     'module' => 'custom_breadcrumbs',
   );
 
+  // Exported permission: 'use text format ace_editor'.
+  $permissions['use text format ace_editor'] = array(
+    'name' => 'use text format ace_editor',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'collaborator' => 'collaborator',
+    ),
+    'module' => 'filter',
+  );
+
   // Exported permission: 'use text format filtered_html'.
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
@@ -1439,6 +1466,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'filter',
   );
@@ -1459,6 +1487,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'view any unpublished article content',
     'roles' => array(
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'view_unpublished',
   );
@@ -1469,6 +1498,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'view_unpublished',
   );
@@ -1478,6 +1508,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'view any unpublished page content',
     'roles' => array(
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'view_unpublished',
   );
@@ -1487,6 +1518,7 @@ function antistatique_site_user_default_permissions() {
     'name' => 'view any unpublished project content',
     'roles' => array(
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'view_unpublished',
   );
@@ -1529,6 +1561,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'node',
   );
@@ -1559,6 +1592,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'system',
   );

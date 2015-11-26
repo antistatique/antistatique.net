@@ -17,3 +17,10 @@ namespace :assets do
     run "cd #{current_release} && ./node_modules/.bin/gulp build"
   end
 end
+
+namespace :staging_env do
+  desc "Add HTTP basic AUTH"
+  task :protect do
+    run "cat #{shared_path}/drupal/.htaccess.protect >> #{current_release}/drupal/.htaccess"
+  end
+end

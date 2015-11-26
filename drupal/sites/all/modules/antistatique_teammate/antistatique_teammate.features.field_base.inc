@@ -10,7 +10,7 @@
 function antistatique_teammate_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_email'
+  // Exported field_base: 'field_email'.
   $field_bases['field_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -27,7 +27,7 @@ function antistatique_teammate_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_firstname'
+  // Exported field_base: 'field_firstname'.
   $field_bases['field_firstname'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -49,7 +49,7 @@ function antistatique_teammate_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_lastname'
+  // Exported field_base: 'field_lastname'.
   $field_bases['field_lastname'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -71,7 +71,7 @@ function antistatique_teammate_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_pingpong_points'
+  // Exported field_base: 'field_pingpong_points'.
   $field_bases['field_pingpong_points'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -88,7 +88,7 @@ function antistatique_teammate_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_pingpong_ranking'
+  // Exported field_base: 'field_pingpong_ranking'.
   $field_bases['field_pingpong_ranking'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -106,7 +106,7 @@ function antistatique_teammate_field_default_field_bases() {
     'type' => 'number_float',
   );
 
-  // Exported field_base: 'field_related_project'
+  // Exported field_base: 'field_related_project'.
   $field_bases['field_related_project'] = array(
     'active' => 1,
     'cardinality' => 2,
@@ -142,7 +142,7 @@ function antistatique_teammate_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_teammate_body'
+  // Exported field_base: 'field_teammate_body'.
   $field_bases['field_teammate_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -163,7 +163,7 @@ function antistatique_teammate_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_teammate_currently_working'
+  // Exported field_base: 'field_teammate_currently_working'.
   $field_bases['field_teammate_currently_working'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -189,7 +189,7 @@ function antistatique_teammate_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_teammate_hero_image'
+  // Exported field_base: 'field_teammate_hero_image'.
   $field_bases['field_teammate_hero_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -214,7 +214,7 @@ function antistatique_teammate_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_teammate_job_title'
+  // Exported field_base: 'field_teammate_job_title'.
   $field_bases['field_teammate_job_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -236,7 +236,7 @@ function antistatique_teammate_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_teammate_links'
+  // Exported field_base: 'field_teammate_links'.
   $field_bases['field_teammate_links'] = array(
     'active' => 1,
     'cardinality' => -1,

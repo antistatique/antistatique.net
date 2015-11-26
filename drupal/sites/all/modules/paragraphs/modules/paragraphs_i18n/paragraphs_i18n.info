@@ -1,12 +1,15 @@
 name = Paragraphs - Internationalization
-description = Allow paragraphs items to be duplicated for translation.
+description = Allow paragraph bundles to be duplicate for translation.
 core = 7.x
 package = Paragraphs
+
+dependencies[] = paragraphs
+dependencies[] = replicate
 dependencies[] = replicate_paragraphs
 
-; Information added by Drupal.org packaging script on 2015-02-11
-version = "7.x-1.0-beta6"
+; Information added by Drupal.org packaging script on 2015-10-11
+version = "7.x-1.0-rc4"
 core = "7.x"
 project = "paragraphs"
-datestamp = "1423671198"
+datestamp = "1444523876"
 

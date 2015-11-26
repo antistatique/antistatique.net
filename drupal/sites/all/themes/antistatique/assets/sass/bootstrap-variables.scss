@@ -25,7 +25,7 @@ $brand-primary:         $pinkstatik !default;
 $brand-success:         $dodger-blue !default;
 $brand-info:            $midnight-blue-light !default;
 $brand-warning:         $pizazz !default;
-$brand-danger:          $razzmatazz !default;
+$brand-danger:          $pinkstatik-dark !default;
 
 
 //== Scaffolding
@@ -62,7 +62,7 @@ $font-size-small:         ceil(($font-size-base * 0.8)) !default; // ~12px
 $font-size-h1:            floor(($font-size-base * 2.8)) !default; // ~56px
 $font-size-h2:            floor(($font-size-base * 2.2)) !default; // ~50px
 $font-size-h3:            ceil(($font-size-base * 2.1)) !default; // ~42px
-$font-size-h4:            ceil(($font-size-base * 1.8)) !default; // ~36px
+$font-size-h4:            ceil(($font-size-base * 1.4)) !default; // ~36px
 $font-size-h5:            ceil(($font-size-base * 1.4)) !default; // ~28px
 $font-size-h6:            ceil(($font-size-base * 1.2)) !default; // ~24px
 
@@ -495,7 +495,7 @@ $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             $white !default;
+$state-success-text:             $midnight-blue !default;
 $state-success-bg:               $brand-success !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
@@ -845,7 +845,7 @@ $pre-scrollable-max-height:   340px !default;
 //##
 
 //** Horizontal offset for forms and lists.
-$component-offset-horizontal: 180px !default;
+$component-offset-horizontal: 220px !default;
 //** Text muted color
 $text-muted:                  $midnight-blue-light !default;
 //** Abbreviations and acronyms border color

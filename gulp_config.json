@@ -22,7 +22,8 @@
       "bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js",
       "bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js",
       "bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js",
-      "bower_components/bootstrap-select/dist/js/bootstrap-select.min.js "
+      "bower_components/bootstrap-select/dist/js/bootstrap-select.min.js",
+      "bower_components/emojify.js/dist/js/emojify.js"
     ],
     "fonts": [
       "bower_components/font-awesome/fonts/*",
@@ -35,7 +36,8 @@
     ]
   },
   "images": [
-    "drupal/sites/all/themes/antistatique/assets/img/**/*"
+    "drupal/sites/all/themes/antistatique/assets/img/**/*",
+    "bower_components/emojify.js/dist/images/basic/**/*"
   ],
   "svg": [
     "drupal/sites/all/themes/antistatique/assets/svg/**/*"

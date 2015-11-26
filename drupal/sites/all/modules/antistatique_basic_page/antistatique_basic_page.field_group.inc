@@ -21,7 +21,7 @@ function antistatique_basic_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Images',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_hero_image_is_dark',
       1 => 'field_teammate_hero_image',
@@ -50,11 +50,10 @@ function antistatique_basic_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Infos',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_breadcrumb_tagline',
       1 => 'field_section',
-      2 => 'metatags',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -79,7 +78,7 @@ function antistatique_basic_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'body',
       1 => 'field_images',

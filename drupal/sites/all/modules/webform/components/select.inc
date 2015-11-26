@@ -26,6 +26,7 @@ function _webform_defaults_select() {
       'other_text' => t('Other...'),
       'title_display' => 0,
       'description' => '',
+      'description_above' => FALSE,
       'custom_keys' => FALSE,
       'options_source' => '',
       'private' => FALSE,
@@ -58,6 +59,15 @@ function _webform_edit_select($component) {
       ),
     ),
   );
+
+  // Default component if nested under a grid.
+  if (!isset($component['cid']) && $component['pid'] &&
+      ($node = node_load($component['nid'])) && ($parent = $node->webform['components'][$component['pid']]) &&
+      $parent['type'] == 'grid') {
+    $component['value'] = $parent['value'];
+    $component['extra']['items'] = $parent['extra']['options'];
+    $component['required'] = $parent['required'];
+  }
 
   $other = array();
   if ($info = _webform_select_options_info()) {
@@ -328,11 +338,6 @@ function _webform_render_select($component, $value = NULL, $filter = TRUE, $subm
     '#translatable' => array('title', 'description', 'options'),
   );
 
-  // Add HTML5 required attribute, if needed and possible (not working on multiple checkboxes).
-  if ($component['required'] && ($component['extra']['aslist'] || !$component['extra']['multiple'])) {
-    $element['#attributes']['required'] = 'required';
-  }
-
   // Convert the user-entered options list into an array.
   $default_value = $filter ? webform_replace_tokens($component['value'], $node) : $component['value'];
   $options = _webform_select_options($component, !$component['extra']['aslist'], $filter);
@@ -345,11 +350,19 @@ function _webform_render_select($component, $value = NULL, $filter = TRUE, $subm
     _webform_shuffle_options($options);
   }
 
+  // Add HTML5 required attribute, if needed and possible (not working on more than one checkboxes).
+  if ($component['required'] && ($component['extra']['aslist'] || !$component['extra']['multiple'] || count($options) == 1)) {
+    $element['#attributes']['required'] = 'required';
+  }
+
   // Add default options if using a select list with no default. This trigger's
   // Drupal 7's adding of the option for us. See @form_process_select().
   if ($component['extra']['aslist'] && !$component['extra']['multiple'] && $default_value === '') {
     $element['#empty_value'] = '';
-    $element['#empty_option'] = $component['extra']['empty_option'];
+    if (strlen($component['extra']['empty_option'])) {
+      $element['#empty_option'] =  $component['extra']['empty_option'];
+      $element['#translatable'][] = 'empty_option';
+    }
   }
 
   // Set the component options.
@@ -485,7 +498,7 @@ function webform_expand_select_ids($element) {
 /**
  * Implements _webform_display_component().
  */
-function _webform_display_select($component, $value, $format = 'html') {
+function _webform_display_select($component, $value, $format = 'html', $submission = array()) {
   // Sort values by numeric key. These may be in alphabetic order from the database query,
   // which is not numeric order for keys '10' and higher.
   $value = (array) $value;
@@ -740,6 +753,24 @@ function _webform_table_select($component, $value) {
 }
 
 /**
+ * Implements _webform_action_set_component().
+ */
+function _webform_action_set_select($component, &$element, &$form_state, $value) {
+  // Set the value as an array for multiple select or single value otherwise.
+  if ($element['#type'] == 'checkboxes') {
+    $checkbox_values = $element['#options'];
+    array_walk($checkbox_values, function(&$value, $key) use($value) {
+      $value = (int)(strval($key) === $value);
+    });
+  }
+  else {
+    $value = $component['extra']['multiple'] ? array($value) : $value;
+  }
+  $element['#value'] = $value;
+  form_set_value($element, $value, $form_state);
+}
+
+/**
  * Implements _webform_csv_headers_component().
  */
 function _webform_csv_headers_select($component, $export_options) {
@@ -795,7 +826,9 @@ function _webform_csv_data_select($component, $export_options, $value) {
 
   if ($component['extra']['multiple']) {
     foreach ($options as $key => $item) {
-      $index = array_search($key, (array) $value);
+      // Strict search is needed to avoid a key of 0 from matching an empty
+      // value.
+      $index = array_search((string)$key, (array)$value, TRUE);
       if ($index !== FALSE) {
         if ($export_options['select_format'] == 'separate') {
           $return[] = 'X';

@@ -10,7 +10,7 @@
 function antistatique_article_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-article-body'
+  // Exported field_instance: 'node-article-body'.
   $field_instances['node-article-body'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -90,7 +90,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_category'
+  // Exported field_instance: 'node-article-field_category'.
   $field_instances['node-article-field_category'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -102,7 +102,7 @@ function antistatique_article_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'featured' => array(
         'label' => 'hidden',
@@ -146,7 +146,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_co_author'
+  // Exported field_instance: 'node-article-field_co_author'.
   $field_instances['node-article-field_co_author'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -161,7 +161,7 @@ function antistatique_article_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'featured' => array(
         'label' => 'hidden',
@@ -206,11 +206,11 @@ function antistatique_article_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-article-field_hero_image_is_dark'
+  // Exported field_instance: 'node-article-field_hero_image_is_dark'.
   $field_instances['node-article-field_hero_image_is_dark'] = array(
     'bundle' => 'article',
     'default_value' => array(
@@ -226,7 +226,7 @@ function antistatique_article_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_key',
-        'weight' => 7,
+        'weight' => 4,
       ),
       'featured' => array(
         'label' => 'hidden',
@@ -264,17 +264,17 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_images'
+  // Exported field_instance: 'node-article-field_images'.
   $field_instances['node-article-field_images'] = array(
     'bundle' => 'article',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Image should be at least <b>650px</b> wide.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 8,
       ),
       'featured' => array(
         'label' => 'hidden',
@@ -301,14 +301,14 @@ function antistatique_article_field_default_field_instances() {
     'label' => 'Images',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'large-article',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '650x650',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -316,17 +316,6 @@ function antistatique_article_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 0,
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 1,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -351,8 +340,16 @@ function antistatique_article_field_default_field_instances() {
           'image_large_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
           'image_large_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
           'image_medium' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_project_thumbnail' => 0,
           'image_square_thumbnail' => 0,
           'image_thumbnail' => 0,
+          'image_wide_image' => 0,
+          'image_wide_thumbnail' => 0,
           'link' => 0,
         ),
         'insert_width' => '',
@@ -364,7 +361,116 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_svg_title'
+  // Exported field_instance: 'node-article-field_needs_translation'.
+  $field_instances['node-article-field_needs_translation'] = array(
+    'bundle' => 'article',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'This option indicates that this content is ready to be translated by the translator.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'small_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_needs_translation',
+    'label' => 'Ready for translation',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-article-field_skills'.
+  $field_instances['node-article-field_skills'] = array(
+    'bundle' => 'article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Used to reference article in skills pages',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'small_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_skills',
+    'label' => 'Skills',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-article-field_svg_title'.
   $field_instances['node-article-field_svg_title'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -377,7 +483,7 @@ function antistatique_article_field_default_field_instances() {
           'file_view_mode' => 'default',
         ),
         'type' => 'file_rendered',
-        'weight' => 8,
+        'weight' => 5,
       ),
       'featured' => array(
         'label' => 'above',
@@ -404,7 +510,7 @@ function antistatique_article_field_default_field_instances() {
     'label' => 'SVG Title',
     'required' => 0,
     'settings' => array(
-      'description_field' => 0,
+      'description_field' => 1,
       'entity_translation_sync' => 0,
       'file_directory' => 'article-svg',
       'file_extensions' => 'svg',
@@ -460,10 +566,9 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_teammate_hero_image'
+  // Exported field_instance: 'node-article-field_teammate_hero_image'.
   $field_instances['node-article-field_teammate_hero_image'] = array(
     'bundle' => 'article',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.',
     'display' => array(
@@ -481,6 +586,8 @@ function antistatique_article_field_default_field_instances() {
           ),
           'fallback_image_style' => 'hero-image',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
           'picture_mapping' => 'hero',
         ),
         'type' => 'picture',
@@ -523,14 +630,14 @@ function antistatique_article_field_default_field_instances() {
     'label' => 'Hero-image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => 'hero-article',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '1600x900',
+      'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -538,17 +645,6 @@ function antistatique_article_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 0,
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          0 => 0,
-          'audio' => 0,
-          'default' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -594,7 +690,7 @@ function antistatique_article_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-title_field'
+  // Exported field_instance: 'node-article-title_field'.
   $field_instances['node-article-title_field'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -605,7 +701,7 @@ function antistatique_article_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 9,
       ),
       'featured' => array(
         'label' => 'above',
@@ -656,11 +752,16 @@ function antistatique_article_field_default_field_instances() {
   t('Displayed Author(s)');
   t('Hero image is dark');
   t('Hero-image');
+  t('Image should be at least <b>650px</b> wide.');
   t('Images');
   t('L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.');
+  t('Ready for translation');
   t('SVG Title');
+  t('Skills');
+  t('This option indicates that this content is ready to be translated by the translator.');
   t('Tick if your hero image is dark (we\'ll set white text for the header)');
   t('Title');
+  t('Used to reference article in skills pages');
 
   return $field_instances;
 }

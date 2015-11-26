@@ -55,6 +55,9 @@ function antistatique_basic_page_strongarm() {
         'metatags' => array(
           'weight' => '6',
         ),
+        'xmlsitemap' => array(
+          'weight' => '5',
+        ),
       ),
       'display' => array(),
     ),
@@ -89,8 +92,7 @@ function antistatique_basic_page_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_page';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_page'] = $strongarm;
 

@@ -10,7 +10,7 @@
 function antistatique_project_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_client'
+  // Exported field_base: 'field_client'.
   $field_bases['field_client'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -32,7 +32,7 @@ function antistatique_project_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_credits'
+  // Exported field_base: 'field_credits'.
   $field_bases['field_credits'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -53,7 +53,7 @@ function antistatique_project_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_links'
+  // Exported field_base: 'field_links'.
   $field_bases['field_links'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -83,7 +83,33 @@ function antistatique_project_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_paragraphs'
+  // Exported field_base: 'field_needs_translation'.
+  $field_bases['field_needs_translation'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_needs_translation',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'field_paragraphs'.
   $field_bases['field_paragraphs'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -100,7 +126,32 @@ function antistatique_project_field_default_field_bases() {
     'type' => 'paragraphs',
   );
 
-  // Exported field_base: 'field_skills'
+  // Exported field_base: 'field_picto'.
+  $field_bases['field_picto'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_picto',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'image',
+    'settings' => array(
+      'default_image' => 0,
+      'entity_translation_sync' => array(
+        0 => 'fid',
+      ),
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'image',
+  );
+
+  // Exported field_base: 'field_skills'.
   $field_bases['field_skills'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -128,7 +179,7 @@ function antistatique_project_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_testimonial_avatar'
+  // Exported field_base: 'field_testimonial_avatar'.
   $field_bases['field_testimonial_avatar'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -153,7 +204,7 @@ function antistatique_project_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_testimonial_name'
+  // Exported field_base: 'field_testimonial_name'.
   $field_bases['field_testimonial_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -175,7 +226,7 @@ function antistatique_project_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_testimonial_position'
+  // Exported field_base: 'field_testimonial_position'.
   $field_bases['field_testimonial_position'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -197,7 +248,7 @@ function antistatique_project_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_testimonial_quote'
+  // Exported field_base: 'field_testimonial_quote'.
   $field_bases['field_testimonial_quote'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -218,7 +269,7 @@ function antistatique_project_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_tile_image'
+  // Exported field_base: 'field_tile_image'.
   $field_bases['field_tile_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -243,7 +294,7 @@ function antistatique_project_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_year'
+  // Exported field_base: 'field_year'.
   $field_bases['field_year'] = array(
     'active' => 1,
     'cardinality' => 1,

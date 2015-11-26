@@ -10,6 +10,16 @@
 function antistatique_site_filter_default_formats() {
   $formats = array();
 
+  // Exported format: Ace Editor.
+  $formats['ace_editor'] = array(
+    'format' => 'ace_editor',
+    'name' => 'Ace Editor',
+    'cache' => 1,
+    'status' => 1,
+    'weight' => 100,
+    'filters' => array(),
+  );
+
   // Exported format: Filtered HTML.
   $formats['filtered_html'] = array(
     'format' => 'filtered_html',
@@ -22,7 +32,7 @@ function antistatique_site_filter_default_formats() {
         'weight' => -46,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <img> <p> <hr> <pre> <dl> <dt> <picture> <aside> <div>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <img> <p> <hr> <pre> <dl> <dt> <picture> <aside> <div> <br>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
@@ -75,7 +85,7 @@ function antistatique_site_filter_default_formats() {
         'weight' => -49,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <img> <hr> <pre> <dl> <dt> <picture> <aside> <drupal-entity> <p> ',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <img> <hr> <pre> <dl> <dt> <picture> <aside> <drupal-entity> <p> <br> <iframe> <script>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
