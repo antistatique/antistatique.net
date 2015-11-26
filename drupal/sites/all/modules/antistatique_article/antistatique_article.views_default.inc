@@ -433,6 +433,15 @@ function antistatique_article_views_default_views() {
     'article' => 'article',
   );
   $handler->display->display_options['path'] = 'nous/bloggons/%';
+
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'feed_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '80';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['path'] = 'blog/rss.xml';
   $translatables['news'] = array(
     t('Master'),
     t('Go to the blog'),
@@ -465,6 +474,7 @@ function antistatique_article_views_default_views() {
     t('All articles from user'),
     t('Go to the complete blog'),
     t('User entity referenced from field_co_author'),
+    t('Feed'),
   );
   $export['news'] = $view;
 
