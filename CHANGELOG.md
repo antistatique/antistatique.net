@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.1.1 (2015-12-14)
+
+- Add missing assets logo
+
 ## 1.1.0 (2015-12-14)
 
 - Add the coffee.antistatique.net page
