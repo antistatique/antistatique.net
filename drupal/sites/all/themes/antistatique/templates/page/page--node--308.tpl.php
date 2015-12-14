@@ -1,4 +1,3 @@
-<?php print $messages; ?>
 <div class="bg-primary full-screen coffee dark-hero clearfix">
   <a class="logo hidden-xs" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
     <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 332 61.9" style="enable-background:new 0 0 332 61.9;" xml:space="preserve" width="170" height="35">
@@ -46,6 +45,12 @@
   <h1><?php print t('Buvons un café ensemble!') ?></h1>
   <div class="spacer spacer-sm"></div>
   <p><?php print t("Laissez-nous votre <b>numéro</b>, <b>email</b> ou <b>Twitter handle</b> <br>& nous vous appellerons/écrirons/twitterons!"); ?></p>
+
+  <?php if ($messages): ?>
+    <div class="container">
+      <?php print $messages; ?>
+    </div>
+  <?php endif; ?>
 
   <?php print render($page['content_below']); ?>
 

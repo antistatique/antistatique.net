@@ -51,6 +51,7 @@
     color: $white;
     text-decoration: underline;
     font-weight: 600;
+    &.close {text-decoration: none;}
   }
   footer {
     margin-top: auto;
