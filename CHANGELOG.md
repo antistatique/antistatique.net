@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.1.0 (2015-12-14)
+
+- Add the coffee.antistatique.net page
+
 ## 1.0.8 (2015-11-26)
 
 - Adding RSS feed view for articles
