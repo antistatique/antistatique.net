@@ -46,4 +46,8 @@
  */
 
 ?>
-<?php print $content ?>
+<section id="<?php print $block_html_id; ?>"<?php print $attributes; ?>>
+
+  <?php print $content ?>
+
+</section>
