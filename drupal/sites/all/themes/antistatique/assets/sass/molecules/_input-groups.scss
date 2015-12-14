@@ -11,7 +11,8 @@
 }
 
 //merge the button inside the field
-.input-group-merged {
+.input-group-merged,
+.coffee .webform-client-form {
   .btn {
     position: absolute;
     right: 0;
