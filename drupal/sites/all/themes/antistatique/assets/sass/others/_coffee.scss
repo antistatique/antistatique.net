@@ -31,7 +31,10 @@
     max-height: 25vh;
     width: auto;
   }
-  .input-group {
+  .control-label {display: none;}
+  .form-item {
+    @extend .input-group;
+    @extend .input-group-lg;
     margin: 0 auto;
     max-width: 400px;
     align-self: center;
