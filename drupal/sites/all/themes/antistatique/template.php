@@ -394,7 +394,11 @@ function antistatique_file_displays_alter($displays, &$file, $view_mode) {
 }
 
 function antistatique_form_alter(&$form, &$form_state, $form_id) {
-  if (!empty($form['actions']) && $form['actions']['submit']) {
+  if (!empty($form['actions']) && $form['actions']['submit'] && $form_id !== 'webform_client_form_309') {
     $form['actions']['submit']['#attributes'] = array('class' => array('btn-primary', 'btn', 'btn-block'));
+  }
+  if ($form_id === 'webform_client_form_309') {
+      $form['actions']['submit']['#attributes'] = array('class' => array('btn-default', 'btn'));
+      $form['actions']['submit']['#value'] = '<span class="sr-only">Go!</span><i class="antistaticon antistaticon-enter" aria-hidden="true"></i>';
   }
 }

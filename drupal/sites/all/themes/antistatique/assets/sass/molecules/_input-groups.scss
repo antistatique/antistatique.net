@@ -10,6 +10,21 @@
   border-radius: 2px;
 }
 
+//merge the button inside the field
+.input-group-merged,
+.coffee .webform-client-form {
+  .btn {
+    position: absolute;
+    right: 0;
+    z-index: 90;
+    height: 100%;
+    &:hover {
+      background: none;
+    }
+  }
+  .form-control {padding-right: 51px;}
+}
+
 .form-mobile {
   @media only screen and (max-width: $screen-xs-max) {
     .input-group {

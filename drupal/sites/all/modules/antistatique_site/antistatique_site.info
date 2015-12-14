@@ -130,6 +130,7 @@ features[breakpoints][] = breakpoints.theme.bootstrap.screen-md-min
 features[breakpoints][] = breakpoints.theme.bootstrap.screen-sm-max
 features[breakpoints][] = breakpoints.theme.bootstrap.screen-sm-min
 features[breakpoints][] = breakpoints.theme.bootstrap.screen-xs-max
+features[context][] = coffee
 features[context][] = darkheader
 features[context][] = footer_en
 features[context][] = footer_fr

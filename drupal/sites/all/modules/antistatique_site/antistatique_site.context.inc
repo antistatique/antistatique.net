@@ -13,6 +13,38 @@ function antistatique_site_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'coffee';
+  $context->description = '';
+  $context->tag = 'specific';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'coffee' => 'coffee',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'webform-client-block-309' => array(
+          'module' => 'webform',
+          'delta' => 'client-block-309',
+          'region' => 'content_below',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('specific');
+  $export['coffee'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'darkheader';
   $context->description = 'Is it a dark header ? Then add a class';
   $context->tag = 'header';
