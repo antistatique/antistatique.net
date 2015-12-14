@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.1.2 (2015-12-14)
+
+- Fix some styles issues
+
 ## 1.1.1 (2015-12-14)
 
 - Add missing assets logo
