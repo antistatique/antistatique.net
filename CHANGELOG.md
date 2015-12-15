@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.1.3 (2015-12-15)
+
+- Cups are dancing! 💃
+
 ## 1.1.2 (2015-12-14)
 
 - Fix some styles issues
