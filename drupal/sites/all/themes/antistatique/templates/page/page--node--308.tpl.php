@@ -1,4 +1,4 @@
-<div class="bg-primary full-screen coffee dark-hero clearfix">
+<div class="bg-primary full-screen coffee dark-hero clearfix" style="background: #ec2577;">
   <a class="logo hidden-xs" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
     <img src="<?php print $base_path . $directory; ?>/build/svg/logo_white.svg" onerror="this.onerror=null; this.src='<?php print $base_path . $directory; ?>/build/img/logo_white_wide.png'" alt="Antistatique" />
   </a>
@@ -10,7 +10,7 @@
     </svg>
   </a>
   <div class="cups">
-    <img class="img-responsive" src="<?php print $base_path . $directory; ?>/build/img/tasses.png" alt="Tasses">
+    <img class="img-responsive" src="<?php print $base_path . $directory; ?>/build/img/Coffe_anim.gif" alt="Oh mon Dieu! Des tasses qui dansent!">
   </div>
   <h1><?php print t('Buvons un café ensemble!') ?></h1>
   <div class="spacer spacer-sm"></div>
