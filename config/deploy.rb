@@ -1,38 +1,33 @@
-set :application,     "antistatique"
+# config valid only for current version of Capistrano
+lock '3.4.0'
 
-load 'config/recipes'
+set :application, 'antistatique'
 
-# Relative path to thedrupal path
-set :app_path,        "drupal"
-set :shared_children, ['drupal/sites/default/files','drupal/private-files']
-set :shared_files,    ['drupal/sites/default/settings.php']
-set :stages,          %w(staging production)
+load 'config/recipes.rb'
 
-set :scm,            "git"
-set :repository,     "git@github.com:antistatique/antistatique.net.git"
+set :repo_url, 'git@github.com:antistatique/antistatique.net.git'
 
-set :domain,         "antistatique.alwaysdata.net"
+# Default branch is :master
+# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-set :user,           "antistatique"
-set :group,          "antistatique"
-set :runner_group,   "antistatique"
+# Default deploy_to directory is /var/www/my_app_name
+set :deploy_to, '/home/antistatique/www/antistatique.net'
 
-set :use_sudo,       false
-default_run_options[:pty] = true
-ssh_options[:forward_agent] = true
+before "deploy:symlink:release", "assets:build"
 
-set :download_drush, true
-
-role :app,           domain
-role :db,            domain
-
-set  :keep_releases,   3
-
-before "deploy:create_symlink", "assets:build"
-
-after "deploy:update", "deploy:cleanup"
+after "drupal:update:updatedb", "deploy:cleanup"
 after "deploy:cleanup", "drush:cache_clear"
 before "deploy:cleanup", "hotfix:fix_permissions"
 
-# Be more verbose by uncommenting the following line
-#logger.level = Logger::MAX_LEVEL
+namespace :deploy do
+
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
+  end
+
+end
