@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+## 1.1.4 (2016-01-05)
+
+- Update all modules except ace_editor (crashing when editing some nodes)
+- Add $base_path var to html.tpl.php
+- fix iframes format in content
+- allow some more tags in `Filtered HTML` format
+- remove URL autoformatting from `Full HTML` format
+
 ## 1.1.3 (2015-12-15)
 
 - Cups are dancing! 💃
