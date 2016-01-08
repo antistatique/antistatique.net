@@ -13,10 +13,12 @@
         margin-left: -230px;
       }
       &.aside-right {
-        float: right;
-        margin-left: 0;
-        margin-right: -230px;
         text-align: left;
+        &:not(.aside-no-positionning) {
+          float: right;
+          margin-left: 0;
+          margin-right: -230px;
+        }
 
         &:after {
           @media only screen and (min-width: $screen-lg-min) {
