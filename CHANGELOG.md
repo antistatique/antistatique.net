@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+## 1.1.5 (2016-01-8)
+
+- allow `<div>` in Markdown text format
+- remove `table-row` class from paragraph image with aside and fix aside positionning in paragraph image+aside
+
 ## 1.1.4 (2016-01-05)
 
 - Update all modules except ace_editor (crashing when editing some nodes)
