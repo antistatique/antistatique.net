@@ -78,7 +78,7 @@ function antistatique_site_filter_default_formats() {
         'weight' => -49,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <img> <hr> <pre> <dl> <dt> <picture> <aside> <drupal-entity> <p> <br> <iframe> <script>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <h2> <h3> <h4> <h5> <h6> <img> <hr> <pre> <dl> <dt> <picture> <aside> <drupal-entity> <p> <br> <iframe> <script> <div>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
