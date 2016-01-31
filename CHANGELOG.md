@@ -1,6 +1,38 @@
 CHANGELOG
 =========
 
+## 1.1.6 (2016-01-31)
+- Security update on field_group
+
+## 1.1.5 (2016-01-8)
+
+- allow `<div>` in Markdown text format
+- remove `table-row` class from paragraph image with aside and fix aside positionning in paragraph image+aside
+
+## 1.1.4 (2016-01-05)
+
+- Update all modules except ace_editor (crashing when editing some nodes)
+- Add $base_path var to html.tpl.php
+- fix iframes format in content
+- allow some more tags in `Filtered HTML` format
+- remove URL autoformatting from `Full HTML` format
+
+## 1.1.3 (2015-12-15)
+
+- Cups are dancing! 💃
+
+## 1.1.2 (2015-12-14)
+
+- Fix some styles issues
+
+## 1.1.1 (2015-12-14)
+
+- Add missing assets logo
+
+## 1.1.0 (2015-12-14)
+
+- Add the coffee.antistatique.net page
+
 ## 1.0.8 (2015-11-26)
 
 - Adding RSS feed view for articles

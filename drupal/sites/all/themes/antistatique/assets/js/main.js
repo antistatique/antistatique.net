@@ -15,9 +15,12 @@
     // wrap iframes in blog content
     var iframes = $('.blog-content').find('iframe');
     $.each(iframes, function() {
-      $(this)
-        .addClass('embed-responsive-item')
-        .wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
+      var $iframe = $(this);
+      if (!$iframe.hasClass('instagram-media')) {
+        $iframe
+          .addClass('embed-responsive-item')
+          .wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
+      }
     });
 
     // display shop open/closed sign

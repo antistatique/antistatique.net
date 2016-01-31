@@ -59,6 +59,13 @@ body.cke_editable {
 .content {
   iframe {
     max-width: 100%;
-    height: auto;
+  }
+  iframe.instagram-media {
+    max-width:658px;
+    padding:0;
+    width:99.375%;
+    width:-webkit-calc(100% - 2px);
+    width:calc(100% - 2px);
+    margin: 30px auto;
   }
 }

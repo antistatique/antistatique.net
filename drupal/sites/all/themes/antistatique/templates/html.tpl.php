@@ -43,6 +43,9 @@
  *
  * @ingroup themeable
  */
+
+global $base_path;
+
 ?><!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces;?>>
 <head profile="<?php print $grddl_profile; ?>">
@@ -53,7 +56,7 @@
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="<?php print $base_path . $directory; ?>/build/js/polyfills.min.js"></script>
   <![endif]-->
 
   <!-- Import fonts -->

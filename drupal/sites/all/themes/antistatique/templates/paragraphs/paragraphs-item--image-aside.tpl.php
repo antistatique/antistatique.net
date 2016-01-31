@@ -46,7 +46,7 @@ hide($content['field_image_width']);
 ?>
 <div class="<?php print $classes; ?> container"<?php print $attributes; ?>>
   <div class="spacer"></div>
-  <div class="row content table-row"<?php print $content_attributes; ?>>
+  <div class="row content"<?php print $content_attributes; ?>>
     <div class="<?php print $alignment_image; ?>">
       <?php if (isset($device)): ?>
         <div class="marvel-device <?php print $device; ?> <?php print $landscape; ?> silver">
@@ -72,7 +72,7 @@ hide($content['field_image_width']);
         </div>
       <?php endif; ?>
     </div>
-    <aside class="<?php print $alignment_aside; ?><?php if (isset($device)): ?> aside-no-positionning<?php endif; ?>">
+    <aside class="<?php print $alignment_aside; ?> aside-no-positionning">
       <?php print render($content['field_aside']); ?>
     </aside>
   </div>
