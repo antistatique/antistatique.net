@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.1.6 (2016-01-31)
+- Security update on field_group
+
 ## 1.1.5 (2016-01-8)
 
 - allow `<div>` in Markdown text format
