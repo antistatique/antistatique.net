@@ -67,6 +67,7 @@ function new_relic_rpm_uninstall() {
   variable_del('new_relic_rpm_api_key');
   variable_del('new_relic_rpm_module_deployment');
   variable_del('new_relic_rpm_app_name');
+  variable_del('new_relic_rpm_use_menu_item_as_transaction');
 }
 
 /**

@@ -26,3 +26,24 @@ function new_relic_rpm_drush_init() {
     new_relic_rpm_set_job_state(variable_get('new_relic_rpm_track_drush', 'norm'));
   }
 }
+
+/**
+ * Implementation of hook_drush_command().
+ */
+function new_relic_rpm_drush_command() {
+  $items = array();
+
+  $items['newrelic-deploy'] = array(
+    'callback' => '_new_relic_rpm_deploy',
+    'description' => dt('Notify New Relic of a deployment.'),
+    'arguments' => array(
+      'user' => dt('Optional. User doing the deploy.'),
+      'description' => dt('Optional. A brief describing of the deployment.'),
+      'changelog' => dt('Optional. A list of changes for this deployment.'),
+      'revision' => dt('Optional. Revision id of the deployment.'),
+    ),
+    'aliases' => array('nrd'),
+  );
+
+  return $items;
+}
