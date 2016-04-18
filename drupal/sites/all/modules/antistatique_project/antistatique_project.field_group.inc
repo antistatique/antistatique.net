@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function antistatique_project_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -36,7 +36,7 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $export['group_client|node|project|form'] = $field_group;
+  $field_groups['group_client|node|project|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -67,7 +67,7 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $export['group_content|node|project|form'] = $field_group;
+  $field_groups['group_content|node|project|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -97,7 +97,7 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $export['group_image|node|project|form'] = $field_group;
+  $field_groups['group_image|node|project|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -126,7 +126,7 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $export['group_others|node|project|form'] = $field_group;
+  $field_groups['group_others|node|project|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -156,7 +156,15 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $export['group_testimonial|node|project|form'] = $field_group;
+  $field_groups['group_testimonial|node|project|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Client');
+  t('Content');
+  t('Images');
+  t('Others');
+  t('Testimonial');
+
+  return $field_groups;
 }
