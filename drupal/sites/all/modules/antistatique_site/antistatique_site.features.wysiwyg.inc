@@ -34,6 +34,8 @@ function antistatique_site_wysiwyg_default_profiles() {
           'Link' => 1,
           'Unlink' => 1,
           'Image' => 1,
+          'Superscript' => 1,
+          'Subscript' => 1,
           'Blockquote' => 1,
           'Source' => 1,
           'HorizontalRule' => 1,

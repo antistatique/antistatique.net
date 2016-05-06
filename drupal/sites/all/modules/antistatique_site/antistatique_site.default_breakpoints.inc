@@ -49,7 +49,7 @@ function antistatique_site_default_breakpoints() {
   $breakpoint->api_version = 1;
   $breakpoint->machine_name = 'breakpoints.theme.bootstrap.screen-md-min';
   $breakpoint->name = 'screen-md-min';
-  $breakpoint->breakpoint = '(max-width: 992px)';
+  $breakpoint->breakpoint = '(min-width: 992px)';
   $breakpoint->source = 'bootstrap';
   $breakpoint->source_type = 'theme';
   $breakpoint->status = 1;
@@ -83,7 +83,7 @@ function antistatique_site_default_breakpoints() {
   $breakpoint->api_version = 1;
   $breakpoint->machine_name = 'breakpoints.theme.bootstrap.screen-sm-min';
   $breakpoint->name = 'screen-sm-min';
-  $breakpoint->breakpoint = '(max-width: 768px)';
+  $breakpoint->breakpoint = '(min-width: 768px)';
   $breakpoint->source = 'bootstrap';
   $breakpoint->source_type = 'theme';
   $breakpoint->status = 1;

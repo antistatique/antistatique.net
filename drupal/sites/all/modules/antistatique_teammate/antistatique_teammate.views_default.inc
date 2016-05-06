@@ -360,6 +360,20 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['uid']['not'] = TRUE;
+
+  /* Display: Article Author ref */
+  $handler = $view->new_display('entityreference', 'Article Author ref', 'entityreference_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'entityreference_style';
+  $handler->display->display_options['style_options']['search_fields'] = array(
+    'name' => 'name',
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entityreference_fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $translatables['users'] = array(
     t('Master'),
     t('Meet the team'),
@@ -386,6 +400,7 @@ function antistatique_teammate_views_default_views() {
     t('All Teammates Bigger'),
     t('All Teammates except current'),
     t('Notre équipe'),
+    t('Article Author ref'),
   );
   $export['users'] = $view;
 
