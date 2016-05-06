@@ -1,6 +1,15 @@
 CHANGELOG
 =========
 
+## 1.2.0
+- Update Drupal Core
+- Update bootstrap base theme
+- Update all modules
+- Remove people not working anymore from article author list #307
+- Add subscript and supscript to editor #312
+- Force HTTPS usage
+- Update Capdrupal
+
 ## 1.1.7 (2016-02-22)
 - Add Redirect module
 

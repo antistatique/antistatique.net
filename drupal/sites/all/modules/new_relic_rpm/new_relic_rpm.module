@@ -80,6 +80,9 @@ function new_relic_rpm_init() {
   if (variable_get('new_relic_rpm_override_exception_handler', FALSE) && function_exists('newrelic_notice_error')) {
     set_exception_handler('_new_relic_rpm_exception_handler');
   }
+  if (variable_get('new_relic_rpm_use_menu_item_as_transaction', FALSE) && function_exists('newrelic_name_transaction') && ($menu_item = menu_get_item()) && !empty($menu_item['path'])) {
+    newrelic_name_transaction($menu_item['path']);
+  }
 }
 
 /**
@@ -289,12 +292,30 @@ function new_relic_rpm_module_deploy($new_modules, $disable_modules) {
 
 /**
  * Send deployments to New Relic's web API.
+ * @param string $user
+ *   (optional) User deploying changes.
+ * @param string $description
+ *   (optional) Description of the deployment.
+ * @param string $changelog
+ *   (optional) A list of changes for this deployment.
+ * @param string $revision
+ *   (optional) Revision id of the deployment.
+ *
+ * @return NULL
+ *   No return. Deployment is noted in watchdog and in New Relic.
  */
-function _new_relic_rpm_deploy($user, $description, $changelog, $revision = NULL) {
+function _new_relic_rpm_deploy($user = NULL, $description = NULL, $changelog = NULL, $revision = NULL) {
+
   $post_vars['deployment[application_id]'] = ini_get('newrelic.appname');
-  $post_vars['deployment[user]'] = $user;
-  $post_vars['deployment[description]'] = $description;
-  $post_vars['deployment[changelog]'] = $changelog;
+  if (isset($user)) {
+    $post_vars['deployment[user]'] = $user;
+  }
+  if (isset($description)){
+    $post_vars['deployment[description]'] = $description;
+  }
+  if (isset($changelog)) {
+    $post_vars['deployment[changelog]'] = $changelog;
+  }
   if (isset($revision)) {
     $post_vars['deployment[revision]'] = $revision;
   }
