@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.2.1
+- Fix Force SSL Config for Alwaysdata
+
 ## 1.2.0
 - Update Drupal Core
 - Update bootstrap base theme
