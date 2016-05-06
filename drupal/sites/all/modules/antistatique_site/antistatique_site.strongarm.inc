@@ -108,6 +108,10 @@ function antistatique_site_strongarm() {
       0 => 'paragraphs_item',
       1 => 'item_id',
     ),
+    'redirect' => array(
+      0 => 'redirect',
+      1 => 'rid',
+    ),
     'file' => array(
       0 => 'file_managed',
       1 => 'fid',

@@ -192,6 +192,7 @@ function antistatique_article_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_co_author',
     'label' => 'Displayed Author(s)',
     'required' => 1,

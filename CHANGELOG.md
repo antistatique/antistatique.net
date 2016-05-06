@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.1.7 (2016-02-22)
+- Add Redirect module
+
 ## 1.1.6 (2016-01-31)
 - Security update on field_group
 
