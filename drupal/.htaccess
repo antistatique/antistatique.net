@@ -141,7 +141,9 @@ DirectoryIndex index.php index.html index.htm
   # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 
   # Force HTTPS / TLS / SSL (but not on local)
-  RewriteCond %{HTTPS} off
+  #RewriteCond %{HTTPS} off
+  # Alwaysdata Apache config require this:
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteCond %{HTTP_HOST} !=antistatique.dev
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
