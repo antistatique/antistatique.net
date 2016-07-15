@@ -10,34 +10,53 @@ module.exports = function() {
 
   var iconFontName = slug(config.iconsFontName).toLowerCase();
 
+  function errorAlert(error){
+    if (!argv.production) {
+      $.notify.onError({title: "SCSS Error", message: "Check your terminal", sound: "Sosumi"})(error);
+      $.util.log(error.messageFormatted);
+    }
+    this.emit("end");
+  };
+
   /**
    * Build styles from SCSS files
    * With error reporting on compiling (so that there's no crash)
    */
-  gulp.task('styles', function() {
-    if (argv.production) { console.log('[styles] Production mode' ); }
-    else { console.log('[styles] Dev mode'); }
+  gulp.task('styles', ['styles:lint'], function() {
+    if (argv.production) { $.util.log('[styles] Production mode' ); }
+    else { $.util.log('[styles] Dev mode'); }
 
-    gulp.src([config.assets + 'sass/' + iconFontName + '.scss', config.assets + 'sass/main.scss'])
-      .pipe($.if(!argv.production, $.sourcemaps.init()))
+    return gulp.src([config.assets + 'sass/' + iconFontName + '.scss', config.assets + 'sass/main.scss'])
+      .pipe($.plumber({errorHandler: errorAlert}))
+      .pipe(argv.production ? $.util.noop() : $.sourcemaps.init())
       .pipe($.sass({
-        outputStyle: 'nested', // libsass doesn't support expanded yet
-        precision: 10,
+        outputStyle: 'compressed',
+        precision: 5,
         includePaths: ['.']
-      }).on('error', $.sass.logError))
+      }))
       .pipe($.postcss([
-        require('autoprefixer-core')({
+        require('autoprefixer')({
           browsers: config.browsers,
           options: {
             map: true
           }
         })
       ]))
-      .pipe($.if(!argv.production, $.sourcemaps.write()))
-      .pipe($.if(argv.production, $.minifyCss()))
+      .pipe(argv.production ? $.util.noop() : $.sourcemaps.write())
+      .pipe(argv.production ? $.cleanCss() : $.util.noop() )
       .pipe($.concat('main.css'))
       .pipe($.size({title: 'STYLES', showFiles: true}))
       .pipe(gulp.dest(config.build + '/css'));
+  });
+
+  gulp.task('styles:lint', function() {
+    return gulp.src([config.assets + 'sass/**/*.s+(a|c)ss', '!' + config.assets + 'sass/+(bootstrap-variables|bootstrap|main|styleguide|styleguide-variables|main-variables|_mixins).scss', '!' + config.assets + 'sass/organisms/_photoswipes.scss'])
+        .pipe($.plumber({errorHandler: errorAlert}))
+        .pipe($.stylelint({
+          reporters: [
+            {formatter: 'string', console: true}
+          ]
+        }));
   });
 
 };
