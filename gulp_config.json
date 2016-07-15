@@ -40,7 +40,7 @@
   ],
   "tasks":  "./tasks/",
   "assets": "drupal/sites/all/themes/antistatique/assets/",
-  "iconsFontName": "icons",
+  "iconsFontName": "antistaticon",
   "build": "drupal/sites/all/themes/antistatique/build/",
   "browsers": ["last 2 versions", "safari 5", "ie 8", "ie 9", "ff 27", "opera 12.1"],
   "metalsmith": {
@@ -79,7 +79,7 @@
       "layouts": {
         "engine": "swig",
         "default": "default.html.swig",
-        "directory": "assets/templates",
+        "directory": "drupal/sites/all/themes/antistatique/assets/templates",
         "rename": true
       },
       "metalsmithinplace": {
