@@ -10,3 +10,4 @@ test/bower_components
 styleguide
 build
 .idea/
+.bundle
