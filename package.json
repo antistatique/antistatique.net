@@ -11,6 +11,7 @@
     "bower": "^1.4.1",
     "browser-sync": "^2.7.1",
     "del": "~1.1.1",
+    "fabricator": "^0.5.2",
     "fabricator-assemble": "^1.0.6",
     "gulp": "^3.8.11",
     "gulp-browserify": "^0.5.1",
@@ -40,5 +41,14 @@
     "slug": "^0.9.1",
     "toolbox-utils": "0.0.1",
     "yargs": "^3.8.0"
+  },
+  "dependencies": {
+    "Devices.css": "git://github.com/marvelapp/devices.css.git",
+    "bootstrap-sass": "^3.3.6",
+    "bootstrap-select": "^1.10.0",
+    "emojify.js": "^1.1.0",
+    "font-awesome": "^4.6.3",
+    "html5shiv": "^3.7.3",
+    "respond": "^0.9.0"
   }
 }
