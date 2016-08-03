@@ -5,7 +5,7 @@ function antistatique_article_warning_block($param = null) {
     global $language;
 
     $node = menu_get_object();
-    if ($node = menu_get_object() && $node->language != $language->language) {
+    if ($node = menu_get_object() && $language->language == 'fr' && $node->language != $language->language) {
         return theme('antistatique_article_warning_block', $variables);
     }
 }
