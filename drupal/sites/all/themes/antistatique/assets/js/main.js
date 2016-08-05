@@ -33,8 +33,7 @@
     var hours = isDST(d) ? d.getUTCHours() + 2 : d.getUTCHours() + 1;
     var minutes = d.getUTCMinutes();
     var day = d.getUTCDay();
-    var isWeekDay = day < 6;
-
+    var isWeekDay = day > 0 && day < 6;
 
     if (isWeekDay && ((hours === 8 && minutes >= 30) || (hours >= 9 && hours < 18))) {
       $('.shop-sign.open').show();
