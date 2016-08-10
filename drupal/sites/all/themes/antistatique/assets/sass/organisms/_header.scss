@@ -48,7 +48,6 @@
 }
 
 .img-hero {
-  min-height: 600px;
   background-color: $dust;
   background-size: cover;
   background-position: 50% 50%;
@@ -58,11 +57,12 @@
       background-color: $midnight-blue;
   }
   h1 {
-    position: absolute;
-    bottom: 0;
+    position: relative;
     width: 100%;
     color: $white;
-    padding-top: 2em;
+    padding-top: 175px;
+    margin-top: 0;
+    padding-bottom: 20px;
     padding-left: 15px;  // avoids a too wide title on mobile
     padding-right: 15px; // (because not in a container)
     z-index: 1;
@@ -71,8 +71,13 @@
       margin: 0 auto;
       max-width: 1200px;
     }
+
     @media only screen and (min-width: $screen-sm-min) {
+      position: absolute;
+      bottom: 0;
+      margin-top: 0;
       margin-bottom: 0;
+      padding-top: 0;
       padding-bottom: 1em;
       text-align: center;
       background: linear-gradient(to bottom, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
@@ -96,20 +101,12 @@
   @media only screen and (min-width: $screen-xl-min) {
     min-height: 600px;
   }
-  @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+  @media only screen and (min-width: $screen-sm-min) {
     min-height: 512px;
   }
-  @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    min-height: 400px;
-  }
-  @media only screen and (max-width: $screen-xs-max) {
-    min-height: 300px;
-  }
   @media only screen and (max-height: 800px) and (max-width: $screen-sm-max) {
-    min-height: 350px;
     h1 {font-size: $font-size-h1 / 1.4;}
   }
-
 
   + .container {
     padding-top: 25px;
