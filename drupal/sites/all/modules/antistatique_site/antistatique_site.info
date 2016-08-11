@@ -67,6 +67,7 @@ dependencies[] = image
 dependencies[] = image_url_formatter
 dependencies[] = insert
 dependencies[] = jquery_update
+dependencies[] = libraries
 dependencies[] = link
 dependencies[] = list
 dependencies[] = locale
