@@ -112,15 +112,34 @@ global $base_path;
   ?>
 
   <!-- intercom -->
-  <!-- Avoid intercom to allow message when we are closed -->
-  <?php if ( (date('N') < 6) && date('H') > 8 && date('H') < 18 ): ?>
-      <script>
-        window.intercomSettings = {
-          app_id: "l40asf6j"
-        };
-      </script>
-      <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/l40asf6j';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
-  <?php endif; ?>
+  <script>
+    window.intercomSettings = {
+      app_id: "l40asf6j"
+    };
+  </script>
+  <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/l40asf6j';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+
+  <!-- Avoid intercom to send messages when we are closed -->
+  <script type="text/javascript">
+    (function($) {
+        $(document).ready(function(){
+            var d = new Date();
+            var hours = isDST(d) ? d.getUTCHours() + 2 : d.getUTCHours() + 1;
+            var day = d.getUTCDay();
+            var isWeekDay = day > 0 && day < 6;
+            if (isWeekDay && hours >= 8 && hours < 18) {
+                Intercom('shutdown');
+            }
+
+            // display shop open/closed sign
+            function isDST(t) { //t is the date object to check, returns true if daylight saving time is in effect.
+              var jan = new Date(t.getFullYear(),0,1);
+              var jul = new Date(t.getFullYear(),6,1);
+              return Math.min(jan.getTimezoneOffset(),jul.getTimezoneOffset()) === t.getTimezoneOffset();
+            }
+        });
+    })(jQuery);
+  </script>
 
   <script type="text/javascript">
     (function () {
