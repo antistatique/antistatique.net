@@ -21,9 +21,12 @@
       "node_modules/bootstrap-sass/assets/javascripts/bootstrap/popover.js",
       "node_modules/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js",
       "node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js",
-      "node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js"
+      "node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js",
+      "node_modules/bootstrap-select/dist/js/bootstrap-select.min.js",
+      "node_modules/emojify.js/dist/js/emojify.js"
     ],
     "fonts": [
+      "node_modules/font-awesome/fonts/*",
       "node_modules/bootstrap-sass/assets/fonts/bootstrap/*",
       "drupal/sites/all/themes/antistatique/assets/fonts/*"
     ],
@@ -33,7 +36,8 @@
     ]
   },
   "images": [
-    "drupal/sites/all/themes/antistatique/assets/img/**/*"
+    "drupal/sites/all/themes/antistatique/assets/img/**/*",
+    "node_modules/emojify.js/dist/images/basic/**/*"
   ],
   "svg": [
     "drupal/sites/all/themes/antistatique/assets/svg/**/*"
@@ -43,9 +47,11 @@
   "iconsFontName": "antistaticon",
   "build": "drupal/sites/all/themes/antistatique/build/",
   "browsers": ["last 2 versions", "safari 5", "ie 8", "ie 9", "ff 27", "opera 12.1"],
+  "singles": [],
   "metalsmith": {
     "assets": "node_modules/toolbox-utils/styleguide/",
     "dist": "styleguide/",
+    "url": "https://antistatique.github.io/antistatique.net/",
     "plugins": {
       "permalinks": {
         "pattern": ":title",
