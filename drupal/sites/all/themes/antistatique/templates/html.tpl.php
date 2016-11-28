@@ -98,9 +98,15 @@ global $base_path;
   })(window,document,'script','dataLayer','GTM-WLRK');</script>
   <!-- End Google Tag Manager -->
 
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-  </div>
+  <nav class="nav-access">
+    <ul>
+      <li><a class="btn btn-primary" href="<?php print $front_page; ?>" accesskey="1">Page d'accueil du site Antistatique.net</a></li>
+      <li><a class="btn btn-primary" href="#main-content" accesskey="2" >Passer la navigation</a></li>
+      <li><a class="btn btn-primary" href="#full-accessible-navigation" accesskey="3" >Accéder à la navigation</a></li>
+      <li><a class="btn btn-primary" href="mailto:info@antistatique.net" accesskey="9">Contacter Antistatique</a></li>
+    </ul>
+  </nav>
+
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
