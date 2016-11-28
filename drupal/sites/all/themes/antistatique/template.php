@@ -350,7 +350,7 @@ function antistatique_link_formatter_link_default($vars) {
 function antistatique_links__locale_block(&$variables) {
   global $language;
 
-  $output = '<div class="btn-group-vertical lang-switcher">';
+  $output = '<nav id="lang-switcher" class="btn-group-vertical lang-switcher">';
   foreach($variables['links'] as $lang => $info) {
     $name = $info['language']->native;
     $href = isset($info['href']) ? $info['href'] : '';
@@ -358,7 +358,7 @@ function antistatique_links__locale_block(&$variables) {
     $link_classes = array('btn', 'btn-gray', 'btn-xxs', 'text-uppercase');
 
     $options = array(
-      'attributes' => array('class' => $link_classes),
+      'attributes' => array('class' => $link_classes, 'hreflang' => $lang, 'aria-label' => $name),
       'language' => $info['language'],
       'html' => true
       );
