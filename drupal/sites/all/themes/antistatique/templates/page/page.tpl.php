@@ -74,6 +74,12 @@
  */
 ?>
 
+<div id="full-accessible-navigation" class="sr-only">
+    <nav role="navigation">
+        <?php print drupal_render(menu_tree('menu-navigation-accessible')); ?>
+    </nav>
+</div>
+
 <?php if (!empty($page['page_above']) || !empty($messages)): ?>
   <div class="page-top">
     <?php print $messages; ?>
