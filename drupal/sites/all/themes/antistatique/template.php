@@ -331,7 +331,7 @@ function antistatique_link_formatter_link_default($vars) {
          $link_options['attributes']['class'] = 'fa fa-external-link';
      }
     $classes = array($link_options['attributes']['class']);
-    $classes = '<i class="'.implode($classes).'"></i> ';
+    $classes = '<i aria-hidden="true" class="'.implode($classes).'"></i> ';
     $link_options['attributes']['class'] = 'btn btn-default';
   }
   // Display a normal link if both title and URL are available.
@@ -366,7 +366,7 @@ function antistatique_links__locale_block(&$variables) {
     if ($href) $output .= l($lang, $href, $options);
   }
 
-  $output .= '</div>';
+  $output .= '</nav>';
 
   return $output;
 }
