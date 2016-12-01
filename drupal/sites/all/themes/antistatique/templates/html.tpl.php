@@ -99,6 +99,7 @@ global $base_path;
   <!-- End Google Tag Manager -->
 
   <nav class="nav-access">
+    <h2>Access keys</h2>
     <ul>
       <li><a class="btn btn-primary" href="<?php print $front_page; ?>" accesskey="1"><?php print t('Home'); ?></a></li>
       <li><a class="btn btn-primary" href="#main-content" accesskey="2" ><?php print t('To content'); ?></a></li>

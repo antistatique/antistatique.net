@@ -75,6 +75,7 @@
 ?>
 
 <div id="full-accessible-navigation" class="sr-only">
+    <h2>Navigation</h2>
     <nav role="navigation">
         <?php print drupal_render(menu_tree('menu-navigation-accessible')); ?>
     </nav>

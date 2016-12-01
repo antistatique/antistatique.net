@@ -7,6 +7,7 @@ notes: |
 ---
 
 <nav class="nav-access">
+  <h2>Access keys</h2>
   <ul>
     <li><a class="btn btn-primary" href="/" accesskey="1">Page d'accueil du site Antistatique.net</a></li>
     <li><a class="btn btn-primary" href="#main-content" accesskey="2" >Passer la navigation</a></li>
