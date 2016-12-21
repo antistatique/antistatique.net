@@ -1,0 +1,242 @@
+/**
+ * Background and block styles
+ */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.bg {
+  &-foggy {
+    background: $dust;
+
+    &-border-right {
+      border-right: 1px solid $white;
+    }
+
+    &-border-left {
+      border-left: 1px solid $white;
+    }
+  }
+}
+
+.article-foggy article.node {
+  @extend .bg-foggy;
+}
+
+.top-decoration {
+  position: relative;
+  margin-top: 50px;
+
+  &:before {
+    content: '\E001';
+    display: inline-block;
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    width: 64px;
+    margin-left: -32px;
+    background: $dust;
+    border-radius: 32px;
+    z-index: 99999999;
+    font-family: 'antistaticon';
+    font-size: 10px;
+    line-height: 64px;
+    text-align: center;
+  }
+}
+
+.inverse {
+  background: $text-color;
+  color: $body-bg;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.container-inline { // fix for breadcrumb menu
+  select,
+  .dropdown-menu,
+  .btn.ctools-jump-menu-button {
+    display: none;
+  }
+
+  .open .dropdown-menu {
+    display: block;
+  }
+}
+
+.half-width {
+  float: left;
+  width: 50%;
+}
+
+.spacer {
+  height: 65px;
+  &.spacer-xl { height: 120px; }
+  &.spacer-lg { height: 90px; }
+  &.spacer-md { height: 45px; }
+  &.spacer-sm { height: 30px; }
+  &.spacer-xs { height: 15px; }
+
+  @media only screen and (max-width: $screen-sm-max) {
+    height: 30px;
+    &.spacer-xl { height: 50px; }
+    &.spacer-lg { height: 50px; }
+    &.spacer-md { height: 35px; }
+    &.spacer-sm { height: 20px; }
+    &.spacer-xs { height: 10px; }
+  }
+}
+
+.hr-lg {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/**
+ * Margin helpers
+ */
+
+.no-margin {
+  &-top { margin-top: 0; }
+  &-bottom { margin-bottom: 0; }
+}
+
+.bg-image {
+  position: relative;
+  background: url(../img/saniha_bureau.jpg) no-repeat;
+  background-size: cover;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to bottom, rgba($midnight-blue, 1), rgba($midnight-blue, 0));
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/**
+ * Text helpers
+ */
+
+.text {
+  &-thin {
+    font-weight: 100; // to apply only on big text (due to font-smoothing)
+  }
+
+  &-md {
+    margin-bottom: ceil(($font-size-base / 3));
+    font-size: $font-size-base;
+  }
+
+  &-sm {
+    @extend small;
+  }
+
+  &-xs {
+    margin-bottom: ceil(($font-size-base * 0.6));
+    font-size: ceil(($font-size-base * 0.7));
+  }
+
+  &-huge {
+    font-size: 10vw;
+  }
+
+  &-dark {
+    color: $text-color;
+  }
+
+  &-white {
+    color: $white;
+  }
+
+  &-strong {
+    font-weight: 700;
+  }
+}
+
+// wrapper
+.table-wrapper {
+  display: table;
+  padding: 0;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.no-float {
+  display: table-cell;
+  float: none;
+  vertical-align: middle;
+}
+
+/**
+ * Large styling
+ * =============
+ *
+ * We added this to Bootstrap. Mainly for the Teammate single page.
+ *
+ * NOTE:
+ * An element that is visible in screen-lg will also be visible in screen-xl.
+ *
+ *
+ */
+
+/* stylelint-disable declaration-no-important */
+/* we are overriding Bootstrap 3 */
+
+@include responsive-invisibility('.visible-xl');
+
+.visible-xl-block,
+.visible-xl-inline,
+.visible-xl-inline-block {
+  display: none !important;
+}
+
+@media (min-width: $screen-xl-min) {
+  @include responsive-visibility('.visible-xl');
+}
+
+.visible-xl-block {
+  @media (min-width: $screen-xl-min) {
+    display: block !important;
+  }
+}
+
+.visible-xl-inline {
+  @media (min-width: $screen-xl-min) {
+    display: inline !important;
+  }
+}
+
+.visible-xl-inline-block {
+  @media (min-width: $screen-xl-min) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $screen-xl-min) {
+  @include responsive-invisibility('.hidden-xl');
+}
+
+/* stylelint-enable */

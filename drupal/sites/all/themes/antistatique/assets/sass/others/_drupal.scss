@@ -1,0 +1,70 @@
+body.cke_editable {
+  padding: 15px;
+
+  aside {
+    font-size: $font-size-small;
+    color: $text-muted;
+
+    &.aside-right {
+      text-align: right;
+    }
+  }
+}
+
+.krumo-root {
+  text-align: left;
+  color: #000;
+}
+
+.half {
+  .field-item {
+    display: inline-block;
+    width: 50%;
+  }
+}
+
+.readmore a,
+.field-body .more-link {
+  position: relative;
+  margin-left: 20px;
+
+  @include medium-link-hover($position: 0.95em);
+
+  &:before,
+  &:before {
+    content: '›';
+    position: absolute;
+    left: -15px;
+    margin: 0 4px;
+  }
+}
+
+.embed-responsive {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.field-label {
+  color: $text-muted;
+}
+
+// remove ungraceful margin-top from titles in content
+.main-content .field-body {
+  h2:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.content {
+  iframe {
+    max-width: 100%;
+  }
+
+  iframe.instagram-media {
+    max-width: 658px;
+    width: 99.375%;
+    width: calc(100% - 2px);
+    margin: 30px auto;
+    padding: 0;
+  }
+}
