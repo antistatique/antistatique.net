@@ -12,6 +12,13 @@
     "property-no-vendor-prefix": true,
     "selector-no-vendor-prefix": true,
     "value-no-vendor-prefix": true,
+    "selector-pseudo-element-colon-notation": "single",
+    "declaration-no-important": true,
+    "stylelint-disable-reason": "always-after",
+    "comment-empty-line-before": [ "always", {
+      "except": ["first-nested"],
+      "ignore": ["stylelint-commands", "between-comments"],
+    } ],
     "declaration-block-properties-order": [
       "content",
       "display",
