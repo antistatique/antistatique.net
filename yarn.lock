@@ -6625,9 +6625,9 @@ to-function@^2.0.5:
   dependencies:
     component-props "*"
 
-toolbox-utils@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/toolbox-utils/-/toolbox-utils-0.0.4.tgz#b9f74e355633db34d46cd669cc206da220ecdec5"
+toolbox-utils@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/toolbox-utils/-/toolbox-utils-0.0.7.tgz#8fd5859ddb80b9ed9eed57d47957498219310ead"
   dependencies:
     prismjs "^1.5.1"
 
