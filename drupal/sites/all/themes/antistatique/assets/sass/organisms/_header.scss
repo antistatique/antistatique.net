@@ -61,7 +61,6 @@
 
 .img-hero {
   position: relative;
-  min-height: 600px;
   background-color: $dust;
   background-size: cover;
   background-position: 50% 50%;
@@ -72,13 +71,10 @@
   }
 
   h1 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding-top: 2em;
-    padding-left: 15px;  // avoids a too wide title on mobile
-    padding-right: 15px; // (because not in a container)
+    position: relative;
     z-index: 1;
+    width: 100%;
+    padding: 175px 15px 20px; // left avoids a too wide title on mobile
     color: $white;
 
     & > span {
@@ -88,7 +84,11 @@
     }
 
     @media only screen and (min-width: $screen-sm-min) {
+      position: absolute;
+      bottom: 0;
+      margin-top: 0;
       margin-bottom: 0;
+      padding-top: 0;
       padding-bottom: 1em;
       text-align: center;
       background: linear-gradient(to bottom, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
@@ -117,20 +117,11 @@
     min-height: 600px;
   }
 
-  @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+  @media only screen and (min-width: $screen-sm-min) {
     min-height: 512px;
   }
 
-  @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    min-height: 400px;
-  }
-
-  @media only screen and (max-width: $screen-xs-max) {
-    min-height: 300px;
-  }
-
   @media only screen and (max-height: 800px) and (max-width: $screen-sm-max) {
-    min-height: 350px;
     h1 { font-size: $font-size-h1 / 1.4; }
   }
 

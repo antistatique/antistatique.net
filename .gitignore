@@ -10,3 +10,7 @@ drupal/sites/all/themes/antistatique/build/
 
 tests/regression/compare
 tests/regression/temp
+styleguide
+build
+.idea/
+.bundle
