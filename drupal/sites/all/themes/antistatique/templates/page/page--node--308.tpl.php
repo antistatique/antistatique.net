@@ -20,7 +20,7 @@
   </a>
   <h1><?php print t('Laissez-nous votre contact sous le sapin!') ?></h1>
   <div class="spacer spacer-sm"></div>
-  <p><?php print t("Laissez-nous votre <b>numéro</b>, <b>email</b> ou <b>Twitter handle</b> <br>& nous vous appellerons/écrirons/twitterons!"); ?></p>
+  <p><?php print t("Laissez-nous votre <b>numéro</b>, <b>email</b> ou <b>Twitter handle</b> <br>& nous vous appellerons/écrirons/twitterons pour discuter autour d'un café!"); ?></p>
 
   <?php if ($messages): ?>
     <div class="container">
