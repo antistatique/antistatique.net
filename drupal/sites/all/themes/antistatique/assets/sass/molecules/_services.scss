@@ -1,0 +1,51 @@
+@charset 'UTF-8';
+
+.services {
+  min-height: 300px;
+  padding: 60px 0;
+  background: $midnight-blue url(../img/bg_services.jpg) 50% 50%;
+  background-size: cover;
+}
+
+.triangle {
+  position: relative;
+  width: 450px;
+  height: 460px;
+  margin: 0 auto;
+  background: transparent url('../img/triangle.png') 0 0 no-repeat;
+  background-size: contain;
+
+  @media only screen and (max-width: $screen-md-max) {
+    width: 400px;
+    height: 420px;
+  }
+
+  @media only screen and (max-width: $screen-sm-max) {
+    width: 320px;
+    height: 340px;
+  }
+
+  @media only screen and (max-width: $screen-xs-max) {
+    width: 240px;
+    height: 250px;
+  }
+
+  .triangle-link { position: absolute; }
+
+  .triangle-link-strategy {
+    top: 20%;
+    right: 85%;
+  }
+
+  .triangle-link-design {
+    top: 20%;
+    left: 85%;
+  }
+
+  .triangle-link-technology {
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
