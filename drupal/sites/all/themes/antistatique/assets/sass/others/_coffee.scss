@@ -14,24 +14,24 @@
 
   .logo {
     display: block;
-    margin-top: 80px;
+    margin-top: 10px;
     text-align: center;
     @media only screen and (max-width: $screen-xs-max) {
-      margin-top: 25px;
+      margin-top: 10px;
     }
     img {width: 230px;}
   }
 
-  .cups {
+  .christmas-tree {
     text-align: center;
     margin: auto 0;
-    padding: 30px 0;
+    padding: 0 0;
   }
   .region-content-below {margin-bottom: auto;}
   img {
     margin-left: auto;
     margin-right: auto;
-    max-height: 25vh;
+    max-height: 50vh;
     width: auto;
   }
   .control-label {display: none;}
@@ -71,6 +71,9 @@
     text-decoration: underline;
     font-weight: 600;
     &.close {text-decoration: none;}
+    &:hover{
+      color: $brand-primary-dark;
+    }
   }
   footer {
     margin-top: auto;
