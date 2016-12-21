@@ -1,0 +1,250 @@
+@charset 'UTF-8';
+
+.btn {
+  padding-bottom: $padding-base-vertical * (2/3); // fix font alignment to center of button
+  border: 0;
+  text-decoration: none;
+  white-space: normal;
+
+  &-xs {
+    padding-top: $padding-xs-vertical * (5/3);
+    padding-bottom: $padding-xs-vertical * (2/3);
+  }
+
+  &-sm { padding-bottom: $padding-small-vertical * (2/3); }
+  &-lg { padding-bottom: $padding-large-vertical * (2/3); }
+
+  .fa {
+    position: relative;
+    top: 1px;
+    margin-right: 6px;
+    margin-bottom: -2px;
+    font-size: 1.2em;
+  }
+
+  &:hover,
+  &.btn-round {
+    .fa.fa-twitter { color: #55acee; }
+    .fa.fa-facebook { color: #3b5998; }
+    .fa.fa-github { color: #333; }
+    .fa.fa-linkedin { color: #0976b4; }
+    .fa.fa-instagram { color: #3f729b; }
+  }
+
+  &.btn-round {
+    font-size: 14px;
+    text-align: center;
+    max-width: 100px;
+    white-space: normal;
+    line-height: 1.3;
+    font-weight: normal;
+    color: $text-muted;
+    vertical-align: top;
+    transition: all 0.2s;
+
+    &:active { box-shadow: none; }
+
+    &:hover {
+      color: $text-color;
+
+      .fa {
+        background: $brand-primary;
+        color: $white;
+      }
+    }
+
+    > i {
+      display: block;
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 15px;
+      padding-top: 20px;
+      background: $dust;
+      border-radius: 64px;
+      font-size: 1.8em;
+      color: $text-color;
+      transition: all 0.2s;
+    }
+  }
+}
+
+.btn-default {
+  background: none;
+  color: $text-color;
+
+  &:hover {
+    background: $dust;
+    color: $link-color;
+
+    .fa { color: $text-color; }
+  }
+
+  .bg-foggy & {
+    &:hover {
+      background: $white;
+    }
+  }
+
+  &.active {
+    @extend .btn-dark;
+  }
+}
+
+.btn-dark {
+  background: $midnight-blue;
+  font-weight: 600;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+    .fa { color: $white; }
+  }
+}
+
+.btn-white {
+  background: $white;
+  font-weight: 600;
+  color: $text-color;
+
+  &:hover,
+  &.active {
+    background: $text-color;
+    color: $white;
+  }
+}
+
+.btn-wire {
+  background: transparent;
+  border: 1px solid $text-color;
+  font-weight: 600;
+  color: $text-color;
+
+  &:hover {
+    background: $text-color;
+    color: $white;
+    .fa { color: $white; }
+  }
+}
+
+.btn-gray {
+  background: $dust;
+  color: $text-color;
+
+  &:hover {
+    background: darken($dust, 5%);
+    color: $text-color;
+  }
+
+  &.active {
+    background: $white;
+    color: $link-color;
+    box-shadow: none;
+  }
+}
+
+.btn-primary.btn-wire {
+  background: white;
+  border: 1px solid $link-color;
+  font-weight: 600;
+  color: $link-color;
+
+  &:hover {
+    background: $brand-primary-dark;
+    border-color: $brand-primary-dark;
+    color: $white;
+    .fa { color: $white; }
+  }
+}
+
+.btn-info {
+  &:hover {
+    background: $midnight-blue-light;
+    color: $white;
+  }
+}
+
+.btn-wrap {
+  white-space: normal;
+}
+
+.btn-link-dropdown {
+  padding-left: 0;
+  background: none;
+  color: $text-color;
+  box-shadow: none;
+  transition: color 0.2s;
+
+  @include medium-link($position: 1.75em);
+
+  &:hover {
+    color: $link-color;
+  }
+
+  .dark-hero & {
+    color: $white;
+
+    &:hover,
+    &.hover {
+      color: $link-color;
+    }
+  }
+}
+
+// Tweaks for btn with icons only
+.btn-dark {
+  .fa-external-link {
+    top: 3px;
+    margin-right: 0;
+  }
+}
+
+.btn-xxs {
+  font-size: 0.8em;
+  line-height: 1;
+
+  @media only screen and (min-width: $screen-sm-min) {
+    padding: 5px 6px 4px;
+    font-size: 0.6em;
+    line-height: 1;
+
+    &:last-child {
+      padding-bottom: 3px;
+    }
+  }
+}
+
+.btn-like {
+  &:hover {
+    cursor: default;
+  }
+
+  .antistaticon:before {
+    position: relative;
+    top: 4px;
+    font-size: 22px;
+  }
+}
+
+.view {
+  .more-link {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+
+    a {
+      @extend .btn;
+      @extend .btn-primary;
+    }
+  }
+}
+
+.btn-group-vertical > .btn-default + .btn-default {
+  margin-top: 0;
+}
+
+// webform
+.webform-submit {
+  display: block;
+  width: 100%;
+}
