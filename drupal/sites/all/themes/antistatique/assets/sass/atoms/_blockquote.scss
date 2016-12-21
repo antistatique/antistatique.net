@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+
+blockquote {
+  margin: 45px 0;
+  padding: 25px 0;
+  border-left: none;
+  border-top: 1px solid $midnight-blue-lighter;
+  border-bottom: 1px solid $midnight-blue-lighter;
+
+  @media only screen and (min-width: $screen-sm-min) { font-weight: 100; }
+
+  p {
+    &:first-of-type:before { content: '“'; }
+    &:last-of-type:after { content: '”'; }
+  }
+
+  footer:before,
+  footer p:first-of-type:before,
+  footer p:last-of-type:after {
+    content: '';
+  }
+}
