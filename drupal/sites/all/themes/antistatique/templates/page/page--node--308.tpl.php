@@ -1,11 +1,6 @@
 
-<style media="screen">
-  .coffee .text-white a:hover{
-    color: #ec2577;
-  }
-</style>
 <div class="bg-primary full-screen coffee dark-hero clearfix" style="background: #000032;">
-  <div class="cups">
+  <div class="christmas-tree">
     <img class="img-responsive" src="<?php print $base_path . $directory; ?>/build/img/AntistatXmas.gif" alt="Un sapin qui brille!">
   </div>
   <a class="logo hidden-xs" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
