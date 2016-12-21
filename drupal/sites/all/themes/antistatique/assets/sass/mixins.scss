@@ -4,6 +4,7 @@
   background-repeat: repeat-x;
   background-size: 1px 1px;
   background-position: 0 $position;
+
   &:hover {
     background-image: linear-gradient(to bottom, $hover-color 50%, $hover-color 50%);
   }

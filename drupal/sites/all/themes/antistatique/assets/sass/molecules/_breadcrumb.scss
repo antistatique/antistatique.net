@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+.region-header {
+  display: inline-block;
+}
+
+// Dark hero breadcrumb version
+.dark-hero {
+  .breadcrumb {
+    color: transparentize($navbar-inverse-color, 1/5);
+
+    > a,
+    .view-categories.view-display-id-inline a {
+      color: $navbar-inverse-link-color;
+    }
+  }
+}
+
+.breadcrumb {
+  > a,
+  .view-categories.view-display-id-inline a {
+    display: inline-block;
+    font-weight: 700;
+    color: $text-color;
+
+    @include medium-link($position: 29px);
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+}

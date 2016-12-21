@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+
+ul {
+  padding-left: $font-size-base;
+  ul { list-style-type: disc; }
+}
+
+ol {
+  padding-left: $font-size-large;
+}
+
+.list-dash {
+  @extend .list-unstyled;
+
+  li {
+    list-style-type: none;
+
+    &:before {
+      content: '– ';
+    }
+  }
+}
+
+.dl-horizontal {
+  dd { margin-bottom: 20px; }
+  dt { white-space: normal; }
+}

@@ -1,0 +1,115 @@
+@charset 'UTF-8';
+
+.content {
+  aside {
+    margin-bottom: 15px;
+    font-size: $font-size-small;
+    color: $text-muted;
+
+    @include clearfix;
+
+    @media only screen and (min-width: $screen-lg-min) {
+      float: left;
+      text-align: right;
+      margin-top: 0.1em;
+
+      &:not(.aside-no-positionning) {
+        width: 200px;
+        margin-left: -230px;
+      }
+
+      &.aside-right {
+        text-align: left;
+
+        &:not(.aside-no-positionning) {
+          float: right;
+          margin-left: 0;
+          margin-right: -230px;
+        }
+
+        &:after {
+          @media only screen and (min-width: $screen-lg-min) {
+            margin-left: 0;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+
+    &.aside-no-positionning {
+      @media only screen and (max-width: $screen-sm-max) {
+        margin-top: 15px;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 0;
+      margin-top: 15px;
+      border-bottom: 1px solid  $midnight-blue-lighter;
+
+      @media only screen and (min-width: $screen-lg-min) {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+blockquote.blockquote-paragraph {
+  // font-size: $font-size-base;
+  // font-weight: 400;
+  @media only screen and (min-width: $screen-sm-min) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @media only screen and (min-width: $screen-sm-min) {
+    &:before,
+    &:after {
+      position: absolute;
+      font-size: 100px;
+      color: $dust;
+    }
+
+    &:before {
+      content: '“';
+      top: 51px;
+      left: 0;
+    }
+
+    &:after {
+      content: '”';
+      right: 0;
+      bottom: 47px;
+
+      @media only screen and (min-width: $screen-sm-min) {
+        bottom: 14px;
+      }
+    }
+  }
+}
+
+.paragraphs-item-image-wide {
+  .half {
+    margin: 0 auto;
+    max-width: 2600px;
+
+    @media only screen and (min-width: $screen-sm-min) {
+      @include clearfix;
+
+      .field-wide-images {
+        max-width: 50%;
+        float: left;
+      }
+    }
+  }
+
+  .centered {
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

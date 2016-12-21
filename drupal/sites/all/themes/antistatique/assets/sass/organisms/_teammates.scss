@@ -1,0 +1,127 @@
+@charset 'UTF-8';
+
+.team-tiny,
+.team-teaser {
+  display: block;
+  border: none;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+
+  .team-avatar {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 10px;
+    padding: 3px;
+    text-align: center;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0%; // we have to put the % after 0 for Firefox
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      border-radius: 200px;
+      transition: all $transition-duration;
+    }
+
+    &.winner {
+      position: relative;
+
+      &:after {
+        content: url(../svg/pingpong-badge.svg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 40%;
+      }
+    }
+
+    img {
+      display: inline-block;
+      position: relative;
+    }
+  }
+}
+
+a.team-tiny,
+.team-teaser {
+  .h6 {
+    display: inline;
+  }
+
+  &:hover {
+    .h6 {
+      @include medium-link($position: 0.95em);
+    }
+
+    .team-avatar {
+      &:before {
+        background: $link-color;
+        animation-name: hover-effect;
+        animation-duration: $transition-duration;
+        animation-timing-function: ease-in-out;
+      }
+    }
+  }
+
+  &:hover,
+  .active & {
+    .team-avatar {
+      &:before {
+        background: $link-color;
+      }
+    }
+
+    .h6 {
+      color: $link-color;
+    }
+  }
+}
+
+.team-teaser {
+  margin-bottom: (4 * $padding-large-vertical);
+
+  @media only screen and (max-width: $screen-xs-max) {
+    display: block;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .team-avatar {
+    img {
+      max-width: 180px;
+    }
+  }
+}
+
+.field-teammate-job-title {
+  margin: 0 auto;
+  max-width: 180px;
+}
+
+.profile-full {
+  .user-picture {
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+.cover-overlap {
+  .team-tiny {
+    .team-avatar.winner {
+      &:after {
+        right: auto;
+        left: 50%;
+        width: 50px;
+      }
+    }
+  }
+}

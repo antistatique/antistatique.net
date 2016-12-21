@@ -1,0 +1,8 @@
+@charset 'UTF-8';
+
+.field-category a,
+.taxonomy-term.vocabulary-category h1 span {
+  &:before {
+    content: '#';
+  }
+}

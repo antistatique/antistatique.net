@@ -1,0 +1,75 @@
+@charset 'UTF-8';
+
+a,
+button {
+  transition: color 0.2s;
+}
+
+// TODO move this to a better file...
+header.header {
+  .navbar-nav > li:not(.active):not(.active-trail) > a {
+    @include medium-link($hover-color: $link-color,$position: 40px);
+
+    .dark-hero & {
+      background-image: linear-gradient(to bottom, rgba($navbar-inverse-link-color, 0) 50%, $navbar-inverse-link-color 50%);
+    }
+
+    &:hover {
+      .dark-hero & {
+        background-image: linear-gradient(to bottom, rgba($link-color, 0) 50%, $link-color 50%);
+      }
+    }
+  }
+}
+
+.link-inverse {
+  color: $navbar-inverse-link-color;
+
+  &:hover {
+    color: $navbar-inverse-link-hover-color;
+  }
+
+  &:active,
+  &.active {
+    color: $navbar-inverse-link-active-color;
+  }
+}
+
+.link-image {
+  display: block;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: $link-color;
+    transition: all 0.2s ease-in;
+  }
+
+  &:hover {
+    &:after {
+      height: 4px;
+    }
+  }
+
+  a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba($midnight-blue, 1), rgba($midnight-blue, 0));
+    opacity: 0;
+    transition: all 0.2s;
+  }
+
+  a:hover:before {
+    opacity: 0.4;
+  }
+}

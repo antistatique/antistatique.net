@@ -1,0 +1,61 @@
+@charset 'UTF-8';
+
+.dropdown-menu {
+  margin-top: -7px;
+  border: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 1/3);
+
+  .selected a {
+    &,
+    &:focus,
+    &:hover {
+      color: $midnight-blue-light;
+    }
+  }
+
+  > li > a {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: $text-color;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.ctools-jump-menu-select.form-control {
+  box-shadow: none;
+}
+
+.bootstrap-select.btn-group .btn {
+  padding-right: 14px;
+
+  .caret {
+    top: 45%;
+    border: none;
+    font-size: 8px;
+
+    @extend .antistaticon;
+    @extend .antistaticon-caret;
+  }
+}
+
+.open {
+  &.bootstrap-select.btn-group .btn {
+    background: none;
+    box-shadow: none;
+    color: $midnight-blue-light;
+
+    .caret:before {
+      color: $link-color;
+      transform: rotate(180deg);
+    }
+  }
+
+  .dark-hero & {
+    &.bootstrap-select.btn-group .btn {
+      color: $white;
+    }
+  }
+}

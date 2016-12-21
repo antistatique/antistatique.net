@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+
+.form-control {
+  box-shadow: none;
+
+  .well-white & {
+    background: $dust;
+  }
+
+  &.btn-group {
+    background: none;
+  }
+}
+
+.control-label {
+  font-weight: 400;
+}
+
+textarea.form-control {
+  max-width: 100%;
+}
+
+.form-select {
+  display: block;
+  width: 100%;
+  height: 44px;
+  padding: 6px 12px;
+  background: $dust url(../svg/caret.svg) no-repeat;
+  background-position: 98% center;
+  border: $midnight-blue-light;
+  border-radius: 0;
+  text-indent: 0.01px; // firefox fix
+  text-overflow: ''; // firefox fix
+  appearance: none;
+
+  &.ctools-jump-menu-select:hover {
+    cursor: pointer;
+  }
+}

@@ -3,7 +3,8 @@
     "drupal/sites/all/themes/antistatique/assets/sass/main.scss",
     "drupal/sites/all/themes/antistatique/assets/sass/main-variables.scss",
     "drupal/sites/all/themes/antistatique/assets/sass/bootstrap-variables.scss",
-    "drupal/sites/all/themes/antistatique/assets/sass/bootstrap.scss"
+    "drupal/sites/all/themes/antistatique/assets/sass/bootstrap.scss",
+    "drupal/sites/all/themes/antistatique/assets/sass/antistaticon.scss"
   ],
   "extends": "stylelint-config-standard",
   "rules": {

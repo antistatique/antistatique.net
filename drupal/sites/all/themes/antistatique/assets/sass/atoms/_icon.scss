@@ -1,0 +1,10 @@
+@charset 'UTF-8';
+
+.antistaticon-10x {
+  font-size: 10em;
+  line-height: 0.5;
+
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 5em;
+  }
+}

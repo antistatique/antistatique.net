@@ -240,3 +240,21 @@ body {
 }
 
 /* stylelint-enable */
+
+.well {
+  border-radius: 0;
+}
+
+.well-white {
+  background: $white;
+  box-shadow: none;
+  border: none;
+
+  @media only screen and (max-width: $screen-xs-max) {
+    margin: 0 -15px;
+  }
+}
+
+.well-lg {
+  padding: 30px 50px;
+}
