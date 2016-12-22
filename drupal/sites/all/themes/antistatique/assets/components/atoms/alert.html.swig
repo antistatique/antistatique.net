@@ -10,6 +10,6 @@ variants:
 notes: |
   Standard alert component.
 ---
-<div class="alert alert-{% if variant %}{{variant}}{% else %}danger{% endif %}">
+<div class="alert alert-{{variant|default('danger')}}">
   Well done! You successfully read this important alert message.
 </div>

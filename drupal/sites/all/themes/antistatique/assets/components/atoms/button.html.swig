@@ -2,8 +2,6 @@
 title: Button
 name: button
 collection: atoms
-variants:
-  primary: Primary
 notes: |
   A button.
 ---
