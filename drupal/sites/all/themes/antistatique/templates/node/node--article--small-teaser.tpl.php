@@ -86,7 +86,7 @@ if (!empty($content['field_co_author'])) {
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> article-teaser clearfix"<?php print $attributes; ?>>
   <p class="meta small">
-    <span class="pull-right"><a href="<?php print $node_url; ?>#disqus_thread"><i class="fa fa-comment"></i></a></span>
+    <span class="pull-right"><a href="<?php print $node_url; ?>#disqus_thread"><i aria-label="<?php print t('Comment');?>" class="fa fa-comment"></i></a></span>
     <span><?php print format_date($created, 'custom', t('j.m.Y')); ?> › <?php print t('by'); ?> <?php print render($content['field_co_author']); ?> <?php print t('in ') . render($content['field_category']); ?></span>
   </p>
   <div class="link-image">

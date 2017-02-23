@@ -17,5 +17,5 @@
 <?php endif; ?>
 
 <?php foreach ($items as $delta => $item): ?>
-  <a href="mailto:<?php print render($item); ?>" class="btn btn-default"<?php print $attributes; ?>><i class="fa fa-paper-plane <?php print $classes; ?>"></i> <?php print render($item); ?></a>
+  <a href="mailto:<?php print render($item); ?>" class="btn btn-default"<?php print $attributes; ?>><i aria-hidden="true" class="fa fa-paper-plane <?php print $classes; ?>"></i> <?php print render($item); ?></a>
 <?php endforeach; ?>

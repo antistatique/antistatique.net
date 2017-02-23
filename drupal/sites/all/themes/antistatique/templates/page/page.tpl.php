@@ -74,6 +74,13 @@
  */
 ?>
 
+<div id="full-accessible-navigation" class="sr-only">
+    <h2>Navigation</h2>
+    <nav role="navigation">
+        <?php print drupal_render(menu_tree('menu-navigation-accessible')); ?>
+    </nav>
+</div>
+
 <?php if (!empty($page['page_above']) || !empty($messages)): ?>
   <div class="page-top">
     <?php print $messages; ?>
@@ -87,7 +94,7 @@
         <div class="navbar navbar-default">
           <div class="navbar-header">
             <?php if ($logo): ?>
-              <a class="logo navbar-btn navbar-brand pull-left hidden-xs hidden-sm" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+              <a alt="Antistatique, <?php print t('Web Agency in Lausanne & Geneva'); ?>" aria-label="<?php print t('Back to the homepage'); ?>" class="logo navbar-btn navbar-brand pull-left hidden-xs hidden-sm" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
                 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 332 61.9" style="enable-background:new 0 0 332 61.9;" xml:space="preserve" width="170" height="35">
                   <g class="antistatique_logo">
@@ -121,7 +128,7 @@
                   </g>
                 </svg>
               </a>
-              <a class="logo navbar-btn navbar-brand pull-left visible-xs-inline-block visible-sm-inline-block" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+              <a alt="Antistatique, <?php print t('Web Agency in Lausanne & Geneva'); ?>" aria-label="<?php print t('Back to the homepage'); ?>" class="logo navbar-btn navbar-brand pull-left visible-xs-inline-block visible-sm-inline-block" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
                 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 84.6 92.5" style="enable-background:new 0 0 84.6 92.5;" xml:space="preserve" width="30" height="30">
                   <g class="antistatique_logo">
@@ -132,15 +139,15 @@
             <?php endif; ?>
 
             <a href="<?php print url('node/4'); ?>" type="button" class="pull-right btn btn-primary navbar-btn visible-xs">
-              <i class="fa fa-paper-plane"></i>
+              <i aria-hidden="true" class="fa fa-paper-plane"></i>
               <span class="sr-only"><?php print t('Contact'); ?></span>
             </a>
 
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
-              <div class="inline-block">
+              <div aria-hidden="true" class="inline-block">
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icons-bar"></span>
                 <span class="icon-bar"></span>
               </div>
               <?php print t('Menu'); ?>
