@@ -1,8 +1,14 @@
+@charset 'UTF-8';
+
 .form-control {
   box-shadow: none;
 
   .well-white & {
     background: $dust;
+  }
+
+  &.btn-group {
+    background: none;
   }
 }
 
@@ -17,16 +23,15 @@ textarea.form-control {
 .form-select {
   display: block;
   width: 100%;
-  border: $midnight-blue-light;
+  height: 44px;
+  padding: 6px 12px;
   background: $dust url(../svg/caret.svg) no-repeat;
   background-position: 98% center;
-  height: 44px;
+  border: $midnight-blue-light;
   border-radius: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   text-indent: 0.01px; // firefox fix
   text-overflow: ''; // firefox fix
-  padding: 6px 12px;
+  appearance: none;
 
   &.ctools-jump-menu-select:hover {
     cursor: pointer;

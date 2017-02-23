@@ -1,57 +1,64 @@
-.footer{
-  border-top: 1px solid $dust;
-  background-size: 400px;
+@charset 'UTF-8';
+
+.footer {
   position: relative;
+  background-size: 400px;
+  border-top: 1px solid $dust;
   overflow: hidden;
+
   @media only screen and (max-width: $screen-sm-max) {
     padding-top: 80px;
   }
-  &:before{
-    content:"";
+
+  &:before {
+    content: "";
     position: absolute;
-    left: 0;
     top: 50%;
+    left: 0;
+    width: 400px;
+    height: 80px;
     margin-top: -40px;
     background: url('../svg/logo.svg') no-repeat;
     background-position: -155px 50%;
-    width: 400px;
-    height: 80px;
+
     @media only screen and (max-width: $screen-sm-max) {
-      background-position: -120px 50%;
-      width:300px;
       top: 20px;
+      width: 300px;
       margin-top: 0;
+      background-position: -120px 50%;
     }
   }
-  &:after{
-    content:"";
+
+  &:after {
+    content: "";
     position: absolute;
-    right: -250px;
     top: 50%;
+    right: -250px;
+    width: 400px;
+    height: 80px;
     margin-top: -40px;
     background: url('../svg/logo.svg') no-repeat;
-    width: 400px;
-    height: 80px;
+
     @media only screen and (max-width: $screen-sm-max) {
-      background-position-y: 50%;
-      width:300px;
-      right: -180px;
       top: 20px;
+      right: -180px;
+      width: 300px;
       margin-top: 0;
+      background-position-y: 50%;
     }
   }
 
-
-  a:not(.btn){
-    color: $midnight-blue;
-    background-image: linear-gradient(to bottom, rgba($text-color,0) 50%, rgba($text-color,0.6) 50%);
+  a:not(.btn) {
+    padding-bottom: 5px;
+    background-image: linear-gradient(to bottom, rgba($text-color, 0) 50%, rgba($text-color, 0.6) 50%);
     background-repeat: repeat-x;
     background-size: 2px 2px;
     background-position: 0 23px;
-    padding-bottom: 5px;
+    color: $midnight-blue;
+
     &:hover {
+      background-image: linear-gradient(to bottom, rgba($link-color, 0) 50%, rgba($link-color, 0.6) 50%);
       color: $link-color;
-      background-image: linear-gradient(to bottom, rgba($link-color,0) 50%, rgba($link-color,0.6) 50%);
     }
   }
 }

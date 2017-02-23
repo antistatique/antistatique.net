@@ -5,8 +5,12 @@ node_modules
 .env
 
 /dist
-/build
+drupal/sites/all/themes/antistatique/build/
 /styleguide
 
 tests/regression/compare
 tests/regression/temp
+styleguide
+build
+.idea/
+.bundle

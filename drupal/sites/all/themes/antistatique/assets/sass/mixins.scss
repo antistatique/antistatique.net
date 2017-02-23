@@ -1,0 +1,21 @@
+@mixin medium-link($color: currentColor, $hover-color: $link-color, $position: 0.9em) {
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, $color 50%, $color 50%);
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  background-position: 0 $position;
+
+  &:hover {
+    background-image: linear-gradient(to bottom, $hover-color 50%, $hover-color 50%);
+  }
+}
+
+@mixin medium-link-hover($color: currentColor, $hover-color: $link-color, $position: 0.9em) {
+  &:hover {
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, $color 50%, $color 50%);
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    background-position: 0 $position;
+  }
+}

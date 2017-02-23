@@ -1,0 +1,49 @@
+@charset 'UTF-8';
+
+.input-group-btn:last-child > .btn {
+  height: 44px;
+  margin-left: 6px;
+  border-radius: 2px;
+}
+
+.input-group-btn:first-child > .btn {
+  height: 44px;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+
+//merge the button inside the field
+.input-group-merged,
+.coffee .webform-client-form {
+  .btn {
+    position: absolute;
+    right: 0;
+    z-index: 90;
+    height: 100%;
+
+    &:hover {
+      background: none;
+    }
+  }
+  .form-control { padding-right: 51px; }
+}
+
+.form-mobile {
+  @media only screen and (max-width: $screen-xs-max) {
+    .input-group {
+      display: block;
+
+      .form-control {
+        display: inline-block;
+        float: none;
+      }
+    }
+
+    .input-group-btn {
+      > .btn {
+        margin-left: 0;
+        margin-top: 4px;
+      }
+    }
+  }
+}

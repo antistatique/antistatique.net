@@ -1,13 +1,18 @@
+@charset 'UTF-8';
+
 .dropdown-menu {
-  border: none;
   margin-top: -7px;
+  border: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 1/3);
 
   .selected a {
-    &, &:focus, &:hover {
+    &,
+    &:focus,
+    &:hover {
       color: $midnight-blue-light;
     }
   }
+
   > li > a {
     padding-left: 15px;
     padding-right: 15px;
@@ -27,9 +32,10 @@
   padding-right: 14px;
 
   .caret {
+    top: 45%;
     border: none;
     font-size: 8px;
-    top: 45%;
+
     @extend .antistaticon;
     @extend .antistaticon-caret;
   }
@@ -37,15 +43,16 @@
 
 .open {
   &.bootstrap-select.btn-group .btn {
+    background: none;
     box-shadow: none;
     color: $midnight-blue-light;
-    background: none;
 
     .caret:before {
-      transform: rotate(180deg);
       color: $link-color;
+      transform: rotate(180deg);
     }
   }
+
   .dark-hero & {
     &.bootstrap-select.btn-group .btn {
       color: $white;

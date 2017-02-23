@@ -69,7 +69,6 @@ hide($user_profile['field_teammate_currently_working']);
               <p><?php print render($user_profile['field_email']); ?></p>
             <?php endif ?>
             <p><?php print t('<a href="/fr/nous/bloggons/@username" class="btn btn-default"><i aria-hidden="true" class="fa fa-pencil"></i> !name\'s articles</a>', array('@username' => $account->name, '!name' => $user_profile['field_firstname'][0]['#markup'])); ?></p>
-            <p class="btn btn-like"><i aria-hidden="true" class="antistaticon antistaticon-pingpong"></i> <?php print render($user_profile['field_pingpong_points']) ?> <?php print render($user_profile['field_pingpong_ranking']) ?></p>
           </div>
         </div>
       </div>

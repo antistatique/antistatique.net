@@ -1,4 +1,8 @@
-<div class="bg-primary full-screen coffee dark-hero clearfix" style="background: #ec2577;">
+
+<div class="bg-primary full-screen coffee dark-hero clearfix" style="background: #000032;">
+  <div class="christmas-tree">
+    <img class="img-responsive" src="<?php print $base_path . $directory; ?>/build/img/AntistatXmas.gif" alt="Un sapin qui brille!">
+  </div>
   <a class="logo hidden-xs" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
     <img src="<?php print $base_path . $directory; ?>/build/svg/logo_white.svg" onerror="this.onerror=null; this.src='<?php print $base_path . $directory; ?>/build/img/logo_white_wide.png'" alt="Antistatique" />
   </a>
@@ -9,12 +13,9 @@
       </g>
     </svg>
   </a>
-  <div class="cups">
-    <img class="img-responsive" src="<?php print $base_path . $directory; ?>/build/img/Coffe_anim.gif" alt="Oh mon Dieu! Des tasses qui dansent!">
-  </div>
-  <h1><?php print t('Buvons un café ensemble!') ?></h1>
+  <h1><?php print t('Laissez-nous votre contact sous le sapin!') ?></h1>
   <div class="spacer spacer-sm"></div>
-  <p><?php print t("Laissez-nous votre <b>numéro</b>, <b>email</b> ou <b>Twitter handle</b> <br>& nous vous appellerons/écrirons/twitterons!"); ?></p>
+  <p><?php print t("Laissez-nous votre <b>numéro</b>, <b>email</b> ou <b>Twitter handle</b> <br>& nous vous appellerons/écrirons/twitterons pour discuter autour d'un café!"); ?></p>
 
   <?php if ($messages): ?>
     <div class="container">
@@ -24,5 +25,5 @@
 
   <?php print render($page['content_below']); ?>
 
-  <footer class="text-white small"><?php print t('Visitez notre '); ?><a href="http://antistatique.net">site & portfolio</a><br class="visible-xs-block"> — <a href="tel:+41216236303">+41 21 623 63 03</a> — <br class="visible-xs-block"><a href="mailto:hello@antistatique.net?subject=Café!">hello@antistatique.net</a></footer>
+  <footer class="text-white small"><?php print t('Visitez notre '); ?><a href="http://antistatique.net">site & portfolio</a><br class="visible-xs-block"> — Lausanne <a href="tel:+41216236303">+41 21 623 63 03</a> – Genève <a href="tel:+41225520306">+41 22 552 03 06</a> — <br class="visible-xs-block"><a href="mailto:hello@antistatique.net?subject=Café!">hello@antistatique.net</a></footer>
 </div>
