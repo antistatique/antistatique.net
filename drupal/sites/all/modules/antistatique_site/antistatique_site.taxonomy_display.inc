@@ -33,7 +33,7 @@ function antistatique_site_taxonomy_display_default_displays() {
   $taxonomy_display->associated_display_plugin = 'TaxonomyDisplayAssociatedDisplayHandlerViews';
   $taxonomy_display->associated_display_options = array(
     'view' => 'projects',
-    'display' => 'block_3',
+    'display' => 'block_variant_2',
   );
   $taxonomy_display->add_feed = TRUE;
   $taxonomy_display->breadcrumb_display_plugin = 'TaxonomyDisplayBreadcrumbDisplayHandlerCore';

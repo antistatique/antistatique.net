@@ -1173,13 +1173,14 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
+        'type' => 'text_default',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1215,19 +1216,15 @@ function antistatique_project_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1296,6 +1293,48 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-skills-field_skills_cta_text'.
+  $field_instances['taxonomy_term-skills-field_skills_cta_text'] = array(
+    'bundle' => 'skills',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Will get printed above the Contact Us button. Make the user want to click it!',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_skills_cta_text',
+    'label' => 'Call To Action Text',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-skills-name_field'.
   $field_instances['taxonomy_term-skills-name_field'] = array(
     'bundle' => 'skills',
@@ -1307,13 +1346,13 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1335,7 +1374,7 @@ function antistatique_project_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -1343,6 +1382,7 @@ function antistatique_project_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('CEO, Founder, Best client ever, a fan');
+  t('Call To Action Text');
   t('Client');
   t('Credits');
   t('Description');
@@ -1369,6 +1409,7 @@ function antistatique_project_field_default_field_instances() {
   t('This option indicates that this content is ready to be translated by the translator.');
   t('Tile image');
   t('Title');
+  t('Will get printed above the Contact Us button. Make the user want to click it!');
   t('Year');
 
   return $field_instances;
