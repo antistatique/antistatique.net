@@ -331,7 +331,7 @@ function antistatique_link_formatter_link_default($vars) {
          $link_options['attributes']['class'] = 'fa fa-external-link';
      }
     $classes = array($link_options['attributes']['class']);
-    $classes = '<i class="'.implode($classes).'"></i> ';
+    $classes = '<i aria-hidden="true" class="'.implode($classes).'"></i> ';
     $link_options['attributes']['class'] = 'btn btn-default';
   }
   // Display a normal link if both title and URL are available.
@@ -350,7 +350,7 @@ function antistatique_link_formatter_link_default($vars) {
 function antistatique_links__locale_block(&$variables) {
   global $language;
 
-  $output = '<div class="btn-group-vertical lang-switcher">';
+  $output = '<nav id="lang-switcher" class="btn-group-vertical lang-switcher">';
   foreach($variables['links'] as $lang => $info) {
     $name = $info['language']->native;
     $href = isset($info['href']) ? $info['href'] : '';
@@ -358,7 +358,7 @@ function antistatique_links__locale_block(&$variables) {
     $link_classes = array('btn', 'btn-gray', 'btn-xxs', 'text-uppercase');
 
     $options = array(
-      'attributes' => array('class' => $link_classes),
+      'attributes' => array('class' => $link_classes, 'hreflang' => $lang, 'aria-label' => $name),
       'language' => $info['language'],
       'html' => true
       );
@@ -366,7 +366,7 @@ function antistatique_links__locale_block(&$variables) {
     if ($href) $output .= l($lang, $href, $options);
   }
 
-  $output .= '</div>';
+  $output .= '</nav>';
 
   return $output;
 }

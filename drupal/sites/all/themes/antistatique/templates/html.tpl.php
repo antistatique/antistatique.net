@@ -98,9 +98,17 @@ global $base_path;
   })(window,document,'script','dataLayer','GTM-WLRK');</script>
   <!-- End Google Tag Manager -->
 
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-  </div>
+  <nav class="nav-access">
+    <h2>Access keys</h2>
+    <ul>
+      <li><a class="btn btn-primary" href="<?php print $front_page; ?>" accesskey="1"><?php print t('Home'); ?></a></li>
+      <li><a class="btn btn-primary" href="#main-content" accesskey="2" ><?php print t('To content'); ?></a></li>
+      <li><a class="btn btn-primary" href="#full-accessible-navigation" accesskey="3" ><?php print t('To navigation'); ?></a></li>
+      <li><a class="btn btn-primary" href="#lang-switcher" accesskey="4" ><?php print t('To language switcher'); ?></a></li>
+      <li><a class="btn btn-primary" href="mailto:info@antistatique.net" accesskey="9"><?php print t('Contact'); ?></a></li>
+    </ul>
+  </nav>
+
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>

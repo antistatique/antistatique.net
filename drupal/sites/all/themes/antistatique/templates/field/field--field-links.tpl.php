@@ -20,8 +20,9 @@
   <?php if ($item_count === 1): ?>
     <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
       <a target="_blank" class="btn btn-dark btn-wrap" href="<?php print render($item['#element']['url']); ?>">
-        <i class="fa fa-external-link visible-sm-inline-block visible-md-inline-block"></i>
-        <span class="hidden-sm hidden-md"><?php print render($item['#element']['title']); ?></span>
+        <span class="sr-only"><?php print render($item['#element']['title']); ?></span>
+        <i aria-hidden="true" class="fa fa-external-link visible-sm-inline-block visible-md-inline-block"></i>
+        <span aria-hidden="true" class="hidden-sm hidden-md"><?php print render($item['#element']['title']); ?></span>
         </a>
     </div>
   <?php else: ?>
