@@ -1,0 +1,285 @@
+@charset 'UTF-8';
+
+.header {
+  width: 100%;
+
+  @media only screen and (max-width: $screen-xs-max) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  @media only screen and (min-width: $screen-sm-min) {
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+.navbar-brand {
+  @media only screen and (min-width: $screen-sm-min) {
+    padding-left: 0;
+  }
+
+  img {
+    min-width: 29px;
+    width: 30px;
+    max-height: 31px;
+
+    @media only screen and (min-width: $screen-md-min) {
+      width: 165px;
+    }
+  }
+}
+
+.navbar {
+  font-weight: 700;
+
+  @media only screen and (max-width: $screen-xs-max) {
+    position: static;
+    margin: 5px 0 20px;
+  }
+}
+
+.navbar-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+
+  @media only screen and (max-width: $screen-xs-max) {
+    display: inline-block;
+  }
+}
+
+.navbar-default .navbar-nav {
+  > li {
+    @media only screen and (min-width: $screen-sm-min) {
+      padding: 45px 15px 29px;
+    }
+  }
+
+  > .active-trail > a {
+    &,
+    &:hover {
+      background-image: transparent;
+      color: $navbar-default-link-active-color;
+      .dark-hero & { color: $navbar-inverse-link-active-color; }
+    }
+  }
+}
+
+.navbar-btn {
+  margin-top: 11px;
+
+  @media only screen and (min-width: $screen-sm-min) {
+    margin-top: 45px;
+  }
+}
+
+.navbar-header {
+  .btn {
+    width: 44px;
+    height: 44px;
+    padding: 11px 0 0 4px;
+    font-size: 17px;
+  }
+
+  .dark-hero & {
+    > .navbar-toggle { color: $white; }
+    .icon-bar { background: $white; }
+  }
+}
+
+.navbar-default .navbar-toggle {
+  @media only screen and (max-width: $screen-xs-max) {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    .dark-hero & {
+      color: $white;
+
+      .icon-bar {
+        background: $white;
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  border: none;
+}
+
+.navbar-toggle {
+  .icon-bar {
+    width: 16px;
+  }
+}
+
+.navbar-collapse.navbar-mobile {
+  @media only screen and (max-width: $screen-xs-max) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+
+    > nav {
+      position: relative;
+      padding: 90px 20px 15px;
+      background: $white;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background: linear-gradient(to top, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
+      }
+    }
+
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        z-index: 1;
+        width: 300px;
+        height: 80px;
+        margin-top: 0;
+        background: url('../svg/logo.svg') no-repeat;
+        background-position: -120px 50%;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: -180px;
+        width: 300px;
+        height: 80px;
+        margin-top: 0;
+        background: url('../svg/logo.svg') no-repeat;
+        background-position: center 50%;
+      }
+    }
+
+    .navbar-toggle {
+      display: block;
+      float: none;
+      width: 100%;
+      margin-bottom: 100px;
+      color: $white;
+    }
+
+    .navbar-nav {
+      margin: 0;
+      text-align: center;
+      font-size: 1.5em;
+
+      > li:not(.active) > a {
+        background-image: linear-gradient(to bottom, rgba($white, 0) 25%, rgba($white, 0.6) 25%);
+        background-repeat: repeat-x;
+        background-size: 3px 3px;
+
+        &:hover {
+          color: $link-color;
+        }
+      }
+    }
+
+    .navbar-btn {
+      display: block;
+
+      .btn-primary {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.lang-switcher {
+  @media only screen and (min-width: $screen-sm-min) {
+    margin-left: 10px;
+  }
+
+  @media only screen and (max-width: $screen-xs-max) {
+    &.btn-group-vertical {
+      display: block;
+      text-align: center;
+
+      > .btn {
+        display: inline-block;
+        width: auto;
+      }
+    }
+  }
+}
+
+.no-hero-image {
+  .header {
+    position: static;
+    margin: 20px 0;
+  }
+}
+
+// Inverse navbar with dark-hero
+.dark-hero {
+  @media only screen and (min-width: $screen-sm-min) {
+    .navbar-text {
+      color: $navbar-inverse-color;
+    }
+
+    .navbar-nav {
+      > li > a {
+        color: $navbar-inverse-link-color;
+
+        &:hover,
+        &:focus {
+          background-color: $navbar-inverse-link-hover-bg;
+          color: $navbar-inverse-link-hover-color;
+        }
+      }
+
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          background-color: $navbar-inverse-link-active-bg;
+          color: $navbar-inverse-link-active-color;
+        }
+      }
+
+      > .disabled > a {
+        &,
+        &:hover,
+        &:focus {
+          background-color: $navbar-inverse-link-disabled-bg;
+          color: $navbar-inverse-link-disabled-color;
+        }
+      }
+    }
+  }
+}
+
+// Dark version
+.logged-in .tabs--primary {
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.67) none repeat scroll 0% 0%;
+}

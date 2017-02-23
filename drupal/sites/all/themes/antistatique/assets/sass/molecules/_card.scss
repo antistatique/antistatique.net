@@ -1,34 +1,33 @@
+@charset 'UTF-8';
+
 .card {
   position: relative;
-  color: $white;
   margin-bottom: 30px;
+  color: $white;
 
   img {
     width: 100%;
   }
+
   &:before {
     content: '';
+    display: block;
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 100%;
     width: 100%;
-    background: rgba($midnight-blue, .4);
+    height: 100%;
+    background: rgba($midnight-blue, 0.4);
     background: linear-gradient(to top, rgba($midnight-blue, 1), rgba($midnight-blue, 0));
-    display: block;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
   }
 }
 
 a {
   .card {
     &:hover {
-      &:before {
-        opacity: .7;
-      }
-      .card-content {
-        border-width: 5px;
-      }
+      &:before { opacity: 0.7; }
+      .card-content { border-width: 5px; }
     }
   }
 }
@@ -37,16 +36,15 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 0 15px;
   width: 100%;
+  padding: 0 15px;
   border-bottom: 0 solid $brand-primary;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 
   h4 {
     margin-top: 5px;
     margin-bottom: 8px;
   }
-  p {
-    margin-bottom: 0;
-  }
+
+  p { margin-bottom: 0; }
 }

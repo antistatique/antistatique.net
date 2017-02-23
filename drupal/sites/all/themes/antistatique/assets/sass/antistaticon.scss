@@ -9,7 +9,7 @@
   font-style: normal;
 }
 
-.antistaticon:before {
+%antistaticon {
   display: inline-block;
   font-family: "antistaticon";
   font-style: normal;
@@ -17,6 +17,10 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.antistaticon:before {
+  @extend %antistaticon;
 }
 
 .antistaticon-lg {
@@ -33,45 +37,69 @@
   text-align: center;
 }
 
-.antistaticon-caret:before { content: "\E001" }
-.antistaticon-AXA:before { content: "\E002" }
-.antistaticon-BCV:before { content: "\E003" }
-.antistaticon-Bata:before { content: "\E004" }
-.antistaticon-Brigerbad:before { content: "\E005" }
-.antistaticon-Canton-de-Geneve:before { content: "\E006" }
-.antistaticon-Canton-de-Vaud:before { content: "\E007" }
-.antistaticon-Cardis-Sothebys:before { content: "\E008" }
-.antistaticon-Confederation-suisse:before { content: "\E009" }
-.antistaticon-Courtiers-Partenaires:before { content: "\E00A" }
-.antistaticon-Credit-Agricole:before { content: "\E00B" }
-.antistaticon-DeRham-Sothebys:before { content: "\E00C" }
-.antistaticon-DeRham:before { content: "\E00D" }
-.antistaticon-Diams:before { content: "\E00E" }
-.antistaticon-EHL:before { content: "\E00F" }
-.antistaticon-Electrosanne:before { content: "\E010" }
-.antistaticon-Foncia:before { content: "\E011" }
-.antistaticon-Horizon-Vert:before { content: "\E012" }
-.antistaticon-Key-of-Aurora:before { content: "\E013" }
-.antistaticon-Lavey-les-Bains:before { content: "\E014" }
-.antistaticon-Le-Temps:before { content: "\E015" }
-.antistaticon-Loterie-Romande:before { content: "\E016" }
-.antistaticon-Medecins-sans-Frontieres:before { content: "\E017" }
-.antistaticon-Okado:before { content: "\E018" }
-.antistaticon-Orbium:before { content: "\E019" }
-.antistaticon-Picturepark:before { content: "\E01A" }
-.antistaticon-Pierre-Etoile:before { content: "\E01B" }
-.antistaticon-Prateo:before { content: "\E01C" }
-.antistaticon-RDR:before { content: "\E01D" }
-.antistaticon-RTS:before { content: "\E01E" }
-.antistaticon-Redbull:before { content: "\E01F" }
-.antistaticon-Rodondi-Joye:before { content: "\E020" }
-.antistaticon-Tehran-Watch:before { content: "\E021" }
-.antistaticon-Tennis-Club-de-Lausanne:before { content: "\E022" }
-.antistaticon-UWW:before { content: "\E023" }
-.antistaticon-Uchitomi:before { content: "\E024" }
-.antistaticon-Urturn:before { content: "\E025" }
-.antistaticon-Vaudoise:before { content: "\E026" }
-.antistaticon-Ville-de-Geneve:before { content: "\E027" }
-.antistaticon-lavey:before { content: "\E028" }
-.antistaticon-pingpong:before { content: "\E029" }
-.antistaticon-enter:before { content: "\E02A" }
+// transform the icon
+.antistaticon-flip-horizontal:before { transform: scaleX(-1); }
+.antistaticon-flip-vertical:before { transform: scaleY(-1); }
+.antistaticon-rotate-90deg:before { transform: rotate(90deg); }
+.antistaticon-rotate-180deg:before { transform: rotate(180deg); }
+.antistaticon-rotate-270deg:before { transform: rotate(270deg); }
+
+// Variables with the unicode character
+$antistaticon-bata: "\EA01";
+$antistaticon-bcv: "\EA02";
+$antistaticon-brigerbad: "\EA03";
+$antistaticon-caret: "\EA04";
+$antistaticon-courtiers-partenaires: "\EA05";
+$antistaticon-credit-agricole: "\EA06";
+$antistaticon-derham-sothebys: "\EA07";
+$antistaticon-derham: "\EA08";
+$antistaticon-diams: "\EA09";
+$antistaticon-electrosanne: "\EA0A";
+$antistaticon-enter: "\EA0B";
+$antistaticon-foncia: "\EA0C";
+$antistaticon-horizon-vert: "\EA0D";
+$antistaticon-key-of-aurora: "\EA0E";
+$antistaticon-lavey-les-bains: "\EA0F";
+$antistaticon-lavey: "\EA10";
+$antistaticon-okado: "\EA11";
+$antistaticon-picturepark: "\EA12";
+$antistaticon-pierre-etoile: "\EA13";
+$antistaticon-pingpong: "\EA14";
+$antistaticon-prateo: "\EA15";
+$antistaticon-rdr: "\EA16";
+$antistaticon-redbull: "\EA17";
+$antistaticon-rodondi-joye: "\EA18";
+$antistaticon-tehran-watch: "\EA19";
+$antistaticon-tennis-club-de-lausanne: "\EA1A";
+$antistaticon-uchitomi: "\EA1B";
+$antistaticon-urturn: "\EA1C";
+
+
+.antistaticon-bata:before { content: $antistaticon-bata; }
+.antistaticon-bcv:before { content: $antistaticon-bcv; }
+.antistaticon-brigerbad:before { content: $antistaticon-brigerbad; }
+.antistaticon-caret:before { content: $antistaticon-caret; }
+.antistaticon-courtiers-partenaires:before { content: $antistaticon-courtiers-partenaires; }
+.antistaticon-credit-agricole:before { content: $antistaticon-credit-agricole; }
+.antistaticon-derham-sothebys:before { content: $antistaticon-derham-sothebys; }
+.antistaticon-derham:before { content: $antistaticon-derham; }
+.antistaticon-diams:before { content: $antistaticon-diams; }
+.antistaticon-electrosanne:before { content: $antistaticon-electrosanne; }
+.antistaticon-enter:before { content: $antistaticon-enter; }
+.antistaticon-foncia:before { content: $antistaticon-foncia; }
+.antistaticon-horizon-vert:before { content: $antistaticon-horizon-vert; }
+.antistaticon-key-of-aurora:before { content: $antistaticon-key-of-aurora; }
+.antistaticon-lavey-les-bains:before { content: $antistaticon-lavey-les-bains; }
+.antistaticon-lavey:before { content: $antistaticon-lavey; }
+.antistaticon-okado:before { content: $antistaticon-okado; }
+.antistaticon-picturepark:before { content: $antistaticon-picturepark; }
+.antistaticon-pierre-etoile:before { content: $antistaticon-pierre-etoile; }
+.antistaticon-pingpong:before { content: $antistaticon-pingpong; }
+.antistaticon-prateo:before { content: $antistaticon-prateo; }
+.antistaticon-rdr:before { content: $antistaticon-rdr; }
+.antistaticon-redbull:before { content: $antistaticon-redbull; }
+.antistaticon-rodondi-joye:before { content: $antistaticon-rodondi-joye; }
+.antistaticon-tehran-watch:before { content: $antistaticon-tehran-watch; }
+.antistaticon-tennis-club-de-lausanne:before { content: $antistaticon-tennis-club-de-lausanne; }
+.antistaticon-uchitomi:before { content: $antistaticon-uchitomi; }
+.antistaticon-urturn:before { content: $antistaticon-urturn; }

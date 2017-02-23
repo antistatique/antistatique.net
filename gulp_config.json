@@ -32,7 +32,7 @@
     ],
     "polyfills": [
       "node_modules/html5shiv/dist/html5shiv.js",
-      "node_modules/respond/dest/respond.src.js"
+      "node_modules/respond.js/dest/respond.src.js"
     ]
   },
   "images": [
@@ -47,18 +47,50 @@
   "iconsFontName": "antistaticon",
   "build": "drupal/sites/all/themes/antistatique/build/",
   "browsers": ["last 2 versions", "safari 5", "ie 8", "ie 9", "ff 27", "opera 12.1"],
-  "styleguide": {
-    "assets": "node_modules/fabricator/src/assets/fabricator/",
-    "layout": "default",
-    "layouts": "drupal/sites/all/themes/antistatique/assets/templates/views/layouts/*",
-    "layoutIncludes": "drupal/sites/all/themes/antistatique/assets/templates/views/layouts/includes/*",
-    "views": [
-      "drupal/sites/all/themes/antistatique/assets/templates/**/*",
-      "!drupal/sites/all/themes/antistatique/assets/templates/views/+(layouts)/**"
-    ],
-    "materials": "drupal/sites/all/themes/antistatique/assets/components/**/*",
-    "data": "drupal/sites/all/themes/antistatique/assets/data/**/*.{json,yml}",
-    "docs": "drupal/sites/all/themes/antistatique/assets/docs/**/*.md",
-    "dest": "styleguide"
+  "singles": [],
+  "metalsmith": {
+    "assets": "node_modules/toolbox-utils/styleguide/",
+    "dist": "styleguide/",
+    "url": "https://antistatique.github.io/antistatique.net/",
+    "plugins": {
+      "permalinks": {
+        "pattern": ":title",
+        "linksets": [{
+          "match": { "collection": "pages" },
+          "pattern": ":title"
+        }]
+      },
+      "collections": {
+        "atoms": {
+          "sortBy": "title",
+          "reverse": false
+        },
+        "molecules": {
+          "sortBy": "title",
+          "reverse": false
+        },
+        "organisms": {
+          "sortBy": "title",
+          "reverse": false
+        },
+        "pages": {
+          "sortBy": "title",
+          "reverse": false
+        },
+        "docs": {
+          "sortBy": "title",
+          "reverse": false
+        }
+      },
+      "layouts": {
+        "engine": "swig",
+        "default": "default.html.swig",
+        "directory": "drupal/sites/all/themes/antistatique/assets/templates",
+        "rename": true
+      },
+      "metalsmithinplace": {
+        "engine": "swig"
+      }
+    }
   }
 }
