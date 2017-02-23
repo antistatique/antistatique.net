@@ -34,7 +34,7 @@ body {
   margin-top: 50px;
 
   &:before {
-    content: '\E001';
+    content: $antistaticon-caret;
     display: inline-block;
     position: absolute;
     top: -32px;
