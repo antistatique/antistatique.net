@@ -131,7 +131,6 @@ global $base_path;
                 Intercom('shutdown');
             }
 
-            // display shop open/closed sign
             function isDST(t) { //t is the date object to check, returns true if daylight saving time is in effect.
               var jan = new Date(t.getFullYear(),0,1);
               var jul = new Date(t.getFullYear(),6,1);
