@@ -61,6 +61,12 @@ hide($user_profile['field_teammate_currently_working']);
         <?php print render($user_profile['field_teammate_body']); ?>
         <hr>
         <div class="row">
+            <div class="col-sm-12">
+                <?php print render($user_profile['field_skills']); ?>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
           <div class="col-md-4">
             <?php print render($user_profile['field_teammate_links']) ?>
           </div>
