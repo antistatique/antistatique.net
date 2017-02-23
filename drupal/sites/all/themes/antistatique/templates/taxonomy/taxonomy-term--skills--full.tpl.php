@@ -60,6 +60,7 @@
         </div>
     </div>
 
+    <div class="spacer spacer-md"></div>
     <div class="bg-foggy">
         <div class="spacer spacer-sm"></div>
         <div class="container">
@@ -73,5 +74,6 @@
         </div>
         <div class="spacer spacer-sm"></div>
     </div>
+    <div class="spacer spacer-md"></div>
 
 </div>
