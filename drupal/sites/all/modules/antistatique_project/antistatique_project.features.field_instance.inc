@@ -1173,13 +1173,14 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
+        'type' => 'text_default',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1207,21 +1208,17 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-skills-field_picto'.
-  $field_instances['taxonomy_term-skills-field_picto'] = array(
+  // Exported field_instance: 'taxonomy_term-skills-field_images'.
+  $field_instances['taxonomy_term-skills-field_images'] = array(
     'bundle' => 'skills',
     'deleted' => 0,
-    'description' => 'Submit a clear pictogram in a square format. It will be displayed on article pages, services page.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'above',
@@ -1232,17 +1229,17 @@ function antistatique_project_field_default_field_instances() {
     ),
     'entity_type' => 'taxonomy_term',
     'fences_wrapper' => 'div',
-    'field_name' => 'field_picto',
-    'label' => 'Picto',
+    'field_name' => 'field_images',
+    'label' => 'Images',
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
-      'file_directory' => 'skills/picto',
+      'file_directory' => 'skills',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '800x800',
+      'max_filesize' => '2 MB',
+      'max_resolution' => '2000x2000',
       'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
@@ -1251,7 +1248,7 @@ function antistatique_project_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'insert' => 0,
+        'insert' => 1,
         'insert_absolute' => 0,
         'insert_class' => '',
         'insert_default' => 'auto',
@@ -1292,7 +1289,101 @@ function antistatique_project_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-skills-field_skill_symbol'.
+  $field_instances['taxonomy_term-skills-field_skill_symbol'] = array(
+    'bundle' => 'skills',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_skill_symbol',
+    'label' => 'Symbol',
+    'required' => FALSE,
+    'settings' => array(
+      'description_field' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'txt',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'file',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => FALSE,
+        'insert_class' => '',
+        'insert_default' => array(
+          0 => 'auto',
+        ),
+        'insert_styles' => array(
+          0 => 'auto',
+        ),
+        'insert_width' => '',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-skills-field_skills_cta_text'.
+  $field_instances['taxonomy_term-skills-field_skills_cta_text'] = array(
+    'bundle' => 'skills',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Will get printed above the Contact Us button. Make the user want to click it!',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_skills_cta_text',
+    'label' => 'Call To Action Text',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
     ),
   );
 
@@ -1307,13 +1398,13 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1335,7 +1426,7 @@ function antistatique_project_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -1343,6 +1434,7 @@ function antistatique_project_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('CEO, Founder, Best client ever, a fan');
+  t('Call To Action Text');
   t('Client');
   t('Credits');
   t('Description');
@@ -1355,11 +1447,10 @@ function antistatique_project_field_default_field_instances() {
   t('Link(s) where this project can be viewed.');
   t('Name');
   t('Paragraphs');
-  t('Picto');
   t('Ready for translation');
   t('SVG Title');
   t('Skills');
-  t('Submit a clear pictogram in a square format. It will be displayed on article pages, services page.');
+  t('Symbol');
   t('Testimonial Author');
   t('Testimonial Avatar');
   t('Testimonial Quote');
@@ -1369,6 +1460,7 @@ function antistatique_project_field_default_field_instances() {
   t('This option indicates that this content is ready to be translated by the translator.');
   t('Tile image');
   t('Title');
+  t('Will get printed above the Contact Us button. Make the user want to click it!');
   t('Year');
 
   return $field_instances;

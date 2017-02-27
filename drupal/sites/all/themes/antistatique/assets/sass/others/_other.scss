@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+.emoji {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  background-size: contain;
+}
+
+.page-user-login {
+  padding-top: 140px;
+  background: $dust;
+}

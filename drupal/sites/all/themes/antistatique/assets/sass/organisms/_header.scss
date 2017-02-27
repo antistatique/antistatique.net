@@ -1,10 +1,13 @@
+@charset 'UTF-8';
+
 .cover-overlap {
-  margin-top: -110px;
   position: relative;
+  margin-top: -110px;
 
   h1 {
     margin-bottom: $font-size-base * 4;
   }
+
   h2 {
     padding-bottom: 38px;
 
@@ -14,31 +17,40 @@
   }
 
   header {
-    border-bottom: 1px solid $hr-border;
-    margin-bottom: 30px;
-    @media only screen and (min-width: $screen-sm-min) {text-align: center;}
     position: relative;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $hr-border;
     z-index: 1;
+
+    @media only screen and (min-width: $screen-sm-min) { text-align: center; }
 
     @media only screen and (max-width: $screen-xs-max) {
       .team-avatar + p {
-        display: inline-block !important; // override .hidden-xs in this case only (on the article page)
+        /* stylelint-disable declaration-no-important */
+        /* override .hidden-xs in this case only (on the article page) */
+        display: inline-block !important;
+        /* stylelint-enable */
       }
     }
+
     img {
       max-width: 100px;
     }
+
     .field-co-author {
       display: inline-block;
+
       @media only screen and (min-width: $screen-sm-min) {
         margin: 0 15px;
       }
     }
   }
+
   @media only screen and (max-width: $screen-xs-max) {
     margin-top: 0;
     h1 { margin-bottom: $font-size-base; }
     h2 { padding-bottom: $font-size-base; }
+
     header {
       img {
         max-width: 60px;
@@ -48,83 +60,86 @@
 }
 
 .img-hero {
-  min-height: 600px;
+  position: relative;
   background-color: $dust;
   background-size: cover;
   background-position: 50% 50%;
   transition: min-height ease-in-out 0.3s;
-  position: relative;
-  .dark-hero &{
-      background-color: $midnight-blue;
+
+  .dark-hero & {
+    background-color: $midnight-blue;
   }
+
   h1 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    color: $white;
-    padding-top: 2em;
-    padding-left: 15px;  // avoids a too wide title on mobile
-    padding-right: 15px; // (because not in a container)
+    position: relative;
     z-index: 1;
+    width: 100%;
+    padding: 175px 15px 20px; // left avoids a too wide title on mobile
+    color: $white;
+
     & > span {
       display: block;
       margin: 0 auto;
       max-width: 1200px;
     }
+
     @media only screen and (min-width: $screen-sm-min) {
+      position: absolute;
+      bottom: 0;
+      margin-top: 0;
       margin-bottom: 0;
+      padding-top: 0;
       padding-bottom: 1em;
       text-align: center;
       background: linear-gradient(to bottom, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
     }
   }
+
   @media only screen and (max-width: $screen-xs-max) {
     &:after {
       content: '';
-      background: linear-gradient(to bottom, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 60%;
       width: 100%;
+      height: 60%;
+      background: linear-gradient(to bottom, transparentize($midnight-blue, 1) 0%, transparentize($midnight-blue, 0.2) 100%);
     }
   }
-  .img-svg-title, .field-name-field-svg-title img {
+
+  .img-svg-title,
+  .field-name-field-svg-title img {
     position: absolute;
     bottom: 30%;
   }
+
   @media only screen and (min-width: $screen-xl-min) {
     min-height: 600px;
   }
-  @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+
+  @media only screen and (min-width: $screen-sm-min) {
     min-height: 512px;
   }
-  @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    min-height: 400px;
-  }
-  @media only screen and (max-width: $screen-xs-max) {
-    min-height: 300px;
-  }
-  @media only screen and (max-height: 800px) and (max-width: $screen-sm-max) {
-    min-height: 350px;
-    h1 {font-size: $font-size-h1 / 1.4;}
-  }
 
+  @media only screen and (max-height: 800px) and (max-width: $screen-sm-max) {
+    h1 { font-size: $font-size-h1 / 1.4; }
+  }
 
   + .container {
     padding-top: 25px;
+
     @media only screen and (min-width: $screen-sm-min) {
       padding-top: 50px;
     }
   }
 
   .field-svg-title {
-    margin-bottom: -1%;
     position: absolute;
     bottom: 41%;
     left: 0;
-    height: auto;
     width: 100%;
+    height: auto;
+    margin-bottom: -1%;
     z-index: 11;
 
     img {
@@ -132,6 +147,7 @@
     }
   }
 }
+
 .teammate-hero {
   h1 {
     @media only screen and (min-width: $screen-sm-min) {
@@ -154,17 +170,21 @@
     @media only screen and (min-width: $screen-xl-min) {
       min-height: 1000px;
     }
+
     @media only screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
       min-height: 720px;
     }
+
     @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
       min-height: 600px;
     }
+
     @media only screen and (max-height: 620px) and (max-width: $screen-lg-max) {
       min-height: 500px;
-      h1 {font-size: $font-size-h1 / 1.4;}
-      .field-svg-title {display: none;}
+      h1 { font-size: $font-size-h1 / 1.4; }
+      .field-svg-title { display: none; }
     }
+
     .field-svg-title {
       margin-bottom: -5%;
     }
@@ -173,6 +193,7 @@
 
 .antistatique_logo {
   fill: $pinkstatik;
+
   .dark-hero & {
     fill: $white;
   }

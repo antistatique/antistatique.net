@@ -2,8 +2,8 @@ body.cke_editable {
   padding: 15px;
 
   aside {
-    color: $text-muted;
     font-size: $font-size-small;
+    color: $text-muted;
 
     &.aside-right {
       text-align: right;
@@ -16,7 +16,6 @@ body.cke_editable {
   color: #000;
 }
 
-
 .half {
   .field-item {
     display: inline-block;
@@ -28,17 +27,17 @@ body.cke_editable {
 .field-body .more-link {
   position: relative;
   margin-left: 20px;
-  @include medium-link-hover($position: .95em);
+
+  @include medium-link-hover($position: 0.95em);
 
   &:before,
   &:before {
     content: '›';
-    margin: 0 4px;
     position: absolute;
     left: -15px;
+    margin: 0 4px;
   }
 }
-
 
 .embed-responsive {
   margin-top: 25px;
@@ -60,12 +59,12 @@ body.cke_editable {
   iframe {
     max-width: 100%;
   }
+
   iframe.instagram-media {
-    max-width:658px;
-    padding:0;
-    width:99.375%;
-    width:-webkit-calc(100% - 2px);
-    width:calc(100% - 2px);
+    max-width: 658px;
+    width: 99.375%;
+    width: calc(100% - 2px);
     margin: 30px auto;
+    padding: 0;
   }
 }

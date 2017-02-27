@@ -5,3 +5,5 @@
  */
 
 include_once 'antistatique_article.features.inc';
+include_once 'themes.inc';
+include_once 'blocks.inc';

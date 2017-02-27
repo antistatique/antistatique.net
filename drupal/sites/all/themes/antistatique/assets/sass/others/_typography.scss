@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+
+@media only screen and (max-width: $screen-xs-max) {
+  p {
+    font-size: $font-size-base * 0.7;
+    line-height: $line-height-base * 0.95;
+  }
+}
+
+.lead {
+  font-size: ceil(($font-size-base * 1.15));
+  font-weight: 700;
+}
+
+p.small {
+  @media only screen and (min-width: $screen-md-min) {
+    margin-bottom: ($line-height-computed / 3);
+  }
+}

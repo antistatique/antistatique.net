@@ -1,12 +1,16 @@
-.DS_Store*
-
 node_modules
-dist
-.tmp
 .sass-cache
-bower_components
-test/bower_components
+*.DS_Store
+.publish
+.env
 
+/dist
+drupal/sites/all/themes/antistatique/build/
+/styleguide
+
+tests/regression/compare
+tests/regression/temp
 styleguide
 build
 .idea/
+.bundle

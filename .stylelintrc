@@ -1,0 +1,49 @@
+{
+  "ignoreFiles": [
+    "drupal/sites/all/themes/antistatique/assets/sass/main.scss",
+    "drupal/sites/all/themes/antistatique/assets/sass/main-variables.scss",
+    "drupal/sites/all/themes/antistatique/assets/sass/bootstrap-variables.scss",
+    "drupal/sites/all/themes/antistatique/assets/sass/bootstrap.scss",
+    "drupal/sites/all/themes/antistatique/assets/sass/antistaticon.scss"
+  ],
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-vendor-prefix": true,
+    "media-feature-name-no-vendor-prefix" : true,
+    "property-no-vendor-prefix": true,
+    "selector-no-vendor-prefix": true,
+    "value-no-vendor-prefix": true,
+    "selector-pseudo-element-colon-notation": "single",
+    "declaration-no-important": true,
+    "stylelint-disable-reason": "always-after",
+    "comment-empty-line-before": [ "always", {
+      "except": ["first-nested"],
+      "ignore": ["stylelint-commands", "between-comments"],
+    } ],
+    "declaration-block-properties-order": [
+      "content",
+      "display",
+      "flex",
+      "position",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "float",
+      "width",
+      "height",
+      "margin",
+      "padding",
+      "background",
+      "border",
+      "font-familly",
+      "font-size",
+      "line-height",
+      "font-weight",
+      "font-style",
+      "color",
+      "transform",
+      "transition"
+    ],
+  }
+}

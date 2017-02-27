@@ -1,0 +1,18 @@
+{
+  "primary": {
+    "$pinkstatik":                   "#ef2678",
+    "$pinkstatik-dark":              "#be236e",
+    "$midnight-blue":                "#000032",
+    "$dodger-blue":                  "#40b3ff"
+  },
+  "secondary": {
+    "$midnight-blue-light":          "#808098",
+    "$midnight-blue-lighter":        "#bfbfcb",
+    "$midnight-blue-variant":        "#4c4c6f",
+    "$dust":                         "#eaf0f0",
+    "$white":                        "#fff",
+    "$razzmatazz":                   "#d2005a",
+    "$pizazz":                       "#ff9600"
+  }
+
+}

@@ -1,0 +1,13 @@
+name = Antistatique Skills
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = block
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = views
+features[context][] = skill
+features[context][] = skill_en
+features[context][] = skill_fr
+features[ctools][] = context:context:3
+features[features_api][] = api:2

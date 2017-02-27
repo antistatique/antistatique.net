@@ -115,6 +115,12 @@ function antistatique_article_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'antistatique_article-antistatique_article_warning' => array(
+          'module' => 'antistatique_article',
+          'delta' => 'antistatique_article_warning',
+          'region' => 'page_above',
+          'weight' => '-10',
+        ),
         'views-categories-inline' => array(
           'module' => 'views',
           'delta' => 'categories-inline',
@@ -150,52 +156,6 @@ function antistatique_article_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'blog_article_en';
-  $context->description = '';
-  $context->tag = 'specific';
-  $context->conditions = array(
-    'language' => array(
-      'values' => array(
-        'en' => 'en',
-      ),
-    ),
-    'node' => array(
-      'values' => array(
-        'article' => 'article',
-      ),
-      'options' => array(
-        'node_form' => '0',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'block-19' => array(
-          'module' => 'block',
-          'delta' => '19',
-          'region' => 'page_above',
-          'weight' => '-10',
-        ),
-        'disqus-disqus_comments' => array(
-          'module' => 'disqus',
-          'delta' => 'disqus_comments',
-          'region' => 'content_below',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 1;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('specific');
-  $export['blog_article_en'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
   $context->name = 'blog_articles_from_user';
   $context->description = '';
   $context->tag = 'sections';
@@ -224,43 +184,6 @@ function antistatique_article_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('sections');
   $export['blog_articles_from_user'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'blog_warning_en';
-  $context->description = '';
-  $context->tag = 'sections';
-  $context->conditions = array(
-    'language' => array(
-      'values' => array(
-        'en' => 'en',
-      ),
-    ),
-    'path' => array(
-      'values' => array(
-        'we/blog' => 'we/blog',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'block-19' => array(
-          'module' => 'block',
-          'delta' => '19',
-          'region' => 'content_above',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 1;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('sections');
-  $export['blog_warning_en'] = $context;
 
   return $export;
 }

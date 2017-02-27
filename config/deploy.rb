@@ -11,6 +11,8 @@ set :stages,          %w(staging production)
 set :scm,            "git"
 set :repository,     "git@github.com:antistatique/antistatique.net.git"
 
+set :build_path,     "drupal/sites/all/themes/antistatique/build"
+
 set :domain,         "antistatique.alwaysdata.net"
 
 set :user,           "antistatique"

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Antistatique Skills feature.
+ */
+
+include_once 'antistatique_skills.features.inc';
