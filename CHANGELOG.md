@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.2.5 (2017-02-28)
+- remove margins to h1 title in cover
+- fix icon-bar class of mobile menu toggle
+
 ## 1.2.1
 - Fix Force SSL Config for Alwaysdata
 
