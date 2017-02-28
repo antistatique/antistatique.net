@@ -147,7 +147,7 @@
               <span class="sr-only">Toggle navigation</span>
               <div aria-hidden="true" class="inline-block">
                 <span class="icon-bar"></span>
-                <span class="icons-bar"></span>
+                <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </div>
               <?php print t('Menu'); ?>
