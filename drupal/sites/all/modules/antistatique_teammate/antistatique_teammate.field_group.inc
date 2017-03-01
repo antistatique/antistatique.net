@@ -119,7 +119,8 @@ function antistatique_teammate_field_group_info() {
       0 => 'field_teammate_currently_working',
       1 => 'field_teammate_job_title',
       2 => 'field_related_project',
-      3 => 'googleanalytics',
+      3 => 'field_skills',
+      4 => 'googleanalytics',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

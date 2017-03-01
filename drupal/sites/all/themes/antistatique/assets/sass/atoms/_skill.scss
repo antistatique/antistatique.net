@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+
+.field-skills {
+  display: inline-flex;
+  align-items: center;
+}
+
+.skill-icon {
+  display: inline-block;
+  width: 30px;
+  margin-right: 5px;
+  line-height: 0;
+}
+
+.skill-icon-lg {
+  width: 60px;
+}

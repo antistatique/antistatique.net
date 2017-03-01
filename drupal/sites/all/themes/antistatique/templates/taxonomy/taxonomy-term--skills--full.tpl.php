@@ -54,6 +54,21 @@
         <div class="content">
             <div class="row">
                 <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                    <?php if (!empty($term->field_skill_symbol) || !empty($term->field_fa)): ?>
+                        <div class="text-center">
+                            <?php if (!empty($term->field_skill_symbol)): ?>
+                                <span class="skill-icon skill-icon-lg" aria-hidden="true">
+                                    <?php $svg_file = field_get_items('taxonomy_term', $term, 'field_skill_symbol') ?>
+                                    <?php $svg_content = file_get_contents(drupal_realpath($svg_file[0]['uri'])); ?>
+                                    <?= $svg_content ?>
+                                </span>
+                            <?php elseif (!empty($term->field_fa)): ?>
+                                <?php $icon = field_get_items('taxonomy_term', $term, 'field_fa') ?>
+                                <i aria-hidden="true" class="fa fa-3x fa-<?= $icon[0]['safe_value'] ?>"></i>
+                            <?php endif; ?>
+                        </div>
+                        <div class="spacer spacer-sm"></div>
+                    <?php endif; ?>
                     <?php print render($content['description_field']); ?>
                 </div>
             </div>
