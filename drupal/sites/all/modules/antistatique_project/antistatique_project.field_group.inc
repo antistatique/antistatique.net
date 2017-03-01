@@ -72,6 +72,66 @@ function antistatique_project_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_content|taxonomy_term|skills|form';
+  $field_group->group_name = 'group_content';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'skills';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Content',
+    'weight' => '1',
+    'children' => array(
+      0 => 'description_field',
+      1 => 'name_field',
+      2 => 'field_skills_cta_text',
+      3 => 'field_images',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-content field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_content|taxonomy_term|skills|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_images|taxonomy_term|skills|form';
+  $field_group->group_name = 'group_images';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'skills';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Images',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_skill_symbol',
+      1 => 'field_hero_image_is_dark',
+      2 => 'field_teammate_hero_image',
+      3 => 'field_fa',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-images field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_images|taxonomy_term|skills|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_image|node|project|form';
   $field_group->group_name = 'group_image';
   $field_group->entity_type = 'node';

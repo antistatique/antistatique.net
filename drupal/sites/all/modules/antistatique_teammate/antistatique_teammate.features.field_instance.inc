@@ -458,7 +458,54 @@ The fourth image should be <b>640x640</b>.',
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_skills'.
+  $field_instances['user-user-field_skills'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The skills you want to be known for',
+    'display' => array(
+      'big_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'user',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_skills',
+    'label' => 'Skills',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 5,
     ),
   );
 
@@ -558,7 +605,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -802,9 +849,11 @@ The fourth image should be <b>640x640</b>.',
   t('Pingpong Points');
   t('Pingpong Ranking');
   t('Related project');
+  t('Skills');
   t('The first image should be <b>640x960</b>.<br>
 The second and third images should be <b>320x320</b>.<br>
 The fourth image should be <b>640x640</b>.');
+  t('The skills you want to be known for');
   t('To know if you\'re part of the team. <b>Don\'t forget to set the XML Sitemap to <i>EXCLUDED</i> and to remove the <i>collaborator</i> role if the person is not working here anymore.</b>');
   t('Use font awesome syntax for classes (http://fortawesome.github.io/Font-Awesome/icons/) "fa fa-twitter" for twitter.');
   t('What\'s on your business card ?');

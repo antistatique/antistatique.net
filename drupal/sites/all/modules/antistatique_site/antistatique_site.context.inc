@@ -304,20 +304,10 @@ function antistatique_site_context_default_contexts() {
   $context->conditions = array(
     'entity_field' => array(
       'values' => array(
-        'entity_type' => 'a:8:{s:4:"node";s:4:"node";s:13:"taxonomy_term";i:0;s:16:"i18n_translation";i:0;s:15:"paragraphs_item";i:0;s:4:"file";i:0;s:19:"taxonomy_vocabulary";i:0;s:4:"user";i:0;s:15:"wysiwyg_profile";i:0;}',
+        'entity_type' => 'a:10:{s:4:"node";s:4:"node";s:13:"taxonomy_term";s:13:"taxonomy_term";s:16:"i18n_translation";i:0;s:15:"paragraphs_item";i:0;s:8:"redirect";i:0;s:4:"file";i:0;s:19:"taxonomy_vocabulary";i:0;s:4:"user";i:0;s:15:"wysiwyg_profile";i:0;s:9:"menu_link";i:0;}',
         'field_name' => 'field_teammate_hero_image',
         'field_value' => '1',
         'field_empty' => 1,
-      ),
-    ),
-    'taxonomy_term' => array(
-      'values' => array(
-        'category' => 'category',
-        'section' => 'section',
-        'skills' => 'skills',
-      ),
-      'options' => array(
-        'term_form' => '0',
       ),
     ),
     'views' => array(

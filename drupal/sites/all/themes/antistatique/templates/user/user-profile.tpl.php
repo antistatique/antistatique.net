@@ -55,10 +55,37 @@ hide($user_profile['field_teammate_currently_working']);
             <div class="team-avatar <?php if ($winner) print 'winner'; ?>">
               <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print $user_profile['field_firstname'][0]['#markup']; ?>" class="img-circle img-responsive">
               <h2 class="h6 text-md"><?php print render($user_profile['field_teammate_job_title']) ?></h2>
+              <div class="spacer spacer-sm"></div>
             </div>
           </div>
         </header>
         <?php print render($user_profile['field_teammate_body']); ?>
+
+        <?php if (!empty($user_profile['field_skills'])): ?>
+        <hr>
+        <h2 class="h4 text-center"><?= t('Skills'); ?></h2>
+        <div class="row">
+            <?php foreach ($field_skills as $key => $term): ?>
+            <div class="col-sm-6 col-md-4">
+                <?php $term = taxonomy_term_load($term['tid']); ?>
+                <a href="<?= url(drupal_get_path_alias('taxonomy/term/' . $term->tid) ) ?>" class="btn btn-default<?php if (!empty($term->field_skill_symbol)) print ' field-skills'; ?>">
+                    <?php if (!empty($term->field_skill_symbol)): ?>
+                        <span class="skill-icon" aria-hidden="true">
+                            <?php $svg_file = field_get_items('taxonomy_term', $term, 'field_skill_symbol') ?>
+                            <?php $svg_content = file_get_contents(drupal_realpath($svg_file[0]['uri'])); ?>
+                            <?= $svg_content ?>
+                        </span>
+                    <?php elseif (!empty($term->field_fa)): ?>
+                        <?php $icon = field_get_items('taxonomy_term', $term, 'field_fa') ?>
+                        <i aria-hidden="true" class="fa fa-<?= $icon[0]['safe_value'] ?>"></i>
+                    <?php endif; ?>
+                    <?= $term->name ?>
+                </a>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
+
         <hr>
         <div class="row">
           <div class="col-md-4">
