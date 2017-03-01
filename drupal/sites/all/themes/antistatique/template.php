@@ -132,6 +132,75 @@ function antistatique_preprocess_page(&$variables) {
       $variables['classes_array'][] = 'dark-hero';
     }
   }
+    $term = menu_get_object('taxonomy_term', 2);
+    if ($term && isset($term->tid)) {
+        $hero = field_get_items('taxonomy_term', $term, 'field_hero_image_is_dark');
+        if ($hero[0]['value'] == 1) {
+            $variables['classes_array'][] = 'asdf';
+        }
+    }
+}
+
+function antistatique_preprocess_taxonomy_term(&$vars) {
+    if ($vars['view_mode'] == 'full') {
+        $hero = field_get_items('taxonomy_term', $vars['term'], 'field_teammate_hero_image');
+        if($hero){
+            $vars['hero_xs'] = field_view_value('taxonomy_term', $vars['term'], 'field_teammate_hero_image', $hero[0], array(
+                'type' => 'image_url',
+                'settings' => array(
+                    'image_style' => 'hero_breakpoints_theme_bootstrap_screen-xs-max_1x'
+                ),
+            ));
+            $vars['hero_xs2'] = field_view_value('taxonomy_term', $vars['term'], 'field_teammate_hero_image', $hero[0], array(
+                'type' => 'image_url',
+                'settings' => array(
+                    'image_style' => 'hero_breakpoints_theme_bootstrap_screen-xs-max_2x'
+                ),
+            ));
+            $vars['hero_sm'] = field_view_value('taxonomy_term', $vars['term'], 'field_teammate_hero_image', $hero[0], array(
+                'type' => 'image_url',
+                'settings' => array(
+                    'image_style' => 'hero_breakpoints_theme_bootstrap_screen-sm-max_1x'
+                ),
+            ));
+            $vars['hero_md'] = field_view_value('taxonomy_term', $vars['term'], 'field_teammate_hero_image', $hero[0], array(
+                'type' => 'image_url',
+                'settings' => array(
+                    'image_style' => 'hero_breakpoints_theme_bootstrap_screen-md-max_1x'
+                ),
+            ));
+            $vars['hero_lg'] = field_view_value('taxonomy_term', $vars['term'], 'field_teammate_hero_image', $hero[0], array(
+
+
+                'type' => 'image_url',
+                'settings' => array(
+                    'image_style' => 'hero_breakpoints_theme_bootstrap_screen-lg-min_1x'
+                ),
+            ));
+            $css = "@media only screen and (min-width: 1200px) {
+                #taxonomy-term-" . $vars['tid'] . " .img-hero {
+                    background-image:url('" . render($vars['hero_lg']) . "');
+                }
+            }
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                #taxonomy-term-" . $vars['tid'] . " .img-hero {
+                    background-image:url('" . render($vars['hero_md']) . "');
+                }
+            }
+            @media only screen and (min-width: 768px) and (max-width: 991px) {
+                #taxonomy-term-" . $vars['tid'] . " .img-hero {
+                    background-image:url('" . render($vars['hero_sm']) . "');
+                }
+            }
+            @media only screen and (max-width: 767px) {
+                #taxonomy-term-" . $vars['tid'] . " .img-hero {
+                    background-image:url('" . render($vars['hero_xs']) . "');
+                }
+            }";
+
+            drupal_add_css($css, 'inline');
+        }
+    }
 }
 
 /**
