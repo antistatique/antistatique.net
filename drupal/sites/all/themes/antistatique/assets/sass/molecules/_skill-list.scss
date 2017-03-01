@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+
+.field-skills {
+  & + .field-skills {
+    &:before {
+      content: '/';
+      margin-right: 5px;
+      color: $pinkstatik;
+    }
+  }
+}
