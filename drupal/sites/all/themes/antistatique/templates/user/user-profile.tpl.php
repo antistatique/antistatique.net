@@ -55,6 +55,7 @@ hide($user_profile['field_teammate_currently_working']);
             <div class="team-avatar <?php if ($winner) print 'winner'; ?>">
               <img src="<?php print render($user_profile['user_picture']); ?>" alt="<?php print $user_profile['field_firstname'][0]['#markup']; ?>" class="img-circle img-responsive">
               <h2 class="h6 text-md"><?php print render($user_profile['field_teammate_job_title']) ?></h2>
+              <div class="spacer spacer-sm"></div>
             </div>
           </div>
         </header>
@@ -62,6 +63,7 @@ hide($user_profile['field_teammate_currently_working']);
 
         <?php if (!empty($user_profile['field_skills'])): ?>
         <hr>
+        <h2 class="h4 text-center"><?= t('Skills'); ?></h2>
         <div class="row">
             <?php foreach ($field_skills as $key => $term): ?>
             <div class="col-sm-6 col-md-4">
