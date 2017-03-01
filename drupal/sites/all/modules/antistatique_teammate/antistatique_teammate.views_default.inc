@@ -374,6 +374,49 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entityreference_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+
+  /* Display: Skill Page Teammates */
+  $handler = $view->new_display('block', 'Skill Page Teammates', 'block_centered');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Our team';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'container text-center';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Our team';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'node/2';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'big_teaser';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field: Skills (field_skills) */
+  $handler->display->display_options['arguments']['field_skills_tid']['id'] = 'field_skills_tid';
+  $handler->display->display_options['arguments']['field_skills_tid']['table'] = 'field_data_field_skills';
+  $handler->display->display_options['arguments']['field_skills_tid']['field'] = 'field_skills_tid';
+  $handler->display->display_options['arguments']['field_skills_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_skills_tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_skills_tid']['title'] = 'The Team';
+  $handler->display->display_options['arguments']['field_skills_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_skills_tid']['default_argument_options']['node'] = TRUE;
+  $handler->display->display_options['arguments']['field_skills_tid']['default_argument_options']['anyall'] = '+';
+  $handler->display->display_options['arguments']['field_skills_tid']['default_argument_options']['limit'] = TRUE;
+  $handler->display->display_options['arguments']['field_skills_tid']['default_argument_options']['vocabularies'] = array(
+    'skills' => 'skills',
+  );
+  $handler->display->display_options['arguments']['field_skills_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_skills_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_skills_tid']['summary_options']['items_per_page'] = '25';
   $translatables['users'] = array(
     t('Master'),
     t('Meet the team'),
@@ -401,6 +444,8 @@ function antistatique_teammate_views_default_views() {
     t('All Teammates except current'),
     t('Notre équipe'),
     t('Article Author ref'),
+    t('Skill Page Teammates'),
+    t('The Team'),
   );
   $export['users'] = $view;
 
