@@ -60,13 +60,14 @@
         </div>
     </div>
 
+    <?php $cta_text = field_get_items('taxonomy_term', $term, 'field_skills_cta_text'); ?>
+    <?php if ($cta_text): ?>
     <div class="spacer spacer-md"></div>
     <div class="bg-foggy">
         <div class="spacer spacer-sm"></div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-offset-3 col-sm-6 text-center">
-                    <?php $cta_text = field_get_items('taxonomy_term', $term, 'field_skills_cta_text'); ?>
                     <h5><?php print $cta_text[0]['value']; ?></h5>
                     <p><a href="<?php print url(drupal_get_path_alias('node/4')); ?>" class="btn btn-primary"><?php print t('Contact us'); ?></a></p>
                 </div>
@@ -75,5 +76,6 @@
         <div class="spacer spacer-sm"></div>
     </div>
     <div class="spacer spacer-md"></div>
+    <?php endif; ?>
 
 </div>

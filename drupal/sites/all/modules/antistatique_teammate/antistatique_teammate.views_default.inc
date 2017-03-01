@@ -49,6 +49,7 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'users:page_1';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -120,11 +121,19 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
-    'name' => 'name',
+    'field_firstname' => 'field_firstname',
+    'field_lastname' => 'field_firstname',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
-    'name' => array(
+    'field_firstname' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => ' ',
+      'empty_column' => 0,
+    ),
+    'field_lastname' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -136,53 +145,31 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Bulk operations: User */
-  $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
-  $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'users';
-  $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
-  $handler->display->display_options['fields']['views_bulk_operations']['label'] = '';
-  $handler->display->display_options['fields']['views_bulk_operations']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
-  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
-  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
-  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
-  $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
-    'action::views_bulk_operations_user_cancel_action' => array(
-      'selected' => 1,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::views_bulk_operations_delete_item' => array(
-      'selected' => 1,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 1,
-      'label' => 'Delete user',
-    ),
-    'action::views_bulk_operations_user_roles_action' => array(
-      'selected' => 1,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::system_send_email_action' => array(
-      'selected' => 1,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-  );
-  /* Field: User: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'users';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  /* Field: User: Firstname */
+  $handler->display->display_options['fields']['field_firstname']['id'] = 'field_firstname';
+  $handler->display->display_options['fields']['field_firstname']['table'] = 'field_data_field_firstname';
+  $handler->display->display_options['fields']['field_firstname']['field'] = 'field_firstname';
+  $handler->display->display_options['fields']['field_firstname']['label'] = 'Name';
+  $handler->display->display_options['fields']['field_firstname']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_firstname']['element_default_classes'] = FALSE;
+  /* Field: User: Lastname */
+  $handler->display->display_options['fields']['field_lastname']['id'] = 'field_lastname';
+  $handler->display->display_options['fields']['field_lastname']['table'] = 'field_data_field_lastname';
+  $handler->display->display_options['fields']['field_lastname']['field'] = 'field_lastname';
+  /* Field: User: Job title */
+  $handler->display->display_options['fields']['field_teammate_job_title']['id'] = 'field_teammate_job_title';
+  $handler->display->display_options['fields']['field_teammate_job_title']['table'] = 'field_data_field_teammate_job_title';
+  $handler->display->display_options['fields']['field_teammate_job_title']['field'] = 'field_teammate_job_title';
+  $handler->display->display_options['fields']['field_teammate_job_title']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_teammate_job_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_teammate_job_title']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_teammate_job_title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_teammate_job_title']['field_api_classes'] = TRUE;
+  /* Field: User: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'users';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = 'Actions';
   /* Field: Draggableviews: User */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'users';
@@ -194,6 +181,26 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  /* Filter criterion: User: Currently working (field_teammate_currently_working) */
+  $handler->display->display_options['filters']['field_teammate_currently_working_value']['id'] = 'field_teammate_currently_working_value';
+  $handler->display->display_options['filters']['field_teammate_currently_working_value']['table'] = 'field_data_field_teammate_currently_working';
+  $handler->display->display_options['filters']['field_teammate_currently_working_value']['field'] = 'field_teammate_currently_working_value';
+  $handler->display->display_options['filters']['field_teammate_currently_working_value']['value'] = array(
+    1 => '1',
+  );
+  /* Filter criterion: User: Name */
+  $handler->display->display_options['filters']['uid']['id'] = 'uid';
+  $handler->display->display_options['filters']['uid']['table'] = 'users';
+  $handler->display->display_options['filters']['uid']['field'] = 'uid';
+  $handler->display->display_options['filters']['uid']['operator'] = 'not in';
+  $handler->display->display_options['filters']['uid']['value'] = array(
+    0 => '1',
+  );
   $handler->display->display_options['path'] = 'admin/users/sort';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Order Teammates';
@@ -387,8 +394,9 @@ function antistatique_teammate_views_default_views() {
     t('All Teammates'),
     t('Our team'),
     t('Order Page'),
-    t('- Choose an operation -'),
-    t('Delete user'),
+    t('Lastname'),
+    t('Job title'),
+    t('Actions'),
     t('List of teammates (BLOG)'),
     t('asdf'),
     t('nous/bloggons/[name]'),

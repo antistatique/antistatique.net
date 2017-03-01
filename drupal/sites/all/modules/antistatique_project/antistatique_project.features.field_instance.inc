@@ -1173,14 +1173,14 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1208,6 +1208,49 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-skills-field_hero_image_is_dark'.
+  $field_instances['taxonomy_term-skills-field_hero_image_is_dark'] = array(
+    'bundle' => 'skills',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_hero_image_is_dark',
+    'label' => 'Hero image is dark',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-skills-field_images'.
   $field_instances['taxonomy_term-skills-field_images'] = array(
     'bundle' => 'skills',
@@ -1218,13 +1261,13 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1301,16 +1344,15 @@ function antistatique_project_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
         'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 5,
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1341,7 +1383,7 @@ function antistatique_project_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 1,
+      'weight' => 3,
     ),
   );
 
@@ -1356,14 +1398,14 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1387,6 +1429,95 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-skills-field_teammate_hero_image'.
+  $field_instances['taxonomy_term-skills-field_teammate_hero_image'] = array(
+    'bundle' => 'skills',
+    'deleted' => 0,
+    'description' => 'L\'image sera redimensionnée à <b>2600 x 1643 px</b>. Essayez d\'uploader directement une image de cette taille si possible.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 7,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_teammate_hero_image',
+    'label' => 'Hero Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'skills',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_hero-image' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_large' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_medium' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_project_thumbnail' => 0,
+          'image_square_thumbnail' => 0,
+          'image_thumbnail' => 0,
+          'image_wide_image' => 0,
+          'image_wide_thumbnail' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-skills-name_field'.
   $field_instances['taxonomy_term-skills-name_field'] = array(
     'bundle' => 'skills',
@@ -1398,13 +1529,13 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1426,7 +1557,7 @@ function antistatique_project_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
