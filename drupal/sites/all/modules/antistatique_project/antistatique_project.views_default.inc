@@ -240,7 +240,7 @@ function antistatique_project_views_default_views() {
   $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Projects Skill Page */
-  $handler = $view->new_display('block', 'Projects Skill Page', 'block_3');
+  $handler = $view->new_display('block', 'Projects Skill Page', 'block_variant_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
@@ -249,11 +249,9 @@ function antistatique_project_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'views_bootstrap_responsive_grid_plugin_style';
-  $handler->display->display_options['style_options']['item_per_row_xs'] = '1';
-  $handler->display->display_options['style_options']['item_per_row_sm'] = '0';
-  $handler->display->display_options['style_options']['item_per_row_md'] = '0';
-  $handler->display->display_options['style_options']['item_per_row_lg'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
@@ -264,6 +262,8 @@ function antistatique_project_views_default_views() {
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['title'] = 'Our %1 Projects';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
@@ -312,6 +312,7 @@ function antistatique_project_views_default_views() {
     t('Other projects'),
     t('All'),
     t('Projects Skill Page'),
+    t('Our %1 Projects'),
     t('Projects Skill Page Block'),
   );
   $export['projects'] = $view;
