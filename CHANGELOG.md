@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.3.0 (2017-03-01)
+- Skill pages!
+
 ## 1.2.5 (2017-02-28)
 - remove margins to h1 title in cover
 - fix icon-bar class of mobile menu toggle
