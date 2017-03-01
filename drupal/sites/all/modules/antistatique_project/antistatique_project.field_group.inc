@@ -115,6 +115,7 @@ function antistatique_project_field_group_info() {
       0 => 'field_skill_symbol',
       1 => 'field_hero_image_is_dark',
       2 => 'field_teammate_hero_image',
+      3 => 'field_fa',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
