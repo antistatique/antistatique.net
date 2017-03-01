@@ -41,17 +41,7 @@ const inprod = done => done();
 export const serve = () => {
   browserSync({
     server: {
-      baseDir: [config.app.basedir],
-      middleware: [
-        webpackDevMiddleware(bundler, {
-          publicPath: webpackSettings.output.publicPath,
-          stats: {
-            cached: false,
-            colors: true,
-          }
-        }),
-        webpackHotMiddleware(bundler)
-      ]
+      baseDir: [config.app.basedir]
     },
     notify: {
       styles: {
