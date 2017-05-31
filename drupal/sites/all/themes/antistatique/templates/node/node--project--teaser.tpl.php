@@ -88,7 +88,17 @@
       <?php print render($content['field_teammate_hero_image']); ?>
     <?php endif ?>
     <div class="card-content">
-      <p><?php print render($content['field_skills']); ?></p>
+        <p class="text-truncate">
+            <?php foreach ($node->field_skills['und'] as $i => $skill): ?>
+                <?php if ($i <= 1): ?>
+                    <small class="field-skills"><?= $skill['taxonomy_term']->name ?></small>
+                <?php endif ?>
+                <?php if ($i > 1 && count($node->field_skills['und']) > 2): ?>
+                    <small class="field-skills">…</small>
+                    <?php break; ?>
+                <?php endif ?>
+            <?php endforeach ?>
+        </p>
       <h4><?php print $title; ?></h4>
     </div>
   </div>
