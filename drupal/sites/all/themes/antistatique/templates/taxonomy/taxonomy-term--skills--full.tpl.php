@@ -84,6 +84,11 @@
             <div class="row">
                 <div class="col-sm-offset-3 col-sm-6 text-center">
                     <h5><?php print $cta_text[0]['value']; ?></h5>
+                </div>
+                <div class="col-sm-12 text-center clearfix">
+                    <?php print views_embed_view('users', 'block_centered'); ?>
+                </div>
+                <div class="col-sm-offset-3 col-sm-6 text-center">
                     <p><a href="<?php print url(drupal_get_path_alias('node/4')); ?>" class="btn btn-primary"><?php print t('Contact us'); ?></a></p>
                 </div>
             </div>
