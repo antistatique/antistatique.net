@@ -36,7 +36,7 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_client|node|project|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -67,7 +67,7 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_content|node|project|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -97,7 +97,7 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_content|taxonomy_term|skills|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -127,7 +127,7 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_images|taxonomy_term|skills|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -157,7 +157,7 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_image|node|project|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -186,7 +186,7 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_others|node|project|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -216,7 +216,7 @@ function antistatique_project_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_testimonial|node|project|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.

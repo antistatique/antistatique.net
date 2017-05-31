@@ -1379,6 +1379,95 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-skills-field_picto'.
+  $field_instances['taxonomy_term-skills-field_picto'] = array(
+    'bundle' => 'skills',
+    'deleted' => 0,
+    'description' => 'Submit a clear pictogram in a square format. It will be displayed on article pages, services page.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_picto',
+    'label' => 'Picto',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'skills/picto',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '800x800',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_hero-image' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_hero_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_large' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-lg-min_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-md-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-sm-max_2x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_large_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_medium' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-lg-min_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-md-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-sm-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_1x' => 0,
+          'image_project_breakpoints_theme_bootstrap_screen-xs-max_2x' => 0,
+          'image_project_thumbnail' => 0,
+          'image_square_thumbnail' => 0,
+          'image_thumbnail' => 0,
+          'image_wide_image' => 0,
+          'image_wide_thumbnail' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-skills-field_skill_symbol'.
   $field_instances['taxonomy_term-skills-field_skill_symbol'] = array(
     'bundle' => 'skills',
@@ -1653,9 +1742,11 @@ function antistatique_project_field_default_field_instances() {
   t('Link(s) where this project can be viewed.');
   t('Name');
   t('Paragraphs');
+  t('Picto');
   t('Ready for translation');
   t('SVG Title');
   t('Skills');
+  t('Submit a clear pictogram in a square format. It will be displayed on article pages, services page.');
   t('Symbol');
   t('Testimonial Author');
   t('Testimonial Avatar');
