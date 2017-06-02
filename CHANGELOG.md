@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.3.2 (2017-06-02)
+- fix skills displayed in project teasers
+- move teammates in contact us banner in skill page
+
 ## 1.3.1 (2017-03-08)
 - fix Intercom hidden at the wrong hours of the day
 
