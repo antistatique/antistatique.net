@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.3.5 (2017-06-07)
+- fix size of product cards
+
 ## 1.3.4 (2017-06-07)
 - fix skills in project teaser
 - change look of skills in project page
