@@ -10,4 +10,6 @@ features[context][] = skill
 features[context][] = skill_en
 features[context][] = skill_fr
 features[ctools][] = context:context:3
+features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
+features[views_view][] = skills

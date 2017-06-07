@@ -95,7 +95,19 @@
         </div>
         <div class="spacer spacer-sm"></div>
     </div>
-    <div class="spacer spacer-md"></div>
+    <div class="spacer spacer-sm"></div>
     <?php endif; ?>
 
+    <?php $child_skills = views_get_view_result('skills', 'skills_children');?>
+    <?php dpm(views_get_view('skills')->set_display('skills_children')); ?>
+    <?php if (!empty($child_skills)): ?>
+    <div class="bg-foggy">
+        <div class="spacer spacer-sm"></div>
+        <div class="container text-center">
+            <?php print views_embed_view('skills', 'skills_children'); ?>
+        </div>
+        <div class="spacer spacer-xs"></div>
+    </div>
+    <div class="spacer spacer-sm"></div>
+    <?php endif; ?>
 </div>
