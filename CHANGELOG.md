@@ -2,6 +2,11 @@ CHANGELOG
 =========
 
 ## 1.3.2 (2017-06-02)
+- fix skills in project teaser
+- change look of skills in project page
+- update all modules and core
+
+## 1.3.2 (2017-06-02)
 - fix skills displayed in project teasers
 - move teammates in contact us banner in skill page
 
