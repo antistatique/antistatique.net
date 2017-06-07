@@ -68,6 +68,7 @@ function bootstrap_css_alter(&$css) {
     }
   }
   if (!empty($excludes)) {
+    $excludes = array_merge($excludes, str_replace('.css', '-rtl.css', $excludes));
     $css = array_diff_key($css, drupal_map_assoc($excludes));
   }
 }
@@ -90,11 +91,6 @@ function bootstrap_element_info_alter(&$info) {
       $cached[$theme] = array();
       foreach (array_keys($info) as $type) {
         $element = array();
-
-        // Ensure elements that have a base type with the #input set match.
-        if (isset($info[$type]['#base_type']) && isset($info[$type][$info[$type]['#base_type']]['#input'])) {
-          $element['#input'] = $info[$info[$type]['#base_type']]['#input'];
-        }
 
         // Replace fieldset theme implementations with bootstrap_panel.
         if (!empty($info[$type]['#theme']) && $info[$type]['#theme'] === 'fieldset') {
@@ -201,6 +197,51 @@ function _bootstrap_element_info_array_merge($info, $cached) {
 
   // Return the altered element info array.
   return $info;
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function bootstrap_field_widget_form_alter(&$element, &$form_state, $context) {
+  $widget_type = isset($context['instance']['widget']['type']) ? $context['instance']['widget']['type'] : NULL;
+  if ($widget_type === 'image_image') {
+    foreach (element_children($element) as $child) {
+      $element[$child]['#process'][] = '_bootstrap_image_field_widget_process';
+    }
+  }
+}
+
+/**
+ * Implements above #process callback.
+ */
+function _bootstrap_image_field_widget_process($element, &$form_state, $form) {
+  // Core explicitly sets #theme_wrappers to an empty array for the upload
+  // element (perhaps for styling reasons?). Thus, bootstrap_form_element() is
+  // invoked, preventing any necessary logic from executing. To achieve the
+  // same goal and keep backwards compatibility, reset the theme wrapper back
+  // and indicating that the wrapper shouldn't be printed.
+  $element['upload']['#theme_wrappers'][] = 'form_element__image_widget';
+  $element['upload']['#form_element_wrapper'] = FALSE;
+
+  // Unfortunately, core also doesn't set #access on the appropriate elements
+  // until way too late (ironically, because of #ajax). Instead of calling
+  // file_managed_file_pre_render(), just mimic the same #access logic, but
+  // using #default_value instead of #value since the ajax request populates
+  // #value.
+  $value = empty($element['#default_value']['fid']);
+  if (!$value) {
+    $element['upload']['#access'] = FALSE;
+    $element['upload_button']['#access'] = FALSE;
+  }
+  // If we don't already have a file, there is nothing to remove.
+  else {
+    $element['remove_button']['#access'] = FALSE;
+  }
+
+  // Make the upload file element an input group with a button.
+  $element['upload']['#input_group_button'] = $value;
+
+  return $element;
 }
 
 /**
