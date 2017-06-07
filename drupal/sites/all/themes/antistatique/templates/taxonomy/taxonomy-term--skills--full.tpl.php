@@ -99,7 +99,6 @@
     <?php endif; ?>
 
     <?php $child_skills = views_get_view_result('skills', 'skills_children');?>
-    <?php dpm(views_get_view('skills')->set_display('skills_children')); ?>
     <?php if (!empty($child_skills)): ?>
     <div class="bg-foggy">
         <div class="spacer spacer-sm"></div>
