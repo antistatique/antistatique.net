@@ -39,8 +39,11 @@ function antistatique_site_wysiwyg_default_profiles() {
           'Blockquote' => 1,
           'Source' => 1,
           'HorizontalRule' => 1,
+          'PasteText' => 1,
+          'PasteFromWord' => 1,
           'Format' => 1,
           'Styles' => 1,
+          'Maximize' => 1,
           'Scayt' => 1,
         ),
         'picture_ckeditor' => array(
@@ -59,7 +62,7 @@ function antistatique_site_wysiwyg_default_profiles() {
 Aside=aside.aside-left
 Aside Right=aside.aside-right',
       'block_formats' => 'p,code,pre,h2,h3,h4,h5,h6,dt,dd',
-      'advanced__active_tab' => 'edit-css',
+      'advanced__active_tab' => 'edit-basic',
       'forcePasteAsPlainText' => 0,
     ),
     'rdf_mapping' => array(),

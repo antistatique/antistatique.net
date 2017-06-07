@@ -13,99 +13,6 @@ function antistatique_teammate_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_account|user|user|form';
-  $field_group->group_name = 'group_account';
-  $field_group->entity_type = 'user';
-  $field_group->bundle = 'user';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Account',
-    'weight' => '4',
-    'children' => array(
-      0 => 'account',
-      1 => 'timezone',
-      2 => 'locale',
-      3 => 'wysiwyg',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-account field-group-tab',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $field_groups['group_account|user|user|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_basic_info|user|user|form';
-  $field_group->group_name = 'group_basic_info';
-  $field_group->entity_type = 'user';
-  $field_group->bundle = 'user';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Basic infos',
-    'weight' => '1',
-    'children' => array(
-      0 => 'field_email',
-      1 => 'field_firstname',
-      2 => 'field_lastname',
-      3 => 'field_teammate_body',
-      4 => 'field_teammate_links',
-      5 => 'field_pingpong_ranking',
-      6 => 'field_pingpong_points',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-basic-info field-group-tab',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $field_groups['group_basic_info|user|user|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_image|user|user|form';
-  $field_group->group_name = 'group_image';
-  $field_group->entity_type = 'user';
-  $field_group->bundle = 'user';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Images',
-    'weight' => '3',
-    'children' => array(
-      0 => 'field_teammate_hero_image',
-      1 => 'field_four_images',
-      2 => 'field_hero_image_is_dark',
-      3 => 'picture',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-image field-group-tab',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $field_groups['group_image|user|user|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_project|user|user|form';
   $field_group->group_name = 'group_project';
   $field_group->entity_type = 'user';
@@ -133,13 +40,10 @@ function antistatique_teammate_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_project|user|user|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Account');
-  t('Basic infos');
-  t('Images');
   t('Work');
 
   return $field_groups;

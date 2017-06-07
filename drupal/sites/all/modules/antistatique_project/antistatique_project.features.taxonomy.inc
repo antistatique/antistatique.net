@@ -13,11 +13,11 @@ function antistatique_project_taxonomy_default_vocabularies() {
       'name' => 'Skills',
       'machine_name' => 'skills',
       'description' => 'e.g. strategy, design, tech...',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',
-      'i18n_mode' => 1,
+      'i18n_mode' => 32768,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

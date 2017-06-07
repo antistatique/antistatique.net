@@ -84,13 +84,30 @@
             <div class="row">
                 <div class="col-sm-offset-3 col-sm-6 text-center">
                     <h5><?php print $cta_text[0]['value']; ?></h5>
+                </div>
+                <div class="col-sm-12 text-center clearfix">
+                    <?php print views_embed_view('users', 'block_centered'); ?>
+                </div>
+                <div class="col-sm-offset-3 col-sm-6 text-center">
                     <p><a href="<?php print url(drupal_get_path_alias('node/4')); ?>" class="btn btn-primary"><?php print t('Contact us'); ?></a></p>
                 </div>
             </div>
         </div>
         <div class="spacer spacer-sm"></div>
     </div>
-    <div class="spacer spacer-md"></div>
+    <div class="spacer spacer-sm"></div>
     <?php endif; ?>
 
+    <?php $child_skills = views_get_view_result('skills', 'skills_children');?>
+    <?php dpm(views_get_view('skills')->set_display('skills_children')); ?>
+    <?php if (!empty($child_skills)): ?>
+    <div class="bg-foggy">
+        <div class="spacer spacer-sm"></div>
+        <div class="container text-center">
+            <?php print views_embed_view('skills', 'skills_children'); ?>
+        </div>
+        <div class="spacer spacer-xs"></div>
+    </div>
+    <div class="spacer spacer-sm"></div>
+    <?php endif; ?>
 </div>

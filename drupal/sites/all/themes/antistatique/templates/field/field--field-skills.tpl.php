@@ -17,5 +17,10 @@
 <?php endif; ?>
 
 <?php foreach ($items as $delta => $item): ?>
-    <?php if ($element['#label_display'] != 'inline'): ?><small class="<?php print $classes; ?>"<?php print $attributes; ?>><?php endif; print render($item); if ($element['#label_display'] != 'inline'): ?></small><?php endif; ?>
+    <?php if ($element['#label_display'] != 'inline'): ?><small class="<?php print $classes; ?>"<?php print $attributes; ?>><?php endif; ?>
+    <?php $href = url(drupal_get_path_alias($item['#href'])); ?>
+    <a href="<?php print $href; ?>" class="badge">
+      <?php print $item['#title']; ?>
+    </a>
+    <?php if ($element['#label_display'] != 'inline'): ?></small><?php endif; ?>
 <?php endforeach; ?>

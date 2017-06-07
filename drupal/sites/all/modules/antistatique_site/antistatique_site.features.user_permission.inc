@@ -566,6 +566,7 @@ function antistatique_site_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'user',
   );
