@@ -1,10 +1,11 @@
 CHANGELOG
 =========
 
-## 1.3.2 (2017-06-02)
+## 1.3.4 (2017-06-07)
 - fix skills in project teaser
 - change look of skills in project page
 - update all modules and core
+- remove dump
 
 ## 1.3.2 (2017-06-02)
 - fix skills displayed in project teasers
