@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+
+.product-cards {
+  position: relative;
+
+  @media only screen and (min-width: $screen-sm-min) {
+    display: flex;
+  }
+}
+
+.product-card {
+  flex: 1 1 auto;
+  margin-bottom: $grid-gutter-width / 2;
+  padding: ($grid-gutter-width * 2) $grid-gutter-width;
+  background: $white;
+  box-shadow: 0 0 $grid-gutter-width 0 $midnight-blue-lighter;
+
+  @media only screen and (min-width: $screen-sm-min) {
+    margin: 10px 0;
+
+    &:nth-child(2) {
+      z-index: 10;
+      margin: 0;
+    }
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+}
