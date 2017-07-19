@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.3.6
+- fix some sloppy English
+
 ## 1.3.5 (2017-06-07)
 - fix size of product cards
 
