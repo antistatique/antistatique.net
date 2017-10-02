@@ -240,12 +240,14 @@
       <div class="col-xs-12 text-center">
         <div class="spacer spacer-md"></div>
 
-        &nbsp;  <strong><a href="<?php print url('node/4'); ?>#offices">Lausanne</a></strong> & <strong><a href="<?php print url('node/4'); ?>#offices">Geneva</a></strong>&nbsp;
+        &nbsp;  <strong><a href="<?php print url('node/4'); ?>#offices">Geneva</a></strong> & <strong><a href="<?php print url('node/4'); ?>#offices">Miami</a></strong> & <strong><a href="<?php print url('node/4'); ?>#offices">Lausanne</a></strong>&nbsp;
         <div class="visible-xs spacer spacer-xs"></div>
         <span class="visible-xs">
-          <a href="tel:0041216236303" class="btn btn-primary">+41 21 623 63 03</a>
+          <a href="tel:+41216236303" class="btn btn-primary">+41 21 623 63 03</a>
+          <a href="tel:+17023254325" class="btn btn-primary">+1 702 325 4325</a>
         </span>
         <span class="hidden-xs"> &nbsp;  +41 21 623 63 03 &nbsp;  </span>
+        <span class="hidden-xs"> &nbsp;  +1 702 325 4325 &nbsp;  </span>
         <div class="visible-xs spacer spacer-xs"></div>
         <strong>&nbsp;<a href="mailto:hello@antistatique.net">hello@antistatique.net</a>&nbsp;</strong>
         <div class="spacer spacer-lg"></div>
