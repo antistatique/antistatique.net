@@ -356,7 +356,7 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['link_url'] = 'nous/bloggons/%1';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Co-Author (field_co_author) */
+  /* Contextual filter: Content: Displayed Author(s) (field_co_author) */
   $handler->display->display_options['arguments']['field_co_author_target_id']['id'] = 'field_co_author_target_id';
   $handler->display->display_options['arguments']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['arguments']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
@@ -404,7 +404,7 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['relationships']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['relationships']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Co-Author (field_co_author) */
+  /* Contextual filter: Content: Displayed Author(s) (field_co_author) */
   $handler->display->display_options['arguments']['field_co_author_target_id']['id'] = 'field_co_author_target_id';
   $handler->display->display_options['arguments']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['arguments']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
