@@ -715,7 +715,7 @@ function antistatique_site_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_count';
-  $strongarm->value = 2;
+  $strongarm->value = 3;
   $export['language_count'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1015,6 +1015,13 @@ function antistatique_site_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_article_es_pattern';
+  $strongarm->value = 'nosotros/hablamos/[node:created:custom:Y]/[node:created:custom:m]/[node:created:custom:d]/[node:title]';
+  $export['pathauto_node_article_es_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_article_fr_pattern';
   $strongarm->value = 'nous/bloggons/[node:created:custom:Y]/[node:created:custom:m]/[node:created:custom:d]/[node:title]';
   $export['pathauto_node_article_fr_pattern'] = $strongarm;
@@ -1039,6 +1046,13 @@ function antistatique_site_strongarm() {
   $strongarm->name = 'pathauto_node_page_en_pattern';
   $strongarm->value = '';
   $export['pathauto_node_page_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_page_es_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_page_es_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1078,6 +1092,13 @@ function antistatique_site_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_project_es_pattern';
+  $strongarm->value = 'nosotros/trabajamos/con/[node:field_client]';
+  $export['pathauto_node_project_es_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_project_fr_pattern';
   $strongarm->value = 'nous/travaillons/avec/[node:field_client]';
   $export['pathauto_node_project_fr_pattern'] = $strongarm;
@@ -1095,6 +1116,41 @@ function antistatique_site_strongarm() {
   $strongarm->name = 'pathauto_node_project_und_pattern';
   $strongarm->value = 'nous/travaillons/avec/[node:field_client]';
   $export['pathauto_node_project_und_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_webform_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_webform_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_webform_es_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_webform_es_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_webform_fr_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_webform_fr_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_webform_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_webform_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_webform_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_webform_und_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

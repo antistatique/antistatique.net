@@ -13,7 +13,7 @@ function antistatique_project_taxonomy_default_vocabularies() {
       'name' => 'Skills',
       'machine_name' => 'skills',
       'description' => 'e.g. strategy, design, tech...',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',

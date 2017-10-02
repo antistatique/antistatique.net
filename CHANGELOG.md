@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+## 1.3.6 (2017-10-02)
+- fix some sloppy English
+- add Spanish language
+- fix some issues in navbar CSS
+
 ## 1.3.5 (2017-06-07)
 - fix size of product cards
 

@@ -444,7 +444,7 @@ function antistatique_views_pre_render(&$view) {
   if ($view->name == 'news' && $view->current_display == 'block_articles_from_user') {
     $user = user_load($view->args[0]);
     $username = $user->field_firstname['und'][0]['safe_value'];
-    $view->set_title( t('Blog articles from !username', array('!username' => $username)) );
+    $view->set_title( t('!username\'s blog articles', array('!username' => $username)) );
   }
   if ($view->name == 'news' && $view->current_display == 'page') {
     $user = user_load_by_name($view->args[0]);

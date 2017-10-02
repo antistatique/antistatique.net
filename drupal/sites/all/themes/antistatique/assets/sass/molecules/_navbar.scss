@@ -67,6 +67,12 @@
   }
 }
 
+@media only screen and (min-width: $screen-md-min) {
+    .navbar-right {
+    display: flex;
+  }
+}
+
 .navbar-btn {
   margin-top: 11px;
 
