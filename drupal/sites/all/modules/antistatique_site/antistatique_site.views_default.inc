@@ -43,6 +43,11 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<a href="#" class="text-strong dropdown-toggle" data-toggle="dropdown">[field_breadcrumb_tagline_1] <span class="caret"></span></a>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  /* Relationship: Content: Entity translation: translations */
+  $handler->display->display_options['relationships']['entity_translations']['id'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['table'] = 'node';
+  $handler->display->display_options['relationships']['entity_translations']['field'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['required'] = TRUE;
   /* Field: Content: Breadcrumb Tagline */
   $handler->display->display_options['fields']['field_breadcrumb_tagline']['id'] = 'field_breadcrumb_tagline';
   $handler->display->display_options['fields']['field_breadcrumb_tagline']['table'] = 'field_data_field_breadcrumb_tagline';
@@ -156,6 +161,14 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'page' => 'page',
+  );
+  /* Filter criterion: Entity translation: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'entity_translation';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'entity_translations';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
   $handler->display->display_options['block_description'] = 'Dropdown';
 
@@ -272,6 +285,14 @@ function antistatique_site_views_default_views() {
   );
   $handler->display->display_options['filters']['field_section_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_section_tid']['vocabulary'] = 'section';
+  /* Filter criterion: Entity translation: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'entity_translation';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'entity_translations';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
   $handler->display->display_options['block_description'] = 'Jump Menu Pages';
 
   /* Display: Jump Menu Projects */
@@ -337,6 +358,14 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'project' => 'project',
+  );
+  /* Filter criterion: Entity translation: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'entity_translation';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'entity_translations';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
   $handler->display->display_options['block_description'] = 'Jump Menu Projects';
 
@@ -438,6 +467,14 @@ function antistatique_site_views_default_views() {
   $handler->display->display_options['filters']['field_section_tid']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_section_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_section_tid']['vocabulary'] = 'section';
+  /* Filter criterion: Entity translation: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'entity_translation';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'entity_translations';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
   $handler->display->display_options['path'] = 'admin/order-breadcrumb';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Order pages in breadcrumb';
@@ -454,6 +491,7 @@ function antistatique_site_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('<a href="#" class="text-strong dropdown-toggle" data-toggle="dropdown">[field_breadcrumb_tagline_1] <span class="caret"></span></a>'),
+    t('Translations'),
     t('[node:url]'),
     t('Content'),
     t('All'),

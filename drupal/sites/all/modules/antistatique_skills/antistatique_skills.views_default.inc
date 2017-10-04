@@ -35,6 +35,11 @@ function antistatique_skills_views_default_views() {
   $handler->display->display_options['style_options']['class'] = 'list-inline';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Relationship: Taxonomy term: Entity translation: translations */
+  $handler->display->display_options['relationships']['entity_translations']['id'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['entity_translations']['field'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['required'] = TRUE;
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -73,6 +78,14 @@ function antistatique_skills_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'skills' => 'skills',
   );
+  /* Filter criterion: Entity translation: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'entity_translation';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'entity_translations';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Child Skills */
   $handler = $view->new_display('block', 'Child Skills', 'skills_children');
@@ -93,6 +106,7 @@ function antistatique_skills_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
+    t('Translations'),
     t('All'),
     t('Our skills in %1'),
     t('Child Skills'),

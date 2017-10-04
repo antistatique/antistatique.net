@@ -239,13 +239,28 @@
     <div class="row">
       <div class="col-xs-12 text-center">
         <div class="spacer spacer-md"></div>
+          <p class="hidden-xs">
+            <strong><a href="<?php print url('node/4'); ?>#offices">Geneva</a></strong>
+            <span>&nbsp;+41 22 552 03 06&nbsp;</span>&nbsp;
+            <strong><a href="<?php print url('node/4'); ?>#offices">Lausanne</a></strong>
+            <span>&nbsp;+41 21 623 63 03&nbsp;</span>&nbsp;
 
-        &nbsp;  <strong><a href="<?php print url('node/4'); ?>#offices">Lausanne</a></strong> & <strong><a href="<?php print url('node/4'); ?>#offices">Geneva</a></strong>&nbsp;
-        <div class="visible-xs spacer spacer-xs"></div>
+            <strong><a href="<?php print url('node/4'); ?>#offices">Miami</a></strong>
+            <span>&nbsp;+1 786 281 9983</span>
+          </p>
+
         <span class="visible-xs">
-          <a href="tel:0041216236303" class="btn btn-primary">+41 21 623 63 03</a>
+          <p>
+            <a href="tel:+41225520306" class="btn btn-primary">Geneva +41&nbsp;22&nbsp;552&nbsp;03&nbsp;06</a>
+          </p>
+          <p>
+            <a href="tel:+41216236303" class="btn btn-primary">Lausanne +41&nbsp;21&nbsp;623&nbsp;63&nbsp;03</a>
+          </p>
+          <p>
+            <a href="tel:+17862819983" class="btn btn-primary">Miami +1&nbsp;786&nbsp;281&nbsp;9983</a>
+          </p>
         </span>
-        <span class="hidden-xs"> &nbsp;  +41 21 623 63 03 &nbsp;  </span>
+
         <div class="visible-xs spacer spacer-xs"></div>
         <strong>&nbsp;<a href="mailto:hello@antistatique.net">hello@antistatique.net</a>&nbsp;</strong>
         <div class="spacer spacer-lg"></div>
