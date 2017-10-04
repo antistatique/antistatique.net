@@ -169,6 +169,14 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['style_options']['item_per_row_lg'] = '2';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = FALSE;
+  /* No results behavior: Global: Unfiltered text */
+  $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area_text_custom']['content'] = '<div class="spacer spacer-lg"></div>
+<p class="text-center"><strong>No results</strong></p>
+<div class="spacer spacer-xl"></div>';
   /* Relationship: Content: Entity translation: translations */
   $handler->display->display_options['relationships']['entity_translations']['id'] = 'entity_translations';
   $handler->display->display_options['relationships']['entity_translations']['table'] = 'node';
@@ -540,6 +548,9 @@ function antistatique_article_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('<div class="spacer spacer-lg"></div>
+<p class="text-center"><strong>No results</strong></p>
+<div class="spacer spacer-xl"></div>'),
     t('Translations'),
     t('From the blog'),
     t('Live from our blog'),
