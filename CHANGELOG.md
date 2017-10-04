@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.3.7 (2017-10-04)
+- update footer with all phone numbers
+- fix config of views to display only current language
+
 ## 1.3.6 (2017-10-02)
 - fix some sloppy English
 - add Spanish language
