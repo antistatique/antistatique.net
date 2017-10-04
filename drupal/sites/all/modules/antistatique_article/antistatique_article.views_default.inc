@@ -169,6 +169,11 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['style_options']['item_per_row_lg'] = '2';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = FALSE;
+  /* Relationship: Content: Entity translation: translations */
+  $handler->display->display_options['relationships']['entity_translations']['id'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['table'] = 'node';
+  $handler->display->display_options['relationships']['entity_translations']['field'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['required'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -194,6 +199,14 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
+  );
+  /* Filter criterion: Entity translation: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'entity_translation';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'entity_translations';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
 
   /* Display: From the blog */
@@ -355,8 +368,13 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'Voir plus';
   $handler->display->display_options['link_url'] = 'nous/bloggons/%1';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Entity translation: translations */
+  $handler->display->display_options['relationships']['entity_translations']['id'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['table'] = 'node';
+  $handler->display->display_options['relationships']['entity_translations']['field'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['required'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Displayed Author(s) (field_co_author) */
+  /* Contextual filter: Content: Co-Author (field_co_author) */
   $handler->display->display_options['arguments']['field_co_author_target_id']['id'] = 'field_co_author_target_id';
   $handler->display->display_options['arguments']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['arguments']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
@@ -403,8 +421,13 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['relationships']['field_co_author_target_id']['id'] = 'field_co_author_target_id';
   $handler->display->display_options['relationships']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['relationships']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
+  /* Relationship: Content: Entity translation: translations */
+  $handler->display->display_options['relationships']['entity_translations']['id'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['table'] = 'node';
+  $handler->display->display_options['relationships']['entity_translations']['field'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['required'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Displayed Author(s) (field_co_author) */
+  /* Contextual filter: Content: Co-Author (field_co_author) */
   $handler->display->display_options['arguments']['field_co_author_target_id']['id'] = 'field_co_author_target_id';
   $handler->display->display_options['arguments']['field_co_author_target_id']['table'] = 'field_data_field_co_author';
   $handler->display->display_options['arguments']['field_co_author_target_id']['field'] = 'field_co_author_target_id';
@@ -432,6 +455,14 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'article' => 'article',
   );
+  /* Filter criterion: Entity translation: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'entity_translation';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'entity_translations';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
   $handler->display->display_options['path'] = 'nous/bloggons/%';
 
   /* Display: Feed */
@@ -441,6 +472,23 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss';
   $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+  );
   $handler->display->display_options['path'] = 'blog/rss.xml';
 
   /* Display: Skill Page Articles */
@@ -492,6 +540,7 @@ function antistatique_article_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Translations'),
     t('From the blog'),
     t('Live from our blog'),
     t('more'),

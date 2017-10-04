@@ -78,6 +78,8 @@
  *
  * @ingroup themeable
  */
+
+ global $language;
 ?>
 
 <a href="<?php print $node_url; ?>">
@@ -89,11 +91,13 @@
     <?php endif ?>
     <div class="card-content">
         <p class="text-truncate">
-            <?php foreach ($node->field_skills['und'] as $i => $skill): ?>
-                <?php if ($i <= 1): ?>
-                    <small class="field-skills"><?= $skill['taxonomy_term']->name ?></small>
+            <?php foreach ($node->field_skills['und'] as $i => $skill):
+                  $iterator = 0;
+                ?>
+                <?php if ($iterator <= 1 && $skill['taxonomy_term']->name_field[$language->language]): $iterator++; ?>
+                    <small class="field-skills"><?= $skill['taxonomy_term']->name_field[$language->language][0]['value'] ?></small>
                 <?php endif ?>
-                <?php if ($i > 1 && count($node->field_skills['und']) > 2): ?>
+                <?php if ($iterator > 1 && count($node->field_skills['und']) > 2): ?>
                     <small class="field-skills">…</small>
                     <?php break; ?>
                 <?php endif ?>

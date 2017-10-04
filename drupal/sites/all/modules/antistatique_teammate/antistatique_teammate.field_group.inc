@@ -40,7 +40,7 @@ function antistatique_teammate_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_project|user|user|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.

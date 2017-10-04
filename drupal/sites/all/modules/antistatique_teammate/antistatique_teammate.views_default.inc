@@ -37,6 +37,11 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['style_options']['item_per_row_lg'] = '4';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'big_teaser';
+  /* Relationship: User: Entity translation: translations */
+  $handler->display->display_options['relationships']['entity_translations']['id'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['table'] = 'users';
+  $handler->display->display_options['relationships']['entity_translations']['field'] = 'entity_translations';
+  $handler->display->display_options['relationships']['entity_translations']['required'] = TRUE;
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
@@ -82,6 +87,14 @@ function antistatique_teammate_views_default_views() {
     1 => 0,
     3 => 0,
     4 => 0,
+  );
+  /* Filter criterion: Entity translation: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'entity_translation';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'entity_translations';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
 
   /* Display: All Teammates */
@@ -144,6 +157,7 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: User: Firstname */
   $handler->display->display_options['fields']['field_firstname']['id'] = 'field_firstname';
@@ -433,6 +447,7 @@ function antistatique_teammate_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Translations'),
     t('Name'),
     t('All Teammates'),
     t('Our team'),

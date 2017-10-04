@@ -41,6 +41,7 @@ features[field_base][] = field_testimonial_position
 features[field_base][] = field_testimonial_quote
 features[field_base][] = field_tile_image
 features[field_base][] = field_year
+features[field_group][] = group_testimonial|node|project|form
 features[field_instance][] = node-project-body
 features[field_instance][] = node-project-field_client
 features[field_instance][] = node-project-field_credits
