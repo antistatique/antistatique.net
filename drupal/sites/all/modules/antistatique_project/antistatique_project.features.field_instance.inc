@@ -1180,7 +1180,7 @@ function antistatique_project_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1227,7 +1227,7 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1247,7 +1247,7 @@ function antistatique_project_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 7,
     ),
   );
 
@@ -1290,7 +1290,7 @@ function antistatique_project_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 6,
+      'weight' => 10,
     ),
   );
 
@@ -1310,7 +1310,7 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1375,7 +1375,7 @@ function antistatique_project_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -1399,7 +1399,7 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1468,6 +1468,49 @@ function antistatique_project_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-skills-field_second_description'.
+  $field_instances['taxonomy_term-skills-field_second_description'] = array(
+    'bundle' => 'skills',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Use this second description to have some continuing text below some intersecting content.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_second_description',
+    'label' => 'Second Description',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-skills-field_skill_symbol'.
   $field_instances['taxonomy_term-skills-field_skill_symbol'] = array(
     'bundle' => 'skills',
@@ -1484,7 +1527,7 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1544,7 +1587,7 @@ function antistatique_project_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
@@ -1566,7 +1609,7 @@ function antistatique_project_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1586,7 +1629,7 @@ function antistatique_project_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -1610,7 +1653,7 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1675,7 +1718,7 @@ function antistatique_project_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 5,
+      'weight' => 8,
     ),
   );
 
@@ -1696,7 +1739,7 @@ function antistatique_project_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1718,7 +1761,7 @@ function antistatique_project_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -1745,6 +1788,7 @@ function antistatique_project_field_default_field_instances() {
   t('Picto');
   t('Ready for translation');
   t('SVG Title');
+  t('Second Description');
   t('Skills');
   t('Submit a clear pictogram in a square format. It will be displayed on article pages, services page.');
   t('Symbol');
@@ -1757,6 +1801,7 @@ function antistatique_project_field_default_field_instances() {
   t('This option indicates that this content is ready to be translated by the translator.');
   t('Tile image');
   t('Title');
+  t('Use this second description to have some continuing text below some intersecting content.');
   t('Will get printed above the Contact Us button. Make the user want to click it!');
   t('Year');
 

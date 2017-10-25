@@ -67,9 +67,25 @@
                                 <i aria-hidden="true" class="fa fa-3x fa-<?= $icon[0]['safe_value'] ?>"></i>
                             <?php endif; ?>
                         </div>
-                        <div class="spacer spacer-sm"></div>
                     <?php endif; ?>
                     <?php print render($content['description_field']); ?>
+                    <div class="spacer spacer-md"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php if (!empty($region['content_below'])) : ?>
+        <div class="spacer spacer-sm"></div>
+        <?php print render($region['content_below']); ?>
+        <div class="spacer spacer-sm"></div>
+    <?php endif; ?>
+
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                    <?php print render($content['field_second_description']); ?>
                 </div>
             </div>
         </div>

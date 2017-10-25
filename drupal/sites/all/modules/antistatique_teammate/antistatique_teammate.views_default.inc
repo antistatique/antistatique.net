@@ -63,13 +63,6 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: User: Currently working (field_teammate_currently_working) */
-  $handler->display->display_options['filters']['field_teammate_currently_working_value']['id'] = 'field_teammate_currently_working_value';
-  $handler->display->display_options['filters']['field_teammate_currently_working_value']['table'] = 'field_data_field_teammate_currently_working';
-  $handler->display->display_options['filters']['field_teammate_currently_working_value']['field'] = 'field_teammate_currently_working_value';
-  $handler->display->display_options['filters']['field_teammate_currently_working_value']['value'] = array(
-    1 => '1',
-  );
   /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
@@ -95,6 +88,13 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['filters']['language']['relationship'] = 'entity_translations';
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
+  /* Filter criterion: User: Currently working (field_teammate_currently_working) */
+  $handler->display->display_options['filters']['field_teammate_currently_working_value']['id'] = 'field_teammate_currently_working_value';
+  $handler->display->display_options['filters']['field_teammate_currently_working_value']['table'] = 'field_data_field_teammate_currently_working';
+  $handler->display->display_options['filters']['field_teammate_currently_working_value']['field'] = 'field_teammate_currently_working_value';
+  $handler->display->display_options['filters']['field_teammate_currently_working_value']['value'] = array(
+    1 => '1',
   );
 
   /* Display: All Teammates */
@@ -395,6 +395,41 @@ function antistatique_teammate_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entityreference_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: User: Name */
+  $handler->display->display_options['filters']['uid']['id'] = 'uid';
+  $handler->display->display_options['filters']['uid']['table'] = 'users';
+  $handler->display->display_options['filters']['uid']['field'] = 'uid';
+  $handler->display->display_options['filters']['uid']['operator'] = 'not in';
+  $handler->display->display_options['filters']['uid']['value'] = array(
+    0 => '1',
+  );
+  $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['label'] = 'Name';
+  $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
+  $handler->display->display_options['filters']['uid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Entity translation: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'entity_translation';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'entity_translations';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Skill Page Teammates */
   $handler = $view->new_display('block', 'Skill Page Teammates', 'block_centered');

@@ -62,6 +62,7 @@ function antistatique_article_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'collaborator' => 'collaborator',
+      'translator' => 'translator',
     ),
     'module' => 'node',
   );
