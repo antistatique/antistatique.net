@@ -29,12 +29,6 @@ function antistatique_skills_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-21' => array(
-          'module' => 'block',
-          'delta' => '21',
-          'region' => 'content_below',
-          'weight' => '-10',
-        ),
         'views-news-block_1' => array(
           'module' => 'views',
           'delta' => 'news-block_1',
