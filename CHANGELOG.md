@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## 1.3.8 (2017-10-04)
+- add a second body in skill page 
+- allow to insert the `content_below` region inbetween descriptions
+
 ## 1.3.7 (2017-10-04)
 - update footer with all phone numbers
 - fix config of views to display only current language
