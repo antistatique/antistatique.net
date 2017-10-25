@@ -222,6 +222,7 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Live from our blog';
   $handler->display->display_options['link_url'] = 'node/7';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
   $handler->display->display_options['block_description'] = 'Live from our blog';
 
   /* Display: Other posts */
@@ -323,6 +324,7 @@ function antistatique_article_views_default_views() {
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'Go to the blog';
   $handler->display->display_options['link_url'] = 'node/7';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
   $handler->display->display_options['block_description'] = 'Live from our blog - 10cols';
 
   /* Display: Category Articles */

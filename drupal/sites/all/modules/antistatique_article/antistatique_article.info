@@ -5,7 +5,6 @@ version = 7.x-1.0
 project = antistatique_article
 dependencies[] = antistatique_basic_page
 dependencies[] = disqus
-dependencies[] = field_group
 dependencies[] = flippy
 dependencies[] = i18n_taxonomy
 dependencies[] = override_node_options

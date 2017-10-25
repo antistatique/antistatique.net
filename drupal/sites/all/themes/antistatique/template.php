@@ -143,6 +143,13 @@ function antistatique_preprocess_page(&$variables) {
 
 function antistatique_preprocess_taxonomy_term(&$vars) {
     if ($vars['view_mode'] == 'full') {
+
+      // add regions to template
+      if ($reaction = context_get_plugin('reaction', 'block')) {
+        $vars['region']['content_below'] = $reaction->block_get_blocks_by_region('content_below');
+        drupal_static_reset('context_reaction_block_list');
+      }
+
         $hero = field_get_items('taxonomy_term', $vars['term'], 'field_teammate_hero_image');
         if($hero){
             $vars['hero_xs'] = field_view_value('taxonomy_term', $vars['term'], 'field_teammate_hero_image', $hero[0], array(
