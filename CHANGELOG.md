@@ -2,6 +2,9 @@ CHANGELOG
 =========
 
 ## 1.3.8 (2017-10-04)
+- fix teammates grid with views plugin #378
+
+## 1.3.8 (2017-10-04)
 - add a second body in skill page 
 - allow to insert the `content_below` region inbetween descriptions
 
