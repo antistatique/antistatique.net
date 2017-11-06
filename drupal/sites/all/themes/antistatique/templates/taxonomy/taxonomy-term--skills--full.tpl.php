@@ -81,16 +81,6 @@
         <div class="spacer spacer-sm"></div>
     <?php endif; ?>
 
-    <div class="container">
-        <div class="content">
-            <div class="row">
-                <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-                    <?php print render($content['field_second_description']); ?>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <?php $cta_text = field_get_items('taxonomy_term', $term, 'field_skills_cta_text'); ?>
     <?php if ($cta_text): ?>
     <div class="spacer spacer-md"></div>
@@ -113,6 +103,16 @@
     </div>
     <div class="spacer spacer-sm"></div>
     <?php endif; ?>
+
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                    <?php print render($content['field_second_description']); ?>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <?php $child_skills = views_get_view_result('skills', 'skills_children');?>
     <?php if (!empty($child_skills)): ?>
