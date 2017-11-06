@@ -1,7 +1,10 @@
 CHANGELOG
 =========
 
-## 1.3.8 (2017-10-04)
+## 1.3.10 (2017-11-06)
+- add phone number to users and display it in teammate views in skill page
+
+## 1.3.9 (2017-10-04)
 - fix teammates grid with views plugin #378
 
 ## 1.3.8 (2017-10-04)

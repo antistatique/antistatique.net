@@ -52,7 +52,7 @@ function antistatique_teammate_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 6,
+      'weight' => 10,
     ),
   );
 
@@ -102,7 +102,7 @@ function antistatique_teammate_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -199,7 +199,7 @@ The fourth image should be <b>640x640</b>.',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 8,
+      'weight' => 15,
     ),
   );
 
@@ -248,7 +248,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 7,
+      'weight' => 13,
     ),
   );
 
@@ -298,7 +298,7 @@ The fourth image should be <b>640x640</b>.',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -347,7 +347,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 10,
+      'weight' => 18,
     ),
   );
 
@@ -397,7 +397,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 9,
+      'weight' => 17,
     ),
   );
 
@@ -544,7 +544,7 @@ The fourth image should be <b>640x640</b>.',
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 14,
     ),
   );
 
@@ -708,7 +708,7 @@ The fourth image should be <b>640x640</b>.',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 6,
+      'weight' => 12,
     ),
   );
 
@@ -821,7 +821,7 @@ The fourth image should be <b>640x640</b>.',
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 8,
+      'weight' => 16,
     ),
   );
 
