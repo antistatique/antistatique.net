@@ -249,3 +249,13 @@
   display: block;
   width: 100%;
 }
+
+// Views (users on skill page)
+.view-id-users .btn-default {
+  font-size: 80%;
+}
+
+.view-id-users .views-field-rendered-entity + .btn-default {
+  display: inline-block;
+  margin-top: -30px;
+}
