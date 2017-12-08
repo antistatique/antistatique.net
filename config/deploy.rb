@@ -13,7 +13,7 @@ set :repository,     "git@github.com:antistatique/antistatique.net.git"
 
 set :build_path,     "drupal/sites/all/themes/antistatique/build"
 
-set :domain,         "antistatique.alwaysdata.net"
+set :domain,         "ssh-antistatique.alwaysdata.net"
 
 set :user,           "antistatique"
 set :group,          "antistatique"
