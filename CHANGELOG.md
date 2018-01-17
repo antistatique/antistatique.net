@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## 1.3.12 (2018-01-17)
+- change Miami number
+
+## 1.3.11 (2017-11-29)
+- hide a11y nav items shown with scroll inertia
+
 ## 1.3.10 (2017-11-06)
 - add phone number to users and display it in teammate views in skill page
 
