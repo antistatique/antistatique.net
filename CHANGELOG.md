@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.3.13 (2018-03-11)
+- Adds honeypot module
+
 ## 1.3.12 (2018-01-17)
 - change Miami number
 
@@ -14,7 +17,7 @@ CHANGELOG
 - fix teammates grid with views plugin #378
 
 ## 1.3.8 (2017-10-04)
-- add a second body in skill page 
+- add a second body in skill page
 - allow to insert the `content_below` region inbetween descriptions
 
 ## 1.3.7 (2017-10-04)
