@@ -144,7 +144,7 @@ DirectoryIndex index.php index.html index.htm
   #RewriteCond %{HTTPS} off
   # Alwaysdata Apache config require this:
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteCond %{HTTP_HOST} !=antistatique.dev
+  RewriteCond %{HTTP_HOST} !=antistatique.test
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
