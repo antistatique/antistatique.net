@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.3.14 (2018-03-28)
+- security update! 
+
 ## 1.3.13 (2018-03-11)
 - Adds honeypot module
 
