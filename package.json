@@ -6,8 +6,8 @@
     "jquery": "global:jQuery"
   },
   "engines": {
-    "node": "8",
-    "npm": "3.10.3"
+    "node": ">=8",
+    "npm": ">=3.10.3"
   },
   "dependencies": {
     "Devices.css": "git://github.com/marvelapp/devices.css.git",
