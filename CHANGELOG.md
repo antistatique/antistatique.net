@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## 1.3.17 (2018-06-07)
+- Added GTM on the landing page
+
+## 1.3.16 (2018-06-04)
+- Added Landing page for the ads in LeTemps
+
 ## 1.3.15 (2018-04-26)
 - security update! 
 
