@@ -345,6 +345,12 @@ function antistatique_site_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'block-22' => array(
+          'module' => 'block',
+          'delta' => '22',
+          'region' => 'page_above',
+          'weight' => '-10',
+        ),
         'locale-language_content' => array(
           'module' => 'locale',
           'delta' => 'language_content',
