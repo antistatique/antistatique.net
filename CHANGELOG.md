@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.3.18 (2018-09-19)
+- add Don't Panic newsletter landing page
+
 ## 1.3.17 (2018-06-07)
 - Added GTM on the landing page
 
