@@ -85,6 +85,8 @@
       </div>
     </div>
 
+    <div class="spacer spacer-sm"></div>
+
     <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
       <img style="max-width: 120px;" src="<?php print $base_path . $directory; ?>/build/svg/logo_white.svg" onerror="this.onerror=null; this.src='<?php print $base_path . $directory; ?>/build/img/logo_white_wide.png'" alt="Antistatique"/>
     </a>
