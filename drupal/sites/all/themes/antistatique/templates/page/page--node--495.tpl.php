@@ -65,9 +65,6 @@
                 <label for="fielddjnvjt-0">
                   <input style="margin-top: 7px;" id="fielddjnvjt-0" name="cm-fo-djnvjt" type="checkbox" value="12358924" /> <?php print t('I also want to receive news from the agency'); ?></label>
               </div>
-            </div>
-
-            <div class="form-group">
               <div class="checkbox">
                 <label for="cm-privacy-consent">
                   <input style="margin-top: 7px;" id="cm-privacy-consent" name="cm-privacy-consent" required type="checkbox"/> <?php print t('I agree to be emailed'); ?>
