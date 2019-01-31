@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.3.19 (2019-01-31)
+- Update to Drupal 7.6.3
+
 ## 1.3.18 (2018-09-19)
 - add Don't Panic newsletter landing page
 
