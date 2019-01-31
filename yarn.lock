@@ -6,10 +6,6 @@ Base64@~0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/Base64/-/Base64-0.2.1.tgz#ba3a4230708e186705065e66babdd4c35cf60028"
 
-"Devices.css@git://github.com/marvelapp/devices.css.git":
-  version "0.0.1"
-  resolved "git://github.com/marvelapp/devices.css.git#7b88c304afbf13cdac0b639809910acd3580098b"
-
 JSONStream@^0.8.4:
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-0.8.4.tgz#91657dfe6ff857483066132b4618b62e8f4887bd"
@@ -1973,6 +1969,10 @@ detective@~4.1.0:
 dev-ip@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/dev-ip/-/dev-ip-1.0.1.tgz#a76a3ed1855be7a012bb8ac16cb80f3c00dc28f0"
+
+"devices.css@git://github.com/marvelapp/devices.css.git":
+  version "0.0.1"
+  resolved "git://github.com/marvelapp/devices.css.git#a5448c0ab819d7f3050e80b60208f891e92fe60b"
 
 diffie-hellman@^5.0.0:
   version "5.0.2"
