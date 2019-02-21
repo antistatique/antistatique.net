@@ -31,6 +31,12 @@
     width: 80vw;
     max-width: 1000px;
   }
+.well a {
+  color: #e30074;
+}
+.well a:hover {
+  text-decoration: none;
+}
 </style>
 <?php if (!empty($tabs)): ?>
   <?php print render($tabs); ?>

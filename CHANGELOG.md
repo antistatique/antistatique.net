@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+## 1.3.20 (2019-02-21)
+- Update link module (security issue)
+
 ## 1.3.19 (2019-01-31)
 - Update to Drupal 7.6.3
 
