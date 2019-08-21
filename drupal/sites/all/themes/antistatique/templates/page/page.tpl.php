@@ -243,10 +243,7 @@
             <strong><a href="<?php print url('node/4'); ?>#offices">Geneva</a></strong>
             <span>&nbsp;+41 22 552 03 06&nbsp;</span>&nbsp;
             <strong><a href="<?php print url('node/4'); ?>#offices">Lausanne</a></strong>
-            <span>&nbsp;+41 21 623 63 03&nbsp;</span>&nbsp;
-
-            <strong><a href="<?php print url('node/4'); ?>#offices">Miami</a></strong>
-            <span>&nbsp;+1 786 224 0090</span>
+            <span>&nbsp;+41 21 623 63 03&nbsp;</span>
           </p>
 
         <span class="visible-xs">
@@ -255,9 +252,6 @@
           </p>
           <p>
             <a href="tel:+41216236303" class="btn btn-primary">Lausanne +41&nbsp;21&nbsp;623&nbsp;63&nbsp;03</a>
-          </p>
-          <p>
-            <a href="tel:+17862240090" class="btn btn-primary">Miami +1&nbsp;786&nbsp;224&nbsp;0090</a>
           </p>
         </span>
 
