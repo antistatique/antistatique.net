@@ -51,7 +51,7 @@ export const serve = () => {
         bottom: 0,
         borderBottomLeftRadius: 0,
         borderTopLeftRadius: "5px",
-        backgroundColor: "#ef2678",
+        backgroundColor: "#FF0099",
       }
     },
     open: false
