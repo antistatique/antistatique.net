@@ -19,7 +19,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-register": "^6.14.0",
     "bootstrap-sass": "^3.3.7",
-    "bootstrap-select": "^1.12.1",
+    "bootstrap-select": "^1.13.6",
     "browser-sync": "^2.16.0",
     "del": "~2.2.2",
     "emojify.js": "^1.1.0",
