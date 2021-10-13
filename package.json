@@ -70,7 +70,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
-    "lodash": "^4.1.6",
+    "lodash": "^4.17.19",
     "marked": "^0.3.6",
     "metalsmith": "^2.2.0",
     "metalsmith-collections": "^0.7.0",
