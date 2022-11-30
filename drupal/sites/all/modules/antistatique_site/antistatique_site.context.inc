@@ -481,6 +481,9 @@ function antistatique_site_context_default_contexts() {
     'path' => array(
       'values' => array(
         'nous' => 'nous',
+        'nous%20' => 'nous%20',
+        'nous*' => 'nous*',
+        '~nous*/*' => '~nous*/*',
       ),
     ),
   );
